@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj",
-      "projectName": "BionicLibraryNetStandard",
-      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj",
+      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNet\\BionicLibraryNetStandard\\BionicLibrary.NetStandard.csproj",
+      "projectName": "BionicLibrary.NetStandard",
+      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNet\\BionicLibraryNetStandard\\BionicLibrary.NetStandard.csproj",
       "packagesPath": "C:\\Users\\MusicMonkey\\.nuget\\packages\\",
-      "outputPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\obj\\",
+      "outputPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNet\\BionicLibraryNetStandard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

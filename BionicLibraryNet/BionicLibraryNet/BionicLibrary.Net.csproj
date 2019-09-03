@@ -7,8 +7,8 @@
     <ProjectGuid>{BCF9BE24-4D6F-4823-BD1A-0603CB5E5813}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BionicLibraryNet</RootNamespace>
-    <AssemblyName>BionicLibraryNet</AssemblyName>
+    <RootNamespace>BionicLibrary.Net</RootNamespace>
+    <AssemblyName>BionicLibrary.Net</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -29,6 +29,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>dna_helix_medicine_hospital_512_LIZ_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -55,10 +58,13 @@
     <Folder Include="Generic\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BionicLibraryNetStandard\BionicLibraryNetStandard.csproj">
+    <ProjectReference Include="..\BionicLibraryNetStandard\BionicLibrary.NetStandard.csproj">
       <Project>{0cefcc36-7d9d-4de0-a627-2cbea6535c66}</Project>
-      <Name>BionicLibraryNetStandard</Name>
+      <Name>BionicLibrary.NetStandard</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dna_helix_medicine_hospital_512_LIZ_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

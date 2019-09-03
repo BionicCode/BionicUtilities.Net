@@ -13,6 +13,7 @@
     <Copyright>2019</Copyright>
     <PackageTags>BaseViewModel, RelayCommand, WPF, NET Standard, VisualTreeHelper</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ApplicationIcon>dna_helix_medicine_hospital_512_LIZ_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
 </Project>
