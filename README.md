@@ -17,7 +17,7 @@ Example with validation
 
 ```c#
     private string name;
-    public string name
+    public string Name
     {
       get => this.name;
       set
@@ -40,7 +40,7 @@ Example without validation
 
 ```c#
     private string name;
-    public string name
+    public string Name
     {
       get => this.name;
       set
