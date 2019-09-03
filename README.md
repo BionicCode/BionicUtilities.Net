@@ -14,6 +14,7 @@ Reusable utility and class library based on .NET Standard
 implementing `INotifyPropertyChanged` and `INotifyDataErrorInfo`
 
 Example with validation
+
 ```c#
     private string name;
     public string name
@@ -36,6 +37,7 @@ Example with validation
     }
 ```
 Example without validation
+
 ```c#
     private string name;
     public string name
@@ -54,7 +56,8 @@ Example without validation
 Reusable generic command class that encapsulates `ICommand` and allows asynchronous executionExample without validation
 
 ```c#
-    private IRelayCommand<string> StringAsyncCommand => new RelayCommand<string>(ProcessStringAsync);
+    // ICommand property
+    public IRelayCommand<string> StringAsyncCommand => new RelayCommand<string>(ProcessStringAsync);
     
     // Execute asynchronously
     await StringAsyncCommand.ExecuteAsync("String value");
