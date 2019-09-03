@@ -1,5 +1,5 @@
-# BionicLibraryNetStandard
-Reusable utility and class library based on .NET Standard
+# BionicLibrary.Net
+Reusable utility and class library for WPF
 
 ## Contains 
 * `BaseViewModel`
