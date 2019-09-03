@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BionicLibrary.NetStandard</id>
+    <version>1.0.0</version>
+    <authors>Brian Sampoh</authors>
+    <owners>Brian Sampoh</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/BionicCode/BionicLibraryNetStandard</projectUrl>
+    <description>Reusable utility and class library based on .NET Standard</description>
+    <copyright>2019</copyright>
+    <tags>BaseViewModel, RelayCommand, WPF, NET Standard, VisualTreeHelper</tags>
+    <repository url="https://github.com/BionicCode/BionicLibraryNetStandard" />
+    <dependencies>
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+        <dependency id="System.ValueTuple" version="4.5.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNetStandard\bin\Release\netstandard1.3\BionicLibrary.NetStandard.dll" target="lib\netstandard1.3\BionicLibrary.NetStandard.dll" />
+  </files>
+</package>

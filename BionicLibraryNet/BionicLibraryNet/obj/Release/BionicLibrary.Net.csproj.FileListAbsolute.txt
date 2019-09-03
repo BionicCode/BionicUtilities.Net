@@ -1,0 +1,9 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Release\BionicLibrary.Net.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Release\BionicLibrary.Net.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Release\BionicLibrary.NetStandard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Release\BionicLibrary.NetStandard.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Release\BionicLibrary.Net.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Release\BionicLibrary.Net.csproj.CoreCompileInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Release\BionicLibrary.Net.csproj.CopyComplete
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Release\BionicLibrary.Net.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Release\BionicLibrary.Net.pdb
