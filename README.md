@@ -57,7 +57,7 @@ Reusable generic command class that encapsulates `ICommand` and allows asynchron
 
 ```c#
     // ICommand property
-    public IRelayCommand<string> StringAsyncCommand => new RelayCommand<string>(ProcessStringAsync);
+    public IRelayCommand<string> StringAsyncCommand => new AsyncRelayCommand<string>(ProcessStringAsync);
     
     // Execute asynchronously
     await StringAsyncCommand.ExecuteAsync("String value");
