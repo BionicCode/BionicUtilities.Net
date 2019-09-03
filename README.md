@@ -3,7 +3,7 @@ Reusable utility and class library for WPF
 
 ## Contains 
 * `BaseViewModel`
-* `RelayCommand<T>`
+* `AsyncRelayCommand<T>`
 * Extension Methods for WPF e.g.
   * `TryFindVisualParentElement : bool` 
   * `TryFindVisualChildElement<TChild> : bool`
@@ -52,7 +52,7 @@ Example without validation
       }
     }
 ```
-### RelayComand<T> 
+### AsyncRelayComand&lt;T&gt; 
 Reusable generic command class that encapsulates `ICommand` and allows asynchronous executionExample without validation
 
 ```c#
