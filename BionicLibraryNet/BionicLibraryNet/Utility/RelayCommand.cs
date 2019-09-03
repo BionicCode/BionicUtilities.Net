@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace BionicLibraryNet.Utility
+namespace BionicLibrary.Net.Utility
 {
 
 

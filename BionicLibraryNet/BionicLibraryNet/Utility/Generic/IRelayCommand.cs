@@ -6,7 +6,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace BionicLibraryNet.Utility.Generic
+namespace BionicLibrary.Net.Utility.Generic
 {
   public interface IRelayCommand<TParam> : IRelayCommand, ICommand
   {
