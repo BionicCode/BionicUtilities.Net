@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
 
-namespace Library
+namespace BionicLibraryNetStandard.ViewModel
 {
   public abstract class BaseViewModel : IViewModel, INotifyDataErrorInfo
   {
@@ -65,7 +64,6 @@ namespace Library
       /// Method called to fire a <see cref="PropertyChanged"/> event.
       /// </summary>
       /// <param name="propertyName"> The property name. </para
-      [NotifyPropertyChangedInvocator]
       protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
       {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

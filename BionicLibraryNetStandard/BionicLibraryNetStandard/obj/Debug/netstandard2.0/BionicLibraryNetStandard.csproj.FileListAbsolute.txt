@@ -1,0 +1,9 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNetStandard\BionicLibraryNetStandard\obj\Debug\netstandard2.0\BionicLibraryNetStandard.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNetStandard\BionicLibraryNetStandard\obj\Debug\netstandard2.0\BionicLibraryNetStandard.csproj.CoreCompileInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNetStandard\BionicLibraryNetStandard\obj\Debug\netstandard2.0\BionicLibraryNetStandard.AssemblyInfoInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNetStandard\BionicLibraryNetStandard\obj\Debug\netstandard2.0\BionicLibraryNetStandard.AssemblyInfo.cs
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNetStandard\BionicLibraryNetStandard\bin\Debug\netstandard2.0\BionicLibraryNetStandard.deps.json
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNetStandard\BionicLibraryNetStandard\bin\Debug\netstandard2.0\BionicLibraryNetStandard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNetStandard\BionicLibraryNetStandard\bin\Debug\netstandard2.0\BionicLibraryNetStandard.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNetStandard\BionicLibraryNetStandard\obj\Debug\netstandard2.0\BionicLibraryNetStandard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNetStandard\BionicLibraryNetStandard\obj\Debug\netstandard2.0\BionicLibraryNetStandard.pdb

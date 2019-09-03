@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Windows.Input;
 
-namespace Library.Generic
+namespace BionicLibraryNet.Utility.Generic
 {
   /// <summary>
   /// An implementation independent ICommand implementation.

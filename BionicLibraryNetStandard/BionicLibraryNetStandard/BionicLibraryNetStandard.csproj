@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Brian Sampoh</Authors>
+    <Company>BionicCode</Company>
+    <Description>Reusable utility and class library based on .NET Standard</Description>
+    <PackageProjectUrl>https://github.com/BionicCode/BionicLibraryNetStandard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/BionicCode/BionicLibraryNetStandard</RepositoryUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>2019</Copyright>
+    <PackageTags>BaseViewModel, RelayCommand, WPF, NET Standard, VisualTreeHelper</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>

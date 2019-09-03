@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Library
+namespace BionicLibraryNet.Utility
 {
 
 
@@ -15,9 +15,9 @@ namespace Library
 /// <remarks>The type of <c>RelayCommand</c> actually is a <see cref="System.Windows.Input.ICommand"/></remarks>
 public class RelayCommand : IRelayCommand
 {
-  protected readonly Func<Task> executeAsyncNoParam;
-  protected readonly Action executeNoParam;
-  protected readonly Func<bool> canExecuteNoParam;
+  protected readonly Func<Task> ExecuteAsyncNoParam;
+  protected readonly Action ExecuteNoParam;
+  protected readonly Func<bool> CanExecuteNoParam;
   private readonly Func<object, Task> executeAsync;
   private readonly Action<object> execute;
   private readonly Predicate<object> canExecute;
@@ -68,8 +68,8 @@ public class RelayCommand : IRelayCommand
   /// <param name="canExecuteNoParam">The execution status logic.</param>
   public RelayCommand(Action executeNoParam, Func<bool> canExecuteNoParam)
   {
-    this.executeNoParam = executeNoParam ?? throw new ArgumentNullException(nameof(executeNoParam));
-    this.canExecuteNoParam = canExecuteNoParam;
+    this.ExecuteNoParam = executeNoParam ?? throw new ArgumentNullException(nameof(executeNoParam));
+    this.CanExecuteNoParam = canExecuteNoParam;
   }
   /// <summary>
   /// Creates a new command.
@@ -88,8 +88,8 @@ public class RelayCommand : IRelayCommand
   /// <param name="canExecuteNoParam">The execution status logic.</param>
   public RelayCommand(Func<Task> executeAsyncNoParam, Func<bool> canExecuteNoParam)
   {
-    this.executeAsyncNoParam = executeAsyncNoParam ?? throw new ArgumentNullException(nameof(executeAsyncNoParam));
-    this.canExecuteNoParam = canExecuteNoParam;
+    this.ExecuteAsyncNoParam = executeAsyncNoParam ?? throw new ArgumentNullException(nameof(executeAsyncNoParam));
+    this.CanExecuteNoParam = canExecuteNoParam;
   }
   /// <summary>
   /// Creates a new command.
@@ -107,7 +107,7 @@ public class RelayCommand : IRelayCommand
   /// <returns>true if this command can be executed; otherwise, false.</returns>
   public bool CanExecute()
   {
-    return this.canExecuteNoParam == null || this.canExecuteNoParam();
+    return this.CanExecuteNoParam == null || this.CanExecuteNoParam();
   }
 
   /// <summary>
@@ -115,12 +115,12 @@ public class RelayCommand : IRelayCommand
   /// </summary>
   public async void Execute()
   {
-    if (this.executeAsyncNoParam != null)
+    if (this.ExecuteAsyncNoParam != null)
     {
       await ExecuteAsync();
       return;
     }
-    this.executeNoParam();
+    this.ExecuteNoParam();
   }
 
   /// <summary>
@@ -128,13 +128,13 @@ public class RelayCommand : IRelayCommand
   /// </summary>
   public async Task ExecuteAsync()
   {
-    if (this.executeAsyncNoParam != null)
+    if (this.ExecuteAsyncNoParam != null)
     {
-      await this.executeAsyncNoParam();
+      await this.ExecuteAsyncNoParam();
       return;
     }
  
-    await Task.Run(() => this.executeNoParam());
+    await Task.Run(() => this.ExecuteNoParam());
   }
   /// <summary>
   /// Determines whether this RelayCommand can execute in its current state.

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Library
+namespace BionicLibraryNet.Utility
 {
   public interface IRelayCommand : ICommand
   {

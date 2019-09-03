@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\-Programming-\\C#\\OpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj": {}
+    "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj": {}
   },
   "projects": {
-    "D:\\-Programming-\\C#\\OpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj": {
+    "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\-Programming-\\C#\\OpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj",
+        "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj",
         "projectName": "BionicLibraryNetStandard",
-        "projectPath": "D:\\-Programming-\\C#\\OpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj",
+        "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\BionicLibraryNetStandard.csproj",
         "packagesPath": "C:\\Users\\MusicMonkey\\.nuget\\packages\\",
-        "outputPath": "D:\\-Programming-\\C#\\OpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\obj\\",
+        "outputPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicLibraryNetStandard\\BionicLibraryNetStandard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

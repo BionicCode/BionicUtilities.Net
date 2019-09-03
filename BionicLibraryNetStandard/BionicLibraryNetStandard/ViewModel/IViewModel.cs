@@ -6,7 +6,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Library
+namespace BionicLibraryNetStandard.ViewModel
 {
   public interface IViewModel : INotifyPropertyChanged
   {
