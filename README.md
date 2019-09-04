@@ -70,8 +70,7 @@ Example without validation
 
 ### AsyncRelayComand&lt;T&gt; 
 Reusable generic command class that encapsulates `ICommand` and allows asynchronous execution.
-
-Example without validation
+When used with a `Binding` the command will execute asynchronously when an awaitable execute handler is assigned to the command.
 
 ```c#
     // ICommand property
