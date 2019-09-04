@@ -3,7 +3,7 @@
 namespace BionicUtilities.NetStandard.IO
 {
   [Flags]
-  public enum FileExtensions
+  public enum FileExtensions : long
   {
     NotDefined = 0,
     Any = 1,
@@ -20,7 +20,7 @@ namespace BionicUtilities.NetStandard.IO
     Inf = 2048,
     Help = 4096,
     Hlp = 8192,
-    Zip = 16384,
+    Dll = 16384,
     Bin = 32768,
     Old = 65536,
     Iii = 131072,
@@ -34,6 +34,20 @@ namespace BionicUtilities.NetStandard.IO
     Cgt = 33554432,
     Cfg = 67108864,
     Png = 134217728,
-    Dll = 268435456
+    Zip = 268435456,
+    Bz2 = 536870912, // BZip/ BZip2
+    Gz = 1073741824, // GZip
+    SevenZip = 2147483648, // 7Zip
+    Xz = 4294967296, // XZ
+    Lz = 8589934592, // LZip
+    Rar = 17179869184, // Rar
+    Tar = 34359738368, // Tarball
+    Xaml = 68719476736,
+    Cpp = 137438953472,
+    C = 274877906944,
+    Cs = 549755813888,
+    Js = 1099511627776,
+    Archive = 2199023255552,
+    NonArchive = 4398046511104
   }
 }
