@@ -6,43 +6,43 @@ using System.Windows.Data;
 namespace BionicLibrary.Net.Converter
 {
   [ValueConversion(typeof(bool), typeof(string))]
-  public class BoollToStringConverter : DependencyObject, IValueConverter
+  public class BoolToStringConverter : DependencyObject, IValueConverter
   {
     public static readonly DependencyProperty TrueValueProperty = DependencyProperty.Register(
       "TrueValue",
       typeof(string),
-      typeof(BoollToStringConverter),
+      typeof(BoolToStringConverter),
       new PropertyMetadata("True"));
 
     public string TrueValue
     {
-      get => (string) GetValue(BoollToStringConverter.TrueValueProperty);
-      set => SetValue(BoollToStringConverter.TrueValueProperty, value);
+      get => (string) GetValue(BoolToStringConverter.TrueValueProperty);
+      set => SetValue(BoolToStringConverter.TrueValueProperty, value);
     }
 
     public static readonly DependencyProperty FalseValueProperty = DependencyProperty.Register(
       "FalseValue",
       typeof(string),
-      typeof(BoollToStringConverter),
+      typeof(BoolToStringConverter),
       new PropertyMetadata("False"));
 
     public string FalseValue
     {
-      get => (string) GetValue(BoollToStringConverter.FalseValueProperty);
-      set => SetValue(BoollToStringConverter.FalseValueProperty, value);
+      get => (string) GetValue(BoolToStringConverter.FalseValueProperty);
+      set => SetValue(BoolToStringConverter.FalseValueProperty, value);
     }
 
 
     public static readonly DependencyProperty NullValueProperty = DependencyProperty.Register(
       "NullValue",
       typeof(string),
-      typeof(BoollToStringConverter),
+      typeof(BoolToStringConverter),
       new PropertyMetadata("Unset"));
 
     public string NullValue
     {
-      get => (string) GetValue(BoollToStringConverter.NullValueProperty);
-      set => SetValue(BoollToStringConverter.NullValueProperty, value);
+      get => (string) GetValue(BoolToStringConverter.NullValueProperty);
+      set => SetValue(BoolToStringConverter.NullValueProperty, value);
     }
 
 

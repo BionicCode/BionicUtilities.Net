@@ -59,7 +59,7 @@
     <Compile Include="Converter\FilePathTruncateConverter.cs" />
     <Compile Include="Converter\InvertValueConverter.cs" />
     <Compile Include="Converter\IsGreaterThanValueConverter.cs" />
-    <Compile Include="Converter\BoollToStringConverter.cs" />
+    <Compile Include="Converter\BoolToStringConverter.cs" />
     <Compile Include="Extensions\HelperExtensions.cs" />
     <Compile Include="MarkupExtension\EqualsExtension.cs" />
     <Compile Include="MarkupExtension\InvertExtension.cs" />
