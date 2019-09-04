@@ -1,17 +1,31 @@
 # BionicLibrary.Net
 Reusable utility and class library for WPF
 
+## [Class Reference](https://rawcdn.githack.com/BionicCode/BionicLibraryNet/343b21a9daf5095f7f544abb0aa9672c671d66cc/BionicLibraryNet/BionicLibraryNet/Documentation/index.html)
+
 ## Contains 
-* `BaseViewModel`
-* `AsyncRelayCommand<T>`
+* [`BaseViewModel`](https://github.com/BionicCode/BionicLibraryNet#baseviewmodel)
+* [`AsyncRelayCommand<T>`](https://github.com/BionicCode/BionicLibraryNet#asyncrelaycomandt)
 * Extension Methods for WPF e.g.
   * `TryFindVisualParentElement : bool` 
   * `TryFindVisualChildElement<TChild> : bool`
   * `TryFindVisualChildElementByName : bool`
   * `FindVisualChildElements<TChildren> : IEnumerable<TChildren>`
+  * `ICollection.AddRange<T>`
+* ValueConverters
+  * `ValueChangedEventArgs<T>`
+  * `BoolToStringConverter`
+  * `BooleanMultiValueConverter`
+  * `FilePathTruncateConverter`
+  * `InvertValueConverter`
+* Collections
+  * `ObservablePropertyChangedCollection<T>`
+* MarkupExtensions
+  * PrimitiveTypeExtension
+  
   
 ### BaseViewModel 
-implementing `INotifyPropertyChanged` and `INotifyDataErrorInfo`
+implements `INotifyPropertyChanged` and `INotifyDataErrorInfo`
 
 Example with validation
 
@@ -52,8 +66,11 @@ Example without validation
       }
     }
 ```
+----
+
 ### AsyncRelayComand&lt;T&gt; 
-Reusable generic command class that encapsulates `ICommand` and allows asynchronous executionExample without validation
+Reusable generic command class that encapsulates `ICommand` and allows asynchronous execution.
+When used with a `Binding` the command will execute asynchronously when an awaitable execute handler is assigned to the command.
 
 ```c#
     // ICommand property
