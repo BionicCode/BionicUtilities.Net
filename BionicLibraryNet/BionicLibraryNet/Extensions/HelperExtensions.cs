@@ -8,12 +8,15 @@ namespace BionicLibrary.Net.Extensions
 {
   public static class HelperExtensions
   {
-    public static bool TryFindVisualParentElement<TParent>(this DependencyObject child, out TParent resultElement) where TParent : DependencyObject
+    public static bool TryFindVisualParentElement<TParent>(this DependencyObject child, out TParent resultElement)
+      where TParent : DependencyObject
     {
       resultElement = null;
 
       if (child == null)
+      {
         return false;
+      }
 
       DependencyObject parentElement = VisualTreeHelper.GetParent(child);
 
@@ -26,7 +29,8 @@ namespace BionicLibrary.Net.Extensions
       return parentElement.TryFindVisualParentElement(out resultElement);
     }
 
-    public static bool TryFindVisualChildElement<TChild>(this DependencyObject parent, out TChild resultElement) where TChild : DependencyObject
+    public static bool TryFindVisualChildElement<TChild>(this DependencyObject parent, out TChild resultElement)
+      where TChild : DependencyObject
     {
       resultElement = null;
       for (var childIndex = 0; childIndex < VisualTreeHelper.GetChildrenCount(parent); childIndex++)
@@ -53,7 +57,10 @@ namespace BionicLibrary.Net.Extensions
       return false;
     }
 
-    public static bool TryFindVisualChildElementByName(this DependencyObject parent, string childElementName, out FrameworkElement resultElement)
+    public static bool TryFindVisualChildElementByName(
+      this DependencyObject parent,
+      string childElementName,
+      out FrameworkElement resultElement)
     {
       resultElement = null;
       for (var childIndex = 0; childIndex < VisualTreeHelper.GetChildrenCount(parent); childIndex++)
@@ -65,7 +72,9 @@ namespace BionicLibrary.Net.Extensions
           childElement = popup.Child;
         }
 
-        if (childElement is FrameworkElement uiElement && uiElement.Name.Equals(childElementName, StringComparison.OrdinalIgnoreCase))
+        if (childElement is FrameworkElement uiElement && uiElement.Name.Equals(
+              childElementName,
+              StringComparison.OrdinalIgnoreCase))
         {
           resultElement = uiElement;
           return true;
@@ -80,7 +89,8 @@ namespace BionicLibrary.Net.Extensions
       return false;
     }
 
-    public static IEnumerable<TChildren> FindVisualChildElements<TChildren>(this DependencyObject parent) where  TChildren : DependencyObject
+    public static IEnumerable<TChildren> FindVisualChildElements<TChildren>(this DependencyObject parent)
+      where TChildren : DependencyObject
     {
       for (var childIndex = 0; childIndex < VisualTreeHelper.GetChildrenCount(parent); childIndex++)
       {

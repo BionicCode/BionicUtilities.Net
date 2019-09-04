@@ -5,7 +5,7 @@ using System.Windows.Data;
 namespace BionicLibrary.Net.Converter
 {
   [ValueConversion(typeof(double), typeof(double))]
-  class DividerValueConverter : IValueConverter
+  public class DividerValueConverter : IValueConverter
   {
     #region Implementation of IValueConverter
 
@@ -20,7 +20,7 @@ namespace BionicLibrary.Net.Converter
 
       if (parameter != null)
       {
-        divisor = ((double)parameter).Equals(0) ? 1 : (double) parameter;
+        divisor = ((double) parameter).Equals(0) ? 1 : (double) parameter;
       }
 
       return (double) value / divisor;

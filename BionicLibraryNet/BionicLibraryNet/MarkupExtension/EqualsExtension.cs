@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Windows.Data;
+using System.Windows.Markup;
 
 namespace BionicLibrary.Net.MarkupExtension
 {
-    class EqualsExtension : System.Windows.Markup.MarkupExtension
+  [MarkupExtensionReturnType(typeof(bool))]
+  public class EqualsExtension : System.Windows.Markup.MarkupExtension
     {
       private readonly Type typeToEqual;
       private readonly object valueX;

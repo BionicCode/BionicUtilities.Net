@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Data;
@@ -7,7 +8,7 @@ using System.Windows.Data;
 namespace BionicLibrary.Net.Converter
 {
   /// <summary>
-  /// Converter to truncate file paths exceeding a specific length by replacing a number of characters with an ellipsis.
+  ///   Converter to truncate file paths exceeding a specific length by replacing a number of characters with an ellipsis.
   /// </summary>
   public class FilePathTruncateConverter : DependencyObject, IValueConverter
   {
@@ -25,14 +26,20 @@ namespace BionicLibrary.Net.Converter
 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-      if (value == null) return string.Empty;
+      if (value == null)
+      {
+        return string.Empty;
+      }
 
-      var path = value.ToString();
+      string path = value.ToString();
 
-      if (path.Contains("\\") == false) return path;
+      if (path.Contains("\\") == false)
+      {
+        return path;
+      }
 
-      var maxLength = parameter == null 
-        ? this.MaxLength 
+      int maxLength = parameter == null
+        ? this.MaxLength
         : System.Convert.ToInt32(parameter);
 
 
@@ -41,24 +48,26 @@ namespace BionicLibrary.Net.Converter
 
     private string InsertCharacterEllipsis(string path, int maxLength)
     {
-      var directory = System.IO.Path.GetDirectoryName(path) ?? string.Empty;
-      var fileName = System.IO.Path.GetFileName(path) ?? string.Empty;
-      string[] pathSegments = directory?.Split(new[] { @"\" }, StringSplitOptions.RemoveEmptyEntries);
+      string directory = Path.GetDirectoryName(path) ?? string.Empty;
+      string fileName = Path.GetFileName(path) ?? string.Empty;
+      string[] pathSegments = directory?.Split(new[] {@"\"}, StringSplitOptions.RemoveEmptyEntries);
       var pathBuilder = new StringBuilder();
       var pathSegmentIndex = 0;
 
       if (fileName.Length >= maxLength)
       {
-        var fileExtension = System.IO.Path.GetExtension(fileName);
+        string fileExtension = Path.GetExtension(fileName);
         pathBuilder.Append(pathSegments[0]);
         pathBuilder.Append(@"\...\");
         pathBuilder.Append(fileName.Substring(0, (int) Math.Floor(maxLength / 2.0)));
         pathBuilder.Append(" ...");
-        pathBuilder.Append(fileName.Substring(fileName.Length - fileExtension.Length - ((int) Math.Ceiling(maxLength / 2.0))));
+        pathBuilder.Append(
+          fileName.Substring(fileName.Length - fileExtension.Length - (int) Math.Ceiling(maxLength / 2.0)));
         return pathBuilder.ToString();
       }
 
-      while (pathSegmentIndex < pathSegments.Length && pathBuilder.Length + pathSegments[pathSegmentIndex].Length + 1 + fileName.Length < maxLength)
+      while (pathSegmentIndex < pathSegments.Length &&
+             pathBuilder.Length + pathSegments[pathSegmentIndex].Length + 1 + fileName.Length < maxLength)
       {
         pathBuilder.Append(pathSegments[pathSegmentIndex++] + @"\");
       }
@@ -72,9 +81,7 @@ namespace BionicLibrary.Net.Converter
       return pathBuilder.ToString();
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-      return Binding.DoNothing;
-    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) =>
+      throw new NotSupportedException();
   }
 }

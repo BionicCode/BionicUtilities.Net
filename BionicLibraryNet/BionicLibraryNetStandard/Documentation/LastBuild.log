@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2019.8.24.0" projectFile="D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\BionicLibraryDocumentation.shfbproj" started="04.09.2019 16:31:09">
+<buildStep step="Initializing">
+Finding tools...
+The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
+Locating components in the following folder(s):
+    D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation
+    C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins\
+    C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
+Using framework reflection data for &#39;.NET Framework 4.7.2&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Data\.NETFramework&#39;
+Using presentation style &#39;VS2013&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013&#39;
+Loading and initializing plug-ins...
+Lightweight Website Style Version 2019.8.24.0
+Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved
+Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
+-------------------------------
+Clearing any prior web/markdown output...
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\BionicLibrary.Net.csproj
+    Found project &#39;D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\BionicLibrary.Net.csproj&#39;
+
+Parsing project files
+    Found assembly &#39;D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Debug\BionicLibrary.Net.dll&#39;
+
+References to include:
+    None
+
+Copying XML comments files
+    D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Debug\BionicLibrary.Net.xml -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BionicLibrary.Net.xml
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, English (United States))...
+<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
+</plugIn>    Last step completed in 00:00:00,0159
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00,0050
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - GenerateRefInfo.proj]
+Build started 04.09.2019 16:31:11.
+Project &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
+PrepareForBuild:
+  Creating directory &quot;obj\Debug\&quot;.
+GenerateBindingRedirects:
+  No suggested binding redirects from ResolveAssemblyReferences.
+GenerateRefInfo:
+  MRefBuilder (v2019.8.24.0)
+  Copyright &#169; 2006-2019, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved.
+  No source code context base path specified.  Source context information is unavailable.
+  Loaded 1 assemblies for reflection and 1 dependency assemblies.
+  Wrote information on 6 namespaces, 16 types, and 95 members
+  Copying file from &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\reflection.org&quot; to &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\reflection.all&quot;.
+  XslTransform (v2019.8.24.0)
+  Copyright &#169; 2006-2019, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\AddXamlSyntaxData.xsl&#39;.
+Done Building Project &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\GenerateRefInfo.proj&quot; (default targets).
+    Last step completed in 00:00:01,0831
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - TransformManifest.proj]
+Build started 04.09.2019 16:31:12.
+Project &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
+TransformManifest:
+  XslTransform (v2019.8.24.0)
+  Copyright &#169; 2006-2019, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
+  Copying file from &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\reflection.xml&quot; to &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\reflection.nofilenames&quot;.
+  XslTransform (v2019.8.24.0)
+  Copyright &#169; 2006-2019, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\AddFilenames.xsl&#39;.
+  XslTransform (v2019.8.24.0)
+  Copyright &#169; 2006-2019, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
+Done Building Project &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\TransformManifest.proj&quot; (default targets).
+    Last step completed in 00:00:00,6980
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00,0180
+</buildStep>
+<buildStep step="GenerateInheritedDocumentation">
+Generating inherited documentation...
+[C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - GenerateInheritedDocs.proj]
+Sandcastle Help File Builder and Tools, version 2019.8.24.0
+Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Reflection information will be retrieved from &#39;reflection.xml&#39;
+Inherited documentation will be written to &#39;_InheritedDocs_.xml&#39;
+Indexing C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\*.xml
+Indexing D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BionicLibrary.Net.xml
+Indexed 158613 members in 128 file(s).  1 file(s) to scan for &lt;inheritdoc /&gt; tags.
+Merging inherited documentation...
+
+
+Documentation merged successfully
+    Last step completed in 00:00:01,4251
+</buildStep>
+<buildStep step="CopyConceptualContent">
+Copying conceptual content...
+Copying standard token shared content file...
+Checking for other token files...
+Checking for code snippets files...
+Copying images and creating the media map file...
+Generating conceptual topic files
+    Parsing topic file &#39;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Content\Welcome.aml&#39;
+    D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Content\Welcome.aml -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\ddueXml\eaeb49f0-653a-4833-8dad-6c9efafe6588.xml
+    Parsing topic file &#39;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Content\VersionHistory\VersionHistory.aml&#39;
+    D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Content\VersionHistory\VersionHistory.aml -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\ddueXml\22dedf27-3aa6-41f8-806a-94d9008cd8c2.xml
+    Parsing topic file &#39;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Content\VersionHistory\v1.0.0.0.aml&#39;
+    D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Content\VersionHistory\v1.0.0.0.aml -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\ddueXml\9e4451be-1ff5-4a86-abb6-7e3b4da69508.xml
+    Last step completed in 00:00:00,0609
+</buildStep>
+<buildStep step="CreateConceptualTopicConfigs">
+Creating conceptual topic configuration files...
+    Companion files
+    _ContentMetadata_.xml
+    Merging topic IDs into manifest.xml
+    Last step completed in 00:00:00,0120
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\icons\Help.png -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\Help.png
+    Last step completed in 00:00:00,0100
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00,0040
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file...
+[C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
+Build started 04.09.2019 16:31:15.
+Project &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
+GenerateIntermediateTOC:
+  XslTransform (v2019.8.24.0)
+  Copyright &#169; 2006-2019, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
+Done Building Project &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:00,3030
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    Last step completed in 00:00:00,2030
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\sandcastle.config
+  Updating reference topic configurations.
+  Updating conceptual topic configurations.
+    Removing unused ExampleComponent.
+    Last step completed in 00:00:00,0080
+</buildStep>
+<buildStep step="BuildTopics">
+Building help topics...
+[C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - BuildTopics.proj]
+Build started 04.09.2019 16:31:15.
+Project &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
+BuildTopics:
+  BuildAssembler (v2019.8.24.0)
+  Copyright &#169; 2006-2019, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved.
+  Loading configuration...
+  ResolveReferenceLinksComponent: The member ID URL cache &#39;C:\Users\MusicMonkey\AppData\Local\EWSoftware\Sandcastle Help File Builder\Cache\MemberIdUrl.cache&#39; does not exist yet.  All IDs will be looked up in this build which will slow it down.
+  Processing topics...
+BuildAssembler : warning : ShowMissingComponent: [N:BionicLibrary.Net.Collections.Generic] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:BionicLibrary.Net.Converter] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Converter.BooleanMultiValueConverter] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;values&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetTypes&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BooleanMultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Converter.BoollToStringConverter] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.BoollToStringConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.Converter.BoollToStringConverter.FalseValue] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicLibrary.Net.Converter.BoollToStringConverter.FalseValueProperty] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.Converter.BoollToStringConverter.NullValue] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicLibrary.Net.Converter.BoollToStringConverter.NullValueProperty] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.Converter.BoollToStringConverter.TrueValue] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicLibrary.Net.Converter.BoollToStringConverter.TrueValueProperty] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Converter.DividerValueConverter] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.DividerValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.FilePathTruncateConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.Converter.FilePathTruncateConverter.MaxLength] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicLibrary.Net.Converter.FilePathTruncateConverter.MaxLengthProperty] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Converter.InvertBooleanConverter] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Converter.InvertValueConverter] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.InvertValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Converter.IsGreaterThanValueConverter] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.Comparer] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.ComparerProperty] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.CompareValue] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.CompareValueProperty] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Converter.IsGreaterThanValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:BionicLibrary.Net.Extensions] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Extensions.HelperExtensions] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.FindVisualChildElements``1(System.Windows.DependencyObject)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.FindVisualChildElements``1(System.Windows.DependencyObject)] Missing &lt;typeparam name=&quot;TChildren&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.FindVisualChildElements``1(System.Windows.DependencyObject)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.FindVisualChildElements``1(System.Windows.DependencyObject)] Missing &lt;param name=&quot;parent&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;typeparam name=&quot;TChild&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;param name=&quot;parent&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;param name=&quot;resultElement&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElementByName(System.Windows.DependencyObject,System.String,System.Windows.FrameworkElement@)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElementByName(System.Windows.DependencyObject,System.String,System.Windows.FrameworkElement@)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElementByName(System.Windows.DependencyObject,System.String,System.Windows.FrameworkElement@)] Missing &lt;param name=&quot;parent&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElementByName(System.Windows.DependencyObject,System.String,System.Windows.FrameworkElement@)] Missing &lt;param name=&quot;childElementName&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualChildElementByName(System.Windows.DependencyObject,System.String,System.Windows.FrameworkElement@)] Missing &lt;param name=&quot;resultElement&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualParentElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualParentElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;typeparam name=&quot;TParent&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualParentElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualParentElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;param name=&quot;child&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Extensions.HelperExtensions.TryFindVisualParentElement``1(System.Windows.DependencyObject,``0@)] Missing &lt;param name=&quot;resultElement&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:BionicLibrary.Net.MarkupExtension] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.MarkupExtension.EqualsExtension] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.EqualsExtension.#ctor(System.Object,System.Object)] Missing &lt;param name=&quot;valueX&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.EqualsExtension.#ctor(System.Object,System.Object)] Missing &lt;param name=&quot;valueY&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.EqualsExtension.#ctor(System.Object,System.Type)] Missing &lt;param name=&quot;valueXToCompare&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.EqualsExtension.#ctor(System.Object,System.Type)] Missing &lt;param name=&quot;expectedType&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.EqualsExtension.ProvideValue(System.IServiceProvider)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.EqualsExtension.ProvideValue(System.IServiceProvider)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.EqualsExtension.ProvideValue(System.IServiceProvider)] Missing &lt;param name=&quot;serviceProvider&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.MarkupExtension.InvertExtension] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.InvertExtension.#ctor(System.Object)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.InvertExtension.ProvideValue(System.IServiceProvider)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.InvertExtension.ProvideValue(System.IServiceProvider)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.InvertExtension.ProvideValue(System.IServiceProvider)] Missing &lt;param name=&quot;serviceProvider&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.MarkupExtension.InvertExtension.Value] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.#ctor(System.Boolean)] Missing &lt;param name=&quot;booleanValue&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.#ctor(System.Double)] Missing &lt;param name=&quot;doubleValue&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.#ctor(System.Int32)] Missing &lt;param name=&quot;int32Value&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.#ctor(System.String)] Missing &lt;param name=&quot;stringValue&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.Boolean] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.Double] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.Int32] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.ProvideValue(System.IServiceProvider)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.ProvideValue(System.IServiceProvider)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.ProvideValue(System.IServiceProvider)] Missing &lt;param name=&quot;serviceProvider&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension.String] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.AsyncRelayCommand.#ctor(System.Func{System.Threading.Tasks.Task})] Missing &lt;param name=&quot;executeAsyncNoParam&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicLibrary.Net.Utility.AsyncRelayCommand.CanExecuteNoParam] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.AsyncRelayCommand.ExecuteAsync] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.AsyncRelayCommand.ExecuteAsync(System.Object)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicLibrary.Net.Utility.AsyncRelayCommand.ExecuteAsyncNoParam] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicLibrary.Net.Utility.AsyncRelayCommand.ExecuteNoParam] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Utility.IAsyncRelayCommand] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.IAsyncRelayCommand.CanExecute] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.IAsyncRelayCommand.ExecuteAsync] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.IAsyncRelayCommand.ExecuteAsync(System.Object)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:BionicLibrary.Net.Utility.Generic] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [N:BionicLibrary.Net.Utility.Generic] Unknown reference link target &#39;!:Execute()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [N:BionicLibrary.Net.Utility.Generic] Invalid reference link target &#39;!:Execute()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [N:BionicLibrary.Net.Utility.Generic] Unknown reference link target &#39;!:ExecuteAsync()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [N:BionicLibrary.Net.Utility.Generic] Invalid reference link target &#39;!:ExecuteAsync()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [N:BionicLibrary.Net.Utility.Generic] Unknown reference link target &#39;!:CanExecute()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [N:BionicLibrary.Net.Utility.Generic] Invalid reference link target &#39;!:CanExecute()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1] Missing &lt;typeparam name=&quot;TParam&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1] Unknown reference link target &#39;!:Execute()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1] Invalid reference link target &#39;!:Execute()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1] Unknown reference link target &#39;!:ExecuteAsync()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1] Invalid reference link target &#39;!:ExecuteAsync()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1] Unknown reference link target &#39;!:CanExecute()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1] Invalid reference link target &#39;!:CanExecute()&#39;. [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1.CanExecute(`0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1.CanExecute(`0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1.CanExecute(`0)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.Generic.AsyncRelayCommand`1.ExecuteAsync(`0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Utility.Generic.IAsyncRelayCommand`1] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicLibrary.Net.Utility.Generic.IAsyncRelayCommand`1] Missing &lt;typeparam name=&quot;TParam&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.Generic.IAsyncRelayCommand`1.CanExecute(`0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.Generic.IAsyncRelayCommand`1.CanExecute(`0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.Generic.IAsyncRelayCommand`1.CanExecute(`0)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicLibrary.Net.Utility.Generic.IAsyncRelayCommand`1.ExecuteAsync(`0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj]
+  Processed 169 topic(s)
+  186 warning(s)
+  CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
+  ResolveArtLinksComponent: Copying media files...
+  ResolveReferenceLinksComponent: 89 entries added to the member ID URL cache.  New cache size: 89 entries
+  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 9 of 15.
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 5 of 30.
+Done Building Project &quot;D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\BuildTopics.proj&quot; (default targets).
+    Last step completed in 00:00:34,9350
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+    Last step completed in 00:00:00,0030
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for HTML Help 1 and/or website...
+[C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - ExtractHtmlInfo.proj]
+Sandcastle Help File Builder and Tools, version 2019.8.24.0
+Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
+
+Processing website files in D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website
+Processed 169 HTML files
+Sorting keywords and generating See Also indices
+Saving website keyword index to D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\WebKI.xml
+Saving website table of contents to D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\WebTOC.xml
+    Last step completed in 00:00:00,3410
+</buildStep>
+<buildStep step="CopyStandardHelpContent">
+Copying standard help content...
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\AlertCaution.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\AlertNote.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\AlertSecurity.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\CFW.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\CodeExample.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\favicon.ico
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\privstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protoperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\protstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\puboperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\pubstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\SectionCollapsed.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\SectionExpanded.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\slMobile.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\static.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\xna.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\scripts\branding.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-cs-CZ.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-de-DE.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-en-US.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-es-ES.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-fr-FR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-Help1.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-HelpViewer.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-it-IT.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-ja-JP.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-ko-KR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-pl-PL.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-pt-BR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-ru-RU.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-tr-TR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-Website.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-zh-CN.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding-zh-TW.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\styles\branding.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\index.html -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\index.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\search.html -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\search.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.aspx -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\SearchHelp.aspx
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.inc.php -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\SearchHelp.inc.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.php -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\SearchHelp.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\Web.Config -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\Web.Config
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\html\GeneralError.htm -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\html\GeneralError.htm
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\html\PageNotFound.htm -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\html\PageNotFound.htm
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\Search.png -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\Search.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocClose.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\TocClose.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocCollapsed.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\TocCollapsed.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocExpanded.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\TocExpanded.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\icons\TocOpen.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\scripts\branding-Website.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\scripts\clipboard.min.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-3.3.1.min.js -&gt; D:\-Programming-\C#\Sandbox Repository\BionicLibraryDocumentation\BionicLibraryDocumentation\Help\Working\Output\Website\scripts\jquery-3.3.1.min.js
+    Last step completed in 00:00:00,6020
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContents">
+Generating website table of contents file...
+    Last step completed in 00:00:00,0010
+</buildStep>
+<buildStep step="GenerateFullTextIndex">
+Generating full-text index for the website...
+
+<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
+Adding lightweight search and TOC elements to each topic...
+</plugIn>    Last step completed in 00:00:00,2640
+</buildStep>
+<buildStep step="CopyingWebsiteFiles">
+Copying website files to output folder...
+
+Copied 340 files for the website content
+    Last step completed in 00:00:00,3560
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00,1460
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 04.09.2019 16:31:52.  Total time: 00:00:42,3170
+
+</buildStep>
+</shfbBuild>

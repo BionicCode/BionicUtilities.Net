@@ -14,10 +14,14 @@
     <tags>BaseViewModel, RelayCommand, WPF, NET Standard, VisualTreeHelper</tags>
     <repository url="https://github.com/BionicCode/BionicLibraryNetStandard" />
     <dependencies>
-      <group targetFramework=".NETStandard2.0" />
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+        <dependency id="System.ValueTuple" version="4.5.0" exclude="Build,Analyzers" />
+      </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNetStandard\bin\Debug\netstandard2.0\BionicLibrary.NetStandard.dll" target="lib\netstandard2.0\BionicLibrary.NetStandard.dll" />
+    <file src="D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNetStandard\bin\Debug\netstandard1.3\BionicLibrary.NetStandard.dll" target="lib\netstandard1.3\BionicLibrary.NetStandard.dll" />
+    <file src="D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNetStandard\bin\Debug\netstandard1.3\BionicLibrary.NetStandard.xml" target="lib\netstandard1.3\BionicLibrary.NetStandard.xml" />
   </files>
 </package>

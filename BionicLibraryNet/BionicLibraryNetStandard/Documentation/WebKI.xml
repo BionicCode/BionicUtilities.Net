@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AsyncRelayCommand class">
+    <HelpKINode Title="AsyncRelayCommand Class" Url="html/c7e4d0aa-8697-ccb0-1dea-1350f7b9c9e9.htm" />
+    <HelpKINode Title="constructor" Url="html/fb6f68c8-3220-7287-fa5a-f8507185e2a3.htm" />
+    <HelpKINode Title="events" Url="html/4bf3bc0d-00bf-f328-c162-023e4bd8056f.htm" />
+    <HelpKINode Title="fields" Url="html/0f0acc2e-bfe6-ac54-97c6-cfd81edf408f.htm" />
+    <HelpKINode Title="methods" Url="html/724b2c11-1c50-580c-d7d1-8ea745e2951b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AsyncRelayCommand(Of TParam) class">
+    <HelpKINode Title="AsyncRelayCommand(TParam) Class" Url="html/f0d9e5b6-e61e-bb2f-f4e1-0482d38bffac.htm" />
+    <HelpKINode Title="constructor" Url="html/1cb51f22-c973-202b-2987-ba0d792ca14e.htm" />
+    <HelpKINode Title="events" Url="html/b9650b45-e558-4a33-12a1-dbc685b0681b.htm" />
+    <HelpKINode Title="fields" Url="html/cf79ab68-7276-ec4a-df17-2bcc14f813d6.htm" />
+    <HelpKINode Title="methods" Url="html/5c1bde48-444c-18df-b170-b10b66f1bcd7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AsyncRelayCommand(Of TParam).AsyncRelayCommand constructor" Url="html/1cb51f22-c973-202b-2987-ba0d792ca14e.htm" />
+  <HelpKINode Title="AsyncRelayCommand(Of TParam).CanExecute method" Url="html/4632e91a-8b8b-0d34-b810-f047d5d8cd91.htm" />
+  <HelpKINode Title="AsyncRelayCommand(Of TParam).Execute method" Url="html/a4257a32-e47d-ca2e-0951-9e29949ee19d.htm" />
+  <HelpKINode Title="AsyncRelayCommand(Of TParam).ExecuteAsync method" Url="html/5cdad23a-b228-0a36-b3bd-711b0f1c0a78.htm" />
+  <HelpKINode Title="AsyncRelayCommand.AsyncRelayCommand constructor" Url="html/fb6f68c8-3220-7287-fa5a-f8507185e2a3.htm" />
+  <HelpKINode Title="AsyncRelayCommand.CanExecute method" Url="html/ca8f85f5-dfb3-5329-fb7b-2e838bcfbb86.htm" />
+  <HelpKINode Title="AsyncRelayCommand.CanExecuteChanged event" Url="html/cd3d4a06-4dee-1927-47c3-99c1edae33d5.htm" />
+  <HelpKINode Title="AsyncRelayCommand.CanExecuteNoParam field" Url="html/e119d0de-f27c-a582-0a13-37bafc9ce94d.htm" />
+  <HelpKINode Title="AsyncRelayCommand.Execute method" Url="html/cdf7bfca-9fd2-9f61-4f52-82f24c515513.htm" />
+  <HelpKINode Title="AsyncRelayCommand.ExecuteAsync method" Url="html/2d875865-5ea9-66c7-f156-1cdd96a1ccf9.htm" />
+  <HelpKINode Title="AsyncRelayCommand.ExecuteAsyncNoParam field" Url="html/5ac49b7e-6643-dc56-0177-bc70e65e3e8c.htm" />
+  <HelpKINode Title="AsyncRelayCommand.ExecuteNoParam field" Url="html/7b9ff166-39c6-feb4-2231-28e4d250884e.htm" />
+  <HelpKINode Title="AsyncRelayCommand&lt;TParam&gt; class">
+    <HelpKINode Title="AsyncRelayCommand(TParam) Class" Url="html/f0d9e5b6-e61e-bb2f-f4e1-0482d38bffac.htm" />
+    <HelpKINode Title="constructor" Url="html/1cb51f22-c973-202b-2987-ba0d792ca14e.htm" />
+    <HelpKINode Title="events" Url="html/b9650b45-e558-4a33-12a1-dbc685b0681b.htm" />
+    <HelpKINode Title="fields" Url="html/cf79ab68-7276-ec4a-df17-2bcc14f813d6.htm" />
+    <HelpKINode Title="methods" Url="html/5c1bde48-444c-18df-b170-b10b66f1bcd7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AsyncRelayCommand&lt;TParam&gt;.AsyncRelayCommand constructor" Url="html/1cb51f22-c973-202b-2987-ba0d792ca14e.htm" />
+  <HelpKINode Title="AsyncRelayCommand&lt;TParam&gt;.CanExecute method" Url="html/4632e91a-8b8b-0d34-b810-f047d5d8cd91.htm" />
+  <HelpKINode Title="AsyncRelayCommand&lt;TParam&gt;.Execute method" Url="html/a4257a32-e47d-ca2e-0951-9e29949ee19d.htm" />
+  <HelpKINode Title="AsyncRelayCommand&lt;TParam&gt;.ExecuteAsync method" Url="html/5cdad23a-b228-0a36-b3bd-711b0f1c0a78.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Collections.Generic namespace" Url="html/5f6f9821-0622-b302-c287-2a9db2a9ecb3.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Collections.Generic.ObservablePropertyChangedCollection(Of TItem) class" Url="html/dcefbcf5-8ec4-43a5-48f9-67c5aa7012bf.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Collections.Generic.ObservablePropertyChangedCollection&lt;TItem&gt; class" Url="html/dcefbcf5-8ec4-43a5-48f9-67c5aa7012bf.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Converter namespace" Url="html/9aa5d254-a08b-71f0-98a2-08deee207662.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Converter.BooleanMultiValueConverter class" Url="html/b3f2c309-a4cf-8b57-8983-9583d07d90b6.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Converter.BoollToStringConverter class" Url="html/ab568ffe-f947-333a-df7a-b0ad3fecfcd8.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Converter.DividerValueConverter class" Url="html/85190487-c83e-84f9-d68d-762765702d21.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Converter.FilePathTruncateConverter class" Url="html/10871029-36ae-0bf9-388c-8a43523ac5a4.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Converter.InvertBooleanConverter class" Url="html/1123268a-15ad-19e5-d8d5-070867d9a2d4.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Converter.InvertValueConverter class" Url="html/0bea2d04-3065-16e6-a106-79aa8ce975fe.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Converter.IsGreaterThanValueConverter class" Url="html/478dee32-3486-ecdc-cd70-919bff041d89.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Extensions namespace" Url="html/543b564e-b5dc-55bc-043d-9d4511294a96.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Extensions.HelperExtensions class" Url="html/d09db6de-d66c-3056-0ff0-3e97cece191e.htm" />
+  <HelpKINode Title="BionicLibrary.Net.MarkupExtension namespace" Url="html/3ec7e64d-ce78-eec6-0396-e38ddc869817.htm" />
+  <HelpKINode Title="BionicLibrary.Net.MarkupExtension.EqualsExtension class" Url="html/2d1b4432-155f-b535-c016-04fbcfbda241.htm" />
+  <HelpKINode Title="BionicLibrary.Net.MarkupExtension.InvertExtension class" Url="html/2814499f-69d9-643b-6741-20ab14bec323.htm" />
+  <HelpKINode Title="BionicLibrary.Net.MarkupExtension.PrimitiveTypeExtension class" Url="html/79a7f85b-7a6e-e845-04f2-1e88501e3098.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Utility namespace" Url="html/70977c4c-73ae-d28f-5a86-38187089e35f.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Utility.AsyncRelayCommand class" Url="html/c7e4d0aa-8697-ccb0-1dea-1350f7b9c9e9.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Utility.Generic namespace" Url="html/a0713cf2-b0bf-223d-d170-f1e79b6f8954.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Utility.Generic.AsyncRelayCommand(Of TParam) class" Url="html/f0d9e5b6-e61e-bb2f-f4e1-0482d38bffac.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Utility.Generic.AsyncRelayCommand&lt;TParam&gt; class" Url="html/f0d9e5b6-e61e-bb2f-f4e1-0482d38bffac.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Utility.Generic.IAsyncRelayCommand(Of TParam) interface" Url="html/e74bb19e-3eb4-d89d-6d6c-8d53b78d194c.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Utility.Generic.IAsyncRelayCommand&lt;TParam&gt; interface" Url="html/e74bb19e-3eb4-d89d-6d6c-8d53b78d194c.htm" />
+  <HelpKINode Title="BionicLibrary.Net.Utility.IAsyncRelayCommand interface" Url="html/eeca2a49-be84-4f4b-64d7-d55a470ecbb1.htm" />
+  <HelpKINode Title="Boolean property" Url="html/42cd16a1-9b14-af8a-f45d-abe365805bdb.htm" />
+  <HelpKINode Title="BooleanMultiValueConverter class">
+    <HelpKINode Title="BooleanMultiValueConverter Class" Url="html/b3f2c309-a4cf-8b57-8983-9583d07d90b6.htm" />
+    <HelpKINode Title="constructor" Url="html/b168b528-14ae-e964-8f21-c736c70327b2.htm" />
+    <HelpKINode Title="methods" Url="html/84730873-d3c0-4c13-013f-edd1b9f5d22c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BooleanMultiValueConverter.BooleanMultiValueConverter constructor" Url="html/b168b528-14ae-e964-8f21-c736c70327b2.htm" />
+  <HelpKINode Title="BooleanMultiValueConverter.Convert method" Url="html/6e1b4fc6-0ffe-10fa-18b8-6aec52cbd6c8.htm" />
+  <HelpKINode Title="BooleanMultiValueConverter.ConvertBack method" Url="html/e92d84c8-e3eb-e654-c597-857e504c01e4.htm" />
+  <HelpKINode Title="BoollToStringConverter class">
+    <HelpKINode Title="BoollToStringConverter Class" Url="html/ab568ffe-f947-333a-df7a-b0ad3fecfcd8.htm" />
+    <HelpKINode Title="constructor" Url="html/276b0d30-f890-dac7-7e9c-01c02ac4ab00.htm" />
+    <HelpKINode Title="fields" Url="html/1bee6e37-8430-b181-5b05-f0c14f5a6ff1.htm" />
+    <HelpKINode Title="methods" Url="html/e733936b-b26d-72ce-68b8-22e16ff23413.htm" />
+    <HelpKINode Title="properties" Url="html/7c202109-c946-3dcd-a7a1-8124ab7768eb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BoollToStringConverter.BoollToStringConverter constructor" Url="html/276b0d30-f890-dac7-7e9c-01c02ac4ab00.htm" />
+  <HelpKINode Title="BoollToStringConverter.Convert method" Url="html/f4fd88d1-34a2-7264-a5ca-e9e2b1fafd76.htm" />
+  <HelpKINode Title="BoollToStringConverter.ConvertBack method" Url="html/202cf609-1ce5-937d-9885-ec4787de08c2.htm" />
+  <HelpKINode Title="BoollToStringConverter.FalseValue property" Url="html/06d43282-e9b4-a678-4d65-6b46c42f4365.htm" />
+  <HelpKINode Title="BoollToStringConverter.FalseValueProperty field" Url="html/7be1bc4f-5d99-0b5b-edf8-cabe5beb9d17.htm" />
+  <HelpKINode Title="BoollToStringConverter.NullValue property" Url="html/73da0fbe-37aa-e187-4d68-784d29bf000d.htm" />
+  <HelpKINode Title="BoollToStringConverter.NullValueProperty field" Url="html/607e0ba6-5c7d-a2cf-5520-e42fadd3c3a3.htm" />
+  <HelpKINode Title="BoollToStringConverter.TrueValue property" Url="html/eb0f0230-2d9c-e7bd-a047-22f964a52079.htm" />
+  <HelpKINode Title="BoollToStringConverter.TrueValueProperty field" Url="html/bcc2579b-55ea-8c04-924f-3dfd643f8914.htm" />
+  <HelpKINode Title="CanExecute method">
+    <HelpKINode Title="AsyncRelayCommand(TParam).CanExecute Method " Url="html/4632e91a-8b8b-0d34-b810-f047d5d8cd91.htm" />
+    <HelpKINode Title="AsyncRelayCommand.CanExecute Method " Url="html/ca8f85f5-dfb3-5329-fb7b-2e838bcfbb86.htm" />
+    <HelpKINode Title="IAsyncRelayCommand(TParam).CanExecute Method " Url="html/7109e20d-5465-66b7-12f5-062e32ee6002.htm" />
+    <HelpKINode Title="IAsyncRelayCommand.CanExecute Method " Url="html/60de7b55-2c5e-3203-1ceb-e7f42a1bccff.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CanExecuteChanged event" Url="html/cd3d4a06-4dee-1927-47c3-99c1edae33d5.htm" />
+  <HelpKINode Title="CanExecuteNoParam field" Url="html/e119d0de-f27c-a582-0a13-37bafc9ce94d.htm" />
+  <HelpKINode Title="ClearItems method" Url="html/5ed0af6d-ced9-b8ad-1577-fc9a9a8ed5b6.htm" />
+  <HelpKINode Title="Comparer property" Url="html/4d70c86c-9505-372b-121c-b839dee07fc6.htm" />
+  <HelpKINode Title="ComparerProperty field" Url="html/6fcfdc94-ae1e-5627-56cb-9419365938ee.htm" />
+  <HelpKINode Title="CompareValue property" Url="html/cc53005f-2467-d554-d40d-f497472c8769.htm" />
+  <HelpKINode Title="CompareValueProperty field" Url="html/0a101437-5935-4f10-61c4-34c816a86d84.htm" />
+  <HelpKINode Title="Convert method">
+    <HelpKINode Title="BooleanMultiValueConverter.Convert Method " Url="html/6e1b4fc6-0ffe-10fa-18b8-6aec52cbd6c8.htm" />
+    <HelpKINode Title="BoollToStringConverter.Convert Method " Url="html/f4fd88d1-34a2-7264-a5ca-e9e2b1fafd76.htm" />
+    <HelpKINode Title="DividerValueConverter.Convert Method " Url="html/caf90391-f919-a3c1-ff40-7645197bbe06.htm" />
+    <HelpKINode Title="FilePathTruncateConverter.Convert Method " Url="html/74d30be3-f341-c4ee-3567-d2dd4884c6c9.htm" />
+    <HelpKINode Title="InvertBooleanConverter.Convert Method " Url="html/824ea1c9-7496-cd83-3b11-e83f33245f84.htm" />
+    <HelpKINode Title="InvertValueConverter.Convert Method " Url="html/30a1e045-7e1f-3ff6-453d-75f6aae25ec4.htm" />
+    <HelpKINode Title="IsGreaterThanValueConverter.Convert Method " Url="html/8b9f9d6b-a630-c663-fd17-e3ec4f280dd5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConvertBack method">
+    <HelpKINode Title="BooleanMultiValueConverter.ConvertBack Method " Url="html/e92d84c8-e3eb-e654-c597-857e504c01e4.htm" />
+    <HelpKINode Title="BoollToStringConverter.ConvertBack Method " Url="html/202cf609-1ce5-937d-9885-ec4787de08c2.htm" />
+    <HelpKINode Title="DividerValueConverter.ConvertBack Method " Url="html/d0cbe456-3bec-a378-59d8-fcb259e6b58e.htm" />
+    <HelpKINode Title="FilePathTruncateConverter.ConvertBack Method " Url="html/09c35920-53c8-b2ad-1718-fe84ca8686fc.htm" />
+    <HelpKINode Title="InvertBooleanConverter.ConvertBack Method " Url="html/558f9906-454a-790b-76de-92f95c99a123.htm" />
+    <HelpKINode Title="InvertValueConverter.ConvertBack Method " Url="html/b4994e9f-a199-052c-b53b-54b365db8507.htm" />
+    <HelpKINode Title="IsGreaterThanValueConverter.ConvertBack Method " Url="html/3e172317-777c-5efc-629e-fe61503f51a5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DividerValueConverter class">
+    <HelpKINode Title="DividerValueConverter Class" Url="html/85190487-c83e-84f9-d68d-762765702d21.htm" />
+    <HelpKINode Title="constructor" Url="html/93551712-ecc4-dd49-e3b1-ccb4706cf255.htm" />
+    <HelpKINode Title="methods" Url="html/2d3b5fc3-7533-98f2-4dc4-698b103cd418.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DividerValueConverter.Convert method" Url="html/caf90391-f919-a3c1-ff40-7645197bbe06.htm" />
+  <HelpKINode Title="DividerValueConverter.ConvertBack method" Url="html/d0cbe456-3bec-a378-59d8-fcb259e6b58e.htm" />
+  <HelpKINode Title="DividerValueConverter.DividerValueConverter constructor" Url="html/93551712-ecc4-dd49-e3b1-ccb4706cf255.htm" />
+  <HelpKINode Title="Double property" Url="html/e785025e-a3f6-a1c7-d786-bf58c8801507.htm" />
+  <HelpKINode Title="EqualsExtension class">
+    <HelpKINode Title="EqualsExtension Class" Url="html/2d1b4432-155f-b535-c016-04fbcfbda241.htm" />
+    <HelpKINode Title="constructor" Url="html/bdb64046-829a-698b-b50e-b56ba7909a1b.htm" />
+    <HelpKINode Title="methods" Url="html/95626880-9dc4-6247-bd80-5178f8d0bea9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EqualsExtension.EqualsExtension constructor" Url="html/bdb64046-829a-698b-b50e-b56ba7909a1b.htm" />
+  <HelpKINode Title="EqualsExtension.ProvideValue method" Url="html/0b41a503-b692-fac7-958c-1ceff8f1728c.htm" />
+  <HelpKINode Title="Execute method">
+    <HelpKINode Title="AsyncRelayCommand(TParam).Execute Method " Url="html/a4257a32-e47d-ca2e-0951-9e29949ee19d.htm" />
+    <HelpKINode Title="AsyncRelayCommand.Execute Method " Url="html/cdf7bfca-9fd2-9f61-4f52-82f24c515513.htm" />
+    <HelpKINode Title="IAsyncRelayCommand(TParam).Execute Method " Url="html/90c201f0-2e3b-b519-ea82-ac4dcd6e5bff.htm" />
+    <HelpKINode Title="IAsyncRelayCommand.Execute Method " Url="html/13d689f7-3b7a-990b-1ee4-ca660527d75f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExecuteAsync method">
+    <HelpKINode Title="AsyncRelayCommand(TParam).ExecuteAsync Method " Url="html/5cdad23a-b228-0a36-b3bd-711b0f1c0a78.htm" />
+    <HelpKINode Title="AsyncRelayCommand.ExecuteAsync Method " Url="html/2d875865-5ea9-66c7-f156-1cdd96a1ccf9.htm" />
+    <HelpKINode Title="IAsyncRelayCommand(TParam).ExecuteAsync Method " Url="html/0daa4acd-7b58-7350-ba95-b1a71cf0cf05.htm" />
+    <HelpKINode Title="IAsyncRelayCommand.ExecuteAsync Method " Url="html/900db5c7-3a75-9a30-c1f8-838ab45b0788.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExecuteAsyncNoParam field" Url="html/5ac49b7e-6643-dc56-0177-bc70e65e3e8c.htm" />
+  <HelpKINode Title="ExecuteNoParam field" Url="html/7b9ff166-39c6-feb4-2231-28e4d250884e.htm" />
+  <HelpKINode Title="FalseValue property" Url="html/06d43282-e9b4-a678-4d65-6b46c42f4365.htm" />
+  <HelpKINode Title="FalseValueProperty field" Url="html/7be1bc4f-5d99-0b5b-edf8-cabe5beb9d17.htm" />
+  <HelpKINode Title="FilePathTruncateConverter class">
+    <HelpKINode Title="FilePathTruncateConverter Class" Url="html/10871029-36ae-0bf9-388c-8a43523ac5a4.htm" />
+    <HelpKINode Title="constructor" Url="html/ed782c74-4465-c170-c6b3-794f4ee00a17.htm" />
+    <HelpKINode Title="fields" Url="html/137194e4-be28-d2e5-b5b6-bbcb63f091d8.htm" />
+    <HelpKINode Title="methods" Url="html/2a28157a-78cb-c43f-de7f-640fdaf085f8.htm" />
+    <HelpKINode Title="properties" Url="html/a81f57c0-98f7-9c11-ead3-348f19c79d64.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FilePathTruncateConverter.Convert method" Url="html/74d30be3-f341-c4ee-3567-d2dd4884c6c9.htm" />
+  <HelpKINode Title="FilePathTruncateConverter.ConvertBack method" Url="html/09c35920-53c8-b2ad-1718-fe84ca8686fc.htm" />
+  <HelpKINode Title="FilePathTruncateConverter.FilePathTruncateConverter constructor" Url="html/ed782c74-4465-c170-c6b3-794f4ee00a17.htm" />
+  <HelpKINode Title="FilePathTruncateConverter.MaxLength property" Url="html/dbc0b05a-edad-4770-4a68-1ab8f54dc3ef.htm" />
+  <HelpKINode Title="FilePathTruncateConverter.MaxLengthProperty field" Url="html/eaecb93d-c570-260f-5dde-502774baf69c.htm" />
+  <HelpKINode Title="FindVisualChildElements(Of TChildren) method" Url="html/1fb10484-f87c-41db-c7fd-f55d3305dcc1.htm" />
+  <HelpKINode Title="FindVisualChildElements&lt;TChildren&gt; method" Url="html/1fb10484-f87c-41db-c7fd-f55d3305dcc1.htm" />
+  <HelpKINode Title="HelperExtensions class">
+    <HelpKINode Title="HelperExtensions Class" Url="html/d09db6de-d66c-3056-0ff0-3e97cece191e.htm" />
+    <HelpKINode Title="methods" Url="html/89eb1098-7b12-0c92-e2d3-81a22b80434b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HelperExtensions.FindVisualChildElements(Of TChildren) method" Url="html/1fb10484-f87c-41db-c7fd-f55d3305dcc1.htm" />
+  <HelpKINode Title="HelperExtensions.FindVisualChildElements&lt;TChildren&gt; method" Url="html/1fb10484-f87c-41db-c7fd-f55d3305dcc1.htm" />
+  <HelpKINode Title="HelperExtensions.TryFindVisualChildElement(Of TChild) method" Url="html/03d4febd-cb48-7f24-27bd-ece95f4fedf4.htm" />
+  <HelpKINode Title="HelperExtensions.TryFindVisualChildElement&lt;TChild&gt; method" Url="html/03d4febd-cb48-7f24-27bd-ece95f4fedf4.htm" />
+  <HelpKINode Title="HelperExtensions.TryFindVisualChildElementByName method" Url="html/4e7bd529-3812-4a30-6e67-d110fdbe338d.htm" />
+  <HelpKINode Title="HelperExtensions.TryFindVisualParentElement(Of TParent) method" Url="html/1628a092-9f06-5a97-2be1-ff4d4df03222.htm" />
+  <HelpKINode Title="HelperExtensions.TryFindVisualParentElement&lt;TParent&gt; method" Url="html/1628a092-9f06-5a97-2be1-ff4d4df03222.htm" />
+  <HelpKINode Title="IAsyncRelayCommand interface">
+    <HelpKINode Title="IAsyncRelayCommand Interface" Url="html/eeca2a49-be84-4f4b-64d7-d55a470ecbb1.htm" />
+    <HelpKINode Title="events" Url="html/32860d90-1e27-424a-2c5b-f12d0af68161.htm" />
+    <HelpKINode Title="methods" Url="html/bfd1acc4-a9fb-32f9-7776-f852da5457be.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAsyncRelayCommand(Of TParam) interface">
+    <HelpKINode Title="IAsyncRelayCommand(TParam) Interface" Url="html/e74bb19e-3eb4-d89d-6d6c-8d53b78d194c.htm" />
+    <HelpKINode Title="events" Url="html/cb1b1340-6bb2-e604-3fd5-211bad6c81ec.htm" />
+    <HelpKINode Title="methods" Url="html/c69ac6ec-8b52-e119-4693-d486d26217ea.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAsyncRelayCommand(Of TParam).CanExecute method" Url="html/7109e20d-5465-66b7-12f5-062e32ee6002.htm" />
+  <HelpKINode Title="IAsyncRelayCommand(Of TParam).Execute method" Url="html/90c201f0-2e3b-b519-ea82-ac4dcd6e5bff.htm" />
+  <HelpKINode Title="IAsyncRelayCommand(Of TParam).ExecuteAsync method" Url="html/0daa4acd-7b58-7350-ba95-b1a71cf0cf05.htm" />
+  <HelpKINode Title="IAsyncRelayCommand.CanExecute method" Url="html/60de7b55-2c5e-3203-1ceb-e7f42a1bccff.htm" />
+  <HelpKINode Title="IAsyncRelayCommand.Execute method" Url="html/13d689f7-3b7a-990b-1ee4-ca660527d75f.htm" />
+  <HelpKINode Title="IAsyncRelayCommand.ExecuteAsync method" Url="html/900db5c7-3a75-9a30-c1f8-838ab45b0788.htm" />
+  <HelpKINode Title="IAsyncRelayCommand&lt;TParam&gt; interface">
+    <HelpKINode Title="IAsyncRelayCommand(TParam) Interface" Url="html/e74bb19e-3eb4-d89d-6d6c-8d53b78d194c.htm" />
+    <HelpKINode Title="events" Url="html/cb1b1340-6bb2-e604-3fd5-211bad6c81ec.htm" />
+    <HelpKINode Title="methods" Url="html/c69ac6ec-8b52-e119-4693-d486d26217ea.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAsyncRelayCommand&lt;TParam&gt;.CanExecute method" Url="html/7109e20d-5465-66b7-12f5-062e32ee6002.htm" />
+  <HelpKINode Title="IAsyncRelayCommand&lt;TParam&gt;.Execute method" Url="html/90c201f0-2e3b-b519-ea82-ac4dcd6e5bff.htm" />
+  <HelpKINode Title="IAsyncRelayCommand&lt;TParam&gt;.ExecuteAsync method" Url="html/0daa4acd-7b58-7350-ba95-b1a71cf0cf05.htm" />
+  <HelpKINode Title="InsertItem method" Url="html/ab33ccc7-7522-ad9b-8b01-20b93714b077.htm" />
+  <HelpKINode Title="Int32 property" Url="html/745dd568-c700-48c8-92c3-f5fcba40cc3c.htm" />
+  <HelpKINode Title="InvertBooleanConverter class">
+    <HelpKINode Title="InvertBooleanConverter Class" Url="html/1123268a-15ad-19e5-d8d5-070867d9a2d4.htm" />
+    <HelpKINode Title="constructor" Url="html/fa8cfd4a-6e57-0dd1-398c-5b8293917f67.htm" />
+    <HelpKINode Title="methods" Url="html/34fdd851-1ef8-c9a3-854f-9cdab6c2fda0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvertBooleanConverter.Convert method" Url="html/824ea1c9-7496-cd83-3b11-e83f33245f84.htm" />
+  <HelpKINode Title="InvertBooleanConverter.ConvertBack method" Url="html/558f9906-454a-790b-76de-92f95c99a123.htm" />
+  <HelpKINode Title="InvertBooleanConverter.InvertBooleanConverter constructor" Url="html/fa8cfd4a-6e57-0dd1-398c-5b8293917f67.htm" />
+  <HelpKINode Title="InvertExtension class">
+    <HelpKINode Title="InvertExtension Class" Url="html/2814499f-69d9-643b-6741-20ab14bec323.htm" />
+    <HelpKINode Title="constructor" Url="html/aa6cb6f0-dca8-e691-c083-ede271c570be.htm" />
+    <HelpKINode Title="methods" Url="html/be66732e-e52a-9332-8f65-1f60d53f7edc.htm" />
+    <HelpKINode Title="properties" Url="html/b4f4598f-9a94-edec-079a-ec8914e52956.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvertExtension.InvertExtension constructor" Url="html/aa6cb6f0-dca8-e691-c083-ede271c570be.htm" />
+  <HelpKINode Title="InvertExtension.ProvideValue method" Url="html/a5d46ca1-9a15-949e-7307-13ba65da1387.htm" />
+  <HelpKINode Title="InvertExtension.Value property" Url="html/53381a62-d0db-b4d1-5db5-f7f3a1986fb4.htm" />
+  <HelpKINode Title="InvertValueConverter class">
+    <HelpKINode Title="InvertValueConverter Class" Url="html/0bea2d04-3065-16e6-a106-79aa8ce975fe.htm" />
+    <HelpKINode Title="constructor" Url="html/f05aa2bf-26d7-4adf-8fbb-7abc31a9328a.htm" />
+    <HelpKINode Title="methods" Url="html/ca6c79de-6766-7b34-efab-1504186c593d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvertValueConverter.Convert method" Url="html/30a1e045-7e1f-3ff6-453d-75f6aae25ec4.htm" />
+  <HelpKINode Title="InvertValueConverter.ConvertBack method" Url="html/b4994e9f-a199-052c-b53b-54b365db8507.htm" />
+  <HelpKINode Title="InvertValueConverter.InvertValueConverter constructor" Url="html/f05aa2bf-26d7-4adf-8fbb-7abc31a9328a.htm" />
+  <HelpKINode Title="IsGreaterThanValueConverter class">
+    <HelpKINode Title="IsGreaterThanValueConverter Class" Url="html/478dee32-3486-ecdc-cd70-919bff041d89.htm" />
+    <HelpKINode Title="constructor" Url="html/0047115d-e62b-bc13-37ce-ea8f24edb780.htm" />
+    <HelpKINode Title="fields" Url="html/69aea684-02ce-cce3-b19d-e4aafb53b398.htm" />
+    <HelpKINode Title="methods" Url="html/a00422fa-95a9-e463-27b8-d5308207de94.htm" />
+    <HelpKINode Title="properties" Url="html/566161ab-48c4-d613-ad69-bfb4d8d969aa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsGreaterThanValueConverter.Comparer property" Url="html/4d70c86c-9505-372b-121c-b839dee07fc6.htm" />
+  <HelpKINode Title="IsGreaterThanValueConverter.ComparerProperty field" Url="html/6fcfdc94-ae1e-5627-56cb-9419365938ee.htm" />
+  <HelpKINode Title="IsGreaterThanValueConverter.CompareValue property" Url="html/cc53005f-2467-d554-d40d-f497472c8769.htm" />
+  <HelpKINode Title="IsGreaterThanValueConverter.CompareValueProperty field" Url="html/0a101437-5935-4f10-61c4-34c816a86d84.htm" />
+  <HelpKINode Title="IsGreaterThanValueConverter.Convert method" Url="html/8b9f9d6b-a630-c663-fd17-e3ec4f280dd5.htm" />
+  <HelpKINode Title="IsGreaterThanValueConverter.ConvertBack method" Url="html/3e172317-777c-5efc-629e-fe61503f51a5.htm" />
+  <HelpKINode Title="IsGreaterThanValueConverter.IsGreaterThanValueConverter constructor" Url="html/0047115d-e62b-bc13-37ce-ea8f24edb780.htm" />
+  <HelpKINode Title="MaxLength property" Url="html/dbc0b05a-edad-4770-4a68-1ab8f54dc3ef.htm" />
+  <HelpKINode Title="MaxLengthProperty field" Url="html/eaecb93d-c570-260f-5dde-502774baf69c.htm" />
+  <HelpKINode Title="NullValue property" Url="html/73da0fbe-37aa-e187-4d68-784d29bf000d.htm" />
+  <HelpKINode Title="NullValueProperty field" Url="html/607e0ba6-5c7d-a2cf-5520-e42fadd3c3a3.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection(Of TItem) class">
+    <HelpKINode Title="ObservablePropertyChangedCollection(TItem) Class" Url="html/dcefbcf5-8ec4-43a5-48f9-67c5aa7012bf.htm" />
+    <HelpKINode Title="constructor" Url="html/59940f07-156e-e246-2103-9dac22b3e373.htm" />
+    <HelpKINode Title="events" Url="html/8425a16c-b57b-64cf-9176-46d51e442f41.htm" />
+    <HelpKINode Title="methods" Url="html/e8bc180f-ed84-01bb-8e27-6827676a74e7.htm" />
+    <HelpKINode Title="properties" Url="html/2e182be7-e7c8-af1c-cfb3-bfa37cc86240.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ObservablePropertyChangedCollection(Of TItem).ClearItems method" Url="html/5ed0af6d-ced9-b8ad-1577-fc9a9a8ed5b6.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection(Of TItem).InsertItem method" Url="html/ab33ccc7-7522-ad9b-8b01-20b93714b077.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection(Of TItem).ObservablePropertyChangedCollection constructor" Url="html/59940f07-156e-e246-2103-9dac22b3e373.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection(Of TItem).RemoveItem method" Url="html/dc28a1e3-891b-e837-9cc1-deb82186c302.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection(Of TItem).SetItem method" Url="html/53397aa8-306f-972f-b43e-946fedcb55c9.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection&lt;TItem&gt; class">
+    <HelpKINode Title="ObservablePropertyChangedCollection(TItem) Class" Url="html/dcefbcf5-8ec4-43a5-48f9-67c5aa7012bf.htm" />
+    <HelpKINode Title="constructor" Url="html/59940f07-156e-e246-2103-9dac22b3e373.htm" />
+    <HelpKINode Title="events" Url="html/8425a16c-b57b-64cf-9176-46d51e442f41.htm" />
+    <HelpKINode Title="methods" Url="html/e8bc180f-ed84-01bb-8e27-6827676a74e7.htm" />
+    <HelpKINode Title="properties" Url="html/2e182be7-e7c8-af1c-cfb3-bfa37cc86240.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ObservablePropertyChangedCollection&lt;TItem&gt;.ClearItems method" Url="html/5ed0af6d-ced9-b8ad-1577-fc9a9a8ed5b6.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection&lt;TItem&gt;.InsertItem method" Url="html/ab33ccc7-7522-ad9b-8b01-20b93714b077.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection&lt;TItem&gt;.ObservablePropertyChangedCollection constructor" Url="html/59940f07-156e-e246-2103-9dac22b3e373.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection&lt;TItem&gt;.RemoveItem method" Url="html/dc28a1e3-891b-e837-9cc1-deb82186c302.htm" />
+  <HelpKINode Title="ObservablePropertyChangedCollection&lt;TItem&gt;.SetItem method" Url="html/53397aa8-306f-972f-b43e-946fedcb55c9.htm" />
+  <HelpKINode Title="PrimitiveTypeExtension class">
+    <HelpKINode Title="PrimitiveTypeExtension Class" Url="html/79a7f85b-7a6e-e845-04f2-1e88501e3098.htm" />
+    <HelpKINode Title="constructor" Url="html/e5d4248b-8e0a-4f6a-56b3-a2fc766c8241.htm" />
+    <HelpKINode Title="methods" Url="html/af40048a-7293-6d25-ba5c-ae4fcb58b4ae.htm" />
+    <HelpKINode Title="properties" Url="html/1a5a1eac-367c-002f-cee6-1ca781023ef7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PrimitiveTypeExtension.Boolean property" Url="html/42cd16a1-9b14-af8a-f45d-abe365805bdb.htm" />
+  <HelpKINode Title="PrimitiveTypeExtension.Double property" Url="html/e785025e-a3f6-a1c7-d786-bf58c8801507.htm" />
+  <HelpKINode Title="PrimitiveTypeExtension.Int32 property" Url="html/745dd568-c700-48c8-92c3-f5fcba40cc3c.htm" />
+  <HelpKINode Title="PrimitiveTypeExtension.PrimitiveTypeExtension constructor" Url="html/e5d4248b-8e0a-4f6a-56b3-a2fc766c8241.htm" />
+  <HelpKINode Title="PrimitiveTypeExtension.ProvideValue method" Url="html/bc9fb6d7-26cd-dfdf-cf0b-818dd503542e.htm" />
+  <HelpKINode Title="PrimitiveTypeExtension.String property" Url="html/bc6723c4-12b5-2ef3-d38a-957bc9f4f67d.htm" />
+  <HelpKINode Title="ProvideValue method">
+    <HelpKINode Title="EqualsExtension.ProvideValue Method " Url="html/0b41a503-b692-fac7-958c-1ceff8f1728c.htm" />
+    <HelpKINode Title="InvertExtension.ProvideValue Method " Url="html/a5d46ca1-9a15-949e-7307-13ba65da1387.htm" />
+    <HelpKINode Title="PrimitiveTypeExtension.ProvideValue Method " Url="html/bc9fb6d7-26cd-dfdf-cf0b-818dd503542e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RemoveItem method" Url="html/dc28a1e3-891b-e837-9cc1-deb82186c302.htm" />
+  <HelpKINode Title="SetItem method" Url="html/53397aa8-306f-972f-b43e-946fedcb55c9.htm" />
+  <HelpKINode Title="String property" Url="html/bc6723c4-12b5-2ef3-d38a-957bc9f4f67d.htm" />
+  <HelpKINode Title="TrueValue property" Url="html/eb0f0230-2d9c-e7bd-a047-22f964a52079.htm" />
+  <HelpKINode Title="TrueValueProperty field" Url="html/bcc2579b-55ea-8c04-924f-3dfd643f8914.htm" />
+  <HelpKINode Title="TryFindVisualChildElement(Of TChild) method" Url="html/03d4febd-cb48-7f24-27bd-ece95f4fedf4.htm" />
+  <HelpKINode Title="TryFindVisualChildElement&lt;TChild&gt; method" Url="html/03d4febd-cb48-7f24-27bd-ece95f4fedf4.htm" />
+  <HelpKINode Title="TryFindVisualChildElementByName method" Url="html/4e7bd529-3812-4a30-6e67-d110fdbe338d.htm" />
+  <HelpKINode Title="TryFindVisualParentElement(Of TParent) method" Url="html/1628a092-9f06-5a97-2be1-ff4d4df03222.htm" />
+  <HelpKINode Title="TryFindVisualParentElement&lt;TParent&gt; method" Url="html/1628a092-9f06-5a97-2be1-ff4d4df03222.htm" />
+  <HelpKINode Title="Value property" Url="html/53381a62-d0db-b4d1-5db5-f7f3a1986fb4.htm" />
+  <HelpKINode Title="version">
+    <HelpKINode Title="1.0.0.0" Url="html/9e4451be-1ff5-4a86-abb6-7e3b4da69508.htm" />
+    <HelpKINode Title="history" Url="html/22dedf27-3aa6-41f8-806a-94d9008cd8c2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Welcome" Url="html/eaeb49f0-653a-4833-8dad-6c9efafe6588.htm" />
+</HelpKI>

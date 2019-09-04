@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Windows.Markup;
 
 namespace BionicLibrary.Net.MarkupExtension
 {
+  [MarkupExtensionReturnType(typeof(object))]
   public class PrimitiveTypeExtension : System.Windows.Markup.MarkupExtension
   {
     private object primitiveValue;

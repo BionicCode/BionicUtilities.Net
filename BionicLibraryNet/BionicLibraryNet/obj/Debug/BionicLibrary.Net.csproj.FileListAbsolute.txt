@@ -1,9 +1,11 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Debug\BionicLibrary.Net.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Debug\BionicLibrary.Net.csproj.CoreCompileInputs.cache
 D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Debug\BionicLibrary.Net.dll
 D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Debug\BionicLibrary.Net.pdb
 D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Debug\BionicLibrary.NetStandard.dll
 D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Debug\BionicLibrary.NetStandard.pdb
-D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Debug\BionicLibrary.Net.csprojAssemblyReference.cache
-D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Debug\BionicLibrary.Net.csproj.CoreCompileInputs.cache
 D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Debug\BionicLibrary.Net.csproj.CopyComplete
 D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Debug\BionicLibrary.Net.dll
 D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\obj\Debug\BionicLibrary.Net.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Debug\BionicLibrary.Net.xml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNet\bin\Debug\BionicLibrary.NetStandard.xml

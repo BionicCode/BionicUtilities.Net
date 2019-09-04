@@ -11,23 +11,16 @@ namespace BionicLibrary.Net.Converter
 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-      if (value is bool)
+      if (value is bool boolValue)
       {
-        return !(bool) value;
+        return !boolValue;
       }
-      return Binding.DoNothing;
 
+      return Binding.DoNothing;
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-      if (value is bool)
-      {
-        return !(bool) value;
-      }
-      return Binding.DoNothing;
-
-    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) =>
+      Convert(value, targetType, parameter, culture);
 
     #endregion
   }

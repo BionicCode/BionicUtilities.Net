@@ -6,42 +6,31 @@ using System.Windows.Data;
 namespace BionicLibrary.Net.Converter
 {
   [ValueConversion(typeof(object), typeof(object))]
-  class InvertValueConverter : IValueConverter
+  public class InvertValueConverter : IValueConverter
   {
     #region Implementation of IValueConverter
 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-      if (value is double)
+      switch (value)
       {
-        return (double)value * -1;
+        case double doubleValue:
+          return doubleValue * -1;
+        case int intValue:
+          return intValue * -1;
+        case bool boolValue:
+          return !boolValue;
+        case Visibility visibilityValue:
+          return visibilityValue.Equals(Visibility.Hidden) || visibilityValue.Equals(Visibility.Collapsed)
+            ? Visibility.Visible
+            : Visibility.Collapsed;
+        default:
+          return Binding.DoNothing;
       }
-
-      if (value is int)
-      {
-        return (int)value * -1;
-      }
-
-      if (value is bool)
-      {
-        return (bool)value ^ true;
-      }
-
-      if (value is Visibility)
-      {
-        Visibility visibilityValue = (Visibility)value;
-        return visibilityValue.Equals(Visibility.Hidden) || visibilityValue.Equals(Visibility.Collapsed)
-          ? Visibility.Visible
-          : Visibility.Collapsed;
-      }
-
-      return Binding.DoNothing;
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-      return Convert(value, targetType, parameter, culture);
-    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) =>
+      Convert(value, targetType, parameter, culture);
 
     #endregion
   }

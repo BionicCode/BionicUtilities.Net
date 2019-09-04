@@ -16,8 +16,20 @@
     <ApplicationIcon>dna_helix_medicine_hospital_512_LIZ_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNetStandard\BionicLibrary.NetStandard.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\-Programming-\C#\GitOpenSourceRepository\BionicLibraryNet\BionicLibraryNetStandard\BionicLibrary.NetStandard.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Collections\Generic\" />
   </ItemGroup>
 
 </Project>

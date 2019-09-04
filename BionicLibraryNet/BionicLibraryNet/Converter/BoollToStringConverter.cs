@@ -6,7 +6,7 @@ using System.Windows.Data;
 namespace BionicLibrary.Net.Converter
 {
   [ValueConversion(typeof(bool), typeof(string))]
-  class BoollToStringConverter : DependencyObject, IValueConverter
+  public class BoollToStringConverter : DependencyObject, IValueConverter
   {
     public static readonly DependencyProperty TrueValueProperty = DependencyProperty.Register(
       "TrueValue",
@@ -39,7 +39,11 @@ namespace BionicLibrary.Net.Converter
       typeof(BoollToStringConverter),
       new PropertyMetadata("Unset"));
 
-    public string NullValue { get { return (string) GetValue(BoollToStringConverter.NullValueProperty); } set { SetValue(BoollToStringConverter.NullValueProperty, value); } }
+    public string NullValue
+    {
+      get => (string) GetValue(BoollToStringConverter.NullValueProperty);
+      set => SetValue(BoollToStringConverter.NullValueProperty, value);
+    }
 
 
     #region Implementation of IValueConverter
@@ -53,8 +57,8 @@ namespace BionicLibrary.Net.Converter
       if (value is bool isTrue)
       {
         return isTrue
-            ? this.TrueValue
-            : this.FalseValue;
+          ? this.TrueValue
+          : this.FalseValue;
       }
 
       return this.NullValue;
@@ -64,10 +68,8 @@ namespace BionicLibrary.Net.Converter
       object value,
       Type targetType,
       object parameter,
-      CultureInfo culture)
-    {
-      return (value as string)?.Equals(this.TrueValue, StringComparison.OrdinalIgnoreCase) ?? false;
-    }
+      CultureInfo culture) =>
+      (value as string)?.Equals(this.TrueValue, StringComparison.OrdinalIgnoreCase) ?? false;
 
     #endregion
   }

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Markup;
 
 namespace BionicLibrary.Net.MarkupExtension
 {
+  [MarkupExtensionReturnType(typeof(object))]
   public class InvertExtension : System.Windows.Markup.MarkupExtension
   {
-    
     public InvertExtension()
     {
       this.Value = null;
