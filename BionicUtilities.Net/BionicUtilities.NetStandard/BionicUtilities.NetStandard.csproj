@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Brian Sampoh</Authors>
+    <Company>BionicCode</Company>
+    <Description>Reusable utility and class library based on .NET Standard</Description>
+    <PackageProjectUrl>https://github.com/BionicCode/BionicUtilities.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/BionicCode/BionicUtilities.Net</RepositoryUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>2019</Copyright>
+    <PackageTags>BaseViewModel, RelayCommand, WPF, NET Standard, VisualTreeHelper</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ApplicationIcon>dna_helix_medicine_hospital_512_LIZ_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.NetStandard\BionicUtilities.NetStandard.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.NetStandard\BionicUtilities.NetStandard.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Collections\Generic\" />
+  </ItemGroup>
+
+</Project>

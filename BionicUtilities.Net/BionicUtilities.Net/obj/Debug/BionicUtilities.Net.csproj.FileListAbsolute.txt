@@ -1,0 +1,11 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\bin\Debug\BionicUtilities.Net.xml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\bin\Debug\BionicUtilities.Net.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\bin\Debug\BionicUtilities.Net.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\bin\Debug\BionicUtilities.NetStandard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\bin\Debug\BionicUtilities.NetStandard.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\bin\Debug\BionicUtilities.NetStandard.xml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net.csproj.CoreCompileInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net.csproj.CopyComplete
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net.pdb

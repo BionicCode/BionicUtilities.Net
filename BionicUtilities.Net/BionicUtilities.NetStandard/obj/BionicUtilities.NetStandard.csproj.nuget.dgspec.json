@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicUtilities.Net\\BionicUtilities.NetStandard\\BionicUtilities.NetStandard.csproj": {}
+  },
+  "projects": {
+    "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicUtilities.Net\\BionicUtilities.NetStandard\\BionicUtilities.NetStandard.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicUtilities.Net\\BionicUtilities.NetStandard\\BionicUtilities.NetStandard.csproj",
+        "projectName": "BionicUtilities.NetStandard",
+        "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicUtilities.Net\\BionicUtilities.NetStandard\\BionicUtilities.NetStandard.csproj",
+        "packagesPath": "C:\\Users\\MusicMonkey\\.nuget\\packages\\",
+        "outputPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicUtilities.Net\\BionicUtilities.NetStandard\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MusicMonkey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard1.3"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard1.3": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard1.3": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[1.6.1, )",
+              "autoReferenced": true
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}
