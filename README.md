@@ -1,9 +1,9 @@
-# BionicLibraryNetStandard
-Reusable utility and class library based on .NET Standard
+# BionicLibrary.Net
+Reusable utility and class library for WPF
 
 ## Contains 
 * `BaseViewModel`
-* `RelayCommand<T>`
+* `AsyncRelayCommand<T>`
 * Extension Methods for WPF e.g.
   * `TryFindVisualParentElement : bool` 
   * `TryFindVisualChildElement<TChild> : bool`
@@ -52,12 +52,12 @@ Example without validation
       }
     }
 ```
-### RelayComand<T> 
+### AsyncRelayComand&lt;T&gt; 
 Reusable generic command class that encapsulates `ICommand` and allows asynchronous executionExample without validation
 
 ```c#
     // ICommand property
-    public IRelayCommand<string> StringAsyncCommand => new RelayCommand<string>(ProcessStringAsync);
+    public IRelayCommand<string> StringAsyncCommand => new AsyncRelayCommand<string>(ProcessStringAsync);
     
     // Execute asynchronously
     await StringAsyncCommand.ExecuteAsync("String value");
