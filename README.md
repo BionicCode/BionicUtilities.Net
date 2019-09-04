@@ -25,7 +25,7 @@ Reusable utility and class library for WPF
   
   
 ### BaseViewModel 
-implementing `INotifyPropertyChanged` and `INotifyDataErrorInfo`
+implements `INotifyPropertyChanged` and `INotifyDataErrorInfo`
 
 Example with validation
 
@@ -69,7 +69,9 @@ Example without validation
 ----
 
 ### AsyncRelayComand&lt;T&gt; 
-Reusable generic command class that encapsulates `ICommand` and allows asynchronous executionExample without validation
+Reusable generic command class that encapsulates `ICommand` and allows asynchronous execution.
+
+Example without validation
 
 ```c#
     // ICommand property
