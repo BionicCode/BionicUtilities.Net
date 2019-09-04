@@ -2,7 +2,7 @@
 using System.Windows.Data;
 using System.Windows.Markup;
 
-namespace BionicLibrary.Net.MarkupExtension
+namespace BionicUtilities.Net.MarkupExtension
 {
   [MarkupExtensionReturnType(typeof(bool))]
   public class EqualsExtension : System.Windows.Markup.MarkupExtension

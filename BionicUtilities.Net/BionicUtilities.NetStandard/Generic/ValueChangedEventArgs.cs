@@ -5,7 +5,7 @@
 
 using System;
 
-namespace BionicLibrary.NetStandard.Generic
+namespace BionicUtilities.NetStandard.Generic
 {
 public class ValueChangedEventArgs<TValue> : EventArgs
 {

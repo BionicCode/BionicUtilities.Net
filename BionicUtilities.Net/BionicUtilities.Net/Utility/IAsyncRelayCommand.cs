@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace BionicLibrary.Net.Utility
+namespace BionicUtilities.Net.Utility
 {
   public interface IAsyncRelayCommand : ICommand
   {

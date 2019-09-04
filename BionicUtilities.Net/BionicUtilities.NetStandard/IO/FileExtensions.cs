@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BionicLibrary.NetStandard.IO
+namespace BionicUtilities.NetStandard.IO
 {
   [Flags]
   public enum FileExtensions

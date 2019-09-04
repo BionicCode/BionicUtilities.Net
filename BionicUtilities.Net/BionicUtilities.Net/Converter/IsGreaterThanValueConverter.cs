@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace BionicLibrary.Net.Converter
+namespace BionicUtilities.Net.Converter
 {
   [ValueConversion(typeof(double), typeof(bool))]
   public class IsGreaterThanValueConverter : DependencyObject, IValueConverter

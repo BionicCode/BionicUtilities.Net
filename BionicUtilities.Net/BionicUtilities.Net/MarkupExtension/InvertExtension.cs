@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Markup;
 
-namespace BionicLibrary.Net.MarkupExtension
+namespace BionicUtilities.Net.MarkupExtension
 {
   [MarkupExtensionReturnType(typeof(object))]
   public class InvertExtension : System.Windows.Markup.MarkupExtension

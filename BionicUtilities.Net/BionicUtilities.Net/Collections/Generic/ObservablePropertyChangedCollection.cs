@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 
-namespace BionicLibrary.Net.Collections.Generic
+namespace BionicUtilities.Net.Collections.Generic
 {
   /// <summary>
   /// Raises <see cref="ObservableCollection{T}.CollectionChanged"></see> event when the property of an item raised <see cref="INotifyPropertyChanged.PropertyChanged"/>. The change action for this particular notification is <see cref="NotifyCollectionChangedAction.Reset"/> with a reference to the notifying item and the item's index. The item must implement <see cref="INotifyPropertyChanged"/>.

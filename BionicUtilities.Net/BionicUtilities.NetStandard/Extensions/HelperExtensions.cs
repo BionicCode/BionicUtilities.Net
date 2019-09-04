@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace BionicLibrary.NetStandard.Extensions
+namespace BionicUtilities.NetStandard.Extensions
 {
   public static class HelperExtensions
   {

@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-namespace BionicLibrary.NetStandard.ViewModel
+namespace BionicUtilities.NetStandard.ViewModel
 {
   public abstract class BaseViewModel : IViewModel, INotifyDataErrorInfo
   {
