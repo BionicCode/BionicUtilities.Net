@@ -23,7 +23,7 @@ Reusable utility and class library for WPF
   * `ObservablePropertyChangedCollection<T>`
 * MarkupExtensions
   * PrimitiveTypeExtension  
-* [`Profiling`](https://github.com/BionicCode/BionicLibraryNet#Profiling)
+* [`Profiler`](https://github.com/BionicCode/BionicLibraryNet#Profiler)
   
   
 ### BaseViewModel 
