@@ -7,7 +7,8 @@ Reusable utility and class library for WPF
 * [`BaseViewModel`](https://github.com/BionicCode/BionicLibraryNet#baseviewmodel)
 * [`AsyncRelayCommand<T>`](https://github.com/BionicCode/BionicLibraryNet#asyncrelaycomandt)
 * Extension Methods for WPF e.g.
-  * `TryFindVisualParentElement : bool` 
+  * `TryFindVisualParentElement<TParent> : bool` 
+  * `TryFindVisualParentElementByName : bool` 
   * `TryFindVisualChildElement<TChild> : bool`
   * `TryFindVisualChildElementByName : bool`
   * `FindVisualChildElements<TChildren> : IEnumerable<TChildren>`
@@ -21,7 +22,8 @@ Reusable utility and class library for WPF
 * Collections
   * `ObservablePropertyChangedCollection<T>`
 * MarkupExtensions
-  * PrimitiveTypeExtension
+  * PrimitiveTypeExtension  
+* [`Profiling`](https://github.com/BionicCode/BionicLibraryNet#Profiling)
   
   
 ### BaseViewModel 
@@ -83,3 +85,21 @@ When used with a `Binding` the command will execute asynchronously when an await
     StringAsyncCommand.Execute("String value");
     
 ```
+
+### Profiler
+Static helper methods to measure the execution time of code.
+
+```c#
+    // Specify a custom output
+    Profiler.LogPrinter = (timeSpan) => PrintToFile(timeSpan);
+    
+    // Measure the average execution time of a specified number of iterations.
+    TimeSpan elapsedTime = Profiler.LogAverageTime(() => ReadFromDatabase(), 1000);
+    
+    // Measure the execution times of a specified number of iterations.
+    List<TimeSpan> elapsedTime = Profiler.LogTimes(() => ReadFromDatabase(), 1000);
+    
+    // Measure the execution time.
+    TimeSpan elapsedTime = Profiler.LogTime(() => ReadFromDatabase());
+```
+
