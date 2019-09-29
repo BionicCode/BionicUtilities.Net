@@ -87,7 +87,7 @@ When used with a `Binding` the command will execute asynchronously when an await
 ```
 
 ### Profiler
-Static helper methods to measure the execution time of code.
+Static helper methods to measure performance e.g. the execution time of a code portion.
 
 ```c#
     // Specify a custom output
