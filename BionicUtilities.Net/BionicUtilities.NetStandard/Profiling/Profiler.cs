@@ -6,10 +6,19 @@ using System.Text;
 
 namespace BionicUtilities.NetStandard.Profiling
 {
+  /// <summary>
+  /// Helper methods to measure code execution time.
+  /// </summary>
   public static class Profiler
   {
     public static Action<TimeSpan> LogPrinter { get; set; }
 
+    /// <summary>
+    /// Measures the execution time of a method.
+    /// </summary>
+    /// <param name="action">The code to measure execution time.</param>
+    /// <returns>The execution time as a <see cref="TimeSpan"/>.</returns>
+    /// <remarks>Specify a <see cref="LogPrinter"/> <see cref="Action"/> to customize the output target and formatting.</remarks>
     public static TimeSpan LogTime(Action action)
     {
       var stopwatch = new Stopwatch();
@@ -27,6 +36,14 @@ namespace BionicUtilities.NetStandard.Profiling
       return stopwatchElapsed;
     }
 
+
+    /// <summary>
+    /// Measures the execution time of a method.
+    /// </summary>
+    /// <param name="action">The code to measure execution time.</param>
+    /// <param name="runCount">Number of iterations the <paramref name="action"/> should be executed.</param>
+    /// <returns>A list of execution times for all <paramref name="runCount"/> number of iterations <see cref="TimeSpan"/>.</returns>
+    /// <remarks>Specify a <see cref="LogPrinter"/> <see cref="Action"/> to customize the output target and formatting.</remarks>
     public static List<TimeSpan> LogTimes(Action action, int runCount)
     {
       if (Profiler.LogPrinter == null)
@@ -50,6 +67,13 @@ namespace BionicUtilities.NetStandard.Profiling
       return measuredTimes;
     }
 
+    /// <summary>
+    /// Measures the execution time of a method.
+    /// </summary>
+    /// <param name="action">The code to measure execution time.</param>
+    /// <param name="runCount">Number of iterations the <paramref name="action"/> should be executed.</param>
+    /// <returns>The average execution time of all <paramref name="runCount"/> number of iterations as <see cref="TimeSpan"/>.</returns>
+    /// <remarks>Specify a <see cref="LogPrinter"/> <see cref="Action"/> to customize the output target and formatting.</remarks>
     public static TimeSpan LogAverageTime(Action action, int runCount)
     {
       var stopwatch = new Stopwatch();

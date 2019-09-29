@@ -27,6 +27,56 @@
               Converter to truncate file paths exceeding a specific length by replacing a number of characters with an ellipsis.
             </summary>
         </member>
+        <member name="T:BionicUtilities.Net.Extensions.HelperExtensions">
+            <summary>
+            Collection of extension methods e.g. visual tree traversal
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.TryFindVisualParentElement``1(System.Windows.DependencyObject,``0@)">
+            <summary>
+            Traverses the visual tree towards the root until an element with a matching element name is found.
+            </summary>
+            <typeparam name="TParent">The type the visual parent must match.</typeparam>
+            <param name="child"></param>
+            <param name="resultElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.TryFindVisualParentElementByName(System.Windows.DependencyObject,System.String,System.Windows.FrameworkElement@)">
+            <summary>
+            Traverses the visual tree towards the root until an element with a matching element type is found.
+            </summary>
+            <param name="child"></param>
+            <param name="elementName">The element name the visual parent must match.</param>
+            <param name="resultElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.TryFindVisualChildElement``1(System.Windows.DependencyObject,``0@)">
+            <summary>
+            Traverses the visual tree towards the leafs until an element with a matching element type is found.
+            </summary>
+            <typeparam name="TChild">The type the visual child must match.</typeparam>
+            <param name="parent"></param>
+            <param name="resultElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.TryFindVisualChildElementByName(System.Windows.DependencyObject,System.String,System.Windows.FrameworkElement@)">
+            <summary>
+            Traverses the visual tree towards the leafs until an element with a matching element name is found.
+            </summary>
+            <param name="parent"></param>
+            <param name="childElementName">The name the visual child's name must match.</param>
+            <param name="resultElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.FindVisualChildElements``1(System.Windows.DependencyObject)">
+            <summary>
+            Traverses the visual tree towards the leafs until all elements with a matching element type is found.
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> to enable deferred traversal.
+            </summary>
+            <typeparam name="TChildren">The type the visual children must match.</typeparam>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
         <member name="M:BionicUtilities.Net.Utility.Generic.IAsyncRelayCommand`1.Execute(`0)">
             <summary>
             Executes the AsyncRelayCommand on the current command target.

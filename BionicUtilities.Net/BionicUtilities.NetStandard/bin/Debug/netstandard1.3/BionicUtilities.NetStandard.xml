@@ -64,6 +64,37 @@
               <see cref="T:BionicUtilities.NetStandard.IO.FileExtensions" />
             </remarks>
         </member>
+        <member name="T:BionicUtilities.NetStandard.Profiling.Profiler">
+            <summary>
+            Helper methods to measure code execution time.
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.Profiling.Profiler.LogTime(System.Action)">
+            <summary>
+            Measures the execution time of a method.
+            </summary>
+            <param name="action">The code to measure execution time.</param>
+            <returns>The execution time as a <see cref="T:System.TimeSpan"/>.</returns>
+            <remarks>Specify a <see cref="P:BionicUtilities.NetStandard.Profiling.Profiler.LogPrinter"/> <see cref="T:System.Action"/> to customize the output target and formatting.</remarks>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.Profiling.Profiler.LogTimes(System.Action,System.Int32)">
+            <summary>
+            Measures the execution time of a method.
+            </summary>
+            <param name="action">The code to measure execution time.</param>
+            <param name="runCount">Number of iterations the <paramref name="action"/> should be executed.</param>
+            <returns>A list of execution times for all <paramref name="runCount"/> number of iterations <see cref="T:System.TimeSpan"/>.</returns>
+            <remarks>Specify a <see cref="P:BionicUtilities.NetStandard.Profiling.Profiler.LogPrinter"/> <see cref="T:System.Action"/> to customize the output target and formatting.</remarks>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.Profiling.Profiler.LogAverageTime(System.Action,System.Int32)">
+            <summary>
+            Measures the execution time of a method.
+            </summary>
+            <param name="action">The code to measure execution time.</param>
+            <param name="runCount">Number of iterations the <paramref name="action"/> should be executed.</param>
+            <returns>The average execution time of all <paramref name="runCount"/> number of iterations as <see cref="T:System.TimeSpan"/>.</returns>
+            <remarks>Specify a <see cref="P:BionicUtilities.NetStandard.Profiling.Profiler.LogPrinter"/> <see cref="T:System.Action"/> to customize the output target and formatting.</remarks>
+        </member>
         <member name="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyChanged">
             <summary>
             Event fired whenever a child property changes its value.
