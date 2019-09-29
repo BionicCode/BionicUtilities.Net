@@ -1,5 +1,5 @@
 # BionicLibrary.Net
-Reusable utility and class library for WPF
+Reusable utility and class library for WPF.
 
 ## [NuGet package](https://www.nuget.org/packages/BionicUtilities.Net/)
 
@@ -78,7 +78,7 @@ When used with a `Binding` the command will execute asynchronously when an await
 
 ```c#
     // ICommand property
-    public IRelayCommand<string> StringAsyncCommand => new AsyncRelayCommand<string>(ProcessStringAsync);
+    public IAsyncRelayCommand<string> StringAsyncCommand => new AsyncRelayCommand<string>(ProcessStringAsync);
     
     // Execute asynchronously
     await StringAsyncCommand.ExecuteAsync("String value");
