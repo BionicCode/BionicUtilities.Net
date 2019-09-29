@@ -4,7 +4,28 @@
         <name>BionicUtilities.NetStandard</name>
     </assembly>
     <members>
-        <member name="M:BionicLibrary.NetStandard.IO.FilePathFilter.FilterFilePathsFromMixedPathsIncludingFolders(System.Collections.Generic.IEnumerable{System.String},BionicLibrary.NetStandard.IO.FileExtensions,System.Boolean)">
+        <member name="T:BionicUtilities.NetStandard.Generic.INullObject`1">
+            <summary>
+            Interface that returns a null object for the implementing type. Implements Null-Object Pattern
+            </summary>
+            <typeparam name="TObject"></typeparam>
+        </member>
+        <member name="P:BionicUtilities.NetStandard.Generic.INullObject`1.NullObject">
+            <summary>
+            Instance to return instead of NULL
+            </summary>
+        </member>
+        <member name="T:BionicUtilities.NetStandard.INullObject">
+            <summary>
+            Null-Object Pattern implementation
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.NetStandard.INullObject.IsNull">
+            <summary>
+            Property to indicate whether the current type is NULL
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.IO.FilePathFilter.FilterFilePathsFromMixedPathsIncludingFolders(System.Collections.Generic.IEnumerable{System.String},BionicUtilities.NetStandard.IO.FileExtensions,System.Boolean)">
             <summary>
               Extracts valid paths or paths with a specified extension from a collection of paths.
               The path collection can be a mix-up of files and folders. In case the path describes a folder, the extension filter
@@ -13,7 +34,7 @@
             <param name="pathEntries">A string collection holding folder and/ or file paths filter.</param>
             <param name="fileExtensionsToCollect">
               A flagged Enum type that defines one or more extensions to filter from the
-              collection. <see cref="T:BionicLibrary.NetStandard.IO.FileExtensions" />
+              collection. <see cref="T:BionicUtilities.NetStandard.IO.FileExtensions" />
             </param>
             <param name="isIncludingSubdirectories">
               Sets the filter whether to apply to sub directories or not.
@@ -23,10 +44,10 @@
             <returns>IEnumerable</returns>
             <remarks>
               To ignore file extensions and collect all files found specify the <c>any</c> file extension.
-              <see cref="T:BionicLibrary.NetStandard.IO.FileExtensions" />
+              <see cref="T:BionicUtilities.NetStandard.IO.FileExtensions" />
             </remarks>
         </member>
-        <member name="M:BionicLibrary.NetStandard.IO.FilePathFilter.FilterFilePathsFromMixedPathsIgnoringFolders(System.Collections.Generic.IEnumerable{System.String},BionicLibrary.NetStandard.IO.FileExtensions)">
+        <member name="M:BionicUtilities.NetStandard.IO.FilePathFilter.FilterFilePathsFromMixedPathsIgnoringFolders(System.Collections.Generic.IEnumerable{System.String},BionicUtilities.NetStandard.IO.FileExtensions)">
             <summary>
               Extracts valid paths or paths with a specified extension from a collection of paths.
               The path collection can be a mix-up of files and folders. In case the path describes a folder, the filter will ignore
@@ -35,27 +56,27 @@
             <param name="pathEntries">A string collection holding folder and/ or file paths filter.</param>
             <param name="fileExtensionsToCollect">
               A flagged Enum type that defines one or more extensions to filter from the
-              collection. <see cref="T:BionicLibrary.NetStandard.IO.FileExtensions" />
+              collection. <see cref="T:BionicUtilities.NetStandard.IO.FileExtensions" />
             </param>
             <returns>IEnumerable</returns>
             <remarks>
               To ignore file extensions and collect all files found specify the <c>any</c> file extension.
-              <see cref="T:BionicLibrary.NetStandard.IO.FileExtensions" />
+              <see cref="T:BionicUtilities.NetStandard.IO.FileExtensions" />
             </remarks>
         </member>
-        <member name="E:BionicLibrary.NetStandard.ViewModel.BaseViewModel.PropertyChanged">
+        <member name="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyChanged">
             <summary>
             Event fired whenever a child property changes its value.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:BionicLibrary.NetStandard.ViewModel.BaseViewModel.OnPropertyChanged(System.String)" -->
-        <member name="M:BionicLibrary.NetStandard.ViewModel.BaseViewModel.GetErrors(System.String)">
+        <!-- Badly formed XML comment ignored for member "M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.OnPropertyChanged(System.String)" -->
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetErrors(System.String)">
             <inheritdoc />
         </member>
-        <member name="P:BionicLibrary.NetStandard.ViewModel.BaseViewModel.HasErrors">
+        <member name="P:BionicUtilities.NetStandard.ViewModel.BaseViewModel.HasErrors">
             <inheritdoc />
         </member>
-        <member name="E:BionicLibrary.NetStandard.ViewModel.BaseViewModel.ErrorsChanged">
+        <member name="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.ErrorsChanged">
             <inheritdoc />
         </member>
     </members>

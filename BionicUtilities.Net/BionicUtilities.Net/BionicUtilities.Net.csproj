@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" 
-  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -62,6 +61,7 @@
     <Compile Include="Converter\IsGreaterThanValueConverter.cs" />
     <Compile Include="Converter\BoolToStringConverter.cs" />
     <Compile Include="Extensions\HelperExtensions.cs" />
+    <Compile Include="Generic\NullObjectCreator.cs" />
     <Compile Include="MarkupExtension\EqualsExtension.cs" />
     <Compile Include="MarkupExtension\InvertExtension.cs" />
     <Compile Include="MarkupExtension\PrimitivesMarkupExtension.cs" />
@@ -70,9 +70,6 @@
     <Compile Include="Utility\Generic\AsyncAsyncRelayCommand.cs" />
     <Compile Include="Utility\IAsyncRelayCommand.cs" />
     <Compile Include="Utility\AsyncAsyncRelayCommand.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Generic\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BionicUtilities.NetStandard\BionicUtilities.NetStandard.csproj">
