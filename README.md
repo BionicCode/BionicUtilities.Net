@@ -1,4 +1,4 @@
-# BionicLibrary.Net
+# BionicUtilities.Net
 Reusable utility and class library for WPF.
 
 ## [NuGet package](https://www.nuget.org/packages/BionicUtilities.Net/)
