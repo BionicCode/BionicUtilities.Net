@@ -13,7 +13,7 @@
     <Copyright>2019</Copyright>
     <PackageTags>BaseViewModel, RelayCommand, WPF, NET Standard, VisualTreeHelper</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <ApplicationIcon>dna_helix_medicine_hospital_512_LIZ_icon.ico</ApplicationIcon>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -23,6 +23,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.NetStandard\BionicUtilities.NetStandard.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="dna_helix_medicine_hospital_512_LIZ_icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
