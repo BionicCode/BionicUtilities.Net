@@ -1,5 +1,7 @@
-# BionicLibrary.Net
-Reusable utility and class library for WPF
+# BionicUtilities.Net
+Reusable utility and class library for WPF.
+
+## [NuGet package](https://www.nuget.org/packages/BionicUtilities.Net/)
 
 ## [Class Reference](https://rawcdn.githack.com/BionicCode/BionicLibraryNet/343b21a9daf5095f7f544abb0aa9672c671d66cc/BionicLibraryNet/BionicLibraryNet/Documentation/index.html)
 
@@ -7,7 +9,8 @@ Reusable utility and class library for WPF
 * [`BaseViewModel`](https://github.com/BionicCode/BionicLibraryNet#baseviewmodel)
 * [`AsyncRelayCommand<T>`](https://github.com/BionicCode/BionicLibraryNet#asyncrelaycomandt)
 * Extension Methods for WPF e.g.
-  * `TryFindVisualParentElement : bool` 
+  * `TryFindVisualParentElement<TParent> : bool` 
+  * `TryFindVisualParentElementByName : bool` 
   * `TryFindVisualChildElement<TChild> : bool`
   * `TryFindVisualChildElementByName : bool`
   * `FindVisualChildElements<TChildren> : IEnumerable<TChildren>`
@@ -21,7 +24,8 @@ Reusable utility and class library for WPF
 * Collections
   * `ObservablePropertyChangedCollection<T>`
 * MarkupExtensions
-  * PrimitiveTypeExtension
+  * PrimitiveTypeExtension  
+* [`Profiler`](https://github.com/BionicCode/BionicLibraryNet#Profiler)
   
   
 ### BaseViewModel 
@@ -74,7 +78,7 @@ When used with a `Binding` the command will execute asynchronously when an await
 
 ```c#
     // ICommand property
-    public IRelayCommand<string> StringAsyncCommand => new AsyncRelayCommand<string>(ProcessStringAsync);
+    public IAsyncRelayCommand<string> StringAsyncCommand => new AsyncRelayCommand<string>(ProcessStringAsync);
     
     // Execute asynchronously
     await StringAsyncCommand.ExecuteAsync("String value");
@@ -83,3 +87,21 @@ When used with a `Binding` the command will execute asynchronously when an await
     StringAsyncCommand.Execute("String value");
     
 ```
+
+### Profiler
+Static helper methods to measure performance e.g. the execution time of a code portion.
+
+```c#
+    // Specify a custom output
+    Profiler.LogPrinter = (timeSpan) => PrintToFile(timeSpan);
+    
+    // Measure the average execution time of a specified number of iterations.
+    TimeSpan elapsedTime = Profiler.LogAverageTime(() => ReadFromDatabase(), 1000);
+    
+    // Measure the execution times of a specified number of iterations.
+    List<TimeSpan> elapsedTime = Profiler.LogTimes(() => ReadFromDatabase(), 1000);
+    
+    // Measure the execution time.
+    TimeSpan elapsedTime = Profiler.LogTime(() => ReadFromDatabase());
+```
+
