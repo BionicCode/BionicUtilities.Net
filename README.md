@@ -17,7 +17,7 @@ Reusable utility and class library for WPF.
   * `ICollection.AddRange<T>`
 
 * EventArgs
-  * [`ValueChangedEventArgs<T>`]((https://github.com/BionicCode/BionicLibraryNet#ValueChangedEventArgst))
+  * [`ValueChangedEventArgs<T>`](https://github.com/BionicCode/BionicUtilities.Net#valuechangedeventargst)
 * ValueConverters
   * `BoolToStringConverter`
   * `BooleanMultiValueConverter`
@@ -107,6 +107,8 @@ Static helper methods to measure performance e.g. the execution time of a code p
     TimeSpan elapsedTime = Profiler.LogTime(() => ReadFromDatabase());
 ```
 ### `ValueChangedEventArgs<T>`
+Generic `EventArgs` implementation that provides value change information like `OldValue` and `NewValue`.
+
 
 ```c#
     // Specify a named ValueTuple as event argument
