@@ -26,7 +26,7 @@ Reusable utility and class library for WPF.
 * Collections
   * `ObservablePropertyChangedCollection<T>`
 * MarkupExtensions
-  * PrimitiveTypeExtension  
+  * `PrimitiveTypeExtension`
 * [`Profiler`](https://github.com/BionicCode/BionicLibraryNet#Profiler)
   
   
@@ -90,7 +90,7 @@ StringAsyncCommand.Execute("String value");
     
 ```
 
-### Profiler
+### `Profiler`
 Static helper methods to measure performance e.g. the execution time of a code portion.
 
 ```c#
