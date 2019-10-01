@@ -1,0 +1,9 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\bin\Debug\netstandard2.1\BionicUtilities.NetStandard.deps.json
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\bin\Debug\netstandard2.1\BionicUtilities.NetStandard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\bin\Debug\netstandard2.1\BionicUtilities.NetStandard.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\bin\Debug\netstandard2.1\BionicUtilities.NetStandard.xml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\obj\Debug\netstandard2.1\BionicUtilities.NetStandard.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\obj\Debug\netstandard2.1\BionicUtilities.NetStandard.AssemblyInfoInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\obj\Debug\netstandard2.1\BionicUtilities.NetStandard.AssemblyInfo.cs
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\obj\Debug\netstandard2.1\BionicUtilities.NetStandard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\obj\Debug\netstandard2.1\BionicUtilities.NetStandard.pdb
