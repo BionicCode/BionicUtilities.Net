@@ -15,8 +15,10 @@ Reusable utility and class library for WPF.
   * `TryFindVisualChildElementByName : bool`
   * `FindVisualChildElements<TChildren> : IEnumerable<TChildren>`
   * `ICollection.AddRange<T>`
+
+* EventArgs
+  * [`ValueChangedEventArgs<T>`]((https://github.com/BionicCode/BionicLibraryNet#ValueChangedEventArgst))
 * ValueConverters
-  * `ValueChangedEventArgs<T>`
   * `BoolToStringConverter`
   * `BooleanMultiValueConverter`
   * `FilePathTruncateConverter`
@@ -28,7 +30,7 @@ Reusable utility and class library for WPF.
 * [`Profiler`](https://github.com/BionicCode/BionicLibraryNet#Profiler)
   
   
-### BaseViewModel 
+### `BaseViewModel`
 implements `INotifyPropertyChanged` and `INotifyDataErrorInfo`
 
 Example with validation
@@ -72,7 +74,7 @@ Example without validation
 ```
 ----
 
-### AsyncRelayComand&lt;T&gt; 
+### `AsyncRelayComand<T>` 
 Reusable generic command class that encapsulates `ICommand` and allows asynchronous execution.
 When used with a `Binding` the command will execute asynchronously when an awaitable execute handler is assigned to the command.
 
@@ -104,4 +106,20 @@ Static helper methods to measure performance e.g. the execution time of a code p
     // Measure the execution time.
     TimeSpan elapsedTime = Profiler.LogTime(() => ReadFromDatabase());
 ```
+### `ValueChangedEventArgs<T>`
 
+```c#
+    // Specify a named ValueTuple as event argument
+    event EventHandler<ValueChangedEventArgs<(bool HasError, string Message)>> Completed;    
+    
+    protected virtual void RaiseCompleted((bool HasError, string Message) oldValue, (bool HasError, string Message) newValue)
+    {
+      this.Completed?.Invoke(this, new ValueChangedEventArgs<(bool HasError, string Message)>(oldValue, newValue));
+    }
+
+    private void OnCompleted(object sender, ValueChangedEventArgs<(bool HasError, string Message)> e)
+    {
+      (bool HasError, string Message) newValue = e.NewValue;
+      (bool HasError, string Message) oldValue = e.OldValue;
+    }
+```
