@@ -7,7 +7,7 @@ Reusable utility and class library for WPF.
 
 ## Contains 
 * [`BaseViewModel`](https://github.com/BionicCode/BionicLibraryNet#baseviewmodel)
-* [`AsyncRelayCommand&lt;T&gt;`](https://github.com/BionicCode/BionicLibraryNet#asyncrelaycomandt)
+* [`AsyncRelayCommand<T>`](https://github.com/BionicCode/BionicLibraryNet#asyncrelaycomandt)
 * Extension Methods for WPF e.g.
   * `TryFindVisualParentElement<TParent> : bool` 
   * `TryFindVisualParentElementByName : bool` 
