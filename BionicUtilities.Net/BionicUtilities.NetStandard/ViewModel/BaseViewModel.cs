@@ -7,14 +7,14 @@ using System.Runtime.CompilerServices;
 
 namespace BionicUtilities.NetStandard.ViewModel
 {
-  public abstract class BaseViewModel : IViewModel, INotifyDataErrorInfo
+  public abstract class BaseViewModel : IViewModel
   {
     protected BaseViewModel()
     {
       this.Errors = new Dictionary<string, IEnumerable<string>>();
     }
 
-    public bool TrySetValue<TValue>(TValue value, ref TValue targetBackingField, [CallerMemberName] string propertyName = null)
+    protected virtual bool TrySetValue<TValue>(TValue value, ref TValue targetBackingField, [CallerMemberName] string propertyName = null)
     {
       if (value.Equals(targetBackingField))
       {
@@ -26,17 +26,20 @@ namespace BionicUtilities.NetStandard.ViewModel
       return true;
     }
 
-    public bool TrySetValue<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, ref TValue targetBackingField, [CallerMemberName] string propertyName = null)
+    protected virtual bool TrySetValue<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, ref TValue targetBackingField, [CallerMemberName] string propertyName = null)
     {
       if (value.Equals(targetBackingField))
       {
         return false;
       }
 
-      targetBackingField = value;
-      OnPropertyChanged(propertyName);
-
-      return IsValueValid(value, validationDelegate, propertyName);
+      bool isValueValid = IsValueValid(value, validationDelegate, propertyName);
+      if (isValueValid)
+      {
+        targetBackingField = value;
+        OnPropertyChanged(propertyName);
+      }
+      return isValueValid;
     }
 
     protected virtual bool IsValueValid<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, [CallerMemberName] string propertyName = null)
@@ -52,10 +55,13 @@ namespace BionicUtilities.NetStandard.ViewModel
       return validationResult.IsValid;
     }
 
-    protected virtual bool PropertyHasError([CallerMemberName] string propertyName = null) =>
+    public virtual bool PropertyHasError([CallerMemberName] string propertyName = null) =>
       this.Errors.ContainsKey(propertyName);
 
-      /// <summary>
+    /// <inheritdoc />
+    public IEnumerable<string> GetPropertyErrors(string propertyName = null) => GetErrors(propertyName).Cast<string>();
+
+    /// <summary>
       /// Event fired whenever a child property changes its value.
       /// </summary>
       public event PropertyChangedEventHandler PropertyChanged;
@@ -63,7 +69,7 @@ namespace BionicUtilities.NetStandard.ViewModel
       /// <summary>
       /// Method called to fire a <see cref="PropertyChanged"/> event.
       /// </summary>
-      /// <param name="propertyName"> The property name. </para
+      /// <param name="propertyName"> The property name. </param>
       protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
       {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

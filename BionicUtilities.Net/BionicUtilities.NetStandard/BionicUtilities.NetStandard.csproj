@@ -39,6 +39,7 @@
 
   <ItemGroup>
     <Folder Include="Collections\Generic\" />
+    <Folder Include="Settings\" />
   </ItemGroup>
 
 </Project>

@@ -15,6 +15,9 @@
             Instance to return instead of NULL
             </summary>
         </member>
+        <member name="P:BionicUtilities.NetStandard.Generic.NullObject`1.IsNull">
+            <inheritdoc />
+        </member>
         <member name="T:BionicUtilities.NetStandard.INullObject">
             <summary>
             Null-Object Pattern implementation
@@ -95,12 +98,20 @@
             <returns>The average execution time of all <paramref name="runCount"/> number of iterations as <see cref="T:System.TimeSpan"/>.</returns>
             <remarks>Specify a <see cref="P:BionicUtilities.NetStandard.Profiling.Profiler.LogPrinter"/> <see cref="T:System.Action"/> to customize the output target and formatting.</remarks>
         </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetPropertyErrors(System.String)">
+            <inheritdoc />
+        </member>
         <member name="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyChanged">
             <summary>
             Event fired whenever a child property changes its value.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.OnPropertyChanged(System.String)" -->
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.OnPropertyChanged(System.String)">
+            <summary>
+            Method called to fire a <see cref="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName"> The property name. </param>
+        </member>
         <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetErrors(System.String)">
             <inheritdoc />
         </member>

@@ -8,3 +8,6 @@ D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net.csproj.CopyComplete
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net.dll
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\UiTemplates\ErrorVallidationTemplate.baml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net_MarkupCompile.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\obj\Debug\BionicUtilities.Net.g.resources
