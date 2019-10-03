@@ -28,18 +28,15 @@ namespace BionicUtilities.NetStandard.ViewModel
 
     protected virtual bool TrySetValue<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, ref TValue targetBackingField, [CallerMemberName] string propertyName = null)
     {
-      if (value.Equals(targetBackingField))
+      bool isValueValid = IsValueValid(value, validationDelegate, propertyName);
+      if (!isValueValid || value.Equals(targetBackingField))
       {
         return false;
       }
 
-      bool isValueValid = IsValueValid(value, validationDelegate, propertyName);
-      if (isValueValid)
-      {
-        targetBackingField = value;
-        OnPropertyChanged(propertyName);
-      }
-      return isValueValid;
+      targetBackingField = value;
+      OnPropertyChanged(propertyName);
+      return true;
     }
 
     protected virtual bool IsValueValid<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, [CallerMemberName] string propertyName = null)
