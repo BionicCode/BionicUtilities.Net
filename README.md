@@ -15,8 +15,10 @@ Reusable utility and class library for WPF.
   * `TryFindVisualChildElementByName : bool`
   * `FindVisualChildElements<TChildren> : IEnumerable<TChildren>`
   * `ICollection.AddRange<T>`
+
+* EventArgs
+  * [`ValueChangedEventArgs<T>`](https://github.com/BionicCode/BionicUtilities.Net#valuechangedeventargst)
 * ValueConverters
-  * `ValueChangedEventArgs<T>`
   * `BoolToStringConverter`
   * `BooleanMultiValueConverter`
   * `FilePathTruncateConverter`
@@ -24,84 +26,106 @@ Reusable utility and class library for WPF.
 * Collections
   * `ObservablePropertyChangedCollection<T>`
 * MarkupExtensions
-  * PrimitiveTypeExtension  
+  * `PrimitiveTypeExtension`
 * [`Profiler`](https://github.com/BionicCode/BionicLibraryNet#Profiler)
   
   
-### BaseViewModel 
+### `BaseViewModel`
 implements `INotifyPropertyChanged` and `INotifyDataErrorInfo`
 
 Example with validation
 
 ```c#
-    private string name;
-    public string Name
-    {
-      get => this.name;
-      set
+private string name;
+public string Name
+{
+  get => this.name;
+  set
+  {
+    if (TrySetValue(
+      value,
+      (stringValue) =>
       {
-        if (TrySetValue(
-          value,
-          (stringValue) =>
-          {
-            var messages = new List<string>() {"Name must start with an underscore"};
-            return (stringValue.StartsWith("_"), messages);
-          },
-          ref this.name))
-        {
-          DoSomething(this.name);
-        }
-      }
+        var messages = new List<string>() {"Name must start with an underscore"};
+        return (stringValue.StartsWith("_"), messages);
+      },
+      ref this.name))
+    {
+      DoSomething(this.name);
     }
+  }
+}
 ```
 Example without validation
 
 ```c#
-    private string name;
-    public string Name
+private string name;
+public string Name
+{
+  get => this.name;
+  set
+  {
+    if (TrySetValue(value, ref this.name))
     {
-      get => this.name;
-      set
-      {
-        if (TrySetValue(value, ref this.name))
-        {
-          DoSomething(this.name);
-        }
-      }
+      DoSomething(this.name);
     }
+  }
+}
 ```
 ----
 
-### AsyncRelayComand&lt;T&gt; 
+### `AsyncRelayComand<T>` 
 Reusable generic command class that encapsulates `ICommand` and allows asynchronous execution.
 When used with a `Binding` the command will execute asynchronously when an awaitable execute handler is assigned to the command.
 
 ```c#
-    // ICommand property
-    public IAsyncRelayCommand<string> StringAsyncCommand => new AsyncRelayCommand<string>(ProcessStringAsync);
+// ICommand property
+public IAsyncRelayCommand<string> StringAsyncCommand => new AsyncRelayCommand<string>(ProcessStringAsync);
     
-    // Execute asynchronously
-    await StringAsyncCommand.ExecuteAsync("String value");
+// Execute asynchronously
+await StringAsyncCommand.ExecuteAsync("String value");
     
-    // Execute synchronously
-    StringAsyncCommand.Execute("String value");
+// Execute synchronously
+StringAsyncCommand.Execute("String value");
     
 ```
 
-### Profiler
+### `Profiler`
 Static helper methods to measure performance e.g. the execution time of a code portion.
 
 ```c#
-    // Specify a custom output
-    Profiler.LogPrinter = (timeSpan) => PrintToFile(timeSpan);
+// Specify a custom output
+Profiler.LogPrinter = (timeSpan) => PrintToFile(timeSpan);
     
-    // Measure the average execution time of a specified number of iterations.
-    TimeSpan elapsedTime = Profiler.LogAverageTime(() => ReadFromDatabase(), 1000);
+// Measure the average execution time of a specified number of iterations.
+TimeSpan elapsedTime = Profiler.LogAverageTime(() => ReadFromDatabase(), 1000);
     
-    // Measure the execution times of a specified number of iterations.
-    List<TimeSpan> elapsedTime = Profiler.LogTimes(() => ReadFromDatabase(), 1000);
+// Measure the execution times of a specified number of iterations.
+List<TimeSpan> elapsedTime = Profiler.LogTimes(() => ReadFromDatabase(), 1000);
     
-    // Measure the execution time.
-    TimeSpan elapsedTime = Profiler.LogTime(() => ReadFromDatabase());
+// Measure the execution time.
+TimeSpan elapsedTime = Profiler.LogTime(() => ReadFromDatabase());
 ```
+### `ValueChangedEventArgs<T>`
+Generic `EventArgs` implementation that provides value change information like `OldValue` and `NewValue`.
 
+
+```c#
+// Specify a named ValueTuple as event argument
+event EventHandler<ValueChangedEventArgs<(bool HasError, string Message)>> Completed;    
+    
+protected virtual void RaiseCompleted((bool HasError, string Message) oldValue, (bool HasError, string Message) newValue)
+{
+  this.Completed?.Invoke(this, new ValueChangedEventArgs<(bool HasError, string Message)>(oldValue, newValue));
+}
+
+private void OnCompleted(object sender, ValueChangedEventArgs<(bool HasError, string Message)> e)
+{
+  (bool HasError, string Message) newValue = e.NewValue;
+  if (newValue.HasError)
+  {
+    this.TaskCompletionSource.TrySetException(new InvalidOperationException(newValue.Message));
+  }
+  this.TaskCompletionSource.TrySetResult(true);
+}
+```
