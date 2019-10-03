@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BionicCode.BionicNuGetDeploy.Main.Settings
+namespace BionicUtilities.Net.Settings
 {
   public static class AppSettingsConnector
   {
