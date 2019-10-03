@@ -98,6 +98,20 @@
             <returns>The average execution time of all <paramref name="runCount"/> number of iterations as <see cref="T:System.TimeSpan"/>.</returns>
             <remarks>Specify a <see cref="P:BionicUtilities.NetStandard.Profiling.Profiler.LogPrinter"/> <see cref="T:System.Action"/> to customize the output target and formatting.</remarks>
         </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.TrySetValue``1(``0,System.Func{``0,System.ValueTuple{System.Boolean,System.Collections.Generic.IEnumerable{System.String}}},``0@,System.String,System.Boolean,System.Boolean)">
+            <summary>
+             Sets the value of the referenced property and executes a validation delegate.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+            <param name="value">The new value which is to be set to the property.</param>
+            <param name="validationDelegate">The callback that is used to validate the new value.</param>
+            <param name="targetBackingField">The reference to the backing field.</param>
+            <param name="propertyName">The name of the property to set. Default name is the property that called this method.</param>
+            <param name="isRejectInvalidValueEnabled">When <c>true</c> the invalid value is not stored to the backing field.<br/> Use this to ensure that the view model in a valid state.</param>
+            <param name="isThrowExceptionOnValidationErrorEnabled">Enable throwing an <exception cref="T:System.ArgumentException"></exception> if validation failed. Use this when <c>ValidatesOnExceptions</c> on a <c>Binding</c> is set to <c>true</c></param>
+            <exception cref="T:System.ArgumentException">Thrown on validation failed</exception>
+            <returns>Returns <c>true</c> if the new value doesn't equal the old value and when the new value is valid. Returns <c>false</c> if the new value equals the old value or the validation has failed.</returns>
+        </member>
         <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetPropertyErrors(System.String)">
             <inheritdoc />
         </member>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Windows.Data;
 
 namespace BionicUtilities.NetStandard.ViewModel
 {
@@ -26,10 +27,27 @@ namespace BionicUtilities.NetStandard.ViewModel
       return true;
     }
 
-    protected virtual bool TrySetValue<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, ref TValue targetBackingField, [CallerMemberName] string propertyName = null)
+    /// <summary>
+    ///  Sets the value of the referenced property and executes a validation delegate.
+    /// </summary>
+    /// <typeparam name="TValue"></typeparam>
+    /// <param name="value">The new value which is to be set to the property.</param>
+    /// <param name="validationDelegate">The callback that is used to validate the new value.</param>
+    /// <param name="targetBackingField">The reference to the backing field.</param>
+    /// <param name="propertyName">The name of the property to set. Default name is the property that called this method.</param>
+    /// <param name="isRejectInvalidValueEnabled">When <c>true</c> the invalid value is not stored to the backing field.<br/> Use this to ensure that the view model in a valid state.</param>
+    /// <param name="isThrowExceptionOnValidationErrorEnabled">Enable throwing an <exception cref="ArgumentException"></exception> if validation failed. Use this when <c>ValidatesOnExceptions</c> on a <c>Binding</c> is set to <c>true</c></param>
+    /// <exception cref="ArgumentException">Thrown on validation failed</exception>
+    /// <returns>Returns <c>true</c> if the new value doesn't equal the old value and when the new value is valid. Returns <c>false</c> if the new value equals the old value or the validation has failed.</returns>
+    protected virtual bool TrySetValue<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, ref TValue targetBackingField, [CallerMemberName] string propertyName = null, bool isRejectInvalidValueEnabled = true, bool isThrowExceptionOnValidationErrorEnabled = false)
     {
       bool isValueValid = IsValueValid(value, validationDelegate, propertyName);
-      if (!isValueValid || value.Equals(targetBackingField))
+      if (isThrowExceptionOnValidationErrorEnabled && !isValueValid)
+      {
+        throw new ArgumentException(string.Empty);
+      }
+
+      if ((!isValueValid && isRejectInvalidValueEnabled) || value.Equals(targetBackingField))
       {
         return false;
       }
