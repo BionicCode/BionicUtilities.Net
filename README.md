@@ -15,7 +15,6 @@ Reusable utility and class library for WPF.
   * `TryFindVisualChildElementByName : bool`
   * `FindVisualChildElements<TChildren> : IEnumerable<TChildren>`
   * `ICollection.AddRange<T>`
-
 * EventArgs
   * [`ValueChangedEventArgs<T>`](https://github.com/BionicCode/BionicUtilities.Net#valuechangedeventargst)
 * ValueConverters
@@ -28,12 +27,13 @@ Reusable utility and class library for WPF.
 * MarkupExtensions
   * `PrimitiveTypeExtension`
 * [`Profiler`](https://github.com/BionicCode/BionicLibraryNet#Profiler)
+* [`AppSettingsConnector`](https://github.com/BionicCode/BionicLibraryNet#AppSettingsConnector) - A defaul API to the AppSettings that provides strongly typed reading and writing (e.g. `boo`, `int`, `double`, `string`) of key-value pair values
   
   
 ### `BaseViewModel`
 implements `INotifyPropertyChanged` and `INotifyDataErrorInfo`
 
-Example with validation
+#### Example with validation
 
 ```c#
 private string name;
@@ -56,7 +56,7 @@ public string Name
   }
 }
 ```
-Example without validation
+#### Example without validation
 
 ```c#
 private string name;
@@ -78,6 +78,8 @@ public string Name
 Reusable generic command class that encapsulates `ICommand` and allows asynchronous execution.
 When used with a `Binding` the command will execute asynchronously when an awaitable execute handler is assigned to the command.
 
+#### Example
+
 ```c#
 // ICommand property
 public IAsyncRelayCommand<string> StringAsyncCommand => new AsyncRelayCommand<string>(ProcessStringAsync);
@@ -92,6 +94,8 @@ StringAsyncCommand.Execute("String value");
 
 ### `Profiler`
 Static helper methods to measure performance e.g. the execution time of a code portion.
+
+#### Example
 
 ```c#
 // Specify a custom output
@@ -109,6 +113,7 @@ TimeSpan elapsedTime = Profiler.LogTime(() => ReadFromDatabase());
 ### `ValueChangedEventArgs<T>`
 Generic `EventArgs` implementation that provides value change information like `OldValue` and `NewValue`.
 
+#### Example
 
 ```c#
 // Specify a named ValueTuple as event argument
@@ -127,5 +132,20 @@ private void OnCompleted(object sender, ValueChangedEventArgs<(bool HasError, st
     this.TaskCompletionSource.TrySetException(new InvalidOperationException(newValue.Message));
   }
   this.TaskCompletionSource.TrySetResult(true);
+}
+```
+### `AppSettingsConnector` 
+A static default API to the AppSettings that provides strongly typed reading and writing (e.g. `boo`, `int`, `double`, `string`) of key-value pair values.
+
+#### Example
+
+```c#
+// Write the Most Recently Used file count to the AppSettings file
+AppSettingsConnector.WriteInt("mruCount", 10);
+
+// If key exists read the Most Recently Used file count from the AppSettings file
+if (TryReadInt("mruCount", out int mruCount))
+{
+  this.MruCount = mruCount;
 }
 ```
