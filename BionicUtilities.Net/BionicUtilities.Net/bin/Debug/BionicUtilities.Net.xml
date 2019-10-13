@@ -243,6 +243,20 @@
         <member name="E:BionicUtilities.Net.Settings.MruManager.FileAdded">
             <inheritdoc />
         </member>
+        <member name="M:BionicUtilities.Net.Settings.MruManager.IsMruCountValid(System.Int32)">
+            <summary>
+            Property validation delegate. Validates the <see cref="P:BionicUtilities.Net.Settings.MruManager.MaxMostRecentlyUsedCount"/> property values.
+            </summary>
+            <param name="count">The max count value for <see cref="P:BionicUtilities.Net.Settings.MruManager.MaxMostRecentlyUsedCount"/> to validate.</param>
+            <returns></returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MruManager.OnFileAdded(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)">
+            <summary>
+            Called when the <see cref="P:BionicUtilities.Net.Settings.MruManager.InternalMostRecentlyUsedFiles"/> has changed.
+            </summary>
+            <param name="oldItem">The removed <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> item.</param>
+            <param name="newItem">The newly added <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> item.</param>
+        </member>
         <member name="M:BionicUtilities.Net.Utility.Generic.IAsyncRelayCommand`1.Execute(`0)">
             <summary>
             Executes the AsyncRelayCommand on the current command target.

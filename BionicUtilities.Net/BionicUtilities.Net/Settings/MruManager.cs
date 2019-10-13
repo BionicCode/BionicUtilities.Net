@@ -125,7 +125,12 @@ namespace BionicUtilities.Net.Settings
     /// <inheritdoc />
     public event EventHandler<ValueChangedEventArgs<MostRecentlyUsedFileItem>> FileAdded;
 
-    private (bool IsValid, IEnumerable<string> ErrorMessages) IsMruCountValid(int count)
+    /// <summary>
+    /// Property validation delegate. Validates the <see cref="MaxMostRecentlyUsedCount"/> property values.
+    /// </summary>
+    /// <param name="count">The max count value for <see cref="MaxMostRecentlyUsedCount"/> to validate.</param>
+    /// <returns></returns>
+    protected virtual (bool IsValid, IEnumerable<string> ErrorMessages) IsMruCountValid(int count)
     {
       bool isValid = count > 0 && count < 100;
       (bool IsValid, IEnumerable<string> ErrorMessages) result = (isValid,
@@ -133,8 +138,13 @@ namespace BionicUtilities.Net.Settings
       return result;
     }
 
-    private ObservableCollection<MostRecentlyUsedFileItem> InternalMostRecentlyUsedFiles { get; }
+    protected ObservableCollection<MostRecentlyUsedFileItem> InternalMostRecentlyUsedFiles { get; }
 
+    /// <summary>
+    /// Called when the <see cref="InternalMostRecentlyUsedFiles"/> has changed.
+    /// </summary>
+    /// <param name="oldItem">The removed <see cref="MostRecentlyUsedFileItem"/> item.</param>
+    /// <param name="newItem">The newly added <see cref="MostRecentlyUsedFileItem"/> item.</param>
     protected virtual void OnFileAdded(MostRecentlyUsedFileItem oldItem, MostRecentlyUsedFileItem newItem)
     {
       this.FileAdded?.Invoke(this, new ValueChangedEventArgs<MostRecentlyUsedFileItem>(oldItem, newItem));
