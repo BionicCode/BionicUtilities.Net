@@ -3,7 +3,7 @@ Reusable utility and class library for WPF.
 
 ## [NuGet package](https://www.nuget.org/packages/BionicUtilities.Net/)
 
-## [Class Reference](https://rawcdn.githack.com/BionicCode/BionicLibraryNet/343b21a9daf5095f7f544abb0aa9672c671d66cc/BionicLibraryNet/BionicLibraryNet/Documentation/index.html)
+## [Class Reference](https://rawcdn.githack.com/BionicCode/BionicUtilities.Net/25398f382685a68fb6df4b996c0c0041abb56535/BionicUtilities.Net/Documentation/Help/index.html)
 
 ## Contains 
 * [`BaseViewModel`](https://github.com/BionicCode/BionicLibraryNet#baseviewmodel)
@@ -28,6 +28,7 @@ Reusable utility and class library for WPF.
   * `PrimitiveTypeExtension`
 * [`Profiler`](https://github.com/BionicCode/BionicLibraryNet#Profiler)
 * [`AppSettingsConnector`](https://github.com/BionicCode/BionicLibraryNet#AppSettingsConnector) - A defaul API to the AppSettings that provides strongly typed reading and writing (e.g. `boo`, `int`, `double`, `string`) of key-value pair values
+* [`Most Recently Used (MRU) file manager`](https://github.com/BionicCode/BionicUtilities.Net/blob/master/README.md#mru-most-recently-used-file-manager) - API that maintains an MRU table stored in the Application Settings file. 
   
   
 ### `BaseViewModel`
@@ -148,4 +149,40 @@ if (TryReadInt("mruCount", out int mruCount))
 {
   this.MruCount = mruCount;
 }
+```
+
+### MRU (Most Recently Used) file manager
+The `MruManager` maintains a collection of `MostRecentlyUsedFileItem` elrecentlyements that map to a recently used file. Once the max number of recently used files is reached and a new file is added, the `MruManager` automatically removes the least used file to free the MRU table.
+
+#### Example: Save file to MRU list
+
+```c#
+
+var mruManager = new MruManager();
+mruManager.MaxMostRecentlyUsedCount = 30;
+
+var openFileDialog = new OpenFileDialog();
+bool? result = openFileDialog.ShowDialog();
+
+// Process open file dialog box results
+if (result == true)
+{
+  string filename = openFileDialog.FileName;
+
+  // Save the picked file in the MRU list
+  mruManager.AddMostRecentlyUsedFile(filename);
+}
+```
+#### Example: Read file from MRU list
+
+```c#
+
+var mruManager = new MruManager();
+mruManager.MaxMostRecentlyUsedCount = 30;
+
+MostRecentlyUsedFileItem lastUsedFile = mruManager.MostRecentlyUsedFile;
+
+// Since the list is a ReadOnlyObservableCollection you can directly bind to it 
+// and receive CollectionChanged notifications, which will automatically update the binding target
+ReadOnlyObservableCollection<MostRecentlyUsedFileItem> mruList = mruManager.MostRecentlyUsedFiles;
 ```
