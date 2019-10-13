@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using BionicUtilities.NetStandard.ViewModel;
 
 namespace BionicUtilities.Net.Settings
@@ -6,7 +7,7 @@ namespace BionicUtilities.Net.Settings
   /// <summary>
   /// An immutable item that represents a Most Recently Used file (MRU) table entry.
   /// </summary>
-  public class MostRecentlyUsedFileItem : BaseViewModel
+  public class MostRecentlyUsedFileItem : BaseViewModel, IEquatable<MostRecentlyUsedFileItem>
   {
     /// <summary>
     /// Constructor
@@ -16,6 +17,45 @@ namespace BionicUtilities.Net.Settings
     {
       this.FileInfo = fileInfo;
     }
+
+    #region Overrides of Object
+
+    /// <inheritdoc />
+    public override bool Equals(object obj) => Equals(obj as MostRecentlyUsedFileItem);
+
+    #region Equality members
+
+    /// <inheritdoc />
+    public bool Equals(MostRecentlyUsedFileItem other)
+    {
+      if (object.ReferenceEquals(null, other))
+      {
+        return false;
+      }
+
+      if (object.ReferenceEquals(this, other))
+      {
+        return true;
+      }
+
+      if (this.FileInfo.FullName.Equals(other.FileInfo.FullName, StringComparison.OrdinalIgnoreCase))
+      {
+        return true;
+      }
+
+      return object.Equals(this.FileInfo, other.FileInfo);
+    }
+
+    /// <inheritdoc />
+    public override int GetHashCode() => (this.FileInfo != null ? this.FileInfo.GetHashCode() : 0);
+
+    public static bool operator ==(MostRecentlyUsedFileItem left, MostRecentlyUsedFileItem right) => left?.Equals(right) ?? false;
+
+    public static bool operator !=(MostRecentlyUsedFileItem left, MostRecentlyUsedFileItem right) => !left?.Equals(right) ?? false;
+
+    #endregion
+
+    #endregion
 
     /// <summary>
     /// Return the underlying <see cref="FileInfo"/> of this instance.
