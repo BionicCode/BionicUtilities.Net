@@ -4,6 +4,30 @@
         <name>BionicUtilities.NetStandard</name>
     </assembly>
     <members>
+        <member name="T:BionicUtilities.NetStandard.Generic.INullObject`1">
+            <summary>
+            Interface that returns a null object for the implementing type. Implements Null-Object Pattern
+            </summary>
+            <typeparam name="TObject"></typeparam>
+        </member>
+        <member name="P:BionicUtilities.NetStandard.Generic.INullObject`1.NullObject">
+            <summary>
+            Instance to return instead of NULL
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.NetStandard.Generic.NullObject`1.IsNull">
+            <inheritdoc />
+        </member>
+        <member name="T:BionicUtilities.NetStandard.INullObject">
+            <summary>
+            Null-Object Pattern implementation
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.NetStandard.INullObject.IsNull">
+            <summary>
+            Property to indicate whether the current type is NULL
+            </summary>
+        </member>
         <member name="M:BionicUtilities.NetStandard.IO.FilePathFilter.FilterFilePathsFromMixedPathsIncludingFolders(System.Collections.Generic.IEnumerable{System.String},BionicUtilities.NetStandard.IO.FileExtensions,System.Boolean)">
             <summary>
               Extracts valid paths or paths with a specified extension from a collection of paths.
@@ -43,12 +67,104 @@
               <see cref="T:BionicUtilities.NetStandard.IO.FileExtensions" />
             </remarks>
         </member>
+        <member name="T:BionicUtilities.NetStandard.Profiling.Profiler">
+            <summary>
+            Helper methods to measure code execution time.
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.Profiling.Profiler.LogTime(System.Action)">
+            <summary>
+            Measures the execution time of a method.
+            </summary>
+            <param name="action">The code to measure execution time.</param>
+            <returns>The execution time as a <see cref="T:System.TimeSpan"/>.</returns>
+            <remarks>Specify a <see cref="P:BionicUtilities.NetStandard.Profiling.Profiler.LogPrinter"/> <see cref="T:System.Action"/> to customize the output target and formatting.</remarks>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.Profiling.Profiler.LogTimes(System.Action,System.Int32)">
+            <summary>
+            Measures the execution time of a method.
+            </summary>
+            <param name="action">The code to measure execution time.</param>
+            <param name="runCount">Number of iterations the <paramref name="action"/> should be executed.</param>
+            <returns>A list of execution times for all <paramref name="runCount"/> number of iterations <see cref="T:System.TimeSpan"/>.</returns>
+            <remarks>Specify a <see cref="P:BionicUtilities.NetStandard.Profiling.Profiler.LogPrinter"/> <see cref="T:System.Action"/> to customize the output target and formatting.</remarks>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.Profiling.Profiler.LogAverageTime(System.Action,System.Int32)">
+            <summary>
+            Measures the execution time of a method.
+            </summary>
+            <param name="action">The code to measure execution time.</param>
+            <param name="runCount">Number of iterations the <paramref name="action"/> should be executed.</param>
+            <returns>The average execution time of all <paramref name="runCount"/> number of iterations as <see cref="T:System.TimeSpan"/>.</returns>
+            <remarks>Specify a <see cref="P:BionicUtilities.NetStandard.Profiling.Profiler.LogPrinter"/> <see cref="T:System.Action"/> to customize the output target and formatting.</remarks>
+        </member>
+        <member name="T:BionicUtilities.NetStandard.ViewModel.BaseViewModel">
+            <summary>
+            Base class recommended to use for view models across the application. Encapsulates implementations of <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> and <see cref="T:System.ComponentModel.INotifyDataErrorInfo"/>.
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.TrySetValue``1(``0,``0@,System.String)">
+            <summary>
+            Generic property setter. Sets the value of any property of the extending view model by passing in a the corresponding property backing field. Automatically raises the <see cref="E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged"/> event for this property.
+            </summary>
+            <remarks>If new value equals the old value the value of the property won't change and the <see cref="E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged"/> event won't be raised. Uses the <c>Equals</c> implementation to check for equality.</remarks>
+            <typeparam name="TValue">The generic type parameter of the new property value.</typeparam>
+            <param name="value">The new property value.</param>
+            <param name="targetBackingField">The backing field of the target property for the new value. Passed in by reference using <c>ref</c> keyword.</param>
+            <param name="propertyName">The name of the property that changes. By default the property name is automatically set to the property that called this setter method.</param>
+            <returns><c>true</c> when the property has changed or <c>false</c> when the property value didn't change (e.g. on equality of old and new value).</returns>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.TrySetValue``1(``0,System.Func{``0,System.ValueTuple{System.Boolean,System.Collections.Generic.IEnumerable{System.String}}},``0@,System.String,System.Boolean,System.Boolean)">
+            <summary>
+             Sets the value of the referenced property and executes a validation delegate.
+            </summary>
+            <typeparam name="TValue">The generic value type parameter</typeparam>
+            <param name="value">The new value which is to be set to the property.</param>
+            <param name="validationDelegate">The callback that is used to validate the new value.</param>
+            <param name="targetBackingField">The reference to the backing field.</param>
+            <param name="propertyName">The name of the property to set. Default name is the property that called this method.</param>
+            <param name="isRejectInvalidValueEnabled">When <c>true</c> the invalid value is not stored to the backing field.<br/> Use this to ensure that the view model in a valid state.</param>
+            <param name="isThrowExceptionOnValidationErrorEnabled">Enable throwing an <exception cref="T:System.ArgumentException"></exception> if validation failed. Use this when <c>ValidatesOnExceptions</c> on a <c>Binding</c> is set to <c>true</c></param>
+            <exception cref="T:System.ArgumentException">Thrown on validation failed</exception>
+            <returns>Returns <c>true</c> if the new value doesn't equal the old value and the new value is valid. Returns <c>false</c> if the new value equals the old value or the validation has failed.</returns>
+            <remarks>This property setter supports invalid value rejection, which means values are only assigned to the backing field if they are valid which is when the <paramref name="validationDelegate"/> return <c>true</c>.<br/> To support visual validation error feed back and proper behavior in <c>TwoWay</c> binding scenarios, <br/> it is recommended to set <paramref name="isThrowExceptionOnValidationErrorEnabled"/> to <c>true</c> and set the validation mode of the binding to <c>Binding.ValidatesOnExceptions</c>.<br/>If not doing so, the binding target will clear the new value and show the last valid value instead.</remarks>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.IsValueValid``1(``0,System.Func{``0,System.ValueTuple{System.Boolean,System.Collections.Generic.IEnumerable{System.String}}},System.String)">
+            <summary>
+            Can be used to check whether a value is valid.
+            </summary>
+            <typeparam name="TValue">Generic type parameter of the value to check.</typeparam>
+            <param name="value">The value to check.</param>
+            <param name="validationDelegate">The validation delegate <see cref="T:System.Func`2"/>which is invoked on the value.</param>
+            <param name="propertyName">The name of the property to set. Default name is the property that called this method.</param>
+            <returns><c>true</c> when the value is valid, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyHasError(System.String)">
+            <summary>
+            Checks whether the specified property has errors or is valid.
+            </summary>
+            <param name="propertyName">The name of the property to check for errors.</param>
+            <returns><c>true</c> when the specified property has at least one error. Otherwise <c>false</c> when the property is valid.</returns>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetPropertyErrors(System.String)">
+            <inheritdoc />
+        </member>
         <member name="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyChanged">
             <summary>
             Event fired whenever a child property changes its value.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.OnPropertyChanged(System.String)" -->
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.OnPropertyChanged(System.String)">
+            <summary>
+            Method called to fire a <see cref="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName"> The property name. </param>
+        </member>
         <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetErrors(System.String)">
             <inheritdoc />
         </member>
@@ -57,6 +173,12 @@
         </member>
         <member name="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.ErrorsChanged">
             <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.OnErrorsChanged(System.String)">
+            <summary>
+            Raised when the validation state of the view model has changed (e.g. error added or removed).
+            </summary>
+            <param name="propertyName"></param>
         </member>
     </members>
 </doc>

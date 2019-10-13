@@ -27,6 +27,241 @@
               Converter to truncate file paths exceeding a specific length by replacing a number of characters with an ellipsis.
             </summary>
         </member>
+        <member name="T:BionicUtilities.Net.Extensions.HelperExtensions">
+            <summary>
+            Collection of extension methods e.g. visual tree traversal
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.TryFindVisualParentElement``1(System.Windows.DependencyObject,``0@)">
+            <summary>
+            Traverses the visual tree towards the root until an element with a matching element name is found.
+            </summary>
+            <typeparam name="TParent">The type the visual parent must match.</typeparam>
+            <param name="child"></param>
+            <param name="resultElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.TryFindVisualParentElementByName(System.Windows.DependencyObject,System.String,System.Windows.FrameworkElement@)">
+            <summary>
+            Traverses the visual tree towards the root until an element with a matching element type is found.
+            </summary>
+            <param name="child"></param>
+            <param name="elementName">The element name the visual parent must match.</param>
+            <param name="resultElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.TryFindVisualChildElement``1(System.Windows.DependencyObject,``0@)">
+            <summary>
+            Traverses the visual tree towards the leafs until an element with a matching element type is found.
+            </summary>
+            <typeparam name="TChild">The type the visual child must match.</typeparam>
+            <param name="parent"></param>
+            <param name="resultElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.TryFindVisualChildElementByName(System.Windows.DependencyObject,System.String,System.Windows.FrameworkElement@)">
+            <summary>
+            Traverses the visual tree towards the leafs until an element with a matching element name is found.
+            </summary>
+            <param name="parent"></param>
+            <param name="childElementName">The name the visual child's name must match.</param>
+            <param name="resultElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Extensions.HelperExtensions.FindVisualChildElements``1(System.Windows.DependencyObject)">
+            <summary>
+            Traverses the visual tree towards the leafs until all elements with a matching element type is found.
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> to enable deferred traversal.
+            </summary>
+            <typeparam name="TChildren">The type the visual children must match.</typeparam>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BionicUtilities.Net.Settings.AppSettingsConnector">
+            <summary>
+            Exposes a basic static API to access the AppSettings file in order to manage application settings. 
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.AppSettingsConnector.TryReadString(System.String,System.String@)">
+            <summary>
+            If exists, this method will return the corresponding value of the specified key.
+            </summary>
+            <param name="key">The key that maps to a specific setting.</param>
+            <param name="value">The actual settings <see cref="T:System.String"/> value of the specified key.</param>
+            <returns><c>true</c> when an entry for the specified <paramref name="key"/> was found. Otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.AppSettingsConnector.TryReadInt(System.String,System.Int32@)">
+            <summary>
+            If exists, this method will return the corresponding value of the specified key.
+            </summary>
+            <param name="key">The key that maps to a specific setting.</param>
+            <param name="value">The actual settings <see cref="T:System.Int32"/> value of the specified key.</param>
+            <returns><c>true</c> when an entry for the specified <paramref name="key"/> was found. Otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.AppSettingsConnector.TryReadDouble(System.String,System.Double@)">
+            <summary>
+            If exists, this method will return the corresponding value of the specified key.
+            </summary>
+            <param name="key">The key that maps to a specific setting.</param>
+            <param name="value">The actual settings <see cref="T:System.Double"/> value of the specified key.</param>
+            <returns><c>true</c> when an entry for the specified <paramref name="key"/> was found. Otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.AppSettingsConnector.TryReadBool(System.String,System.Boolean@)">
+            <summary>
+            If exists, this method will return the corresponding value of the specified key.
+            </summary>
+            <param name="key">The key that maps to a specific setting.</param>
+            <param name="value">The actual settings <see cref="T:System.Boolean"/> value of the specified key.</param>
+            <returns><c>true</c> when an entry for the specified <paramref name="key"/> was found. Otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.AppSettingsConnector.WriteString(System.String,System.String)">
+            <summary>
+            Writes a <see cref="T:System.String"/> value to the settings file which is stored using the specified lookup <paramref name="key"/>. If the <paramref name="key"/> already exists, the existing value will be overwritten.
+            </summary>
+            <param name="key">The lookup key for the <paramref name="value"/>.</param>
+            <param name="value">The settings value to save to the file.</param>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.AppSettingsConnector.WriteInt(System.String,System.Int32)">
+            <summary>
+            Writes a <see cref="T:System.Int32"/> value to the settings file which is stored using the specified lookup <paramref name="key"/>. If the <paramref name="key"/> already exists, the existing value will be overwritten.
+            </summary>
+            <param name="key">The lookup key for the <paramref name="value"/>.</param>
+            <param name="value">The settings value to save to the file.</param>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.AppSettingsConnector.WriteDouble(System.String,System.Double)">
+            <summary>
+            Writes a <see cref="T:System.Double"/> value to the settings file which is stored using the specified lookup <paramref name="key"/>. If the <paramref name="key"/> already exists, the existing value will be overwritten.
+            </summary>
+            <param name="key">The lookup key for the <paramref name="value"/>.</param>
+            <param name="value">The settings value to save to the file.</param>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.AppSettingsConnector.WriteBool(System.String,System.Boolean)">
+            <summary>
+            Writes a <see cref="T:System.Boolean"/> value to the settings file which is stored using the specified lookup <paramref name="key"/>. If the <paramref name="key"/> already exists, the existing value will be overwritten.
+            </summary>
+            <param name="key">The lookup key for the <paramref name="value"/>.</param>
+            <param name="value">The settings value to save to the file.</param>
+        </member>
+        <member name="T:BionicUtilities.Net.Settings.IMruManager">
+            <summary>
+            Interface that describes an API that manages a MRU (Most Recently Used files) table which is stored in the AppSettings file.
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.IMruManager.AddMostRecentlyUsedFile(System.String)">
+            <summary>
+            Adds a file with the specified path to the MRU table.
+            </summary>
+            <param name="filePath">The path to the file which is to add to the MRU table.</param>
+            <remarks>Checks if the file exists. Does nothing if file doesn't exist. When the number of files in the MRU table exceeds the limit set by <see cref="P:BionicUtilities.Net.Settings.IMruManager.MaxMostRecentlyUsedCount"/> the entry with the least recent access is removed from the table.</remarks>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.IMruManager.Clear">
+            <summary>
+            Clears the MRU list.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.IMruManager.MostRecentlyUsedFiles">
+            <summary>
+            A <see cref="T:System.Collections.ObjectModel.ReadOnlyObservableCollection`1"/> collection of <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> which contains the MRU files.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.IMruManager.MostRecentlyUsedFile">
+            <summary>
+            Gets the MRU file which is the last file added to the MRU table.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.IMruManager.MaxMostRecentlyUsedCount">
+            <summary>
+            The maximum number of files that are kept in the MRU table.<br/>The default value is 10.
+            </summary>
+            <remarks>When the limit is exceeded, the least recent used file will be removed from the MRU table every time a new file is added. <br/>The maximum allowed value is 100. The minimum allowed value is 1.</remarks>
+        </member>
+        <member name="E:BionicUtilities.Net.Settings.IMruManager.FileAdded">
+            <summary>
+            Raised when a new file was added to the MRU list. The event args contains the old and the new MostRecentlyUsedFileItem. <br/>Once the max <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> limit is reached, the least used file will be removed from the list to make space for the new item. <br/>In this case the <see cref="P:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.OldValue"/> is the removed oldest item in the list. <br/>Otherwise <see cref="P:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.OldValue"/> will be <c>null</c>.
+            </summary>
+        </member>
+        <member name="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem">
+            <summary>
+            An immutable item that represents a Most Recently Used file (MRU) table entry.
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.#ctor(System.IO.FileInfo)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="fileInfo">The underlying <see cref="P:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.FileInfo"/> of the item.</param>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.Equals(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.FileInfo">
+            <summary>
+            Return the underlying <see cref="P:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.FileInfo"/> of this instance.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.Name">
+            <summary>
+            Returns the file name including the extension.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.FullName">
+            <summary>
+            Returns the full file path of the file.
+            </summary>
+        </member>
+        <member name="T:BionicUtilities.Net.Settings.MruManager">
+            <summary>
+            API that manages a MRU (Most Recently Used files) table which is stored in the AppSettings file.
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MruManager.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MruManager.AddMostRecentlyUsedFile(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MruManager.Clear">
+            <inheritdoc />
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.MruManager.MostRecentlyUsedFiles">
+            <inheritdoc />  
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.MruManager.MostRecentlyUsedFile">
+            <inheritdoc />
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.MruManager.MaxMostRecentlyUsedCount">
+            <inheritdoc />
+        </member>
+        <member name="E:BionicUtilities.Net.Settings.MruManager.FileAdded">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MruManager.IsMruCountValid(System.Int32)">
+            <summary>
+            Property validation delegate. Validates the <see cref="P:BionicUtilities.Net.Settings.MruManager.MaxMostRecentlyUsedCount"/> property values.
+            </summary>
+            <param name="count">The max count value for <see cref="P:BionicUtilities.Net.Settings.MruManager.MaxMostRecentlyUsedCount"/> to validate.</param>
+            <returns></returns>
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.MruManager.InternalMostRecentlyUsedFiles">
+            <summary>
+            The underlying collection that holds the <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> elements.<br/> This collection is the source for the public <see cref="P:BionicUtilities.Net.Settings.MruManager.MostRecentlyUsedFiles"/> property, which is a <see cref="T:System.Collections.ObjectModel.ReadOnlyObservableCollection`1"/>.
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MruManager.OnFileAdded(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)">
+            <summary>
+            Called when the <see cref="P:BionicUtilities.Net.Settings.MruManager.InternalMostRecentlyUsedFiles"/> has changed.
+            </summary>
+            <param name="oldItem">The removed <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> item.</param>
+            <param name="newItem">The newly added <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> item.</param>
+        </member>
         <member name="M:BionicUtilities.Net.Utility.Generic.IAsyncRelayCommand`1.Execute(`0)">
             <summary>
             Executes the AsyncRelayCommand on the current command target.
