@@ -220,6 +220,8 @@
   <HelpKINode Title="DividerValueConverter.DividerValueConverter constructor" Url="html/a36cdb46-a661-aecd-01f4-d3ae46dde4d6.htm" />
   <HelpKINode Title="Dll enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="Double property" Url="html/884d8d72-1f43-0db1-6cfa-eafbe168dfb2.htm" />
+  <HelpKINode Title="Equality operator" Url="html/8557baf3-e514-f67e-fc02-56804f3a6cc5.htm" />
+  <HelpKINode Title="Equals method" Url="html/28217cbc-1d39-f7d8-fa3b-e92281316f2f.htm" />
   <HelpKINode Title="EqualsExtension class">
     <HelpKINode Title="EqualsExtension Class" Url="html/c9084559-40de-5ecc-f6d1-dd9e25de8992.htm" />
     <HelpKINode Title="constructor" Url="html/16cf4b43-541e-06b7-93c5-6a07836786c8.htm" />
@@ -245,6 +247,10 @@
   <HelpKINode Title="ExecuteNoParam field" Url="html/48709213-a219-b344-7c19-1932cb6f2e0f.htm" />
   <HelpKINode Title="FalseValue property" Url="html/32751d58-1801-9ee1-9d1a-b7c3efb9dc4f.htm" />
   <HelpKINode Title="FalseValueProperty field" Url="html/3a9e4533-e135-2bdf-f874-6bc179fb3221.htm" />
+  <HelpKINode Title="FileAdded event">
+    <HelpKINode Title="IMruManager.FileAdded Event" Url="html/61ea7e09-5c06-00b6-54b3-c59bc22f965f.htm" />
+    <HelpKINode Title="MruManager.FileAdded Event" Url="html/09d3cff4-da1e-8b79-0b10-9b1285d088dd.htm" />
+  </HelpKINode>
   <HelpKINode Title="FileExtensions enumeration" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="FileInfo property" Url="html/de3bb75f-715c-badc-23cb-6ebc961b8866.htm" />
   <HelpKINode Title="FilePathFilter class">
@@ -286,6 +292,7 @@
   <HelpKINode Title="FindVisualChildElements&lt;TChildren&gt; method" Url="html/de162aed-0140-2c05-dc5c-f0c6d4d132f2.htm" />
   <HelpKINode Title="FullName property" Url="html/7c554185-c2cf-01e2-4755-b81645bc040b.htm" />
   <HelpKINode Title="GetErrors method" Url="html/4cd1c898-a497-5124-4a80-767d974ffe48.htm" />
+  <HelpKINode Title="GetHashCode method" Url="html/0f6d5b87-44c1-3985-9cf2-afc22c7a1ee1.htm" />
   <HelpKINode Title="GetPropertyErrors method">
     <HelpKINode Title="BaseViewModel.GetPropertyErrors Method " Url="html/81844342-d7c5-2614-f62c-bbbf1351861c.htm" />
     <HelpKINode Title="IViewModel.GetPropertyErrors Method " Url="html/5d6076c5-1b80-f7ff-8943-f2a3156e0db9.htm" />
@@ -297,8 +304,8 @@
   <HelpKINode Title="HelperExtensions class">
     <HelpKINode Title="HelperExtensions Class" Url="html/0b93fb1e-4082-2601-992f-c35aebafecf6.htm" />
     <HelpKINode Title="HelperExtensions Class" Url="html/9e0b6988-9bd4-f663-fd62-eb05606d823a.htm" />
-    <HelpKINode Title="methods" Url="html/30dd3f85-839f-fffa-2609-98db94683711.htm" />
     <HelpKINode Title="methods" Url="html/2ba04fbc-00f0-670a-3298-0ecc60cfe61d.htm" />
+    <HelpKINode Title="methods" Url="html/30dd3f85-839f-fffa-2609-98db94683711.htm" />
   </HelpKINode>
   <HelpKINode Title="HelperExtensions.AddRange method" Url="html/22b34a57-42db-ae13-27ac-2c84b78b7db0.htm" />
   <HelpKINode Title="HelperExtensions.FindVisualChildElements(Of TChildren) method" Url="html/de162aed-0140-2c05-dc5c-f0c6d4d132f2.htm" />
@@ -366,9 +373,11 @@
     <HelpKINode Title="properties" Url="html/eeca1c16-a44a-4c24-2979-a0ad43f9a5fb.htm" />
   </HelpKINode>
   <HelpKINode Title="IMruManager.AddMostRecentlyUsedFile method" Url="html/eeb10f87-f5c3-626d-d3f0-048926dab9fd.htm" />
+  <HelpKINode Title="IMruManager.FileAdded event" Url="html/61ea7e09-5c06-00b6-54b3-c59bc22f965f.htm" />
   <HelpKINode Title="IMruManager.MaxMostRecentlyUsedCount property" Url="html/3c71d9c3-c420-7967-216d-d22d81846954.htm" />
   <HelpKINode Title="IMruManager.MostRecentlyUsedFile property" Url="html/49254c1a-c4df-be21-854b-2a2eb6c3838d.htm" />
   <HelpKINode Title="IMruManager.MostRecentlyUsedFiles property" Url="html/15d5820c-abff-82fd-7ebe-e93a38f85c77.htm" />
+  <HelpKINode Title="Inequality operator" Url="html/f16b3599-b02a-1997-6577-7b28f794a6b0.htm" />
   <HelpKINode Title="Inf enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="Info enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="Ini enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
@@ -466,10 +475,15 @@
     <HelpKINode Title="constructor" Url="html/200a6834-dc52-2bf7-13ce-e51b64ec6318.htm" />
     <HelpKINode Title="events" Url="html/91b449e7-8694-3ed4-9278-1a8efd3bba70.htm" />
     <HelpKINode Title="methods" Url="html/550814c6-1dab-32a6-5603-0b8bc87eb69d.htm" />
+    <HelpKINode Title="operators" Url="html/aeea02a1-5567-24b9-a31e-5912119b6ddb.htm" />
     <HelpKINode Title="properties" Url="html/1246311a-13f4-6f34-a349-c091e61d7e98.htm" />
   </HelpKINode>
+  <HelpKINode Title="MostRecentlyUsedFileItem.Equality operator" Url="html/8557baf3-e514-f67e-fc02-56804f3a6cc5.htm" />
+  <HelpKINode Title="MostRecentlyUsedFileItem.Equals method" Url="html/28217cbc-1d39-f7d8-fa3b-e92281316f2f.htm" />
   <HelpKINode Title="MostRecentlyUsedFileItem.FileInfo property" Url="html/de3bb75f-715c-badc-23cb-6ebc961b8866.htm" />
   <HelpKINode Title="MostRecentlyUsedFileItem.FullName property" Url="html/7c554185-c2cf-01e2-4755-b81645bc040b.htm" />
+  <HelpKINode Title="MostRecentlyUsedFileItem.GetHashCode method" Url="html/0f6d5b87-44c1-3985-9cf2-afc22c7a1ee1.htm" />
+  <HelpKINode Title="MostRecentlyUsedFileItem.Inequality operator" Url="html/f16b3599-b02a-1997-6577-7b28f794a6b0.htm" />
   <HelpKINode Title="MostRecentlyUsedFileItem.MostRecentlyUsedFileItem constructor" Url="html/200a6834-dc52-2bf7-13ce-e51b64ec6318.htm" />
   <HelpKINode Title="MostRecentlyUsedFileItem.Name property" Url="html/c39c434a-13b1-8764-ee10-6d668fcbe422.htm" />
   <HelpKINode Title="MostRecentlyUsedFiles property">
@@ -484,10 +498,12 @@
     <HelpKINode Title="properties" Url="html/7f376201-47a6-7458-6c43-ed86f0d81161.htm" />
   </HelpKINode>
   <HelpKINode Title="MruManager.AddMostRecentlyUsedFile method" Url="html/cb53941d-d401-4f66-6746-316958ffe429.htm" />
+  <HelpKINode Title="MruManager.FileAdded event" Url="html/09d3cff4-da1e-8b79-0b10-9b1285d088dd.htm" />
   <HelpKINode Title="MruManager.MaxMostRecentlyUsedCount property" Url="html/2cbe363d-7f73-6ee9-83f6-a721a3092eaf.htm" />
   <HelpKINode Title="MruManager.MostRecentlyUsedFile property" Url="html/b82e678e-122c-d248-b952-24452a22788f.htm" />
   <HelpKINode Title="MruManager.MostRecentlyUsedFiles property" Url="html/ab4542aa-dd22-148c-16df-55828e61baf5.htm" />
   <HelpKINode Title="MruManager.MruManager constructor" Url="html/900f7715-029b-cef6-ded3-428b40124812.htm" />
+  <HelpKINode Title="MruManager.OnFileAdded method" Url="html/e2b9c3c6-bc48-8240-eb64-327f8fc91f9f.htm" />
   <HelpKINode Title="Name property" Url="html/c39c434a-13b1-8764-ee10-6d668fcbe422.htm" />
   <HelpKINode Title="NewValue property" Url="html/bd76ec62-8115-4d7a-e1fc-1583287277a7.htm" />
   <HelpKINode Title="NonArchive enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
@@ -544,6 +560,7 @@
   <HelpKINode Title="Old enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="OldValue property" Url="html/1ce111e4-4add-8730-8c43-4b427c98d12f.htm" />
   <HelpKINode Title="OnErrorsChanged method" Url="html/4b7d5a8c-be99-dfe2-c096-4816ba0db96e.htm" />
+  <HelpKINode Title="OnFileAdded method" Url="html/e2b9c3c6-bc48-8240-eb64-327f8fc91f9f.htm" />
   <HelpKINode Title="OnPropertyChanged method" Url="html/944ae616-1323-a237-c935-696ca1a54083.htm" />
   <HelpKINode Title="Png enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="PrimitiveTypeExtension class">

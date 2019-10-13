@@ -142,6 +142,39 @@
             <param name="key">The lookup key for the <paramref name="value"/>.</param>
             <param name="value">The settings value to save to the file.</param>
         </member>
+        <member name="T:BionicUtilities.Net.Settings.IMruManager">
+            <summary>
+            Interface that describes an API that manages a MRU (Most Recently Used files) table which is stored in the AppSettings file.
+            </summary>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.IMruManager.AddMostRecentlyUsedFile(System.String)">
+            <summary>
+            Adds a file with the specified path to the MRU table.
+            </summary>
+            <param name="filePath">The path to the file which is to add to the MRU table.</param>
+            <remarks>Checks if the file exists. Does nothing if file doesn't exist. When the number of files in the MRU table exceeds the limit set by <see cref="P:BionicUtilities.Net.Settings.IMruManager.MaxMostRecentlyUsedCount"/> the entry with the least recent access is removed from the table.</remarks>
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.IMruManager.MostRecentlyUsedFiles">
+            <summary>
+            A <see cref="T:System.Collections.ObjectModel.ReadOnlyObservableCollection`1"/> collection of <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> which contains the MRU files.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.IMruManager.MostRecentlyUsedFile">
+            <summary>
+            Gets the MRU file which is the last file added to the MRU table.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Settings.IMruManager.MaxMostRecentlyUsedCount">
+            <summary>
+            The maximum number of files that are kept in the MRU table.<br/>The default value is 10.
+            </summary>
+            <remarks>When the limit is exceeded, the least recent used file will be removed from the MRU table every time a new file is added. <br/>The maximum allowed value is 100. The minimum allowed value is 1.</remarks>
+        </member>
+        <member name="E:BionicUtilities.Net.Settings.IMruManager.FileAdded">
+            <summary>
+            Raised when a new file was added to the MRU list. The event args contains the old and the new MostRecentlyUsedFileItem. <br/>Once the max <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> limit is reached, the least used file will be removed from the list to make space for the new item. <br/>In this case the <see cref="P:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.OldValue"/> is the removed oldest item in the list. <br/>Otherwise <see cref="P:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.OldValue"/> will be <c>null</c>.
+            </summary>
+        </member>
         <member name="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem">
             <summary>
             An immutable item that represents a Most Recently Used file (MRU) table entry.
@@ -152,6 +185,15 @@
             Constructor
             </summary>
             <param name="fileInfo">The underlying <see cref="P:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.FileInfo"/> of the item.</param>
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.Equals(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.GetHashCode">
+            <inheritdoc />
         </member>
         <member name="P:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.FileInfo">
             <summary>
@@ -179,27 +221,16 @@
             </summary>
         </member>
         <member name="M:BionicUtilities.Net.Settings.MruManager.AddMostRecentlyUsedFile(System.String)">
-            <summary>
-            Adds a file with the specified path to the MRU table.
-            </summary>
-            <param name="filePath">The path to the file which is to add to the MRU table.</param>
-            <remarks>Checks if the file exists. Does nothing if file doesn't exist. When the number of files in the MRU table exceeds the limit set by <see cref="P:BionicUtilities.Net.Settings.MruManager.MaxMostRecentlyUsedCount"/> the entry with the least recent access is removed from the table.</remarks>
-        </member>
-        <member name="P:BionicUtilities.Net.Settings.MruManager.MostRecentlyUsedFiles">
-            <summary>
-            A <see cref="T:System.Collections.ObjectModel.ReadOnlyObservableCollection`1"/> collection of <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> which contains the MRU files.
-            </summary>
+            <inheritdoc />
         </member>
         <member name="P:BionicUtilities.Net.Settings.MruManager.MostRecentlyUsedFile">
-            <summary>
-            Gets the MRU file which is the last file added to the MRU table.
-            </summary>
+            <inheritdoc />
         </member>
         <member name="P:BionicUtilities.Net.Settings.MruManager.MaxMostRecentlyUsedCount">
-            <summary>
-            The maximum number of files that are kept in the MRU table.
-            </summary>
-            <remarks>When the limit is exceeded, the least recent used file will be removed from the MRU table every time a new file is added.</remarks>
+            <inheritdoc />
+        </member>
+        <member name="E:BionicUtilities.Net.Settings.MruManager.FileAdded">
+            <inheritdoc />
         </member>
         <member name="M:BionicUtilities.Net.Utility.Generic.IAsyncRelayCommand`1.Execute(`0)">
             <summary>

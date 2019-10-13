@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2019.8.24.0" projectFile="D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Documentation.shfbproj" started="12.10.2019 09:36:10">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2019.8.24.0" projectFile="D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Documentation.shfbproj" started="13.10.2019 18:37:57">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -148,16 +148,16 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0140
+</plugIn>    Last step completed in 00:00:00,0200
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0010
+    Last step completed in 00:00:00,0050
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - GenerateRefInfo.proj]
-Build started 12.10.2019 09:36:12.
+Build started 13.10.2019 18:37:59.
 Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -169,7 +169,7 @@ GenerateRefInfo:
   Portions Copyright &#184; 2006-2019, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
   Loaded 2 assemblies for reflection and 123 dependency assemblies.
-  Wrote information on 13 namespaces, 34 types, and 205 members
+  Wrote information on 13 namespaces, 34 types, and 213 members
   Copying file from &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\reflection.org&quot; to &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\reflection.all&quot;.
   XslTransform (v2019.8.24.0)
   Copyright &#184; 2006-2019, Microsoft Corporation, All Rights Reserved.
@@ -177,12 +177,12 @@ GenerateRefInfo:
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\AddXamlSyntaxData.xsl&#39;.
 Done Building Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\GenerateRefInfo.proj&quot; (default targets).
-    Last step completed in 00:00:03,6221
+    Last step completed in 00:00:04,3440
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - TransformManifest.proj]
-Build started 12.10.2019 09:36:16.
+Build started 13.10.2019 18:38:04.
 Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2019.8.24.0)
@@ -199,7 +199,7 @@ TransformManifest:
   Portions Copyright &#184; 2006-2019, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
 Done Building Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\TransformManifest.proj&quot; (default targets).
-    Last step completed in 00:00:00,7990
+    Last step completed in 00:00:00,9124
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
@@ -217,13 +217,13 @@ Inherited documentation will be written to &#39;_InheritedDocs_.xml&#39;
 Indexing C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\*.xml
 Indexing D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BionicUtilities.Net.xml
 Indexing D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BionicUtilities.NetStandard.xml
-Indexed 158930 members in 129 file(s).  2 file(s) to scan for &lt;inheritdoc /&gt; tags.
+Indexed 158939 members in 129 file(s).  2 file(s) to scan for &lt;inheritdoc /&gt; tags.
 Merging inherited documentation...
 
 SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetPropertyErrors(System.String)&#39;
 
 Documentation merged successfully
-    Last step completed in 00:00:01,5580
+    Last step completed in 00:00:01,8506
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -238,29 +238,29 @@ Generating conceptual topic files
     D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Content\VersionHistory\VersionHistory.aml -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\ddueXml\c5da87fe-d1a3-43fb-9427-d5a468d39c51.xml
     Parsing topic file &#39;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Content\VersionHistory\v1.0.0.0.aml&#39;
     D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Content\VersionHistory\v1.0.0.0.aml -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\ddueXml\e3f796bb-fafc-41a5-a922-eb3f43610968.xml
-    Last step completed in 00:00:00,0160
+    Last step completed in 00:00:00,0350
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00,0070
+    Last step completed in 00:00:00,0150
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\icons\logo.ico -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\icons\logo.ico
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\icons\Help.png -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\icons\Help.png
-    Last step completed in 00:00:00,0050
+    Last step completed in 00:00:00,0100
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00,0000
+    Last step completed in 00:00:00,0050
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 12.10.2019 09:36:18.
+Build started 13.10.2019 18:38:07.
 Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2019.8.24.0)
@@ -269,12 +269,12 @@ GenerateIntermediateTOC:
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
 Done Building Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,3301
+    Last step completed in 00:00:00,3350
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,2019
+    Last step completed in 00:00:00,2174
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -298,12 +298,12 @@ D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.
     Replaced configuration for &#39;Resolve Reference Links Component&#39; (instance 1) with configuration for &#39;Resolve Reference Links (ESENT Cache)&#39;
     Replacing default configuration for &#39;Syntax Component&#39; with the custom configuration
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00,0190
+    Last step completed in 00:00:00,0200
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - BuildTopics.proj]
-Build started 12.10.2019 09:36:19.
+Build started 13.10.2019 18:38:07.
 Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2019.8.24.0)
@@ -461,12 +461,21 @@ BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.Net.MarkupEx
 BuildAssembler : warning : ShowMissingComponent: [N:BionicUtilities.Net.Settings] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ESentResolveReferenceLinksComponent: [T:BionicUtilities.Net.Settings.AppSettingsConnector] Member ID URL not found for target &#39;T:Microsoft.FSharp.Core.AbstractClassAttribute&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ESentResolveReferenceLinksComponent: [T:BionicUtilities.Net.Settings.AppSettingsConnector] Member ID URL not found for target &#39;T:Microsoft.FSharp.Core.SealedAttribute&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.Net.Settings.IMruManager] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.IMruManager.AddMostRecentlyUsedFile(System.String)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.IMruManager.AddMostRecentlyUsedFile(System.String)] Missing &lt;param name=&quot;filePath&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.Net.Settings.IMruManager.MaxMostRecentlyUsedCount] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.Net.Settings.IMruManager.MostRecentlyUsedFile] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.Net.Settings.IMruManager.MostRecentlyUsedFiles] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.Net.Settings.IMruManager.FileAdded] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.op_Equality(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.op_Equality(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.op_Equality(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;param name=&quot;left&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.op_Equality(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;param name=&quot;right&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.op_Inequality(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.op_Inequality(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.op_Inequality(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;param name=&quot;left&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem.op_Inequality(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;param name=&quot;right&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.Net.Settings.MruManager.FileAdded] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.Net.Settings.MruManager.FileAdded] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.Net.Settings.MruManager.MostRecentlyUsedFiles] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MruManager.OnFileAdded(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MruManager.OnFileAdded(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;param name=&quot;oldItem&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Settings.MruManager.OnFileAdded(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)] Missing &lt;param name=&quot;newItem&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BionicUtilities.Net.Utility] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Utility.AsyncRelayCommand.#ctor(System.Func{System.Threading.Tasks.Task})] Missing &lt;param name=&quot;executeAsyncNoParam&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.Net.Utility.AsyncRelayCommand.CanExecuteChanged] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
@@ -600,22 +609,23 @@ BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.ViewModel.IViewModel.PropertyHasError(System.String)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.ViewModel.IViewModel.PropertyHasError(System.String)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.ViewModel.IViewModel.PropertyHasError(System.String)] Missing &lt;param name=&quot;propertyName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-  Processed 296 topic(s)
-  289 warning(s)
+  Processed 306 topic(s)
+  298 warning(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
   ResolveArtLinksComponent: Copying media files...
-  ESentResolveReferenceLinksComponent: Member ID URL ESENT local cache flushed 0 time(s).  Current ESENT local cache usage: 137 of 2500.
-  ESentResolveReferenceLinksComponent: &quot;FrameworkTargets&quot; ESENT local cache flushed 0 time(s).  Current ESENT local cache usage: 161 of 2500.
-  ESentCopyFromIndexComponent: &quot;reflection&quot; highest ESENT local cache flush count: 0.  Highest ESENT current local cache usage: 48 of 2500.
+  ESentResolveReferenceLinksComponent: 2 entries added to the member ID URL cache.  New cache size: 743 entries
+  ESentResolveReferenceLinksComponent: Member ID URL ESENT local cache flushed 0 time(s).  Current ESENT local cache usage: 138 of 2500.
+  ESentResolveReferenceLinksComponent: &quot;FrameworkTargets&quot; ESENT local cache flushed 0 time(s).  Current ESENT local cache usage: 163 of 2500.
+  ESentCopyFromIndexComponent: &quot;reflection&quot; highest ESENT local cache flush count: 0.  Highest ESENT current local cache usage: 50 of 2500.
   ESentCopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 1 of 15.
   ESentCopyFromIndexComponent: &quot;comments&quot; highest ESENT local cache flush count: 0.  Highest ESENT current local cache usage: 64 of 2500.
   ESentCopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 3 of 30.
 Done Building Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj&quot; (default targets).
-    Last step completed in 00:00:07,5200
+    Last step completed in 00:00:08,4444
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0030
+    Last step completed in 00:00:00,0000
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -627,11 +637,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing website files in D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website
-Processed 296 HTML files
+Processed 306 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\WebKI.xml
 Saving website table of contents to D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\WebTOC.xml
-    Last step completed in 00:00:00,4820
+    Last step completed in 00:00:00,4632
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -713,7 +723,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\scripts\clipboard.min.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-3.3.1.min.js -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\scripts\jquery-3.3.1.min.js
-    Last step completed in 00:00:00,1180
+    Last step completed in 00:00:00,1450
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
@@ -724,22 +734,22 @@ Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:00,6540
+</plugIn>    Last step completed in 00:00:00,6400
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
 Copied 500 files
-Copied 519 files for the website content
-    Last step completed in 00:00:00,8250
+Copied 534 files for the website content
+    Last step completed in 00:00:00,8383
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,2530
+    Last step completed in 00:00:00,2750
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 12.10.2019 09:36:28.  Total time: 00:00:18,3180
+Build completed successfully at 13.10.2019 18:38:18.  Total time: 00:00:21,0822
 
 </buildStep>
 </shfbBuild>
