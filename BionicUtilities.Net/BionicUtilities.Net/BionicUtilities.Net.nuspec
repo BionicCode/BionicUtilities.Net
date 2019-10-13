@@ -12,6 +12,6 @@
     <description>Reusable utility and class library for WPF - Featuring: AsyncRelayCommand&lt;T&gt;, ObservablePropertyChangedCollection, BaseViewModel, Visual Tree Helpers, Profiling, Extension Methods, ValueChangedEventArgs</description>
     <releaseNotes>Release</releaseNotes>
     <copyright>Copyright 2019</copyright>
-    <tags>BaseViewModel AsyncRelayCommand Async RelayCommand WPF VisualTreeHelper Profiler Profiling Measure Measuring View Model ViewModel ExtensionMethods ObservablePropertyChangedCollection Collection ApplicationSettings Settings AppSettings</tags>
+    <tags>BaseViewModel AsyncRelayCommand Async RelayCommand WPF VisualTreeHelper Profiler Profiling Measure Measuring View Model ViewModel ExtensionMethods ObservablePropertyChangedCollection Collection ApplicationSettings Settings AppSettings MRU MostRecentlyUsedFile LastUsedFile RecentlyUsedFile</tags>
   </metadata>
 </package>

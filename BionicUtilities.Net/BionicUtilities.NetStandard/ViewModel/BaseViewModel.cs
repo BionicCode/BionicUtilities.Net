@@ -8,13 +8,28 @@ using System.Windows.Data;
 
 namespace BionicUtilities.NetStandard.ViewModel
 {
-  public abstract class BaseViewModel : IViewModel
+  /// <summary>
+  /// Base class recommended to use for view models across the application. Encapsulates implementations of <see cref="INotifyPropertyChanged"/> and <see cref="INotifyDataErrorInfo"/>.
+  /// </summary>
+  public abstract class BaseViewModel : IBaseViewModel
   {
+    /// <summary>
+    /// Default constructor
+    /// </summary>
     protected BaseViewModel()
     {
       this.Errors = new Dictionary<string, IEnumerable<string>>();
     }
 
+    /// <summary>
+    /// Generic property setter. Sets the value of any property of the extending view model by passing in a the corresponding property backing field. Automatically raises the <see cref="INotifyPropertyChanged.PropertyChanged"/> event for this property.
+    /// </summary>
+    /// <remarks>If new value equals the old value the value of the property won't change and the <see cref="INotifyPropertyChanged.PropertyChanged"/> event won't be raised. Uses the <c>Equals</c> implementation to check for equality.</remarks>
+    /// <typeparam name="TValue">The generic type parameter of the new property value.</typeparam>
+    /// <param name="value">The new property value.</param>
+    /// <param name="targetBackingField">The backing field of the target property for the new value. Passed in by reference using <c>ref</c> keyword.</param>
+    /// <param name="propertyName">The name of the property that changes. By default the property name is automatically set to the property that called this setter method.</param>
+    /// <returns><c>true</c> when the property has changed or <c>false</c> when the property value didn't change (e.g. on equality of old and new value).</returns>
     protected virtual bool TrySetValue<TValue>(TValue value, ref TValue targetBackingField, [CallerMemberName] string propertyName = null)
     {
       if (value.Equals(targetBackingField))
@@ -42,22 +57,45 @@ namespace BionicUtilities.NetStandard.ViewModel
     /// <remarks>This property setter supports invalid value rejection, which means values are only assigned to the backing field if they are valid which is when the <paramref name="validationDelegate"/> return <c>true</c>.<br/> To support visual validation error feed back and proper behavior in <c>TwoWay</c> binding scenarios, <br/> it is recommended to set <paramref name="isThrowExceptionOnValidationErrorEnabled"/> to <c>true</c> and set the validation mode of the binding to <c>Binding.ValidatesOnExceptions</c>.<br/>If not doing so, the binding target will clear the new value and show the last valid value instead.</remarks>
     protected virtual bool TrySetValue<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, ref TValue targetBackingField, [CallerMemberName] string propertyName = null, bool isRejectInvalidValueEnabled = true, bool isThrowExceptionOnValidationErrorEnabled = false)
     {
+      bool previousValidationHasFailed = PropertyHasError(propertyName);
       bool isValueValid = IsValueValid(value, validationDelegate, propertyName);
-      if (isThrowExceptionOnValidationErrorEnabled && PropertyHasError(propertyName))
+
+      if (!isValueValid && isRejectInvalidValueEnabled)
       {
-        throw new ArgumentException(string.Empty);
+        if (isThrowExceptionOnValidationErrorEnabled)
+        {
+          throw new ArgumentException(string.Empty);
+        }
+
+        return false;
       }
 
-      if ((!isValueValid && isRejectInvalidValueEnabled) || value.Equals(targetBackingField))
+      if (value.Equals(targetBackingField))
       {
+        if (isValueValid && previousValidationHasFailed)
+        {
+          OnPropertyChanged(propertyName);
+        }
         return false;
       }
 
       targetBackingField = value;
       OnPropertyChanged(propertyName);
+      if (!isValueValid && isThrowExceptionOnValidationErrorEnabled)
+      {
+        throw new ArgumentException(string.Empty);
+      }
       return true;
     }
 
+    /// <summary>
+    /// Can be used to check whether a value is valid.
+    /// </summary>
+    /// <typeparam name="TValue">Generic type parameter of the value to check.</typeparam>
+    /// <param name="value">The value to check.</param>
+    /// <param name="validationDelegate">The validation delegate <see cref="Func{TVAlue,TResult}"/>which is invoked on the value.</param>
+    /// <param name="propertyName">The name of the property to set. Default name is the property that called this method.</param>
+    /// <returns><c>true</c> when the value is valid, otherwise <c>false</c>.</returns>
     protected virtual bool IsValueValid<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, [CallerMemberName] string propertyName = null)
     {
       this.Errors.Remove(propertyName);
@@ -71,6 +109,11 @@ namespace BionicUtilities.NetStandard.ViewModel
       return validationResult.IsValid;
     }
 
+    /// <summary>
+    /// Checks whether the specified property has errors or is valid.
+    /// </summary>
+    /// <param name="propertyName">The name of the property to check for errors.</param>
+    /// <returns><c>true</c> when the specified property has at least one error. Otherwise <c>false</c> when the property is valid.</returns>
     public virtual bool PropertyHasError([CallerMemberName] string propertyName = null) =>
       this.Errors.ContainsKey(propertyName);
 
@@ -111,6 +154,10 @@ namespace BionicUtilities.NetStandard.ViewModel
 
       private Dictionary<string, IEnumerable<string>> Errors { get; set; }
 
+      /// <summary>
+      /// Raised when the validation state of the view model has changed (e.g. error added or removed).
+      /// </summary>
+      /// <param name="propertyName"></param>
       protected virtual void OnErrorsChanged(string propertyName)
       {
         this.ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
