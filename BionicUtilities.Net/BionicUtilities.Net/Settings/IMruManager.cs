@@ -22,6 +22,10 @@ namespace BionicUtilities.Net.Settings
     /// <remarks>Checks if the file exists. Does nothing if file doesn't exist. When the number of files in the MRU table exceeds the limit set by <see cref="MaxMostRecentlyUsedCount"/> the entry with the least recent access is removed from the table.</remarks>
     void AddMostRecentlyUsedFile(string filePath);
     /// <summary>
+    /// Clears the MRU list.
+    /// </summary>
+    void Clear();
+    /// <summary>
     /// A <see cref="ReadOnlyObservableCollection{T}"/> collection of <see cref="MostRecentlyUsedFileItem"/> which contains the MRU files.
     /// </summary>
     ReadOnlyObservableCollection<MostRecentlyUsedFileItem> MostRecentlyUsedFiles { get; }

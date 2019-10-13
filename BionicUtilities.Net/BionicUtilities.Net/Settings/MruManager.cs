@@ -74,11 +74,26 @@ namespace BionicUtilities.Net.Settings
 
       this.MostRecentlyUsedFile = this.InternalMostRecentlyUsedFiles.Last();
 
-      string mruListString = string.Join(MruManager.MostRecentlyUsedKeyStringSeparator, this.InternalMostRecentlyUsedFiles.Select(mruItem => mruItem.FullName));
+      SaveInternalMruListToSettingsFile();
+    }
+
+    private void SaveInternalMruListToSettingsFile()
+    {
+      string mruListString = string.Join(
+        MruManager.MostRecentlyUsedKeyStringSeparator,
+        this.InternalMostRecentlyUsedFiles.Select(mruItem => mruItem.FullName));
       AppSettingsConnector.WriteString(MruManager.MostRecentlyUsedKey, mruListString);
     }
 
-    private ReadOnlyObservableCollection<MostRecentlyUsedFileItem> mostRecentlyUsedFiles;   
+    /// <inheritdoc />
+    public void Clear()
+    {
+      this.InternalMostRecentlyUsedFiles.Clear();
+      SaveInternalMruListToSettingsFile();
+    }
+
+    private ReadOnlyObservableCollection<MostRecentlyUsedFileItem> mostRecentlyUsedFiles;
+    /// <inheritdoc />  
     public ReadOnlyObservableCollection<MostRecentlyUsedFileItem> MostRecentlyUsedFiles
     {
       get => this.mostRecentlyUsedFiles;
