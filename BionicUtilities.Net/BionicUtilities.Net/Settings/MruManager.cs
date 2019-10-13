@@ -138,6 +138,9 @@ namespace BionicUtilities.Net.Settings
       return result;
     }
 
+    /// <summary>
+    /// The underlying collection that holds the <see cref="MostRecentlyUsedFileItem"/> elements.<br/> This collection is the source for the <see cref="ReadOnlyObservableCollection{T}"/> <see cref="MostRecentlyUsedFiles"/>.
+    /// </summary>
     protected ObservableCollection<MostRecentlyUsedFileItem> InternalMostRecentlyUsedFiles { get; }
 
     /// <summary>

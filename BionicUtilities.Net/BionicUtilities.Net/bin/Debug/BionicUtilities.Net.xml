@@ -250,6 +250,11 @@
             <param name="count">The max count value for <see cref="P:BionicUtilities.Net.Settings.MruManager.MaxMostRecentlyUsedCount"/> to validate.</param>
             <returns></returns>
         </member>
+        <member name="P:BionicUtilities.Net.Settings.MruManager.InternalMostRecentlyUsedFiles">
+            <summary>
+            The underlying collection that holds the <see cref="T:BionicUtilities.Net.Settings.MostRecentlyUsedFileItem"/> elements.<br/> This collection is the source for the <see cref="T:System.Collections.ObjectModel.ReadOnlyObservableCollection`1"/> <see cref="P:BionicUtilities.Net.Settings.MruManager.MostRecentlyUsedFiles"/>.
+            </summary>
+        </member>
         <member name="M:BionicUtilities.Net.Settings.MruManager.OnFileAdded(BionicUtilities.Net.Settings.MostRecentlyUsedFileItem,BionicUtilities.Net.Settings.MostRecentlyUsedFileItem)">
             <summary>
             Called when the <see cref="P:BionicUtilities.Net.Settings.MruManager.InternalMostRecentlyUsedFiles"/> has changed.
