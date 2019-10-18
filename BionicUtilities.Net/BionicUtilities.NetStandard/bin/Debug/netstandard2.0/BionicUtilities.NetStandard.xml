@@ -145,11 +145,7 @@
             <returns><c>true</c> when the value is valid, otherwise <c>false</c>.</returns>
         </member>
         <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyHasError(System.String)">
-            <summary>
-            Checks whether the specified property has errors or is valid.
-            </summary>
-            <param name="propertyName">The name of the property to check for errors.</param>
-            <returns><c>true</c> when the specified property has at least one error. Otherwise <c>false</c> when the property is valid.</returns>
+            <inheritdoc />
         </member>
         <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetPropertyErrors(System.String)">
             <inheritdoc />
@@ -166,7 +162,12 @@
             <param name="propertyName"> The property name. </param>
         </member>
         <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetErrors(System.String)">
-            <inheritdoc />
+            <summary>
+            Gets all error messages of the specified property. If the <paramref name="propertyName"/> is <c>null</c> all error messages will be returned.
+            </summary>
+            <param name="propertyName">The of the property of which the error messages should be returned.</param>
+            <returns>An <see cref="T:System.Collections.IEnumerable"/> containing all error messages of the specified property.</returns>
+            <remarks>If the <paramref name="propertyName"/> is <c>null</c> all current error messages will be returned.</remarks>
         </member>
         <member name="P:BionicUtilities.NetStandard.ViewModel.BaseViewModel.HasErrors">
             <inheritdoc />
@@ -179,6 +180,21 @@
             Raised when the validation state of the view model has changed (e.g. error added or removed).
             </summary>
             <param name="propertyName"></param>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.IViewModel.PropertyHasError(System.String)">
+            <summary>
+            Checks whether the specified property has errors or is valid.
+            </summary>
+            <param name="propertyName">The name of the property to check for errors.</param>
+            <returns><c>true</c> when the specified property has at least one error. Otherwise <c>false</c> when the property is valid.</returns>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.ViewModel.IViewModel.GetPropertyErrors(System.String)">
+            <summary>
+            Gets all error messages of the specified property. If the <paramref name="propertyName"/> is <c>null</c> all error messages will be returned.
+            </summary>
+            <param name="propertyName">The of the property of which the error messages should be returned.</param>
+            <returns>Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing all error messages of the specified property.</returns>
+            <remarks>If the <paramref name="propertyName"/> is <c>null</c> all current error messages will be returned.</remarks>
         </member>
     </members>
 </doc>

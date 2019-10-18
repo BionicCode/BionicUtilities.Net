@@ -9,8 +9,8 @@
     <projectUrl>https://github.com/BionicCode/BionicUtilities.Net.git</projectUrl>
     <iconUrl>https://avatars2.githubusercontent.com/u/39948423?s=400%26u%3D9fa449b3bc919b95843c67e4c4643e0a69e7d9bf%26v%3D4</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Reusable utility and class library for WPF - Featuring: AsyncRelayCommand&lt;T&gt;, ObservablePropertyChangedCollection, BaseViewModel, Visual Tree Helpers, Profiling, Extension Methods, ValueChangedEventArgs, MruManager (Most REecently Used files), AppSettingsConnector and more.</description>
-    <releaseNotes>For bug reports or feature requests please visit the project home on GutHub and open an issue or send me a mail to BionicCode@outlook.com. Thank you very much.</releaseNotes>
+    <description>Reusable utility and class library for WPF - Featuring: AsyncRelayCommand&lt;T&gt;, ObservablePropertyChangedCollection, BaseViewModel, Visual Tree Helpers, Profiling, Extension Methods, ValueChangedEventArgs, MruManager (Most Recently Used files), AppSettingsConnector and more.</description>
+    <releaseNotes>For bug reports or feature requests please visit the project home on GutHub (follow the "Project Site" link on the right) and then open an issue (open the "issue" tab, click "New Issue" and select the appropriate template) or send  a mail to BionicCode@outlook.com. Thank you very much.</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>BaseViewModel AsyncRelayCommand Async RelayCommand WPF VisualTreeHelper Profiler Profiling Measure Measuring View Model ViewModel ExtensionMethods ObservablePropertyChangedCollection Collection ApplicationSettings Settings AppSettings MRU MostRecentlyUsedFile LastUsedFile RecentlyUsedFile</tags>
   </metadata>

@@ -32,7 +32,7 @@ namespace BionicUtilities.NetStandard.ViewModel
     /// <returns><c>true</c> when the property has changed or <c>false</c> when the property value didn't change (e.g. on equality of old and new value).</returns>
     protected virtual bool TrySetValue<TValue>(TValue value, ref TValue targetBackingField, [CallerMemberName] string propertyName = null)
     {
-      if (value.Equals(targetBackingField))
+      if (value?.Equals(targetBackingField) ?? false)
       {
         return false;
       }
@@ -57,8 +57,15 @@ namespace BionicUtilities.NetStandard.ViewModel
     /// <remarks>This property setter supports invalid value rejection, which means values are only assigned to the backing field if they are valid which is when the <paramref name="validationDelegate"/> return <c>true</c>.<br/> To support visual validation error feed back and proper behavior in <c>TwoWay</c> binding scenarios, <br/> it is recommended to set <paramref name="isThrowExceptionOnValidationErrorEnabled"/> to <c>true</c> and set the validation mode of the binding to <c>Binding.ValidatesOnExceptions</c>.<br/>If not doing so, the binding target will clear the new value and show the last valid value instead.</remarks>
     protected virtual bool TrySetValue<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, ref TValue targetBackingField, [CallerMemberName] string propertyName = null, bool isRejectInvalidValueEnabled = true, bool isThrowExceptionOnValidationErrorEnabled = false)
     {
-      bool previousValidationHasFailed = PropertyHasError(propertyName);
-      bool isValueValid = IsValueValid(value, validationDelegate, propertyName);
+      bool isValueValid = false;
+      bool previousValidationHasFailed = false;
+
+      if (propertyName != null)
+      {
+        previousValidationHasFailed = PropertyHasError(propertyName);
+        isValueValid = IsValueValid(value, validationDelegate, propertyName);
+      }
+
 
       if (!isValueValid && isRejectInvalidValueEnabled)
       {
@@ -70,7 +77,7 @@ namespace BionicUtilities.NetStandard.ViewModel
         return false;
       }
 
-      if (value.Equals(targetBackingField))
+      if (value?.Equals(targetBackingField) ?? false)
       {
         if (isValueValid && previousValidationHasFailed)
         {
@@ -98,6 +105,11 @@ namespace BionicUtilities.NetStandard.ViewModel
     /// <returns><c>true</c> when the value is valid, otherwise <c>false</c>.</returns>
     protected virtual bool IsValueValid<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, [CallerMemberName] string propertyName = null)
     {
+      if (propertyName == null)
+      {
+        return validationDelegate(value).IsValid;
+      }
+
       this.Errors.Remove(propertyName);
       (bool IsValid, IEnumerable<string> ErrorMessages) validationResult = validationDelegate(value);
       if (!validationResult.IsValid)
@@ -109,13 +121,9 @@ namespace BionicUtilities.NetStandard.ViewModel
       return validationResult.IsValid;
     }
 
-    /// <summary>
-    /// Checks whether the specified property has errors or is valid.
-    /// </summary>
-    /// <param name="propertyName">The name of the property to check for errors.</param>
-    /// <returns><c>true</c> when the specified property has at least one error. Otherwise <c>false</c> when the property is valid.</returns>
+    /// <inheritdoc />
     public virtual bool PropertyHasError([CallerMemberName] string propertyName = null) =>
-      this.Errors.ContainsKey(propertyName);
+      this.Errors.ContainsKey(propertyName ?? throw new ArgumentNullException(nameof(propertyName)));
 
     /// <inheritdoc />
     public IEnumerable<string> GetPropertyErrors(string propertyName = null) => GetErrors(propertyName).Cast<string>();
@@ -134,10 +142,15 @@ namespace BionicUtilities.NetStandard.ViewModel
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
       }
 
-      #region Implementation of INotifyDataErrorInfo
+    #region Implementation of INotifyDataErrorInfo
 
-      /// <inheritdoc />
-      public IEnumerable GetErrors(string propertyName) =>
+    /// <summary>
+    /// Gets all error messages of the specified property. If the <paramref name="propertyName"/> is <c>null</c> all error messages will be returned.
+    /// </summary>
+    /// <param name="propertyName">The of the property of which the error messages should be returned.</param>
+    /// <returns>An <see cref="IEnumerable"/> containing all error messages of the specified property.</returns>
+    /// <remarks>If the <paramref name="propertyName"/> is <c>null</c> all current error messages will be returned.</remarks>
+    public IEnumerable GetErrors(string propertyName) =>
         string.IsNullOrWhiteSpace(propertyName) 
           ? this.Errors.SelectMany(entry => entry.Value) 
           : this.Errors.TryGetValue(propertyName, out IEnumerable<string> errors) 
