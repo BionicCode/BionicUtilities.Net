@@ -29,7 +29,8 @@ Reusable utility and class library for WPF.
 * [`Profiler`](https://github.com/BionicCode/BionicLibraryNet#Profiler)
 * [`AppSettingsConnector`](https://github.com/BionicCode/BionicLibraryNet#AppSettingsConnector) - A defaul API to the AppSettings that provides strongly typed reading and writing (e.g. `boo`, `int`, `double`, `string`) of key-value pair values
 * [`MruManager`](https://github.com/BionicCode/BionicUtilities.Net/blob/master/README.md#mru-most-recently-used-file-manager) - Most Recently Used (MRU) file manager. An API that maintains an MRU table stored in the Application Settings file. 
-* `EventAggregator`
+* [`EventAggregator`](https://github.com/BionicCode/BionicUtilities.Net#eventaggregator)
+Implememtation of the EventAggregator pattern that supports dynamic aggregation of different typed event sources
   
   
 ### `BaseViewModel`
@@ -210,7 +211,7 @@ aggregator.TryRegisterObservable(settingsPageViewModel, new[] {nameof(INotifyPro
 
 ```
 
-##### Listen to all event sources by event name
+##### Listen to all aggregated event sources by event name
 Subscribe to the `EventAggregator` and listen to specific events of all aggregated event sources:
 
 ```C#
@@ -218,7 +219,7 @@ Subscribe to the `EventAggregator` and listen to specific events of all aggregat
 aggregator.TryRegisterObserver<PropertyChangedEventHandler>(nameof(INotifyPropertyChanged.PropertyChanged), (s, args) => MessageBox.Show($"'PropertyChanged event'. Sender={sender.GetType().Name}; Value={args.PropertyName}"));
 ```
 
-##### Listen to specific event sources by event name
+##### Listen to specific aggregated event sources by event name
 Subscribe to the `EventAggregator` and listen to specific events of specific aggregated event sources:
 
 ```C#
@@ -230,7 +231,7 @@ aggregator.TryRegisterObserver<PropertyChangedEventHandler>(nameof(INotifyProper
 aggregator.TryRegisterObserver<PropertyChangedEventHandler>(nameof(INotifyPropertyChanged.PropertyChanged), typeof(IPage), (s, args) => MessageBox.Show($"'PropertyChanged event'. Sender={sender.GetType().Name}; Value={args.PropertyName}"));
 ```
 
-#### Example: Type declarations used in examples
+##### Type declarations used in examples
 ```C#
 
 class MainPageViewModel : IPage, INotifyPropertyChanged
