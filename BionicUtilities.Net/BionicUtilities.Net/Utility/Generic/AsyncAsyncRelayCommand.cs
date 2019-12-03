@@ -69,8 +69,8 @@ namespace BionicUtilities.Net.Utility.Generic
     /// <param name="execute">The execution handler.</param>
     /// <param name="canExecute">The can execute handler.</param>
     public AsyncRelayCommand(Action<TParam> execute, Predicate<TParam> canExecute) : base(
-      param => execute((TParam) param),
-      param => canExecute((TParam) param))
+      param => execute((TParam)param),
+      param => param is TParam predicate && canExecute(predicate))
     {
       this.execute = execute;
       this.canExecute = canExecute;
@@ -93,8 +93,8 @@ namespace BionicUtilities.Net.Utility.Generic
     /// <param name="executeAsync">The awaitable execution handler.</param>
     /// <param name="canExecute">The can execute handler.</param>
     public AsyncRelayCommand(Func<TParam, Task> executeAsync, Predicate<TParam> canExecute) : base(
-      param => executeAsync((TParam) param),
-      param => canExecute((TParam) param))
+      param => executeAsync((TParam)param),
+      param => param is TParam predicate && canExecute(predicate))
     {
       this.executeAsync = executeAsync;
       this.canExecute = canExecute;

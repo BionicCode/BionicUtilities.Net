@@ -30,15 +30,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Collections\**" />
+    <EmbeddedResource Remove="Collections\**" />
+    <None Remove="Collections\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="dna_helix_medicine_hospital_512_LIZ_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="10.2.1" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Collections\Generic\" />
     <Folder Include="Settings\" />
   </ItemGroup>
 

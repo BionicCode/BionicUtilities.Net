@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using BionicUtilities.NetStandard.Generic;
 
 namespace BionicUtilities.Net.Utility
 {
@@ -113,7 +112,7 @@ namespace BionicUtilities.Net.Utility
     ///   Determines whether this AsyncRelayCommand can execute.
     /// </summary>
     /// <returns><code>true</code>code> if this command can be executed, otherwise <code>false</code>.</returns>
-    public bool CanExecute() => this.CanExecuteNoParam == null || this.CanExecuteNoParam();
+    public bool CanExecute() => this.CanExecuteNoParam != null && this.CanExecuteNoParam() || this.canExecute != null && this.canExecute(null);
 
     /// <summary>
     ///   Executes the AsyncRelayCommand on the current command target. 
@@ -173,7 +172,7 @@ namespace BionicUtilities.Net.Utility
     ///   Data used by the command. 
     /// </param>
     /// <returns><code>true</code>code> if this command can be executed, otherwise <code>false</code>.</returns>
-    public bool CanExecute(object parameter) => this.canExecute == null || this.canExecute(parameter);
+    public bool CanExecute(object parameter) => this.canExecute != null && this.canExecute(parameter) || this.CanExecuteNoParam != null && this.CanExecuteNoParam();
 
     /// <summary>
     ///   Executes the AsyncRelayCommand on the current command target. 
