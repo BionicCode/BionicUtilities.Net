@@ -31,8 +31,11 @@
 
   <ItemGroup>
     <Compile Remove="Collections\**" />
+    <Compile Remove="Settings\**" />
     <EmbeddedResource Remove="Collections\**" />
+    <EmbeddedResource Remove="Settings\**" />
     <None Remove="Collections\**" />
+    <None Remove="Settings\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,10 +45,6 @@
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="10.2.1" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Settings\" />
   </ItemGroup>
 
   <ItemGroup>
