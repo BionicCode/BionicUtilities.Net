@@ -33,7 +33,7 @@ Reusable utility and class library for WPF.
 * Easy to use `Dialog` attached behavior and infrastucture to allow MVVM friendly dialog handling from the view models in a fire-and-forget manner. To display dialogs implement `IDialogViewModel` classes and create a `DataTemplate` for each implementation. The `DataTemplate is the rendered in a native `Window`. Addition attached properties allow for styling of the dialog `Window` or to assign an optional `DataTemplateSelector`. The attached behavior will handle showing and closing of  the dialog.
   
 ### `BaseViewModel`
-* implements and encapsulates `INotifyPropertyChanged` and `INotifyDataErrorInfo`. 
+* Implements and encapsulates `INotifyPropertyChanged` and `INotifyDataErrorInfo`. 
 * Allows to control whether invalid data is set on a property or neglected until validation passes by setting the default parameter `isRejectInvalidValueEnabled` of `TrySetValue()` to `true` (neglects invalid values by default). 
 * Also allows to control whether to throw an exception on validation error or not (silent) by setting the default parameter `isThrowExceptionOnValidationErrorEnabled` of `TrySetValue()` to `true` (is silent by default).
 * Additionally exposes a `PropertyValueChanged` event which is raised in tandem with `INotifyPropertyChanged.PropertyChanged` but additionally carries old value and new value as event args.
