@@ -3,7 +3,7 @@ Reusable utility and class library for WPF.
 
 ## [NuGet package](https://www.nuget.org/packages/BionicUtilities.Net/)
 
-## [Class Reference](https://rawcdn.githack.com/BionicCode/BionicUtilities.Net/dda15ebdd164c9037e9319aed9467937a70bbef8/BionicUtilities.Net/Documentation/Help/index.html)
+## [Class Reference](https://rawcdn.githack.com/BionicCode/BionicUtilities.Net/d1765f5da61687fac04e0fd7fc3ca4142935ecf1/BionicUtilities.Net/Documentation/Help/index.html)
 
 ## Contains 
 * [`BaseViewModel`](https://github.com/BionicCode/BionicLibraryNet#baseviewmodel)
