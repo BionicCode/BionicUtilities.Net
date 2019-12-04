@@ -382,7 +382,8 @@ class MainWindowViewModel : IDialogViewModelProvider
 
 ##### Implementing DialogViewModel (required)
 This is the only mandatory abstract class (or alternatively the `IDialogViewModel` interface) to implement.
-The interfaces `IDialogViewModelProvider` and `IDialogViewModelProvider` are just to provide a clean separation. The `IDialogViewModelProviderSource.DialogRequested` can be omitted. Just provide a mechanism to bind a `DialogViewModel` (or `IDialogViewModel`) implementation to the `Dialog.DialogDataContext` Attached Property. `Dialog` and `DialogViewMoel` are the core classes to make it work.
+The interfaces `IDialogViewModelProvider` and `IDialogViewModelProvider` are just to provide a clean separation. The `IDialogViewModelProviderSource.DialogRequested` can be omitted. Just provide a mechanism to bind a `DialogViewModel` (or `IDialogViewModel`) implementation to the `Dialog.DialogDataContext` Attached Property. 
+`Dialog` and `DialogViewMoel` are the core classes to make it work.
 
 ```C#
 public class FileExistsDialogViewModel : DialogViewModel
@@ -400,12 +401,12 @@ public class FileExistsDialogViewModel : DialogViewModel
 ```
 
 ##### Implementing `DataTemplate` for `FileExistsDialogViewModel` (required)
+Make sure the templates are declared in the proper scope. It is recommended to declare them in the App.xaml.
 
 ```XAML
 Application x:Class="BionicCode.BionicNuGetDeploy.Main.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:BionicCode.BionicNuGetDeploy.Main"
              xmlns:pages="clr-namespace:BionicCode.BionicNuGetDeploy.Main.Pages"
              xmlns:dialog="clr-namespace:BionicUtilities.Net.Dialog;assembly=BionicUtilities.Net"
              Startup="RunApplication">
