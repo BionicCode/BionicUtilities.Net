@@ -325,7 +325,7 @@ class SettingsPageViewModel : IDialogViewModelProviderSource
       var dialogTitle = "File Exists";
       
       // Set the continuation callback which will be invoked once the dialog closed
-      var fileExistsdialogViewModel = new FileExistsDialogViewModel(message, dialogTitle, dialogTitleBarIcon, HandleFileExistsDialogResponseAsync);
+      var fileExistsdialogViewModel = new FileExistsDialogViewModel(message, dialogTitle, dialogTitleBarIcon, dialogViewModel => HandleFileExistsDialogResponseAsync(dialogViewModel, filePath, settingsData));
       
       // Request File Exists dialog to ask if existing file can be overwritten
       OnDialogRequested(newfileExistsdialogViewModel);
@@ -337,7 +337,7 @@ class SettingsPageViewModel : IDialogViewModelProviderSource
   
   // Continuation callback. Will be invoked once the dialog closed. 
   // The parameter is the previously created FileExistsDialogViewmodel containing data set from the dialog.
-  private async Task HandleFileExistsDialogResponseAsync(IDialogViewModel dialogViewModel)
+  private async Task HandleFileExistsDialogResponseAsync(IDialogViewModel dialogViewModel, string filePath, string settingsData)
   {
     if (dialogViewModel.DialogResult == DialogResult.Accepted)
     {
