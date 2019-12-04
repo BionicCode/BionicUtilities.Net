@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2019.8.24.0" projectFile="D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Documentation.shfbproj" started="18.10.2019 14:51:08">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2019.8.24.0" projectFile="D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Documentation.shfbproj" started="04.12.2019 17:03:16">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -140,6 +140,8 @@ References to include:
     C:\Program Files\dotnet\sdk\NuGetFallbackFolder\netstandard.library\2.0.3\build\netstandard2.0\ref\System.Xml.XmlSerializer.dll
     C:\Program Files\dotnet\sdk\NuGetFallbackFolder\netstandard.library\2.0.3\build\netstandard2.0\ref\System.Xml.XPath.dll
     C:\Program Files\dotnet\sdk\NuGetFallbackFolder\netstandard.library\2.0.3\build\netstandard2.0\ref\System.Xml.XPath.XDocument.dll
+    JetBrains.Annotations, Version=2019.1.3.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL
+    JetBrains.Annotations.NetStandard
 
 Copying XML comments files
     D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.Net\bin\Debug\BionicUtilities.Net.xml -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BionicUtilities.Net.xml
@@ -148,7 +150,7 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0200
+</plugIn>    Last step completed in 00:00:00,0340
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
@@ -157,7 +159,7 @@ Generating API filter for MRefBuilder...
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - GenerateRefInfo.proj]
-Build started 18.10.2019 14:51:10.
+Build started 04.12.2019 17:03:18.
 Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -168,8 +170,8 @@ GenerateRefInfo:
   Copyright &#184; 2006-2019, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2019, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
-  Loaded 2 assemblies for reflection and 123 dependency assemblies.
-  Wrote information on 13 namespaces, 34 types, and 217 members
+  Loaded 2 assemblies for reflection and 125 dependency assemblies.
+  Wrote information on 14 namespaces, 45 types, and 287 members
   Copying file from &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\reflection.org&quot; to &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\reflection.all&quot;.
   XslTransform (v2019.8.24.0)
   Copyright &#184; 2006-2019, Microsoft Corporation, All Rights Reserved.
@@ -177,12 +179,12 @@ GenerateRefInfo:
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\AddXamlSyntaxData.xsl&#39;.
 Done Building Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\GenerateRefInfo.proj&quot; (default targets).
-    Last step completed in 00:00:04,5940
+    Last step completed in 00:00:04,5722
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - TransformManifest.proj]
-Build started 18.10.2019 14:51:15.
+Build started 04.12.2019 17:03:23.
 Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2019.8.24.0)
@@ -199,11 +201,11 @@ TransformManifest:
   Portions Copyright &#184; 2006-2019, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
 Done Building Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\TransformManifest.proj&quot; (default targets).
-    Last step completed in 00:00:00,8850
+    Last step completed in 00:00:00,9720
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0460
+    Last step completed in 00:00:00,0520
 </buildStep>
 <buildStep step="GenerateInheritedDocumentation">
 Generating inherited documentation...
@@ -215,14 +217,27 @@ E-Mail: Eric@EWoodruff.us
 Reflection information will be retrieved from &#39;reflection.xml&#39;
 Inherited documentation will be written to &#39;_InheritedDocs_.xml&#39;
 Indexing C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\*.xml
+Indexing D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\JetBrains.Annotations.NetStandard.xml
+Indexing D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\JetBrains.Annotations.xml
 Indexing D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BionicUtilities.Net.xml
 Indexing D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BionicUtilities.NetStandard.xml
-Indexed 158947 members in 129 file(s).  2 file(s) to scan for &lt;inheritdoc /&gt; tags.
+Indexed 159061 members in 131 file(s).  4 file(s) to scan for &lt;inheritdoc /&gt; tags.
 Merging inherited documentation...
 
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Boolean)&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryClearEventSources(System.Type)&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryClearGlobalEventSource``1(``0)&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllHandlers``1(System.String)&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,``0)&#39;
+SHFB: Warning GID0004: No comments found for member &#39;M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)&#39;
 
 Documentation merged successfully
-    Last step completed in 00:00:01,8960
+    Last step completed in 00:00:02,0080
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -237,20 +252,20 @@ Generating conceptual topic files
     D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Content\VersionHistory\VersionHistory.aml -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\ddueXml\c5da87fe-d1a3-43fb-9427-d5a468d39c51.xml
     Parsing topic file &#39;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Content\VersionHistory\v1.0.0.0.aml&#39;
     D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Content\VersionHistory\v1.0.0.0.aml -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\ddueXml\e3f796bb-fafc-41a5-a922-eb3f43610968.xml
-    Last step completed in 00:00:00,0450
+    Last step completed in 00:00:00,0379
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00,0170
+    Last step completed in 00:00:00,0140
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\icons\logo.ico -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\icons\logo.ico
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\icons\Help.png -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\icons\Help.png
-    Last step completed in 00:00:00,0100
+    Last step completed in 00:00:00,0090
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
@@ -259,7 +274,7 @@ Merging conceptual and additional tables of contents...
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 18.10.2019 14:51:18.
+Build started 04.12.2019 17:03:26.
 Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2019.8.24.0)
@@ -268,12 +283,12 @@ GenerateIntermediateTOC:
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
 Done Building Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,3700
+    Last step completed in 00:00:00,3770
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,2340
+    Last step completed in 00:00:00,2480
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -297,12 +312,12 @@ D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.
     Replaced configuration for &#39;Resolve Reference Links Component&#39; (instance 1) with configuration for &#39;Resolve Reference Links (ESENT Cache)&#39;
     Replacing default configuration for &#39;Syntax Component&#39; with the custom configuration
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00,0310
+    Last step completed in 00:00:00,0230
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe - BuildTopics.proj]
-Build started 18.10.2019 14:51:18.
+Build started 04.12.2019 17:03:26.
 Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2019.8.24.0)
@@ -414,6 +429,49 @@ BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Converte
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Converter.IsGreaterThanValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;targetType&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Converter.IsGreaterThanValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;parameter&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Converter.IsGreaterThanValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:BionicUtilities.Net.Dialog] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.Net.Dialog.Dialog.DataTemplateSelector] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicUtilities.Net.Dialog.Dialog.DataTemplateSelectorProperty] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.Net.Dialog.Dialog.DialogDataContext] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BionicUtilities.Net.Dialog.Dialog.DialogDataContextProperty] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.GetDataTemplateSelector(System.Windows.DependencyObject)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.GetDataTemplateSelector(System.Windows.DependencyObject)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.GetDataTemplateSelector(System.Windows.DependencyObject)] Missing &lt;param name=&quot;attachingElement&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.GetDialogDataContext(System.Windows.DependencyObject)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.GetDialogDataContext(System.Windows.DependencyObject)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.GetDialogDataContext(System.Windows.DependencyObject)] Missing &lt;param name=&quot;attachingElement&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.GetStyle(System.Windows.DependencyObject)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.GetStyle(System.Windows.DependencyObject)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.GetStyle(System.Windows.DependencyObject)] Missing &lt;param name=&quot;attachingElement&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.SetDataTemplateSelector(System.Windows.DependencyObject,System.Windows.Controls.DataTemplateSelector)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.SetDataTemplateSelector(System.Windows.DependencyObject,System.Windows.Controls.DataTemplateSelector)] Missing &lt;param name=&quot;attachingElement&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.SetDataTemplateSelector(System.Windows.DependencyObject,System.Windows.Controls.DataTemplateSelector)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.SetDialogDataContext(System.Windows.DependencyObject,BionicUtilities.Net.Dialog.IDialogViewModel)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.SetDialogDataContext(System.Windows.DependencyObject,BionicUtilities.Net.Dialog.IDialogViewModel)] Missing &lt;param name=&quot;attachingElement&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.SetDialogDataContext(System.Windows.DependencyObject,BionicUtilities.Net.Dialog.IDialogViewModel)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.SetStyle(System.Windows.DependencyObject,System.Windows.Style)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.SetStyle(System.Windows.DependencyObject,System.Windows.Style)] Missing &lt;param name=&quot;attachingElement&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.SetStyle(System.Windows.DependencyObject,System.Windows.Style)] Missing &lt;param name=&quot;value&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.TryGetDialog(BionicUtilities.Net.Dialog.IDialogViewModel,System.Windows.Window@)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.TryGetDialog(BionicUtilities.Net.Dialog.IDialogViewModel,System.Windows.Window@)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.TryGetDialog(BionicUtilities.Net.Dialog.IDialogViewModel,System.Windows.Window@)] Missing &lt;param name=&quot;viewModel&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.Dialog.TryGetDialog(BionicUtilities.Net.Dialog.IDialogViewModel,System.Windows.Window@)] Missing &lt;param name=&quot;dialog&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.Net.Dialog.DialogResult] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [T:BionicUtilities.Net.Dialog.DialogViewModel] Member ID URL not found for target &#39;T:Microsoft.FSharp.Core.AbstractClassAttribute&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.#ctor(System.String,System.String)] Missing &lt;param name=&quot;message&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.#ctor(System.String,System.String)] Missing &lt;param name=&quot;title&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.#ctor(System.String,System.String,System.Func{BionicUtilities.Net.Dialog.IDialogViewModel,System.Threading.Tasks.Task})] Missing &lt;param name=&quot;message&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.#ctor(System.String,System.String,System.Func{BionicUtilities.Net.Dialog.IDialogViewModel,System.Threading.Tasks.Task})] Missing &lt;param name=&quot;title&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.#ctor(System.String,System.String,System.Func{BionicUtilities.Net.Dialog.IDialogViewModel,System.Threading.Tasks.Task})] Missing &lt;param name=&quot;sendResponseCallbackAsync&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.#ctor(System.String,System.String,System.Windows.Media.ImageSource,System.Func{BionicUtilities.Net.Dialog.IDialogViewModel,System.Threading.Tasks.Task})] Missing &lt;param name=&quot;message&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.#ctor(System.String,System.String,System.Windows.Media.ImageSource,System.Func{BionicUtilities.Net.Dialog.IDialogViewModel,System.Threading.Tasks.Task})] Missing &lt;param name=&quot;title&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.#ctor(System.String,System.String,System.Windows.Media.ImageSource,System.Func{BionicUtilities.Net.Dialog.IDialogViewModel,System.Threading.Tasks.Task})] Missing &lt;param name=&quot;titleBarIcon&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.#ctor(System.String,System.String,System.Windows.Media.ImageSource,System.Func{BionicUtilities.Net.Dialog.IDialogViewModel,System.Threading.Tasks.Task})] Missing &lt;param name=&quot;sendResponseCallbackAsync&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.Net.Dialog.DialogViewModel.InteractionCompleted] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.Net.Dialog.DialogViewModel.InteractionCompleted] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.Net.Dialog.DialogViewModel.OnInteractionCompleted] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.Net.Dialog.IDialogViewModel.InteractionCompleted] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.Net.Dialog.IDialogViewModelProviderSource.DialogRequested] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BionicUtilities.Net.Extensions] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ESentResolveReferenceLinksComponent: [T:BionicUtilities.Net.Extensions.HelperExtensions] Member ID URL not found for target &#39;T:Microsoft.FSharp.Core.AbstractClassAttribute&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ESentResolveReferenceLinksComponent: [T:BionicUtilities.Net.Extensions.HelperExtensions] Member ID URL not found for target &#39;T:Microsoft.FSharp.Core.SealedAttribute&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
@@ -514,6 +572,114 @@ BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.ArgumentsValidator.ArgsAreNull(System.Object[])] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.ArgumentsValidator.ArgsAreNull(System.Object[])] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.ArgumentsValidator.ArgsAreNull(System.Object[])] Missing &lt;param name=&quot;argsToValidate&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.EventAggregator] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryClearEventSources(System.Type)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryClearEventSources(System.Type)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryClearEventSources(System.Type)] Missing &lt;param name=&quot;eventSourceType&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryClearGlobalEventSource``1(``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryClearGlobalEventSource``1(``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryClearGlobalEventSource``1(``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryClearGlobalEventSource``1(``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;typeparam name=&quot;TEventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;param name=&quot;eventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;param name=&quot;eventNames&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventSourceType&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllHandlers``1(System.String)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllHandlers``1(System.String)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllHandlers``1(System.String)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllHandlers``1(System.String)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)] Missing &lt;param name=&quot;eventSourceType&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;typeparam name=&quot;TEventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;param name=&quot;eventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;param name=&quot;removeObserversOfEvents&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;typeparam name=&quot;TEventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;param name=&quot;eventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;param name=&quot;eventNames&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;param name=&quot;removeEventObservers&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventSourceType&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.EventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.IEventAggregator] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryClearEventSources(System.Type)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryClearEventSources(System.Type)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryClearEventSources(System.Type)] Missing &lt;param name=&quot;eventSourceType&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryClearGlobalEventSource``1(``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryClearGlobalEventSource``1(``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryClearGlobalEventSource``1(``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryClearGlobalEventSource``1(``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;typeparam name=&quot;TEventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;param name=&quot;eventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})] Missing &lt;param name=&quot;eventNames&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventSourceType&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRegisterObserver``1(System.String,``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveAllHandlers``1(System.String)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveAllHandlers``1(System.String)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveAllHandlers``1(System.String)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveAllHandlers``1(System.String)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)] Missing &lt;param name=&quot;eventSourceType&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;typeparam name=&quot;TEventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;param name=&quot;eventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Boolean)] Missing &lt;param name=&quot;removeObserversOfEvents&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;typeparam name=&quot;TEventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;param name=&quot;eventSource&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;param name=&quot;eventNames&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)] Missing &lt;param name=&quot;removeEventObservers&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;typeparam name=&quot;TEventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;returns&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventSourceType&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.IEventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)] Missing &lt;param name=&quot;eventHandler&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BionicUtilities.NetStandard.Extensions] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.Extensions.HelperExtensions] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ESentResolveReferenceLinksComponent: [T:BionicUtilities.NetStandard.Extensions.HelperExtensions] Member ID URL not found for target &#39;T:Microsoft.FSharp.Core.AbstractClassAttribute&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
@@ -546,12 +712,6 @@ BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.
 BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.Generic.NullObject`1.#ctor(System.Boolean)] Missing &lt;param name=&quot;isNull&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.NetStandard.Generic.NullObject`1.NullInstance] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.NetStandard.Generic.NullObject`1.NullInstanceFactory] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1] Missing &lt;typeparam name=&quot;TValue&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.#ctor(`0,`0)] Missing &lt;param name=&quot;newValue&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.#ctor(`0,`0)] Missing &lt;param name=&quot;oldValue&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.NewValue] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.OldValue] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BionicUtilities.NetStandard.IO] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.IO.FileExtensions] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.IO.FilePathFilter] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
@@ -594,24 +754,37 @@ BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtiliti
 BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.ErrorsChanged] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyChanged] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyChanged] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyValueChanged] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyValueChanged] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.ViewModel.IBaseViewModel] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ESentResolveReferenceLinksComponent: [E:BionicUtilities.NetStandard.ViewModel.IBaseViewModel.PropertyValueChanged] Member ID URL not found for target &#39;T:Microsoft.FSharp.Control.IEvent`2&#39;. [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.ViewModel.IViewModel] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
-  Processed 310 topic(s)
-  286 warning(s)
+BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs`1] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs`1] Missing &lt;typeparam name=&quot;TValue&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs`1.#ctor(System.String,`0,`0)] Missing &lt;param name=&quot;propertyName&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs`1.#ctor(System.String,`0,`0)] Missing &lt;param name=&quot;oldValue&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs`1.#ctor(System.String,`0,`0)] Missing &lt;param name=&quot;newValue&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs`1.NewValue] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs`1.OldValue] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs`1.PropertyName] Missing &lt;summary&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedEventHandler`1] Missing &lt;typeparam name=&quot;TValue&quot;/&gt; documentation [D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj]
+  Processed 411 topic(s)
+  443 warning(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
   ResolveArtLinksComponent: Copying media files...
-  ESentResolveReferenceLinksComponent: Member ID URL ESENT local cache flushed 0 time(s).  Current ESENT local cache usage: 138 of 2500.
-  ESentResolveReferenceLinksComponent: &quot;FrameworkTargets&quot; ESENT local cache flushed 0 time(s).  Current ESENT local cache usage: 162 of 2500.
-  ESentCopyFromIndexComponent: &quot;reflection&quot; highest ESENT local cache flush count: 0.  Highest ESENT current local cache usage: 51 of 2500.
+  ESentResolveReferenceLinksComponent: 3 entries added to the member ID URL cache.  New cache size: 747 entries
+  ESentResolveReferenceLinksComponent: Member ID URL ESENT local cache flushed 0 time(s).  Current ESENT local cache usage: 145 of 2500.
+  ESentResolveReferenceLinksComponent: &quot;FrameworkTargets&quot; ESENT local cache flushed 0 time(s).  Current ESENT local cache usage: 171 of 2500.
+  ESentCopyFromIndexComponent: &quot;reflection&quot; highest ESENT local cache flush count: 0.  Highest ESENT current local cache usage: 56 of 2500.
   ESentCopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 1 of 15.
   ESentCopyFromIndexComponent: &quot;comments&quot; highest ESENT local cache flush count: 0.  Highest ESENT current local cache usage: 64 of 2500.
   ESentCopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 3 of 30.
 Done Building Project &quot;D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\BuildTopics.proj&quot; (default targets).
-    Last step completed in 00:00:07,2280
+    Last step completed in 00:00:10,3029
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0149
+    Last step completed in 00:00:00,0050
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -623,11 +796,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing website files in D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website
-Processed 310 HTML files
+Processed 411 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\WebKI.xml
 Saving website table of contents to D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\WebTOC.xml
-    Last step completed in 00:00:00,4930
+    Last step completed in 00:00:00,6170
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -709,33 +882,33 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\scripts\clipboard.min.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-3.3.1.min.js -&gt; D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\Documentation\Help\Working\Output\Website\scripts\jquery-3.3.1.min.js
-    Last step completed in 00:00:00,1200
+    Last step completed in 00:00:00,1410
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
-    Last step completed in 00:00:00,0010
+    Last step completed in 00:00:00,0000
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:00,7040
+</plugIn>    Last step completed in 00:00:01,2390
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
 Copied 500 files
-Copied 538 files for the website content
-    Last step completed in 00:00:01,0420
+Copied 669 files for the website content
+    Last step completed in 00:00:01,0670
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,2560
+    Last step completed in 00:00:00,3300
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 18.10.2019 14:51:28.  Total time: 00:00:19,8060
+Build completed successfully at 04.12.2019 17:03:40.  Total time: 00:00:23,9111
 
 </buildStep>
 </shfbBuild>

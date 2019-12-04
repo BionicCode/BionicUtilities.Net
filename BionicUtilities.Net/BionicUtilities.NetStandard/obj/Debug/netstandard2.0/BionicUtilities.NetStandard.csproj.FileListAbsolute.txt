@@ -37,4 +37,3 @@ D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\obj\Debug\netstandard2.0\BionicUtilities.NetStandard.csproj.CopyComplete
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\obj\Debug\netstandard2.0\BionicUtilities.NetStandard.dll
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\obj\Debug\netstandard2.0\BionicUtilities.NetStandard.pdb
-D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicUtilities.Net\BionicUtilities.NetStandard\obj\Debug\netstandard2.0\BionicUtilities.NetStandard.csprojAssemblyReference.cache

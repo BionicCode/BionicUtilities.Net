@@ -10,8 +10,16 @@
     <iconUrl>https://avatars2.githubusercontent.com/u/39948423?s=400%26u%3D9fa449b3bc919b95843c67e4c4643e0a69e7d9bf%26v%3D4</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Reusable utility and class library for WPF - Featuring: AsyncRelayCommand&lt;T&gt;, ObservablePropertyChangedCollection, BaseViewModel, Visual Tree Helpers, Profiling, Extension Methods, ValueChangedEventArgs, MruManager (Most Recently Used files), AppSettingsConnector and more.</description>
-    <releaseNotes>For bug reports or feature requests please visit the project home on GutHub (follow the "Project Site" link on the right) and then open an issue (open the "issue" tab, click "New Issue" and select the appropriate template) or send  a mail to BionicCode@outlook.com. Thank you very much.</releaseNotes>
-    <copyright>Copyright 2019</copyright>
-    <tags>BaseViewModel AsyncRelayCommand Async RelayCommand WPF VisualTreeHelper Profiler Profiling Measure Measuring View Model ViewModel ExtensionMethods ObservablePropertyChangedCollection Collection ApplicationSettings Settings AppSettings MRU MostRecentlyUsedFile LastUsedFile RecentlyUsedFile</tags>
+    <releaseNotes>
+    - Fixed AsyncRelayCommand when using no param overload of CanExecute()
+    - Added dynamic multitype EventAggregator
+    - Added PropertyValueChanged event to BaseViewModel
+    - Added MVVM conform display dialog infrastructure
+    
+    ---------------------------------------------------------
+    For bug reports or feature requests please visit the project home on GutHub (follow the "Project Site" link on the right) and then open an issue (open the "issue" tab, click "New Issue" and select the appropriate template) or send  a mail to BionicCode@outlook.com. Thank you very much.</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <license type="expression">MIT</license>
+    <tags>BaseViewModel AsyncRelayCommand Async RelayCommand WPF VisualTreeHelper Profiler Profiling Measure Measuring View Model ViewModel ExtensionMethods ObservablePropertyChangedCollection Collection ApplicationSettings Settings AppSettings MRU MostRecentlyUsedFile LastUsedFile RecentlyUsedFile EventAggregator Aggregator Event MVVMDialog MVVM Dialog DialogService</tags>
   </metadata>
 </package>

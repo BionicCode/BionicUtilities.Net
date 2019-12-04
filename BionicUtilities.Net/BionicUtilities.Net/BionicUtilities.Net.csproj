@@ -39,6 +39,9 @@
     <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=2019.1.3.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.2019.1.3\lib\net20\JetBrains.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -62,6 +65,12 @@
     <Compile Include="Converter\InvertValueConverter.cs" />
     <Compile Include="Converter\IsGreaterThanValueConverter.cs" />
     <Compile Include="Converter\BoolToStringConverter.cs" />
+    <Compile Include="Dialog\Dialog.cs" />
+    <Compile Include="Dialog\DialogResult.cs" />
+    <Compile Include="Dialog\DialogViewModel.cs" />
+    <Compile Include="Dialog\IDialogViewModel.cs" />
+    <Compile Include="Dialog\IDialogViewModelProvider.cs" />
+    <Compile Include="Dialog\IDialogViewModelProviderSource.cs" />
     <Compile Include="Extensions\HelperExtensions.cs" />
     <Compile Include="Generic\NullObjectCreator.cs" />
     <Compile Include="MarkupExtension\EqualsExtension.cs" />
@@ -91,6 +100,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

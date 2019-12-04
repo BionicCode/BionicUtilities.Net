@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
+  <HelpKINode Title="Aborted enumeration member" Url="html/66487f77-ad0f-86e9-780d-6286ac4fc6c9.htm" />
+  <HelpKINode Title="Accepted enumeration member" Url="html/66487f77-ad0f-86e9-780d-6286ac4fc6c9.htm" />
   <HelpKINode Title="AddMostRecentlyUsedFile method">
     <HelpKINode Title="IMruManager.AddMostRecentlyUsedFile Method " Url="html/eeb10f87-f5c3-626d-d3f0-048926dab9fd.htm" />
     <HelpKINode Title="MruManager.AddMostRecentlyUsedFile Method " Url="html/cb53941d-d401-4f66-6746-316958ffe429.htm" />
@@ -80,9 +82,10 @@
   <HelpKINode Title="BaseViewModel.IsValueValid(Of TValue) method" Url="html/270e1416-5657-d847-947c-09224c41a54e.htm" />
   <HelpKINode Title="BaseViewModel.IsValueValid&lt;TValue&gt; method" Url="html/270e1416-5657-d847-947c-09224c41a54e.htm" />
   <HelpKINode Title="BaseViewModel.OnErrorsChanged method" Url="html/4b7d5a8c-be99-dfe2-c096-4816ba0db96e.htm" />
-  <HelpKINode Title="BaseViewModel.OnPropertyChanged method" Url="html/944ae616-1323-a237-c935-696ca1a54083.htm" />
+  <HelpKINode Title="BaseViewModel.OnPropertyChanged method" Url="html/67ba29d8-ca02-2f5d-b374-c4e98f999f67.htm" />
   <HelpKINode Title="BaseViewModel.PropertyChanged event" Url="html/07c29ef7-17ae-441f-3297-67ae95a2bd2e.htm" />
   <HelpKINode Title="BaseViewModel.PropertyHasError method" Url="html/bb6fd71c-3c11-8619-9ec8-cf4675f2a214.htm" />
+  <HelpKINode Title="BaseViewModel.PropertyValueChanged event" Url="html/70f8eb13-e406-0e36-e137-37fa079ee3de.htm" />
   <HelpKINode Title="BaseViewModel.TrySetValue method" Url="html/7d24e199-e156-6fe9-2c2e-4d8e1c0db264.htm" />
   <HelpKINode Title="Bat enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="Bin enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
@@ -97,6 +100,13 @@
   <HelpKINode Title="BionicUtilities.Net.Converter.InvertBooleanConverter class" Url="html/e513f2f5-73ac-c3ae-d92a-27d80d13c80c.htm" />
   <HelpKINode Title="BionicUtilities.Net.Converter.InvertValueConverter class" Url="html/5f3114e7-0730-111f-9789-e44af260355c.htm" />
   <HelpKINode Title="BionicUtilities.Net.Converter.IsGreaterThanValueConverter class" Url="html/0de5ea77-4ecc-d07b-401e-7b06930ca238.htm" />
+  <HelpKINode Title="BionicUtilities.Net.Dialog namespace" Url="html/eee7ba54-c2c5-59c0-de94-171098adefa1.htm" />
+  <HelpKINode Title="BionicUtilities.Net.Dialog.Dialog class" Url="html/c9c0fc42-3af5-aaf7-ee86-79e7e1ba59a6.htm" />
+  <HelpKINode Title="BionicUtilities.Net.Dialog.DialogResult enumeration" Url="html/66487f77-ad0f-86e9-780d-6286ac4fc6c9.htm" />
+  <HelpKINode Title="BionicUtilities.Net.Dialog.DialogViewModel class" Url="html/409b064a-1963-9d6f-ab22-ba07281ce162.htm" />
+  <HelpKINode Title="BionicUtilities.Net.Dialog.IDialogViewModel interface" Url="html/7425b920-f64d-e1da-63a3-add05cbb5f73.htm" />
+  <HelpKINode Title="BionicUtilities.Net.Dialog.IDialogViewModelProvider interface" Url="html/cddbfcf4-b771-06a0-a6bb-24f8ec69f62e.htm" />
+  <HelpKINode Title="BionicUtilities.Net.Dialog.IDialogViewModelProviderSource interface" Url="html/41eb9e7a-2cd3-a8d0-2428-4411f4ac1209.htm" />
   <HelpKINode Title="BionicUtilities.Net.Extensions namespace" Url="html/3e241eff-e2de-71f6-55f8-b2f520e43780.htm" />
   <HelpKINode Title="BionicUtilities.Net.Extensions.HelperExtensions class" Url="html/9e0b6988-9bd4-f663-fd62-eb05606d823a.htm" />
   <HelpKINode Title="BionicUtilities.Net.MarkupExtension namespace" Url="html/cef6a6ea-c378-bffc-53f0-cb24a94cb85e.htm" />
@@ -118,6 +128,7 @@
   <HelpKINode Title="BionicUtilities.Net.Utility.IAsyncRelayCommand interface" Url="html/ae21d0d9-d1c1-720a-ecf9-9ea5650188dd.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard namespace" Url="html/876f51c7-48ac-fc46-a7a1-890ae4435a22.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.ArgumentsValidator class" Url="html/f7da7280-1c72-9495-b526-43bddce3ccdb.htm" />
+  <HelpKINode Title="BionicUtilities.NetStandard.EventAggregator class" Url="html/c9332052-c867-f145-c535-edcb074caa9f.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.Extensions namespace" Url="html/78b53736-4c6a-a001-1ebe-8c3a31ae0212.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.Extensions.HelperExtensions class" Url="html/0b93fb1e-4082-2601-992f-c35aebafecf6.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.Generic namespace" Url="html/5d127271-97e6-80c8-96cb-6f1e864d5016.htm" />
@@ -129,6 +140,9 @@
   <HelpKINode Title="BionicUtilities.NetStandard.Generic.NullObject&lt;TObject&gt; class" Url="html/61e36441-ca96-750f-fa5d-ca41daa27dfd.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.Generic.ValueChangedEventArgs(Of TValue) class" Url="html/875170d6-7c50-dccf-495b-0394dd7ef786.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.Generic.ValueChangedEventArgs&lt;TValue&gt; class" Url="html/875170d6-7c50-dccf-495b-0394dd7ef786.htm" />
+  <HelpKINode Title="BionicUtilities.NetStandard.Generic.ValueEventArgs(Of TValue) class" Url="html/444884a2-7afa-233a-618f-fa2f0353a7a8.htm" />
+  <HelpKINode Title="BionicUtilities.NetStandard.Generic.ValueEventArgs&lt;TValue&gt; class" Url="html/444884a2-7afa-233a-618f-fa2f0353a7a8.htm" />
+  <HelpKINode Title="BionicUtilities.NetStandard.IEventAggregator interface" Url="html/d652b71e-4400-e2c0-80f0-28ec49d3ddd3.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.INullObject interface" Url="html/f42f3f26-a9ad-d741-55b7-0b5442cb41e9.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.IO namespace" Url="html/41426bf5-b71f-7f65-b752-0d54722b1c10.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.IO.FileExtensions enumeration" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
@@ -140,6 +154,10 @@
   <HelpKINode Title="BionicUtilities.NetStandard.ViewModel.BaseViewModel class" Url="html/965edd66-88cc-dae5-1a17-5a98c944e7c8.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.ViewModel.IBaseViewModel interface" Url="html/03b97fcd-efb0-c8d5-9728-6ed63ab092e2.htm" />
   <HelpKINode Title="BionicUtilities.NetStandard.ViewModel.IViewModel interface" Url="html/d5297a53-5a8f-05a4-a387-cffb56fae26a.htm" />
+  <HelpKINode Title="BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs(Of TValue) class" Url="html/805c6bf5-ae6b-36db-efce-9f5225b96c1d.htm" />
+  <HelpKINode Title="BionicUtilities.NetStandard.ViewModel.PropertyValueChangedArgs&lt;TValue&gt; class" Url="html/805c6bf5-ae6b-36db-efce-9f5225b96c1d.htm" />
+  <HelpKINode Title="BionicUtilities.NetStandard.ViewModel.PropertyValueChangedEventHandler(Of TValue) delegate" Url="html/dfd9db63-5e13-4be6-760c-a7fda5297ee9.htm" />
+  <HelpKINode Title="BionicUtilities.NetStandard.ViewModel.PropertyValueChangedEventHandler&lt;TValue&gt; delegate" Url="html/dfd9db63-5e13-4be6-760c-a7fda5297ee9.htm" />
   <HelpKINode Title="Bmp enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="Boolean property" Url="html/0d030f45-68b0-8ceb-fe96-854ab88c964d.htm" />
   <HelpKINode Title="BooleanMultiValueConverter class">
@@ -214,6 +232,57 @@
   <HelpKINode Title="Create method" Url="html/6a376c73-2863-3e6b-4fb9-dc669355c567.htm" />
   <HelpKINode Title="Cs enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="Csv enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
+  <HelpKINode Title="DataTemplateSelector attached property" Url="html/0c1e7be3-2d3c-cade-1ebe-f61d1d26d34f.htm" />
+  <HelpKINode Title="DataTemplateSelectorProperty field" Url="html/68f807e0-fbd1-1493-baa7-96a6b1db98bf.htm" />
+  <HelpKINode Title="Denied enumeration member" Url="html/66487f77-ad0f-86e9-780d-6286ac4fc6c9.htm" />
+  <HelpKINode Title="Dialog class">
+    <HelpKINode Title="Dialog Class" Url="html/c9c0fc42-3af5-aaf7-ee86-79e7e1ba59a6.htm" />
+    <HelpKINode Title="attached properties" Url="html/21d91943-ad2d-82ae-d422-f873c903cede.htm" />
+    <HelpKINode Title="constructor" Url="html/bc529444-54e2-8e10-06ee-570d2ed19d66.htm" />
+    <HelpKINode Title="fields" Url="html/5a15ee85-befe-83e8-9de1-f5528eb4ea43.htm" />
+    <HelpKINode Title="methods" Url="html/8ae63e10-bbec-ad54-096a-17d5065fb60b.htm" />
+    <HelpKINode Title="properties" Url="html/0f63274c-1696-3b55-05ee-c2d2e891209a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dialog.DataTemplateSelector attached property" Url="html/0c1e7be3-2d3c-cade-1ebe-f61d1d26d34f.htm" />
+  <HelpKINode Title="Dialog.DataTemplateSelectorProperty field" Url="html/68f807e0-fbd1-1493-baa7-96a6b1db98bf.htm" />
+  <HelpKINode Title="Dialog.Dialog constructor" Url="html/bc529444-54e2-8e10-06ee-570d2ed19d66.htm" />
+  <HelpKINode Title="Dialog.DialogDataContext attached property" Url="html/a2d06d17-2a73-cba7-0f60-82217c2c794d.htm" />
+  <HelpKINode Title="Dialog.DialogDataContextProperty field" Url="html/80af80a1-6b96-28d7-ff8f-2c1d44aff4e1.htm" />
+  <HelpKINode Title="Dialog.GetDataTemplateSelector method" Url="html/29832459-942c-ed9d-d6a6-9513f313dc76.htm" />
+  <HelpKINode Title="Dialog.GetDialogDataContext method" Url="html/e76dadeb-c15d-c367-9c5b-f43b51c6f20a.htm" />
+  <HelpKINode Title="Dialog.GetStyle method" Url="html/892b8b16-4eeb-0494-7670-9eed2ee35f98.htm" />
+  <HelpKINode Title="Dialog.SetDataTemplateSelector method" Url="html/52c408ce-db39-9d39-2c15-50c2846f2b62.htm" />
+  <HelpKINode Title="Dialog.SetDialogDataContext method" Url="html/43b58361-09b2-580c-9278-d9d18d982d80.htm" />
+  <HelpKINode Title="Dialog.SetStyle method" Url="html/9ee2b840-5323-0ae7-4200-432f852cb51b.htm" />
+  <HelpKINode Title="Dialog.Style attached property" Url="html/9794befe-b221-b517-014a-0f081d387bf5.htm" />
+  <HelpKINode Title="Dialog.StyleProperty field" Url="html/a14e19f0-ec45-ff31-2a16-aac232f5f6fc.htm" />
+  <HelpKINode Title="Dialog.TryGetDialog method" Url="html/aee246ec-a233-4989-72c9-bd9b025037fe.htm" />
+  <HelpKINode Title="DialogDataContext attached property" Url="html/a2d06d17-2a73-cba7-0f60-82217c2c794d.htm" />
+  <HelpKINode Title="DialogDataContextProperty field" Url="html/80af80a1-6b96-28d7-ff8f-2c1d44aff4e1.htm" />
+  <HelpKINode Title="DialogRequested event" Url="html/40fff7ed-8d0e-593e-8bf0-c282aada1835.htm" />
+  <HelpKINode Title="DialogResult enumeration" Url="html/66487f77-ad0f-86e9-780d-6286ac4fc6c9.htm" />
+  <HelpKINode Title="DialogResult property">
+    <HelpKINode Title="DialogViewModel.DialogResult Property " Url="html/c5555a21-1315-3a09-8496-8167ca92ce40.htm" />
+    <HelpKINode Title="IDialogViewModel.DialogResult Property " Url="html/fb473106-ad04-f2f8-b546-78db7e208898.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DialogViewModel class">
+    <HelpKINode Title="DialogViewModel Class" Url="html/409b064a-1963-9d6f-ab22-ba07281ce162.htm" />
+    <HelpKINode Title="constructor" Url="html/00eeb0d2-03b9-b89f-49f8-bd8eb6b8f790.htm" />
+    <HelpKINode Title="events" Url="html/2c9464bb-cc0d-15b9-8748-c75976c424c2.htm" />
+    <HelpKINode Title="methods" Url="html/7dc52292-2511-f1fa-b7b5-8b84b73274e2.htm" />
+    <HelpKINode Title="properties" Url="html/d4f64dfa-6761-8916-2046-80207ca16c64.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DialogViewModel property" Url="html/83371e03-03bf-c1d6-1ecd-b083b8fea445.htm" />
+  <HelpKINode Title="DialogViewModel.DialogResult property" Url="html/c5555a21-1315-3a09-8496-8167ca92ce40.htm" />
+  <HelpKINode Title="DialogViewModel.DialogViewModel constructor" Url="html/00eeb0d2-03b9-b89f-49f8-bd8eb6b8f790.htm" />
+  <HelpKINode Title="DialogViewModel.InteractionCompleted event" Url="html/72e958d6-ea0f-8146-2a15-867cb05d4bd4.htm" />
+  <HelpKINode Title="DialogViewModel.Message property" Url="html/5b988e9a-45cb-87b6-655a-717c3f64c0b1.htm" />
+  <HelpKINode Title="DialogViewModel.OnInteractionCompleted method" Url="html/948af00a-e2cb-1f26-cefd-5098bcc0502c.htm" />
+  <HelpKINode Title="DialogViewModel.OnSendResponseAsyncCommandExecuted method" Url="html/b1be9a9e-0695-dce3-9b49-7bf3da236031.htm" />
+  <HelpKINode Title="DialogViewModel.ResponseCallbackAsync property" Url="html/6693e7a1-f236-7bad-0fbe-fdd1c221c705.htm" />
+  <HelpKINode Title="DialogViewModel.SendResponseAsyncCommand property" Url="html/3d394b65-6be3-fd85-a6b0-79bf8992eb0d.htm" />
+  <HelpKINode Title="DialogViewModel.Title property" Url="html/e04152f2-e93d-2d58-815d-79d7d4e7e53e.htm" />
+  <HelpKINode Title="DialogViewModel.TitleBarIcon property" Url="html/809786ec-96cc-fb04-6a1d-50295375ab6a.htm" />
   <HelpKINode Title="DividerValueConverter class">
     <HelpKINode Title="DividerValueConverter Class" Url="html/25218f37-efea-d640-f561-e64442a3a424.htm" />
     <HelpKINode Title="constructor" Url="html/a36cdb46-a661-aecd-01f4-d3ae46dde4d6.htm" />
@@ -234,6 +303,26 @@
   <HelpKINode Title="EqualsExtension.EqualsExtension constructor" Url="html/16cf4b43-541e-06b7-93c5-6a07836786c8.htm" />
   <HelpKINode Title="EqualsExtension.ProvideValue method" Url="html/bdc955ed-9fb1-599a-f0a8-a245a0c972c5.htm" />
   <HelpKINode Title="ErrorsChanged event" Url="html/49d68514-f93c-e890-e1a4-af690a0ebded.htm" />
+  <HelpKINode Title="EventAggregator class">
+    <HelpKINode Title="EventAggregator Class" Url="html/c9332052-c867-f145-c535-edcb074caa9f.htm" />
+    <HelpKINode Title="constructor" Url="html/cbce0799-4b9d-6ef9-7516-120d957bac11.htm" />
+    <HelpKINode Title="methods" Url="html/80d86eb7-afcc-291a-93f8-dd6ff36b569c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EventAggregator.EventAggregator constructor" Url="html/cbce0799-4b9d-6ef9-7516-120d957bac11.htm" />
+  <HelpKINode Title="EventAggregator.TryClearEventSources method" Url="html/40023cbe-fd2e-2bb4-e7d4-9904b6dac3b5.htm" />
+  <HelpKINode Title="EventAggregator.TryClearGlobalEventSource(Of TEventHandler) method" Url="html/00841188-09f9-0f77-3e71-4502032f922a.htm" />
+  <HelpKINode Title="EventAggregator.TryClearGlobalEventSource&lt;TEventHandler&gt; method" Url="html/00841188-09f9-0f77-3e71-4502032f922a.htm" />
+  <HelpKINode Title="EventAggregator.TryRegisterObservable(Of TEventSource) method" Url="html/2093bfb5-d528-daed-2dc0-bd854cfd757c.htm" />
+  <HelpKINode Title="EventAggregator.TryRegisterObservable&lt;TEventSource&gt; method" Url="html/2093bfb5-d528-daed-2dc0-bd854cfd757c.htm" />
+  <HelpKINode Title="EventAggregator.TryRegisterObserver method" Url="html/c4dcc008-e6de-6383-60d4-1952592fc87d.htm" />
+  <HelpKINode Title="EventAggregator.TryRemoveAllHandlers(Of TEventHandler) method" Url="html/646d5417-00e4-c30a-3b00-c33ce7fe6f08.htm" />
+  <HelpKINode Title="EventAggregator.TryRemoveAllHandlers&lt;TEventHandler&gt; method" Url="html/646d5417-00e4-c30a-3b00-c33ce7fe6f08.htm" />
+  <HelpKINode Title="EventAggregator.TryRemoveAllSpecificEventSources method" Url="html/8225e702-2789-48d5-51d4-13bf93611625.htm" />
+  <HelpKINode Title="EventAggregator.TryRemoveHandlerFromGlobalEventSource(Of TEventHandler) method" Url="html/9c64d754-60df-f85d-03ce-6453118a27c5.htm" />
+  <HelpKINode Title="EventAggregator.TryRemoveHandlerFromGlobalEventSource&lt;TEventHandler&gt; method" Url="html/9c64d754-60df-f85d-03ce-6453118a27c5.htm" />
+  <HelpKINode Title="EventAggregator.TryRemoveObservable method" Url="html/b2c677a4-4b9e-bab7-230a-edb3f143f056.htm" />
+  <HelpKINode Title="EventAggregator.TryRemoveSpecificEventSource(Of TEventHandler) method" Url="html/0f3b800e-17e1-9565-04c0-1d01aaba58e3.htm" />
+  <HelpKINode Title="EventAggregator.TryRemoveSpecificEventSource&lt;TEventHandler&gt; method" Url="html/0f3b800e-17e1-9565-04c0-1d01aaba58e3.htm" />
   <HelpKINode Title="Exe enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="Execute method">
     <HelpKINode Title="AsyncRelayCommand(TParam).Execute Method " Url="html/30e18c07-cfa0-6802-c077-6712b2ed508d.htm" />
@@ -295,21 +384,24 @@
   <HelpKINode Title="FindVisualChildElements(Of TChildren) method" Url="html/de162aed-0140-2c05-dc5c-f0c6d4d132f2.htm" />
   <HelpKINode Title="FindVisualChildElements&lt;TChildren&gt; method" Url="html/de162aed-0140-2c05-dc5c-f0c6d4d132f2.htm" />
   <HelpKINode Title="FullName property" Url="html/7c554185-c2cf-01e2-4755-b81645bc040b.htm" />
+  <HelpKINode Title="GetDataTemplateSelector method" Url="html/29832459-942c-ed9d-d6a6-9513f313dc76.htm" />
+  <HelpKINode Title="GetDialogDataContext method" Url="html/e76dadeb-c15d-c367-9c5b-f43b51c6f20a.htm" />
   <HelpKINode Title="GetErrors method" Url="html/4cd1c898-a497-5124-4a80-767d974ffe48.htm" />
   <HelpKINode Title="GetHashCode method" Url="html/0f6d5b87-44c1-3985-9cf2-afc22c7a1ee1.htm" />
   <HelpKINode Title="GetPropertyErrors method">
     <HelpKINode Title="BaseViewModel.GetPropertyErrors Method " Url="html/81844342-d7c5-2614-f62c-bbbf1351861c.htm" />
     <HelpKINode Title="IViewModel.GetPropertyErrors Method " Url="html/5d6076c5-1b80-f7ff-8943-f2a3156e0db9.htm" />
   </HelpKINode>
+  <HelpKINode Title="GetStyle method" Url="html/892b8b16-4eeb-0494-7670-9eed2ee35f98.htm" />
   <HelpKINode Title="Gz enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="HasErrors property" Url="html/0bfca54b-e8be-7ccb-d69b-7b55f1391f64.htm" />
   <HelpKINode Title="HasReachedEnd method" Url="html/ed42d746-89dc-fe76-cc3c-e215c409fdd1.htm" />
   <HelpKINode Title="Help enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="HelperExtensions class">
-    <HelpKINode Title="HelperExtensions Class" Url="html/9e0b6988-9bd4-f663-fd62-eb05606d823a.htm" />
     <HelpKINode Title="HelperExtensions Class" Url="html/0b93fb1e-4082-2601-992f-c35aebafecf6.htm" />
-    <HelpKINode Title="methods" Url="html/2ba04fbc-00f0-670a-3298-0ecc60cfe61d.htm" />
+    <HelpKINode Title="HelperExtensions Class" Url="html/9e0b6988-9bd4-f663-fd62-eb05606d823a.htm" />
     <HelpKINode Title="methods" Url="html/30dd3f85-839f-fffa-2609-98db94683711.htm" />
+    <HelpKINode Title="methods" Url="html/2ba04fbc-00f0-670a-3298-0ecc60cfe61d.htm" />
   </HelpKINode>
   <HelpKINode Title="HelperExtensions.AddRange method" Url="html/22b34a57-42db-ae13-27ac-2c84b78b7db0.htm" />
   <HelpKINode Title="HelperExtensions.FindVisualChildElements(Of TChildren) method" Url="html/de162aed-0140-2c05-dc5c-f0c6d4d132f2.htm" />
@@ -352,6 +444,48 @@
     <HelpKINode Title="methods" Url="html/52474339-78dc-babb-6d77-f1cf066d0adb.htm" />
     <HelpKINode Title="properties" Url="html/2901e5f6-dfd3-46d1-5baf-2dfc647f71e2.htm" />
   </HelpKINode>
+  <HelpKINode Title="IBaseViewModel.PropertyValueChanged event" Url="html/ddc5f98e-0fea-110b-682c-ccc8ddcf4f23.htm" />
+  <HelpKINode Title="IDialogViewModel interface">
+    <HelpKINode Title="IDialogViewModel Interface" Url="html/7425b920-f64d-e1da-63a3-add05cbb5f73.htm" />
+    <HelpKINode Title="events" Url="html/9243444d-ce13-ce60-9797-3f5569c25de3.htm" />
+    <HelpKINode Title="methods" Url="html/8ae78e1b-0b9c-9d29-3b5a-9351a0f65e64.htm" />
+    <HelpKINode Title="properties" Url="html/4763498c-fa22-917c-5cfb-705aead04f7c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDialogViewModel.DialogResult property" Url="html/fb473106-ad04-f2f8-b546-78db7e208898.htm" />
+  <HelpKINode Title="IDialogViewModel.InteractionCompleted event" Url="html/00ea0f40-b2b3-fb45-25d6-fdf00069289f.htm" />
+  <HelpKINode Title="IDialogViewModel.Message property" Url="html/03661e13-bce0-e4bd-7fcb-6e19c007a588.htm" />
+  <HelpKINode Title="IDialogViewModel.ResponseCallbackAsync property" Url="html/dc36eb09-2c0c-2a32-1cf5-e9201b647adf.htm" />
+  <HelpKINode Title="IDialogViewModel.SendResponseAsyncCommand property" Url="html/49322581-e02f-0418-e6b2-2d6a3be9cdea.htm" />
+  <HelpKINode Title="IDialogViewModel.Title property" Url="html/d18c80cd-b7f7-f82e-c828-48ae012ed15b.htm" />
+  <HelpKINode Title="IDialogViewModel.TitleBarIcon property" Url="html/eb0a8659-7cad-101f-a53e-76bd2e5fed76.htm" />
+  <HelpKINode Title="IDialogViewModelProvider interface">
+    <HelpKINode Title="IDialogViewModelProvider Interface" Url="html/cddbfcf4-b771-06a0-a6bb-24f8ec69f62e.htm" />
+    <HelpKINode Title="properties" Url="html/eaea6744-45fa-7ef0-2828-dc0aac9f97b3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDialogViewModelProvider.DialogViewModel property" Url="html/83371e03-03bf-c1d6-1ecd-b083b8fea445.htm" />
+  <HelpKINode Title="IDialogViewModelProviderSource interface">
+    <HelpKINode Title="IDialogViewModelProviderSource Interface" Url="html/41eb9e7a-2cd3-a8d0-2428-4411f4ac1209.htm" />
+    <HelpKINode Title="events" Url="html/460ceb43-aaea-d1ac-d555-20a542764389.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDialogViewModelProviderSource.DialogRequested event" Url="html/40fff7ed-8d0e-593e-8bf0-c282aada1835.htm" />
+  <HelpKINode Title="IEventAggregator interface">
+    <HelpKINode Title="IEventAggregator Interface" Url="html/d652b71e-4400-e2c0-80f0-28ec49d3ddd3.htm" />
+    <HelpKINode Title="methods" Url="html/233c86eb-26ab-fc82-f133-fa2d1b67e53e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEventAggregator.TryClearEventSources method" Url="html/f28320bc-be62-6a9e-c42f-815b7daa20fa.htm" />
+  <HelpKINode Title="IEventAggregator.TryClearGlobalEventSource(Of TEventHandler) method" Url="html/d7718994-6243-4a71-71e9-bb1bb99dd9f8.htm" />
+  <HelpKINode Title="IEventAggregator.TryClearGlobalEventSource&lt;TEventHandler&gt; method" Url="html/d7718994-6243-4a71-71e9-bb1bb99dd9f8.htm" />
+  <HelpKINode Title="IEventAggregator.TryRegisterObservable(Of TEventSource) method" Url="html/c55b7fd1-bf36-7e0d-453f-53a9a04c368c.htm" />
+  <HelpKINode Title="IEventAggregator.TryRegisterObservable&lt;TEventSource&gt; method" Url="html/c55b7fd1-bf36-7e0d-453f-53a9a04c368c.htm" />
+  <HelpKINode Title="IEventAggregator.TryRegisterObserver method" Url="html/b845c16d-eba6-6946-1a9d-200c498c78c2.htm" />
+  <HelpKINode Title="IEventAggregator.TryRemoveAllHandlers(Of TEventHandler) method" Url="html/03505dc4-4ec1-8e6f-11ec-b3584cf9d7ef.htm" />
+  <HelpKINode Title="IEventAggregator.TryRemoveAllHandlers&lt;TEventHandler&gt; method" Url="html/03505dc4-4ec1-8e6f-11ec-b3584cf9d7ef.htm" />
+  <HelpKINode Title="IEventAggregator.TryRemoveAllSpecificEventSources method" Url="html/cbfb4e9e-f628-8210-e6d1-23b814d441e3.htm" />
+  <HelpKINode Title="IEventAggregator.TryRemoveHandlerFromGlobalEventSource(Of TEventHandler) method" Url="html/67256382-d574-a5dc-b912-f1010ca25f9c.htm" />
+  <HelpKINode Title="IEventAggregator.TryRemoveHandlerFromGlobalEventSource&lt;TEventHandler&gt; method" Url="html/67256382-d574-a5dc-b912-f1010ca25f9c.htm" />
+  <HelpKINode Title="IEventAggregator.TryRemoveObservable method" Url="html/5d6ed28e-109f-5e42-a630-08202dda1aad.htm" />
+  <HelpKINode Title="IEventAggregator.TryRemoveSpecificEventSource(Of TEventHandler) method" Url="html/fae28d70-64be-e88a-327b-6d2dec7e896a.htm" />
+  <HelpKINode Title="IEventAggregator.TryRemoveSpecificEventSource&lt;TEventHandler&gt; method" Url="html/fae28d70-64be-e88a-327b-6d2dec7e896a.htm" />
   <HelpKINode Title="IFactory(Of TCreate) interface">
     <HelpKINode Title="IFactory(TCreate) Interface" Url="html/53387c1d-fd95-5980-abcc-54e1806418e4.htm" />
     <HelpKINode Title="methods" Url="html/b482076f-c0c8-5017-ad8f-7432da72eb4f.htm" />
@@ -388,6 +522,10 @@
   <HelpKINode Title="Ini enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="InsertItem method" Url="html/081f4a63-bf2a-0ce8-4e72-697be20be91a.htm" />
   <HelpKINode Title="Int32 property" Url="html/3ca3830c-e88e-7090-c7df-baa30f66fb25.htm" />
+  <HelpKINode Title="InteractionCompleted event">
+    <HelpKINode Title="DialogViewModel.InteractionCompleted Event" Url="html/72e958d6-ea0f-8146-2a15-867cb05d4bd4.htm" />
+    <HelpKINode Title="IDialogViewModel.InteractionCompleted Event" Url="html/00ea0f40-b2b3-fb45-25d6-fdf00069289f.htm" />
+  </HelpKINode>
   <HelpKINode Title="InternalMostRecentlyUsedFiles property" Url="html/718a45ee-4b22-6081-1f89-9cdc8e6a719f.htm" />
   <HelpKINode Title="INullObject interface">
     <HelpKINode Title="INullObject Interface" Url="html/f42f3f26-a9ad-d741-55b7-0b5442cb41e9.htm" />
@@ -473,6 +611,10 @@
     <HelpKINode Title="IMruManager.MaxMostRecentlyUsedCount Property " Url="html/3c71d9c3-c420-7967-216d-d22d81846954.htm" />
     <HelpKINode Title="MruManager.MaxMostRecentlyUsedCount Property " Url="html/2cbe363d-7f73-6ee9-83f6-a721a3092eaf.htm" />
   </HelpKINode>
+  <HelpKINode Title="Message property">
+    <HelpKINode Title="DialogViewModel.Message Property " Url="html/5b988e9a-45cb-87b6-655a-717c3f64c0b1.htm" />
+    <HelpKINode Title="IDialogViewModel.Message Property " Url="html/03661e13-bce0-e4bd-7fcb-6e19c007a588.htm" />
+  </HelpKINode>
   <HelpKINode Title="MostRecentlyUsedFile property">
     <HelpKINode Title="IMruManager.MostRecentlyUsedFile Property " Url="html/49254c1a-c4df-be21-854b-2a2eb6c3838d.htm" />
     <HelpKINode Title="MruManager.MostRecentlyUsedFile Property " Url="html/b82e678e-122c-d248-b952-24452a22788f.htm" />
@@ -515,8 +657,12 @@
   <HelpKINode Title="MruManager.MruManager constructor" Url="html/900f7715-029b-cef6-ded3-428b40124812.htm" />
   <HelpKINode Title="MruManager.OnFileAdded method" Url="html/e2b9c3c6-bc48-8240-eb64-327f8fc91f9f.htm" />
   <HelpKINode Title="Name property" Url="html/c39c434a-13b1-8764-ee10-6d668fcbe422.htm" />
-  <HelpKINode Title="NewValue property" Url="html/bd76ec62-8115-4d7a-e1fc-1583287277a7.htm" />
+  <HelpKINode Title="NewValue property">
+    <HelpKINode Title="PropertyValueChangedArgs(TValue).NewValue Property " Url="html/5ad60db5-8982-6dbd-3bfa-91d740e20fce.htm" />
+    <HelpKINode Title="ValueChangedEventArgs(TValue).NewValue Property " Url="html/bd76ec62-8115-4d7a-e1fc-1583287277a7.htm" />
+  </HelpKINode>
   <HelpKINode Title="NonArchive enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
+  <HelpKINode Title="None enumeration member" Url="html/66487f77-ad0f-86e9-780d-6286ac4fc6c9.htm" />
   <HelpKINode Title="NotDefined enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="NullInstance property" Url="html/748f5e9d-75c6-55ff-bdba-16e80e1c831e.htm" />
   <HelpKINode Title="NullInstanceFactory property" Url="html/a7c31eec-ba81-bea1-55b8-57f2c6825c98.htm" />
@@ -568,10 +714,15 @@
   <HelpKINode Title="ObservablePropertyChangedCollection&lt;TItem&gt;.RemoveItem method" Url="html/772b1f69-2c33-7c37-0463-3a2dde2f4b6b.htm" />
   <HelpKINode Title="ObservablePropertyChangedCollection&lt;TItem&gt;.SetItem method" Url="html/5b76ae8b-5dd7-bd6c-b79c-35a8310560d0.htm" />
   <HelpKINode Title="Old enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
-  <HelpKINode Title="OldValue property" Url="html/1ce111e4-4add-8730-8c43-4b427c98d12f.htm" />
+  <HelpKINode Title="OldValue property">
+    <HelpKINode Title="PropertyValueChangedArgs(TValue).OldValue Property " Url="html/61ebb3c2-abdd-e198-2e9a-bf8640f75586.htm" />
+    <HelpKINode Title="ValueChangedEventArgs(TValue).OldValue Property " Url="html/1ce111e4-4add-8730-8c43-4b427c98d12f.htm" />
+  </HelpKINode>
   <HelpKINode Title="OnErrorsChanged method" Url="html/4b7d5a8c-be99-dfe2-c096-4816ba0db96e.htm" />
   <HelpKINode Title="OnFileAdded method" Url="html/e2b9c3c6-bc48-8240-eb64-327f8fc91f9f.htm" />
-  <HelpKINode Title="OnPropertyChanged method" Url="html/944ae616-1323-a237-c935-696ca1a54083.htm" />
+  <HelpKINode Title="OnInteractionCompleted method" Url="html/948af00a-e2cb-1f26-cefd-5098bcc0502c.htm" />
+  <HelpKINode Title="OnPropertyChanged method" Url="html/67ba29d8-ca02-2f5d-b374-c4e98f999f67.htm" />
+  <HelpKINode Title="OnSendResponseAsyncCommandExecuted method" Url="html/b1be9a9e-0695-dce3-9b49-7bf3da236031.htm" />
   <HelpKINode Title="Png enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="PrimitiveTypeExtension class">
     <HelpKINode Title="PrimitiveTypeExtension Class" Url="html/98eb2c03-562f-b8bd-3b82-b03f401e6f5e.htm" />
@@ -599,6 +750,33 @@
     <HelpKINode Title="BaseViewModel.PropertyHasError Method " Url="html/bb6fd71c-3c11-8619-9ec8-cf4675f2a214.htm" />
     <HelpKINode Title="IViewModel.PropertyHasError Method " Url="html/54f304c2-eb40-de4b-22fa-d3e36ec3fcf2.htm" />
   </HelpKINode>
+  <HelpKINode Title="PropertyName property" Url="html/00796572-1732-25e4-1e53-c75e99f77b73.htm" />
+  <HelpKINode Title="PropertyValueChanged event">
+    <HelpKINode Title="BaseViewModel.PropertyValueChanged Event" Url="html/70f8eb13-e406-0e36-e137-37fa079ee3de.htm" />
+    <HelpKINode Title="IBaseViewModel.PropertyValueChanged Event" Url="html/ddc5f98e-0fea-110b-682c-ccc8ddcf4f23.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertyValueChangedArgs(Of TValue) class">
+    <HelpKINode Title="PropertyValueChangedArgs(TValue) Class" Url="html/805c6bf5-ae6b-36db-efce-9f5225b96c1d.htm" />
+    <HelpKINode Title="constructor" Url="html/046e4b4c-0cca-66c8-34d9-de3a65e1792e.htm" />
+    <HelpKINode Title="methods" Url="html/874dd123-60d8-c4ae-2be8-6263560658bf.htm" />
+    <HelpKINode Title="properties" Url="html/f0440a6e-dcf4-f71f-d657-c31777c42c9d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertyValueChangedArgs(Of TValue).NewValue property" Url="html/5ad60db5-8982-6dbd-3bfa-91d740e20fce.htm" />
+  <HelpKINode Title="PropertyValueChangedArgs(Of TValue).OldValue property" Url="html/61ebb3c2-abdd-e198-2e9a-bf8640f75586.htm" />
+  <HelpKINode Title="PropertyValueChangedArgs(Of TValue).PropertyName property" Url="html/00796572-1732-25e4-1e53-c75e99f77b73.htm" />
+  <HelpKINode Title="PropertyValueChangedArgs(Of TValue).PropertyValueChangedArgs constructor" Url="html/046e4b4c-0cca-66c8-34d9-de3a65e1792e.htm" />
+  <HelpKINode Title="PropertyValueChangedArgs&lt;TValue&gt; class">
+    <HelpKINode Title="PropertyValueChangedArgs(TValue) Class" Url="html/805c6bf5-ae6b-36db-efce-9f5225b96c1d.htm" />
+    <HelpKINode Title="constructor" Url="html/046e4b4c-0cca-66c8-34d9-de3a65e1792e.htm" />
+    <HelpKINode Title="methods" Url="html/874dd123-60d8-c4ae-2be8-6263560658bf.htm" />
+    <HelpKINode Title="properties" Url="html/f0440a6e-dcf4-f71f-d657-c31777c42c9d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertyValueChangedArgs&lt;TValue&gt;.NewValue property" Url="html/5ad60db5-8982-6dbd-3bfa-91d740e20fce.htm" />
+  <HelpKINode Title="PropertyValueChangedArgs&lt;TValue&gt;.OldValue property" Url="html/61ebb3c2-abdd-e198-2e9a-bf8640f75586.htm" />
+  <HelpKINode Title="PropertyValueChangedArgs&lt;TValue&gt;.PropertyName property" Url="html/00796572-1732-25e4-1e53-c75e99f77b73.htm" />
+  <HelpKINode Title="PropertyValueChangedArgs&lt;TValue&gt;.PropertyValueChangedArgs constructor" Url="html/046e4b4c-0cca-66c8-34d9-de3a65e1792e.htm" />
+  <HelpKINode Title="PropertyValueChangedEventHandler(Of TValue) delegate" Url="html/dfd9db63-5e13-4be6-760c-a7fda5297ee9.htm" />
+  <HelpKINode Title="PropertyValueChangedEventHandler&lt;TValue&gt; delegate" Url="html/dfd9db63-5e13-4be6-760c-a7fda5297ee9.htm" />
   <HelpKINode Title="ProvideValue method">
     <HelpKINode Title="EqualsExtension.ProvideValue Method " Url="html/bdc955ed-9fb1-599a-f0a8-a245a0c972c5.htm" />
     <HelpKINode Title="InvertExtension.ProvideValue Method " Url="html/68f2e2a4-9b76-35c7-0579-702b49d13a7b.htm" />
@@ -607,26 +785,107 @@
   <HelpKINode Title="Rar enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="Reg enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="RemoveItem method" Url="html/772b1f69-2c33-7c37-0463-3a2dde2f4b6b.htm" />
+  <HelpKINode Title="ResponseCallbackAsync property">
+    <HelpKINode Title="DialogViewModel.ResponseCallbackAsync Property " Url="html/6693e7a1-f236-7bad-0fbe-fdd1c221c705.htm" />
+    <HelpKINode Title="IDialogViewModel.ResponseCallbackAsync Property " Url="html/dc36eb09-2c0c-2a32-1cf5-e9201b647adf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SendResponseAsyncCommand property">
+    <HelpKINode Title="DialogViewModel.SendResponseAsyncCommand Property " Url="html/3d394b65-6be3-fd85-a6b0-79bf8992eb0d.htm" />
+    <HelpKINode Title="IDialogViewModel.SendResponseAsyncCommand Property " Url="html/49322581-e02f-0418-e6b2-2d6a3be9cdea.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetDataTemplateSelector method" Url="html/52c408ce-db39-9d39-2c15-50c2846f2b62.htm" />
+  <HelpKINode Title="SetDialogDataContext method" Url="html/43b58361-09b2-580c-9278-d9d18d982d80.htm" />
   <HelpKINode Title="SetItem method" Url="html/5b76ae8b-5dd7-bd6c-b79c-35a8310560d0.htm" />
+  <HelpKINode Title="SetStyle method" Url="html/9ee2b840-5323-0ae7-4200-432f852cb51b.htm" />
   <HelpKINode Title="SevenZip enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="String property" Url="html/ad1f82f1-d370-12d1-39f1-5f58ac720b5c.htm" />
+  <HelpKINode Title="Style attached property" Url="html/9794befe-b221-b517-014a-0f081d387bf5.htm" />
+  <HelpKINode Title="StyleProperty field" Url="html/a14e19f0-ec45-ff31-2a16-aac232f5f6fc.htm" />
   <HelpKINode Title="Sys enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
   <HelpKINode Title="Tar enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
+  <HelpKINode Title="Title property">
+    <HelpKINode Title="DialogViewModel.Title Property " Url="html/e04152f2-e93d-2d58-815d-79d7d4e7e53e.htm" />
+    <HelpKINode Title="IDialogViewModel.Title Property " Url="html/d18c80cd-b7f7-f82e-c828-48ae012ed15b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TitleBarIcon property">
+    <HelpKINode Title="DialogViewModel.TitleBarIcon Property " Url="html/809786ec-96cc-fb04-6a1d-50295375ab6a.htm" />
+    <HelpKINode Title="IDialogViewModel.TitleBarIcon Property " Url="html/eb0a8659-7cad-101f-a53e-76bd2e5fed76.htm" />
+  </HelpKINode>
   <HelpKINode Title="TrueValue property" Url="html/b8797e2b-454c-8aa0-f633-98dbee57d21e.htm" />
   <HelpKINode Title="TrueValueProperty field" Url="html/2271884d-fe98-7024-cf58-5fcfcc71dd52.htm" />
+  <HelpKINode Title="TryClearEventSources method">
+    <HelpKINode Title="EventAggregator.TryClearEventSources Method " Url="html/40023cbe-fd2e-2bb4-e7d4-9904b6dac3b5.htm" />
+    <HelpKINode Title="IEventAggregator.TryClearEventSources Method " Url="html/f28320bc-be62-6a9e-c42f-815b7daa20fa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryClearGlobalEventSource(Of TEventHandler) method">
+    <HelpKINode Title="EventAggregator.TryClearGlobalEventSource(TEventHandler) Method " Url="html/00841188-09f9-0f77-3e71-4502032f922a.htm" />
+    <HelpKINode Title="IEventAggregator.TryClearGlobalEventSource(TEventHandler) Method " Url="html/d7718994-6243-4a71-71e9-bb1bb99dd9f8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryClearGlobalEventSource&lt;TEventHandler&gt; method">
+    <HelpKINode Title="EventAggregator.TryClearGlobalEventSource(TEventHandler) Method " Url="html/00841188-09f9-0f77-3e71-4502032f922a.htm" />
+    <HelpKINode Title="IEventAggregator.TryClearGlobalEventSource(TEventHandler) Method " Url="html/d7718994-6243-4a71-71e9-bb1bb99dd9f8.htm" />
+  </HelpKINode>
   <HelpKINode Title="TryFindVisualChildElement(Of TChild) method" Url="html/d7f2e46b-71b2-3355-e232-1f34cc21c8f9.htm" />
   <HelpKINode Title="TryFindVisualChildElement&lt;TChild&gt; method" Url="html/d7f2e46b-71b2-3355-e232-1f34cc21c8f9.htm" />
   <HelpKINode Title="TryFindVisualChildElementByName method" Url="html/8e170045-d76c-9835-1438-1e0547138461.htm" />
   <HelpKINode Title="TryFindVisualParentElement(Of TParent) method" Url="html/3a43eaa4-4f8f-9d62-65cb-7e1feacbdc25.htm" />
   <HelpKINode Title="TryFindVisualParentElement&lt;TParent&gt; method" Url="html/3a43eaa4-4f8f-9d62-65cb-7e1feacbdc25.htm" />
   <HelpKINode Title="TryFindVisualParentElementByName method" Url="html/0b467ffd-837e-8d66-2d08-d85da978968e.htm" />
+  <HelpKINode Title="TryGetDialog method" Url="html/aee246ec-a233-4989-72c9-bd9b025037fe.htm" />
   <HelpKINode Title="TryReadBool method" Url="html/2df8b0d0-f456-320a-3340-5ca1542a9b2e.htm" />
   <HelpKINode Title="TryReadDouble method" Url="html/8e9b49bf-9028-de4e-df78-2cac54a1ca1f.htm" />
   <HelpKINode Title="TryReadInt method" Url="html/d49c7a52-cae7-3447-5d92-c41b01f6aaab.htm" />
   <HelpKINode Title="TryReadString method" Url="html/25feb2c0-9573-d006-bf4f-409cc53cb17c.htm" />
+  <HelpKINode Title="TryRegisterObservable(Of TEventSource) method">
+    <HelpKINode Title="EventAggregator.TryRegisterObservable(TEventSource) Method " Url="html/2093bfb5-d528-daed-2dc0-bd854cfd757c.htm" />
+    <HelpKINode Title="IEventAggregator.TryRegisterObservable(TEventSource) Method " Url="html/c55b7fd1-bf36-7e0d-453f-53a9a04c368c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRegisterObservable&lt;TEventSource&gt; method">
+    <HelpKINode Title="EventAggregator.TryRegisterObservable(TEventSource) Method " Url="html/2093bfb5-d528-daed-2dc0-bd854cfd757c.htm" />
+    <HelpKINode Title="IEventAggregator.TryRegisterObservable(TEventSource) Method " Url="html/c55b7fd1-bf36-7e0d-453f-53a9a04c368c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRegisterObserver method">
+    <HelpKINode Title="EventAggregator.TryRegisterObserver Method " Url="html/c4dcc008-e6de-6383-60d4-1952592fc87d.htm" />
+    <HelpKINode Title="IEventAggregator.TryRegisterObserver Method " Url="html/b845c16d-eba6-6946-1a9d-200c498c78c2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRemoveAllHandlers(Of TEventHandler) method">
+    <HelpKINode Title="EventAggregator.TryRemoveAllHandlers(TEventHandler) Method " Url="html/646d5417-00e4-c30a-3b00-c33ce7fe6f08.htm" />
+    <HelpKINode Title="IEventAggregator.TryRemoveAllHandlers(TEventHandler) Method " Url="html/03505dc4-4ec1-8e6f-11ec-b3584cf9d7ef.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRemoveAllHandlers&lt;TEventHandler&gt; method">
+    <HelpKINode Title="EventAggregator.TryRemoveAllHandlers(TEventHandler) Method " Url="html/646d5417-00e4-c30a-3b00-c33ce7fe6f08.htm" />
+    <HelpKINode Title="IEventAggregator.TryRemoveAllHandlers(TEventHandler) Method " Url="html/03505dc4-4ec1-8e6f-11ec-b3584cf9d7ef.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRemoveAllSpecificEventSources method">
+    <HelpKINode Title="EventAggregator.TryRemoveAllSpecificEventSources Method " Url="html/8225e702-2789-48d5-51d4-13bf93611625.htm" />
+    <HelpKINode Title="IEventAggregator.TryRemoveAllSpecificEventSources Method " Url="html/cbfb4e9e-f628-8210-e6d1-23b814d441e3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRemoveHandlerFromGlobalEventSource(Of TEventHandler) method">
+    <HelpKINode Title="EventAggregator.TryRemoveHandlerFromGlobalEventSource(TEventHandler) Method " Url="html/9c64d754-60df-f85d-03ce-6453118a27c5.htm" />
+    <HelpKINode Title="IEventAggregator.TryRemoveHandlerFromGlobalEventSource(TEventHandler) Method " Url="html/67256382-d574-a5dc-b912-f1010ca25f9c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRemoveHandlerFromGlobalEventSource&lt;TEventHandler&gt; method">
+    <HelpKINode Title="EventAggregator.TryRemoveHandlerFromGlobalEventSource(TEventHandler) Method " Url="html/9c64d754-60df-f85d-03ce-6453118a27c5.htm" />
+    <HelpKINode Title="IEventAggregator.TryRemoveHandlerFromGlobalEventSource(TEventHandler) Method " Url="html/67256382-d574-a5dc-b912-f1010ca25f9c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRemoveObservable method">
+    <HelpKINode Title="EventAggregator.TryRemoveObservable Method " Url="html/b2c677a4-4b9e-bab7-230a-edb3f143f056.htm" />
+    <HelpKINode Title="IEventAggregator.TryRemoveObservable Method " Url="html/5d6ed28e-109f-5e42-a630-08202dda1aad.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRemoveSpecificEventSource(Of TEventHandler) method">
+    <HelpKINode Title="EventAggregator.TryRemoveSpecificEventSource(TEventHandler) Method " Url="html/0f3b800e-17e1-9565-04c0-1d01aaba58e3.htm" />
+    <HelpKINode Title="IEventAggregator.TryRemoveSpecificEventSource(TEventHandler) Method " Url="html/fae28d70-64be-e88a-327b-6d2dec7e896a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryRemoveSpecificEventSource&lt;TEventHandler&gt; method">
+    <HelpKINode Title="EventAggregator.TryRemoveSpecificEventSource(TEventHandler) Method " Url="html/0f3b800e-17e1-9565-04c0-1d01aaba58e3.htm" />
+    <HelpKINode Title="IEventAggregator.TryRemoveSpecificEventSource(TEventHandler) Method " Url="html/fae28d70-64be-e88a-327b-6d2dec7e896a.htm" />
+  </HelpKINode>
   <HelpKINode Title="TrySetValue method" Url="html/7d24e199-e156-6fe9-2c2e-4d8e1c0db264.htm" />
   <HelpKINode Title="Txt enumeration member" Url="html/78a6feef-d420-5665-bd71-4b624930a4aa.htm" />
-  <HelpKINode Title="Value property" Url="html/1ed9ec16-e8b3-6877-2adb-ba8a516c462f.htm" />
+  <HelpKINode Title="Value property">
+    <HelpKINode Title="InvertExtension.Value Property " Url="html/1ed9ec16-e8b3-6877-2adb-ba8a516c462f.htm" />
+    <HelpKINode Title="ValueEventArgs(TValue).Value Property " Url="html/f088e369-0ad1-08b4-9d4e-1251eacf2bd4.htm" />
+  </HelpKINode>
   <HelpKINode Title="ValueChangedEventArgs(Of TValue) class">
     <HelpKINode Title="ValueChangedEventArgs(TValue) Class" Url="html/875170d6-7c50-dccf-495b-0394dd7ef786.htm" />
     <HelpKINode Title="constructor" Url="html/ba1a99d1-3581-9d69-f01d-f2fcbd36182e.htm" />
@@ -645,6 +904,22 @@
   <HelpKINode Title="ValueChangedEventArgs&lt;TValue&gt;.NewValue property" Url="html/bd76ec62-8115-4d7a-e1fc-1583287277a7.htm" />
   <HelpKINode Title="ValueChangedEventArgs&lt;TValue&gt;.OldValue property" Url="html/1ce111e4-4add-8730-8c43-4b427c98d12f.htm" />
   <HelpKINode Title="ValueChangedEventArgs&lt;TValue&gt;.ValueChangedEventArgs constructor" Url="html/ba1a99d1-3581-9d69-f01d-f2fcbd36182e.htm" />
+  <HelpKINode Title="ValueEventArgs(Of TValue) class">
+    <HelpKINode Title="ValueEventArgs(TValue) Class" Url="html/444884a2-7afa-233a-618f-fa2f0353a7a8.htm" />
+    <HelpKINode Title="constructor" Url="html/843d6055-c8b7-45ab-a3fd-18e89f51497e.htm" />
+    <HelpKINode Title="methods" Url="html/36f0025a-b186-a948-4667-013d471e621a.htm" />
+    <HelpKINode Title="properties" Url="html/6fc2c670-d04c-97e9-0ee8-d148a3cb2c48.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ValueEventArgs(Of TValue).Value property" Url="html/f088e369-0ad1-08b4-9d4e-1251eacf2bd4.htm" />
+  <HelpKINode Title="ValueEventArgs(Of TValue).ValueEventArgs constructor" Url="html/843d6055-c8b7-45ab-a3fd-18e89f51497e.htm" />
+  <HelpKINode Title="ValueEventArgs&lt;TValue&gt; class">
+    <HelpKINode Title="ValueEventArgs(TValue) Class" Url="html/444884a2-7afa-233a-618f-fa2f0353a7a8.htm" />
+    <HelpKINode Title="constructor" Url="html/843d6055-c8b7-45ab-a3fd-18e89f51497e.htm" />
+    <HelpKINode Title="methods" Url="html/36f0025a-b186-a948-4667-013d471e621a.htm" />
+    <HelpKINode Title="properties" Url="html/6fc2c670-d04c-97e9-0ee8-d148a3cb2c48.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ValueEventArgs&lt;TValue&gt;.Value property" Url="html/f088e369-0ad1-08b4-9d4e-1251eacf2bd4.htm" />
+  <HelpKINode Title="ValueEventArgs&lt;TValue&gt;.ValueEventArgs constructor" Url="html/843d6055-c8b7-45ab-a3fd-18e89f51497e.htm" />
   <HelpKINode Title="version">
     <HelpKINode Title="1.0.0.0" Url="html/e3f796bb-fafc-41a5-a922-eb3f43610968.htm" />
     <HelpKINode Title="history" Url="html/c5da87fe-d1a3-43fb-9427-d5a468d39c51.htm" />

@@ -27,6 +27,119 @@
               Converter to truncate file paths exceeding a specific length by replacing a number of characters with an ellipsis.
             </summary>
         </member>
+        <member name="T:BionicUtilities.Net.Dialog.Dialog">
+            <summary>
+            Attached behavior.
+            </summary>
+        </member>
+        <member name="F:BionicUtilities.Net.Dialog.Dialog.StyleProperty">
+            <summary>
+            The attached Style property which holds the <see cref="T:System.Windows.Style"/> which should apply to the dialog. <see cref="P:System.Windows.Style.TargetType"/> must be <see cref="T:System.Windows.Window"/>.
+            </summary>
+        </member>
+        <member name="T:BionicUtilities.Net.Dialog.DialogViewModel">
+            <summary>
+            Implementation of <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/>. This abstract class implements the dialog data handling logic and is therefore preferred over a custom implementation of <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/>.
+            </summary>
+            <remarks>It is recommended to use the <see cref="T:BionicUtilities.Net.Dialog.Dialog"/> attached behavior as it handles the view logic. Just bind <see cref="F:BionicUtilities.Net.Dialog.Dialog.DialogDataContextProperty"/> to an instance of <see cref="T:BionicUtilities.Net.Dialog.DialogViewModel"/> (or <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/>) and define a DataTemplate for each implementation of <see cref="T:BionicUtilities.Net.Dialog.DialogViewModel"/>.</remarks>
+        </member>
+        <member name="M:BionicUtilities.Net.Dialog.DialogViewModel.OnSendResponseAsyncCommandExecuted(BionicUtilities.Net.Dialog.DialogResult)">
+            <summary>
+            Asynchronously called when the SendResponseAsyncCommand is executed.
+            </summary>
+            <param name="result">A <see cref="T:BionicUtilities.Net.Dialog.DialogResult"/> value that was received by the ICommand.</param>
+            <returns>A <c>Task</c> instance to make this method awaitable.</returns>
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.DialogViewModel.Title">
+            <inheritdoc />
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.DialogViewModel.Message">
+            <inheritdoc />
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.DialogViewModel.TitleBarIcon">
+            <inheritdoc />
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.DialogViewModel.SendResponseAsyncCommand">
+            <inheritdoc />
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.DialogViewModel.DialogResult">
+            <inheritdoc />
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.DialogViewModel.ResponseCallbackAsync">
+            <inheritdoc />
+        </member>
+        <member name="E:BionicUtilities.Net.Dialog.DialogViewModel.InteractionCompleted">
+            <inheritdoc />
+        </member>
+        <member name="T:BionicUtilities.Net.Dialog.IDialogViewModel">
+            <summary>
+            The DataContext and binding source for the dialog Window. Implement this interface or the derived abstract <see cref="T:BionicUtilities.Net.Dialog.DialogViewModel"/> to transport data from the view to the view model via binding.
+            </summary>
+            <remarks>It is recommended to extend the abstract class <see cref="T:BionicUtilities.Net.Dialog.DialogViewModel"/> instead as this class already implemented the dialog data handling logic. Also use the <see cref="T:BionicUtilities.Net.Dialog.Dialog"/> attached behavior as it handles the view logic. Just bind <see cref="F:BionicUtilities.Net.Dialog.Dialog.DialogDataContextProperty"/> to an instance of <see cref="T:BionicUtilities.Net.Dialog.DialogViewModel"/> (or <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/>) and define a DataTemplate for each implementation of <see cref="T:BionicUtilities.Net.Dialog.DialogViewModel"/>.</remarks>
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.IDialogViewModel.Title">
+            <summary>
+            The title of the dialog <c>Window</c>
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.IDialogViewModel.Message">
+            <summary>
+            The message for the dialog to show to the user.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.IDialogViewModel.DialogResult">
+            <summary>
+            The <see cref="T:BionicUtilities.Net.Dialog.DialogResult"/> of the user interaction.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.IDialogViewModel.ResponseCallbackAsync">
+            <summary>
+            The asynchronous callback that is invoked during the dialog interaction. Use this callback as continuation of the interrupted flow, after the required data was collected by the dialog.
+            </summary>
+            <remarks>When using the abstract class <see cref="T:BionicUtilities.Net.Dialog.DialogViewModel"/> this delegate is invoked when invoking the <see cref="P:BionicUtilities.Net.Dialog.IDialogViewModel.SendResponseAsyncCommand"/>. The parameter of this callback is the original <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/>. The <see cref="P:BionicUtilities.Net.Dialog.IDialogViewModel.ResponseCallbackAsync"/> makes the dialog interaction fire-and-forget as the <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModelProviderSource"/> doesn't need to wait for the  dialog to close and doesn't have to store a reference to the <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/>.</remarks>
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.IDialogViewModel.SendResponseAsyncCommand">
+            <summary>
+            ICommand that can be bound to the buttons of the dialog. The command parameter is a <see cref="T:BionicUtilities.Net.Dialog.DialogResult"/>.
+            </summary>
+            <remarks>When using the abstract class <see cref="T:BionicUtilities.Net.Dialog.DialogViewModel"/> the <see cref="P:BionicUtilities.Net.Dialog.IDialogViewModel.SendResponseAsyncCommand"/> sets the <see cref="P:BionicUtilities.Net.Dialog.IDialogViewModel.DialogResult"/> property and invokes the <see cref="P:BionicUtilities.Net.Dialog.IDialogViewModel.ResponseCallbackAsync"/> continuation callback. The parameter of this callback is the original <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/>. The <see cref="P:BionicUtilities.Net.Dialog.IDialogViewModel.ResponseCallbackAsync"/> makes the dialog interaction fire-and-forget as the <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModelProviderSource"/> doesn't need to wait for the  dialog to close and doesn't have to store a reference to the <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/>.</remarks>
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.IDialogViewModel.TitleBarIcon">
+            <summary>
+            The icon to display in the title bar of the Window
+            </summary>
+        </member>
+        <member name="E:BionicUtilities.Net.Dialog.IDialogViewModel.InteractionCompleted">
+            <summary>
+            Event to signal that the interaction with the dialog is completed.
+            </summary>
+            <remarks>When extending the abstract class <see cref="T:BionicUtilities.Net.Dialog.DialogViewModel"/> (instead of the <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/> interface) together with the attached property <see cref="F:BionicUtilities.Net.Dialog.Dialog.DialogDataContextProperty"/> raising this event will notify the <see cref="T:BionicUtilities.Net.Dialog.Dialog"/> attached behavior class to close the Window.</remarks>
+        </member>
+        <member name="T:BionicUtilities.Net.Dialog.IDialogViewModelProvider">
+            <summary>
+            The binding source for the current dialog view and the attached property <see cref="F:BionicUtilities.Net.Dialog.Dialog.DialogDataContextProperty"/>.
+            </summary>
+            <remarks>The <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/> can be received from instances that implement <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModelProviderSource"/> by subscribing to their <see cref="E:BionicUtilities.Net.Dialog.IDialogViewModelProviderSource.DialogRequested"/> event.
+            When used together with the attached <see cref="F:BionicUtilities.Net.Dialog.Dialog.DialogDataContextProperty"/> the setting of the <see cref="P:BionicUtilities.Net.Dialog.IDialogViewModelProvider.DialogViewModel"/> property automatically triggers the showing of a dialog. The <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/> is rendered by a custom defined <see cref="T:System.Windows.DataTemplate"/> that targets the concrete type of a <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/> implementation.</remarks>
+        </member>
+        <member name="P:BionicUtilities.Net.Dialog.IDialogViewModelProvider.DialogViewModel">
+            <summary>
+            The binding source for the current dialog view.
+            </summary>
+            <remarks>The <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/> can be received from instances that implement <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModelProviderSource"/> by subscribing to their <see cref="E:BionicUtilities.Net.Dialog.IDialogViewModelProviderSource.DialogRequested"/> event.
+            When used together with the attached <see cref="F:BionicUtilities.Net.Dialog.Dialog.DialogDataContextProperty"/> the setting of the <see cref="P:BionicUtilities.Net.Dialog.IDialogViewModelProvider.DialogViewModel"/> property automatically triggers the showing of a dialog. The <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/> is rendered by a custom defined <see cref="T:System.Windows.DataTemplate"/> that targets the concrete type of a <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/> implementation.</remarks>
+        </member>
+        <member name="T:BionicUtilities.Net.Dialog.IDialogViewModelProviderSource">
+            <summary>
+            Interface that supports notification of observers to request display of a dialog.
+            The event args is the view model of <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/> which serves as the DataContext and binding source of the dialog.
+            </summary>
+        </member>
+        <member name="E:BionicUtilities.Net.Dialog.IDialogViewModelProviderSource.DialogRequested">
+            <summary>
+            Event that can be raised to notify a listening view model (or view) that the displaying of dialog is requested. The event args is the view model of <see cref="T:BionicUtilities.Net.Dialog.IDialogViewModel"/> which serves as the DataContext and binding source of the dialog.
+            </summary>
+        </member>
         <member name="T:BionicUtilities.Net.Extensions.HelperExtensions">
             <summary>
             Collection of extension methods e.g. visual tree traversal

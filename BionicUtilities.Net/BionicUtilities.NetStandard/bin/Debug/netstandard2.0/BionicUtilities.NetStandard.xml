@@ -4,6 +4,39 @@
         <name>BionicUtilities.NetStandard</name>
     </assembly>
     <members>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObservable``1(``0,System.Collections.Generic.IEnumerable{System.String})">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryRemoveObservable``1(``0,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryRemoveSpecificEventSource``1(System.String,System.Type,``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllSpecificEventSources(System.String,System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryClearEventSources(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryRemoveHandlerFromGlobalEventSource``1(System.String,``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryClearGlobalEventSource``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryRemoveAllHandlers``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:BionicUtilities.NetStandard.EventAggregator.TryRegisterObserver``1(System.String,System.Type,``0)">
+            <inheritdoc />
+        </member>
         <member name="T:BionicUtilities.NetStandard.Generic.INullObject`1">
             <summary>
             Interface that returns a null object for the implementing type. Implements Null-Object Pattern
@@ -17,6 +50,47 @@
         </member>
         <member name="P:BionicUtilities.NetStandard.Generic.NullObject`1.IsNull">
             <inheritdoc />
+        </member>
+        <member name="T:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1">
+            <summary>
+            Generic EventArgs implementation that supports value changed information
+            by holding the old and the new value.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.#ctor(`0,`0)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="newValue">The new value that replaces the old value.</param>
+            <param name="oldValue">The old value that was replaced by the new value.</param>
+        </member>
+        <member name="P:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.NewValue">
+            <summary>
+            The new value after the change.
+            </summary>
+        </member>
+        <member name="P:BionicUtilities.NetStandard.Generic.ValueChangedEventArgs`1.OldValue">
+            <summary>
+            The old value before the change.
+            </summary>
+        </member>
+        <member name="T:BionicUtilities.NetStandard.Generic.ValueEventArgs`1">
+            <summary>
+            Generic EventArgs implementation that supports to store a value.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+        </member>
+        <member name="M:BionicUtilities.NetStandard.Generic.ValueEventArgs`1.#ctor(`0)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="value">The value to send as event args.</param>
+        </member>
+        <member name="P:BionicUtilities.NetStandard.Generic.ValueEventArgs`1.Value">
+            <summary>
+            The value to send as event args.
+            </summary>
         </member>
         <member name="T:BionicUtilities.NetStandard.INullObject">
             <summary>
@@ -155,11 +229,14 @@
             Event fired whenever a child property changes its value.
             </summary>
         </member>
-        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.OnPropertyChanged(System.String)">
+        <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.OnPropertyChanged(System.String,System.Object,System.Object)">
             <summary>
             Method called to fire a <see cref="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyChanged"/> event.
+            Also raises the <see cref="E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged"/> event to support binding.
             </summary>
             <param name="propertyName"> The property name. </param>
+            <param name="oldValue">The value before the property change.</param>
+            <param name="newValue">The value after the property change.</param>
         </member>
         <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.GetErrors(System.String)">
             <summary>
@@ -175,11 +252,29 @@
         <member name="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.ErrorsChanged">
             <inheritdoc />
         </member>
+        <member name="E:BionicUtilities.NetStandard.ViewModel.BaseViewModel.PropertyValueChanged">
+            <inheritdoc />
+        </member>
         <member name="M:BionicUtilities.NetStandard.ViewModel.BaseViewModel.OnErrorsChanged(System.String)">
             <summary>
             Raised when the validation state of the view model has changed (e.g. error added or removed).
             </summary>
             <param name="propertyName"></param>
+        </member>
+        <member name="T:BionicUtilities.NetStandard.ViewModel.PropertyValueChangedEventHandler`1">
+            <summary>
+            PropertyChanged event handler that supports standard property changed signature events with additional old value and new value parameters.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+            <param name="sender">The event source.</param>
+            <param name="propertyName">The name of the property that has changed.</param>
+            <param name="oldValue">The value before the change.</param>
+            <param name="newValue">The value after the change.</param>
+        </member>
+        <member name="E:BionicUtilities.NetStandard.ViewModel.IBaseViewModel.PropertyValueChanged">
+            <summary>
+            PropertyChanged implementation that sends old value and new value of the change and raises the INotifyPropertyChanged event.
+            </summary>
         </member>
         <member name="M:BionicUtilities.NetStandard.ViewModel.IViewModel.PropertyHasError(System.String)">
             <summary>

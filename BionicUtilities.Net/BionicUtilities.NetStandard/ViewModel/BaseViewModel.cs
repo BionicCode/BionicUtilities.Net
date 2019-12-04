@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Data;
+using BionicUtilities.NetStandard.Generic;
 
 namespace BionicUtilities.NetStandard.ViewModel
 {
@@ -37,8 +38,9 @@ namespace BionicUtilities.NetStandard.ViewModel
         return false;
       }
 
+      TValue oldValue = value;
       targetBackingField = value;
-      OnPropertyChanged(propertyName);
+      OnPropertyChanged(propertyName, oldValue, value);
       return true;
     }
 
@@ -81,13 +83,14 @@ namespace BionicUtilities.NetStandard.ViewModel
       {
         if (isValueValid && previousValidationHasFailed)
         {
-          OnPropertyChanged(propertyName);
+          OnPropertyChanged(propertyName, value, value);
         }
         return false;
       }
 
+      TValue oldValue = value;
       targetBackingField = value;
-      OnPropertyChanged(propertyName);
+      OnPropertyChanged(propertyName, oldValue, value);
       if (!isValueValid && isThrowExceptionOnValidationErrorEnabled)
       {
         throw new ArgumentException(string.Empty);
@@ -128,19 +131,26 @@ namespace BionicUtilities.NetStandard.ViewModel
     /// <inheritdoc />
     public IEnumerable<string> GetPropertyErrors(string propertyName = null) => GetErrors(propertyName).Cast<string>();
 
-    /// <summary>
-      /// Event fired whenever a child property changes its value.
-      /// </summary>
-      public event PropertyChangedEventHandler PropertyChanged;
 
-      /// <summary>
-      /// Method called to fire a <see cref="PropertyChanged"/> event.
-      /// </summary>
-      /// <param name="propertyName"> The property name. </param>
-      protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-      {
-        this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-      }
+    /// <summary>
+    /// Event fired whenever a child property changes its value.
+    /// </summary>
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    /// <summary>
+    /// Method called to fire a <see cref="PropertyChanged"/> event.
+    /// Also raises the <see cref="INotifyPropertyChanged.PropertyChanged"/> event to support binding.
+    /// </summary>
+    /// <param name="propertyName"> The property name. </param>
+    /// <param name="oldValue">The value before the property change.</param>
+    /// <param name="newValue">The value after the property change.</param>
+    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null, object oldValue = null, object newValue = null)
+    {
+      // Invoke INotifyPropertyChanged.PropertyChanged
+      this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+      this.PropertyValueChanged?.Invoke(this, new PropertyValueChangedArgs<object>(propertyName, oldValue, newValue));
+    }
 
     #region Implementation of INotifyDataErrorInfo
 
@@ -162,6 +172,13 @@ namespace BionicUtilities.NetStandard.ViewModel
 
       /// <inheritdoc />
       public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
+
+      #endregion
+
+      #region Implementation of IBaseViewModel
+
+      /// <inheritdoc />
+      public event PropertyValueChangedEventHandler<object> PropertyValueChanged;
 
       #endregion
 
