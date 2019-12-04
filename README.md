@@ -295,10 +295,17 @@ class MainWindowViewModel : INotifyPropertyChanged
 }
 ```
 ### MVVM Dialog attached behavior
+Provides a clean way to show dialogs that are requested by view models. This apporach uses dialog view models that are templated by specific `DataTemplate` definitions, This templates are rendered as content of native dialog `Window` instances.
+
+Because once the dialog was closed a custom asynchronous continuation delegate is invoked by the `DialogViewModel` the dialog can be shown without the requirement for the requesting view model to wait for a response. This way the dialogs can be shown in a fire-and-forget manner supporting asynchronous delegates.
+
+`DialogViewModel` is the only mandatory abstract class (or alternatively the `IDialogViewModel` interface) to implement. `DialogViewModel` offers ready to use logic for the data and response handling. Virtual methods add a way to add customization or adjust behavior. The `Dialog` attached behavior handles the view logic which includes aplying styles and templates on the dialog and showing/ closing the Window.
+
+The interfaces `IDialogViewModelProvider` and `IDialogViewModelProviderSource` are not a requirement and are supposed to provide a clean separation. The `IDialogViewModelProviderSource.DialogRequested` event driven flow can be omitted. Just provide a mechanism to bind a `DialogViewModel` (or `IDialogViewModel`) implementation to the `Dialog.DialogDataContext` Attached Property. `Dialog` and `DialogViewMoel` are the only core classes that are required to make it work.
 
 #### Example
 
-##### Implementing IDialogViewModelProviderSource
+##### Implementing IDialogViewModelProviderSource (optional)
 
 ```C#
 
@@ -308,6 +315,7 @@ class SettingsPageViewModel : IDialogViewModelProviderSource
   {
     if (File.Exists(filePath))
     {
+      // Create the IDialogViewModel for the File Exists dialog
       var dialogTitleBarIcon = new BitmapImage(new Uri("../../logo.ico", UriKind.Relative));
       if (titleBarIcon.CanFreeze)
       {
@@ -315,13 +323,20 @@ class SettingsPageViewModel : IDialogViewModelProviderSource
       }
       var message = "File exists. Do you want to replace it?";
       var dialogTitle = "File Exists";
+      
+      // Set the continuation callback which will be invoked once the dialog closed
       var fileExistsdialogViewModel = new FileExistsDialogViewModel(message, dialogTitle, dialogTitleBarIcon, HandleFileExistsDialogResponseAsync);
+      
+      // Request File Exists dialog to ask if existing file can be overwritten
       OnDialogRequested(newfileExistsdialogViewModel);
+      return;
     }
     
     await SaveFileAsync(filePath, settingsData);
   }
   
+  // Continuation callback. Will be invoked once the dialog closed. 
+  // The parameter is the previously created FileExistsDialogViewmodel containing data set from the dialog.
   private async Task HandleFileExistsDialogResponseAsync(IDialogViewModel dialogViewModel)
   {
     if (dialogViewModel.DialogResult == DialogResult.Accepted)
@@ -339,14 +354,17 @@ class SettingsPageViewModel : IDialogViewModelProviderSource
 }
 ```
 
-##### Implementing IDialogViewModelProvider
+##### Implementing IDialogViewModelProvider (optional - just provide a binding source for the `Dialog` attached behavior)
 
 ```C#
 class MainWindowViewModel : IDialogViewModelProvider
 {
   public MainPageViewModel()
   {
+    // A view model that implements IDialogViewModelProvider and can request dispalying of a dialog
     var settingsPageViewModel = new SettingsPageViewModel();
+    
+    // Listen for dialog requests and provide the dialog view model for binding of the attahced behavior
     settingsPageViewModel.DialogRequested += (sender, args) => this.DialogViewModel = args.Value);
     
     this.Pages = new ObservableCollection<IPage>() { settingsPageViewModel };
@@ -362,7 +380,9 @@ class MainWindowViewModel : IDialogViewModelProvider
 }
 ```
 
-##### Implementing DialogViewModel
+##### Implementing DialogViewModel (required)
+This is the only mandatory abstract class (or alternatively the `IDialogViewModel` interface) to implement.
+The interfaces `IDialogViewModelProvider` and `IDialogViewModelProvider` are just to provide a clean separation. The `IDialogViewModelProviderSource.DialogRequested` can be omitted. Just provide a mechanism to bind a `DialogViewModel` (or `IDialogViewModel`) implementation to the `Dialog.DialogDataContext` Attached Property. `Dialog` and `DialogViewMoel` are the core classes to make it work.
 
 ```C#
 public class FileExistsDialogViewModel : DialogViewModel
@@ -379,7 +399,7 @@ public class FileExistsDialogViewModel : DialogViewModel
 }
 ```
 
-##### Implementing `DataTemplate` for `FileExistsDialogViewModel`
+##### Implementing `DataTemplate` for `FileExistsDialogViewModel` (required)
 
 ```XAML
 Application x:Class="BionicCode.BionicNuGetDeploy.Main.App"
@@ -453,7 +473,7 @@ Application x:Class="BionicCode.BionicNuGetDeploy.Main.App"
 ```
 
 
-##### Setting the Attached Property  `Dialog.DialogDataContext` on `Window` (or any other `FrameworkElement`)
+##### Setting the Attached Property  `Dialog.DialogDataContext` on `Window` (or any other `FrameworkElement` - required)
 
 ```XAML
 <Window x:Class="BionicCode.BionicNuGetDeploy.Main.MainWindow"
