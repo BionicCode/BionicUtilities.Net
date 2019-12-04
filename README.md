@@ -294,4 +294,176 @@ class MainWindowViewModel : INotifyPropertyChanged
   protected virtual void OnItemCreated() => this.ItemCreated?.Invoke(this, EventArgs.Empty);
 }
 ```
+### MVVM Dialog attached behavior
 
+#### Example
+
+##### Implementing IDialogViewModelProviderSource
+
+```C#
+
+class SettingsPageViewModel : IDialogViewModelProviderSource
+{
+  public async Task TrySaveFileAsync(string filePath, string settingsData)
+  {
+    if (File.Exists(filePath))
+    {
+      var dialogTitleBarIcon = new BitmapImage(new Uri("../../logo.ico", UriKind.Relative));
+      if (titleBarIcon.CanFreeze)
+      {
+        titleBarIcon.Freeze();
+      }
+      var message = "File exists. Do you want to replace it?";
+      var dialogTitle = "File Exists";
+      var fileExistsdialogViewModel = new FileExistsDialogViewModel(message, dialogTitle, dialogTitleBarIcon, HandleFileExistsDialogResponseAsync);
+      OnDialogRequested(newfileExistsdialogViewModel);
+    }
+    
+    await SaveFileAsync(filePath, settingsData);
+  }
+  
+  private async Task HandleFileExistsDialogResponseAsync(IDialogViewModel dialogViewModel)
+  {
+    if (dialogViewModel.DialogResult == DialogResult.Accepted)
+    {
+      await SaveFileAsync(filePath, settingsData);
+    }
+  }
+
+  // IDialogViewModelProviderSource interface implementation
+  public event EventHandler<ValueEventArgs<IDialogViewModel>> DialogRequested;
+  protected virtual void OnDialogRequested(IDialogViewModel dialogViewModel)
+  {
+    this.DialogRequested?.Invoke(this, new ValueEventArgs<IDialogViewModel>(dialogViewModel));
+  }
+}
+```
+
+##### Implementing IDialogViewModelProvider
+
+```C#
+class MainWindowViewModel : IDialogViewModelProvider
+{
+  public MainPageViewModel()
+  {
+    var settingsPageViewModel = new SettingsPageViewModel();
+    settingsPageViewModel.DialogRequested += (sender, args) => this.DialogViewModel = args.Value);
+    
+    this.Pages = new ObservableCollection<IPage>() { settingsPageViewModel };
+  }
+  
+  // IDialogViewModelProvider interface implementation
+  private IDialogViewModel dialogViewModel;  
+  public IDialogViewModel DialogViewModel
+  {
+    get => this.dialogViewModel;
+    private set => TrySetValue(value, ref this.dialogViewModel);
+  }
+}
+```
+
+##### Implementing DialogViewModel
+
+```C#
+public class FileExistsDialogViewModel : DialogViewModel
+{
+  public FileExistsDialogViewModel(string message, string title) : base(message, title)
+  { 
+  }
+  public FileExistsDialogViewModel(string message, string title, Func<IDialogViewModel, Task> sendResponseCallbackAsync) : base(message, title, sendResponseCallbackAsync)
+  { 
+  }
+  public FileExistsDialogViewModel(string message, string title, ImageSource titleBarIcon, Func<IDialogViewModel, Task> sendResponseCallbackAsync) : base(message, title, titleBarIcon, sendResponseCallbackAsync)
+  { 
+  }
+}
+```
+
+##### Implementing `DataTemplate` for `FileExistsDialogViewModel`
+
+```XAML
+Application x:Class="BionicCode.BionicNuGetDeploy.Main.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BionicCode.BionicNuGetDeploy.Main"
+             xmlns:pages="clr-namespace:BionicCode.BionicNuGetDeploy.Main.Pages"
+             xmlns:dialog="clr-namespace:BionicUtilities.Net.Dialog;assembly=BionicUtilities.Net"
+             Startup="RunApplication">
+    <Application.Resources>
+
+      <Viewbox x:Key="WarningIcon"
+               x:Shared="False">
+        <ContentControl FontFamily="Segoe MDL2 Assets"
+                        Content="&#xE814;" />
+      </Viewbox>
+
+      <Viewbox x:Key="WarningLightIcon"
+               x:Shared="False">
+        <ContentControl FontFamily="Segoe MDL2 Assets"
+                        Content="&#xE7BA;" />
+      </Viewbox>
+    
+      <DataTemplate DataType="{x:Type pages:FileExistsDialogViewModel}">
+        <Grid Margin="12">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <StackPanel Grid.Row="0"
+                      Orientation="Horizontal"
+                      Margin="0,0,48,24">
+            <Grid Margin="0,0,16,0">
+              <ContentControl Panel.ZIndex="1"
+                              Content="{StaticResource WarningIcon}"
+                              VerticalAlignment="Center"
+                              Height="32"
+                              Foreground="Orange"
+                              Background="Black" />
+              <ContentControl Panel.ZIndex="2"
+                              Content="{StaticResource WarningLightIcon}"
+                              VerticalAlignment="Center"
+                              Height="32"
+                              Margin="0,4,0,0" />
+            </Grid>
+            <TextBlock Text="{Binding Message}" />
+          </StackPanel>
+          <StackPanel Grid.Row="1"
+                      FocusManager.FocusedElement="{Binding ElementName=CancelButton}"
+                      Orientation="Horizontal"
+                      HorizontalAlignment="Right">
+            <Button Content="Yes"
+                    Padding="0"
+                    Command="{Binding SendResponseAsyncCommand}"
+                    CommandParameter="{x:Static dialog:DialogResult.Accepted}"
+                    Margin="0,0,16,0" />
+            <Button x:Name="CancelButton"
+                    Content="No"
+                    IsCancel="True"
+                    IsDefault="True"
+                    BorderThickness="3"
+                    Padding="0"
+                    Command="{Binding SendResponseAsyncCommand}"
+                    CommandParameter="{x:Static dialog:DialogResult.Denied}" />
+
+          </StackPanel>
+        </Grid>
+      </DataTemplate>
+  </Application.Resources>
+</Application>
+```
+
+
+##### Setting the Attached Property  `Dialog.DialogDataContext` on `Window` (or any other `FrameworkElement`)
+
+```XAML
+<Window x:Class="BionicCode.BionicNuGetDeploy.Main.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:dialog="clr-namespace:BionicUtilities.Net.Dialog;assembly=BionicUtilities.Net"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        dialog:Dialog.DialogDataContext="{Binding DialogViewModel}">
+</Window>      
+```
