@@ -30,7 +30,7 @@ Reusable utility and class library for WPF.
 * [`AppSettingsConnector`](https://github.com/BionicCode/BionicLibraryNet#AppSettingsConnector) - A defaul API to the AppSettings that provides strongly typed reading and writing (e.g. `boo`, `int`, `double`, `string`) of key-value pair values
 * [`MruManager`](https://github.com/BionicCode/BionicUtilities.Net/blob/master/README.md#mru-most-recently-used-file-manager) - Most Recently Used (MRU) file manager. An API that maintains an MRU table stored in the Application Settings file. 
 * [`EventAggregator`](https://github.com/BionicCode/BionicUtilities.Net#eventaggregator) - Implememtation of the EventAggregator pattern that supports dynamic aggregation of different typed event sources
-  
+* Easy to use `Dialog` attached behavior and infrastucture to allow MVVM friendly dialog handling from the view models in a fire-and-forget manner. To display dialogs implement `IDialogViewModel` classes and create a `DataTemplate` for each implementation. The `DataTemplate is the rendered in a native `Window`. Addition attached properties allow for styling of the dialog `Window` or to assign an optional `DataTemplateSelector`. The attached behavior will handle showing and closing of  the dialog.
   
 ### `BaseViewModel`
 implements `INotifyPropertyChanged` and `INotifyDataErrorInfo`
