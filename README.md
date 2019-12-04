@@ -29,7 +29,8 @@ Reusable utility and class library for WPF.
 * [`Profiler`](https://github.com/BionicCode/BionicLibraryNet#Profiler)
 * [`AppSettingsConnector`](https://github.com/BionicCode/BionicLibraryNet#AppSettingsConnector) - A defaul API to the AppSettings that provides strongly typed reading and writing (e.g. `boo`, `int`, `double`, `string`) of key-value pair values
 * [`MruManager`](https://github.com/BionicCode/BionicUtilities.Net/blob/master/README.md#mru-most-recently-used-file-manager) - Most Recently Used (MRU) file manager. An API that maintains an MRU table stored in the Application Settings file. 
-  
+* [`EventAggregator`](https://github.com/BionicCode/BionicUtilities.Net#eventaggregator) - Implememtation of the EventAggregator pattern that supports dynamic aggregation of different typed event sources
+* Easy to use `Dialog` attached behavior and infrastucture to allow MVVM friendly dialog handling from the view models in a fire-and-forget manner. To display dialogs implement `IDialogViewModel` classes and create a `DataTemplate` for each implementation. The `DataTemplate is the rendered in a native `Window`. Addition attached properties allow for styling of the dialog `Window` or to assign an optional `DataTemplateSelector`. The attached behavior will handle showing and closing of  the dialog.
   
 ### `BaseViewModel`
 implements `INotifyPropertyChanged` and `INotifyDataErrorInfo`
@@ -173,6 +174,7 @@ if (result == true)
   mruManager.AddMostRecentlyUsedFile(filename);
 }
 ```
+
 #### Example: Read file from MRU list
 
 ```c#
@@ -186,3 +188,107 @@ MostRecentlyUsedFileItem lastUsedFile = mruManager.MostRecentlyUsedFile;
 // and receive CollectionChanged notifications, which will automatically update the binding target
 ReadOnlyObservableCollection<MostRecentlyUsedFileItem> mruList = mruManager.MostRecentlyUsedFiles;
 ```
+
+### `EventAggregator`
+Dynamic implementation of the EventAggregator design pattern. Listen to events broadcasted by a specific type or by a specific event.
+
+#### Example
+##### Aggregate events
+Let the `EventAggregator` subscribe to events:
+
+```C#
+var aggregator = new EventAggregator();
+
+// Create instances that are source of an event
+var mainWindowViewModel = new MainWindowViewModel();
+var mainPageViewModel = new MainPageViewModel();
+var settingsPageViewModel = new SettingsPageViewModel();
+
+// Listen to a list of events published by a specific instance
+aggregator.TryRegisterObservable(mainWindowViewModel, 
+  new[] 
+  {
+    nameof(INotifyPropertyChanged.PropertyChanged), 
+    nameof(MainWindowViewModel.ItemCreated)
+  });
+aggregator.TryRegisterObservable(mainPageViewModel, new[] {nameof(INotifyPropertyChanged.PropertyChanged)});
+aggregator.TryRegisterObservable(settingsPageViewModel, new[] {nameof(INotifyPropertyChanged.PropertyChanged)});
+```
+
+##### Listen to all aggregated event sources by event name
+Subscribe to the `EventAggregator` and listen to specific events of all aggregated event sources:
+
+```C#
+// Listen to everything that publishes the 'INotifyPropertyChanged.PropertyChanged' event
+aggregator.TryRegisterObserver<PropertyChangedEventHandler>(nameof(INotifyPropertyChanged.PropertyChanged), (s, args) => MessageBox.Show($"'PropertyChanged event'. Sender={sender.GetType().Name}; Value={args.PropertyName}"));
+```
+
+##### Listen to specific aggregated event sources by event name
+Subscribe to the `EventAggregator` and listen to specific events of specific aggregated event sources:
+
+```C#
+// Only listen to the 'INotifyPropertyChanged.PropertyChanged' event of the 'mainWindowViewModel' instance
+aggregator.TryRegisterObserver<PropertyChangedEventHandler>(nameof(INotifyPropertyChanged.PropertyChanged), mainWindowViewModel.GetType(), (s, args) => MessageBox.Show($"'PropertyChanged event'. Sender={sender.GetType().Name}; Value={args.PropertyName}"));
+
+// Only listen to the 'INotifyPropertyChanged.PropertyChanged' event of all instances that implemnt 'IPage'
+aggregator.TryRegisterObserver<PropertyChangedEventHandler>(nameof(INotifyPropertyChanged.PropertyChanged), typeof(IPage), (s, args) => MessageBox.Show($"'PropertyChanged event'. Sender={sender.GetType().Name}; Value={args.PropertyName}"));
+```
+
+##### Type declarations used in examples
+
+```C#
+class MainPageViewModel : IPage, INotifyPropertyChanged
+{
+  public string Title 
+  { 
+    private string title;
+    get => this.title; 
+    set 
+    { 
+      this.title = value;
+      OnPropertyChanged();
+    }
+  }
+}
+
+class SettingsPageViewModel : IPage, INotifyPropertyChanged
+{
+  private string title;
+  public string Title 
+  { 
+    get => this.title; 
+    set 
+    { 
+      this.title = value;
+      OnPropertyChanged();
+    }
+  }
+}
+
+class MainWindowViewModel : INotifyPropertyChanged
+{
+  public void CreateItem()
+  {
+    this.Items.Add("New Item");
+    OnItemCreated();
+  }
+  
+  private ObservableCollection<string> items;
+  public ObservableCollection<string> Items
+  { 
+    get => this.items; 
+    set 
+    { 
+      this.items = value;
+      OnPropertyChanged();
+    }
+  }
+  
+  public event PropertyChangedEventHandler PropertyChanged;
+  protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) => this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+  
+  public event EventHandler ItemCreated;
+  protected virtual void OnItemCreated() => this.ItemCreated?.Invoke(this, EventArgs.Empty);
+}
+```
+
