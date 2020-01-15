@@ -330,7 +330,7 @@ class MainWindowViewModel : IDialogViewModelProvider
       dialogTitleBarIcon, 
       dialogViewModel => HandleFileExistsDialogResponseAsync(dialogViewModel, filePath, settingsData));
     
-    // Show the dialog by setting the DialogViewModel to an instance of IDialogViewModel
+    // Show the dialog by setting the DialogViewModel property to an instance of IDialogViewModel
     this.DialogViewModel = fileExistsdialogViewModel;
   }
   
@@ -528,7 +528,8 @@ class MainWindowViewModel : IDialogViewModelProvider
     // A view model that implements IDialogViewModelProvider and can request dispalying of a dialog
     var settingsPageViewModel = new SettingsPageViewModel();
     
-    // Listen for dialog requests and provide the dialog view model for binding of the attahced behavior
+    // Listen for dialog requests and provide the dialog view model for binding of the attahced behavior.    
+    // Show the dialog by setting the DialogViewModel property to an instance of IDialogViewModel.
     settingsPageViewModel.DialogRequested += (sender, args) => this.DialogViewModel = args.Value);
     
     this.Pages = new ObservableCollection<IPage>() { settingsPageViewModel };
