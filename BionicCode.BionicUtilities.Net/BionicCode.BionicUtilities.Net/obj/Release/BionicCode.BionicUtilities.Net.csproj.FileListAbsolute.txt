@@ -1,0 +1,12 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\obj\Release\BionicCode.BionicUtilities.Net.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\obj\Release\UiTemplates\ErrorVallidationTemplate.baml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\obj\Release\BionicCode.BionicUtilities.Net_MarkupCompile.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\obj\Release\BionicCode.BionicUtilities.Net.g.resources
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\obj\Release\BionicCode.BionicUtilities.Net.csproj.CoreCompileInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\bin\Release\BionicCode.BionicUtilities.Net.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\bin\Release\BionicCode.BionicUtilities.Net.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\bin\Release\BionicCode.BionicUtilities.NetStandard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\bin\Release\BionicCode.BionicUtilities.NetStandard.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\obj\Release\BionicCode.BionicUtilities.Net.csproj.CopyComplete
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\obj\Release\BionicCode.BionicUtilities.Net.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.Net\obj\Release\BionicCode.BionicUtilities.Net.pdb
