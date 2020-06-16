@@ -29,7 +29,11 @@
         },
         "frameworks": {
           "netcoreapp3.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj": {
+                "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

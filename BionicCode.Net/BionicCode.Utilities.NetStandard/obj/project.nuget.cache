@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aaFiaJOUwuN3Ld7tDNaTzRIItP6ji9tSOUEkp5sMCpDzOPbRc4bBK37N7uJ88EiPKW7JTIoPspnfNrnhao+XHg==",
+  "dgSpecHash": "PwtHce4LsxlgSaSooeaWqw0OszSPIwKbd7c3vGLueceKucOongvgcmDCAZtwRY/PwCHhVQBesEa4XKK1gqfw2w==",
   "success": true,
-  "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj",
+  "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.NetStandard\\BionicCode.Utilities.Net.Standard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

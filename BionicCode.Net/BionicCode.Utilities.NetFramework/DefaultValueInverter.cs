@@ -10,7 +10,7 @@ using System.Globalization;
 using System.Windows;
 using BionicCode.Utilities.NetStandard;
 
-namespace BionicCode.Utilities.Net
+namespace BionicCode.Utilities.NetFramework
 {
   public class DefaultValueInverter : IValueInverter
   {

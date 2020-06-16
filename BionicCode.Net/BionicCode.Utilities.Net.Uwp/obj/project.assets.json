@@ -316,14 +316,14 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+      "BionicCode.Utilities.Net.Standard/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         }
       }
     },
@@ -821,14 +821,14 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+      "BionicCode.Utilities.Net.Standard/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         }
       }
     },
@@ -1327,14 +1327,14 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+      "BionicCode.Utilities.Net.Standard/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         }
       }
     },
@@ -1833,14 +1833,14 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+      "BionicCode.Utilities.Net.Standard/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         }
       }
     },
@@ -2338,14 +2338,14 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+      "BionicCode.Utilities.Net.Standard/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         }
       }
     },
@@ -2844,14 +2844,14 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+      "BionicCode.Utilities.Net.Standard/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         }
       }
     },
@@ -3349,14 +3349,14 @@
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
-      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+      "BionicCode.Utilities.Net.Standard/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         }
       }
     },
@@ -3855,14 +3855,14 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+      "BionicCode.Utilities.Net.Standard/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
         }
       }
     }
@@ -8317,15 +8317,15 @@
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+    "BionicCode.Utilities.Net.Standard/1.0.0": {
       "type": "project",
-      "path": "../BionicCode.BionicUtilities.NetStandard/BionicCode.BionicUtilities.NetStandard.csproj",
-      "msbuildProject": "../BionicCode.BionicUtilities.NetStandard/BionicCode.BionicUtilities.NetStandard.csproj"
+      "path": "../BionicCode.Utilities.NetStandard/BionicCode.Utilities.Net.Standard.csproj",
+      "msbuildProject": "../BionicCode.Utilities.NetStandard/BionicCode.Utilities.Net.Standard.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
-      "BionicCode.BionicUtilities.NetStandard >= 1.0.0",
+      "BionicCode.Utilities.Net.Standard >= 1.0.0",
       "JetBrains.Annotations >= 2019.1.3",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.9"
     ]
@@ -8337,11 +8337,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.Uwp\\BionicCode.BionicUtilities.Net.Uwp.csproj",
-      "projectName": "BionicCode.BionicUtilities.Net.Uwp",
-      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.Uwp\\BionicCode.BionicUtilities.Net.Uwp.csproj",
+      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.Net.Uwp\\BionicCode.BionicUtilities.Uwp.csproj",
+      "projectName": "BionicCode.BionicUtilities.Uwp",
+      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.Net.Uwp\\BionicCode.BionicUtilities.Uwp.csproj",
       "packagesPath": "C:\\Users\\MusicMonkey\\.nuget\\packages\\",
-      "outputPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.Uwp\\obj\\",
+      "outputPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.Net.Uwp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8361,8 +8361,8 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.BionicUtilities.NetStandard.csproj": {
-              "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.BionicUtilities.NetStandard.csproj"
+            "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.NetStandard\\BionicCode.Utilities.Net.Standard.csproj": {
+              "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.NetStandard\\BionicCode.Utilities.Net.Standard.csproj"
             }
           }
         }

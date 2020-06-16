@@ -2,7 +2,7 @@
 using System.Collections.Specialized;
 using System.Configuration;
 
-namespace BionicCode.Utilities.Net.Settings
+namespace BionicCode.Utilities.NetFramework.Settings
 {
   /// <summary>
   /// Exposes a basic static API to access the AppSettings file in order to manage application settings. 

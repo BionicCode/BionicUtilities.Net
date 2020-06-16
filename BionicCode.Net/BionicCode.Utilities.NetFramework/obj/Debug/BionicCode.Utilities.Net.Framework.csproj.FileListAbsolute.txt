@@ -1,0 +1,12 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\bin\Debug\BionicCode.Utilities.Net.Framework.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\bin\Debug\BionicCode.Utilities.Net.Framework.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\bin\Debug\BionicCode.Utilities.Net.Standard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\bin\Debug\BionicCode.Utilities.Net.Standard.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\obj\Debug\BionicCode.Utilities.Net.Framework.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\obj\Debug\UiTemplates\ErrorVallidationTemplate.baml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\obj\Debug\BionicCode.Utilities.Net.Framework_MarkupCompile.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\obj\Debug\BionicCode.Utilities.Net.Framework.g.resources
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\obj\Debug\BionicCode.Utilities.Net.Framework.csproj.CoreCompileInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\obj\Debug\BionicCode.Utilities.Net.Framework.csproj.CopyComplete
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\obj\Debug\BionicCode.Utilities.Net.Framework.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.NetFramework\obj\Debug\BionicCode.Utilities.Net.Framework.pdb

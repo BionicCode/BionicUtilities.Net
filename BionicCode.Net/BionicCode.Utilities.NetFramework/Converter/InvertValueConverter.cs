@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace BionicCode.Utilities.Net.Converter
+namespace BionicCode.Utilities.NetFramework.Converter
 {
   [ValueConversion(typeof(object), typeof(object))]
   public class InvertValueConverter : IValueConverter

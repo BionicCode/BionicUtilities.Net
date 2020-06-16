@@ -5,7 +5,9 @@
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [
+      "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\": {},
@@ -36,7 +38,11 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj": {
+              "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -82,5 +88,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    }
+  ]
 }

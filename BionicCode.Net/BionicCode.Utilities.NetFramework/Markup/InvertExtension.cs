@@ -4,7 +4,7 @@ using System.Windows.Data;
 using System.Windows.Markup;
 using BionicCode.Utilities.NetStandard;
 
-namespace BionicCode.Utilities.Net.Markup
+namespace BionicCode.Utilities.NetFramework.Markup
 {
   public class InvertExtension : MarkupExtension
   {

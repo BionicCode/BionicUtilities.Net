@@ -6,10 +6,10 @@
 using System;
 using System.Threading.Tasks;
 using System.Windows.Media;
-using BionicCode.Utilities.Net.Utility.Generic;
+using BionicCode.Utilities.NetFramework.Utility.Generic;
 using BionicCode.Utilities.NetStandard.ViewModel;
 
-namespace BionicCode.Utilities.Net.Dialog
+namespace BionicCode.Utilities.NetFramework.Dialog
 {
   /// <summary>
   /// Implementation of <see cref="IDialogViewModel"/>. This abstract class implements the dialog data handling logic and is therefore preferred over a custom implementation of <see cref="IDialogViewModel"/>.
@@ -35,7 +35,7 @@ namespace BionicCode.Utilities.Net.Dialog
     /// <summary>
     /// Asynchronously called when the SendResponseAsyncCommand is executed.
     /// </summary>
-    /// <param name="result">A <see cref="Net.Dialog.DialogResult"/> value that was received by the ICommand.</param>
+    /// <param name="result">A <see cref="NetFramework.Dialog.DialogResult"/> value that was received by the ICommand.</param>
     /// <returns>A <c>Task</c> instance to make this method awaitable.</returns>
     protected virtual async Task OnSendResponseAsyncCommandExecuted(DialogResult result)
     {

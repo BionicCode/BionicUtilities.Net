@@ -2,7 +2,7 @@
 using System.IO;
 using BionicCode.Utilities.NetStandard.ViewModel;
 
-namespace BionicCode.Utilities.Net.Settings
+namespace BionicCode.Utilities.NetFramework.Settings
 {
   /// <summary>
   /// An immutable item that represents a Most Recently Used file (MRU) table entry.

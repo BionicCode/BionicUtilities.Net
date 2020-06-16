@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Data;
 
-namespace BionicCode.Utilities.Net.Converter
+namespace BionicCode.Utilities.NetFramework.Converter
 {
   /// <summary>
   ///   Converter to truncate file paths exceeding a specific length by replacing a number of characters with an ellipsis.

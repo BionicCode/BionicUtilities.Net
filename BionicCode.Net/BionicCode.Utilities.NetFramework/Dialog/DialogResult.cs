@@ -1,4 +1,4 @@
-﻿namespace BionicCode.Utilities.Net.Dialog
+﻿namespace BionicCode.Utilities.NetFramework.Dialog
 {
   public enum DialogResult
   {

@@ -13,7 +13,7 @@ using System.Windows.Data;
 using BionicCode.Utilities.NetStandard;
 using BionicCode.Utilities.NetStandard.Collections.Generic;
 
-namespace BionicCode.Utilities.Net.Markup
+namespace BionicCode.Utilities.NetFramework.Markup
 {
   internal class BindingResolver : FrameworkElement
   {

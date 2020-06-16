@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 
-namespace BionicCode.Utilities.Net.Extensions
+namespace BionicCode.Utilities.NetFramework.Extensions
 {
   /// <summary>
   /// Collection of extension methods e.g. visual tree traversal

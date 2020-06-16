@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace BionicCode.Utilities.Net.Converter
+namespace BionicCode.Utilities.NetFramework.Converter
 {
   [ValueConversion(typeof(bool), typeof(bool))]
   public class InvertBooleanConverter : IValueConverter
