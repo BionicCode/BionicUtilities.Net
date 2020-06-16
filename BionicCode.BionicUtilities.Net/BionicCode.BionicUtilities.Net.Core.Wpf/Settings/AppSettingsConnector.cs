@@ -2,7 +2,7 @@
 using System.Collections.Specialized;
 using System.Configuration;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.Settings
+namespace BionicCode.Utilities.Net.Core.Wpf.Settings
 {
   /// <summary>
   /// Exposes a basic static API to access the AppSettings file in order to manage application settings. 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BionicCode.BionicUtilities.NetStandard.IO
+namespace BionicCode.Utilities.NetStandard.IO
 {
   [Flags]
   public enum FileExtensions : long

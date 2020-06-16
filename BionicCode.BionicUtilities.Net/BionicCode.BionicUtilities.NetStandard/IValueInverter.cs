@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace BionicCode.BionicUtilities.NetStandard
+namespace BionicCode.Utilities.NetStandard
 {
   public interface IValueInverter
   {

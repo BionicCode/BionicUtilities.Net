@@ -6,10 +6,10 @@
 using System;
 using System.Threading.Tasks;
 using System.Windows.Media;
-using BionicCode.BionicUtilities.Net.Utility.Generic;
-using BionicCode.BionicUtilities.NetStandard.ViewModel;
+using BionicCode.Utilities.Net.Utility.Generic;
+using BionicCode.Utilities.NetStandard.ViewModel;
 
-namespace BionicCode.BionicUtilities.Net.Dialog
+namespace BionicCode.Utilities.Net.Dialog
 {
   /// <summary>
   /// Implementation of <see cref="IDialogViewModel"/>. This abstract class implements the dialog data handling logic and is therefore preferred over a custom implementation of <see cref="IDialogViewModel"/>.

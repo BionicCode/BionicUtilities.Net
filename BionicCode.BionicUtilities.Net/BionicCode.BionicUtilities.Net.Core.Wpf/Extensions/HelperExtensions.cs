@@ -7,7 +7,7 @@ using System.Windows;
 using System.Windows.Media;
 using Popup = System.Windows.Controls.Primitives.Popup;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.Extensions
+namespace BionicCode.Utilities.Net.Core.Wpf.Extensions
 {
   /// <summary>
   /// Collection of extension methods e.g. visual tree traversal
@@ -214,7 +214,7 @@ namespace BionicCode.BionicUtilities.Net.Core.Wpf.Extensions
           }
           else if (item is IEnumerable enumerableItem)
           {
-            items.Add(index.ToString(), ConvertIEnumerableToDictionary(enumerableItem));
+            items.Add(index.ToString(), HelperExtensions.ConvertIEnumerableToDictionary(enumerableItem));
           }
           else
           {

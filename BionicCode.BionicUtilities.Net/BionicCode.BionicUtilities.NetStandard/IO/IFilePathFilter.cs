@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BionicCode.BionicUtilities.NetStandard.IO
+namespace BionicCode.Utilities.NetStandard.IO
 {
   public interface IFilePathFilter
   {

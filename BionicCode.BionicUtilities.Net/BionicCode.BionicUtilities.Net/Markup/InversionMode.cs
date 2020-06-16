@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace BionicCode.BionicUtilities.Net.Markup
+namespace BionicCode.Utilities.Net.Markup
 {
   public enum InversionMode
   {

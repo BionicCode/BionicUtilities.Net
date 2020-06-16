@@ -1,4 +1,4 @@
-﻿namespace BionicCode.BionicUtilities.NetStandard.Generic
+﻿namespace BionicCode.Utilities.NetStandard.Generic
 {
   /// <summary>
   /// Interface that returns a null object for the implementing type. Implements Null-Object Pattern

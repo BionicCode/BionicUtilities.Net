@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-namespace BionicCode.BionicUtilities.NetStandard.ViewModel
+namespace BionicCode.Utilities.NetStandard.ViewModel
 {
   /// <summary>
   /// Base class recommended to use for view models across the application. Encapsulates implementations of <see cref="INotifyPropertyChanged"/> and <see cref="INotifyDataErrorInfo"/>.

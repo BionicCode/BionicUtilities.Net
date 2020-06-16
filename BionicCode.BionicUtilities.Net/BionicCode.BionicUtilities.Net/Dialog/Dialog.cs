@@ -7,9 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using BionicCode.BionicUtilities.Net.Extensions;
+using BionicCode.Utilities.Net.Extensions;
 
-namespace BionicCode.BionicUtilities.Net.Dialog
+namespace BionicCode.Utilities.Net.Dialog
 {
   /// <summary>
   /// Attached behavior.

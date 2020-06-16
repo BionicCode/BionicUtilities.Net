@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
-using BionicCode.BionicUtilities.NetStandard;
+using BionicCode.Utilities.NetStandard;
 
-namespace BionicCode.BionicUtilities.Net.Markup
+namespace BionicCode.Utilities.Net.Markup
 {
   public class InvertExtension : MarkupExtension
   {

@@ -7,9 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using BionicCode.BionicUtilities.Net.Core.Wpf.Extensions;
+using BionicCode.Utilities.Net.Core.Wpf.Extensions;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.Dialog
+namespace BionicCode.Utilities.Net.Core.Wpf.Dialog
 {
   /// <summary>
   /// Attached behavior.

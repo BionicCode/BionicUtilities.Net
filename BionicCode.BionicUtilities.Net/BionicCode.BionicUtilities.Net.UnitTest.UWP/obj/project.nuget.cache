@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qylOqcZ1nKgAqAvcXp6XceAIWvlwTwZYBJfYmkzG+VKl7jfdS1ByzCSlZDO5SGtmBrl+ngbFqu3xxgi6sUlJjA==",
+  "dgSpecHash": "kmZP52VplDHjg99Ouiyu/EEUDTD/0cf6ofAL3KKOoOe2l4hopL1kru33VOp18v403oth/IlhAArN9rqGvmU+KA==",
   "success": true,
-  "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.UWP\\BionicCode.BionicUtilities.Net.UnitTest.UWP.csproj",
+  "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.UWP\\BionicCode.Utilities.Net.UnitTest.UWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.net.native.compiler\\2.2.7-rel-27913-00\\microsoft.net.native.compiler.2.2.7-rel-27913-00.nupkg.sha512",
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.net.test.sdk\\16.0.1\\microsoft.net.test.sdk.16.0.1.nupkg.sha512",

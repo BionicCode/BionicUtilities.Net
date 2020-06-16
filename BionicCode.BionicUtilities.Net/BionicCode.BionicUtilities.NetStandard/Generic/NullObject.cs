@@ -2,7 +2,7 @@
 // //  
 // BionicUtilities.NetStandard
 #endregion
-namespace BionicCode.BionicUtilities.NetStandard.Generic
+namespace BionicCode.Utilities.NetStandard.Generic
 {
   public abstract class NullObject<TObject> : INullObject where TObject : class
   {

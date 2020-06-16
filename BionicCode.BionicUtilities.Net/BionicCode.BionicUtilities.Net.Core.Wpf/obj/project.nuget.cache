@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l9S4y7E9msIYTu+ACw6jpL+EOmSeBoXYr/qoJ/dwIeDwcfV54Shm8TgIjCJnnhDUJGTI9sp6R2H7s2og7cBcCQ==",
+  "dgSpecHash": "yea2KS0XV9MC8szqNSSELBCKKaa4nEUVcGPNvV2ZKuDEK7853+vztuxVISzvN2+C3jKqkvR32ZZzWM5zAn0dXw==",
   "success": true,
-  "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.Core.Wpf\\BionicCode.BionicUtilities.Net.Core.Wpf.csproj",
+  "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.Core.Wpf\\BionicCode.Utilities.Net.Core.Wpf.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",

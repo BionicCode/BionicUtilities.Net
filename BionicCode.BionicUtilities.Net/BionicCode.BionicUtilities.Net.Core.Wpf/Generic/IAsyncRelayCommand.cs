@@ -6,7 +6,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.Generic
+namespace BionicCode.Utilities.Net.Core.Wpf.Generic
 {
   public interface IAsyncRelayCommand<TParam> : IAsyncRelayCommand, ICommand
   {

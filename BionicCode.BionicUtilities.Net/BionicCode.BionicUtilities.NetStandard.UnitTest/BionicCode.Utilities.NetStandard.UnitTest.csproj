@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BionicCode.BionicUtilities.NetStandard\BionicCode.BionicUtilities.NetStandard.csproj">
+    <ProjectReference Include="..\BionicCode.BionicUtilities.NetStandard\BionicCode.Utilities.NetStandard.csproj">
       <Project>{d147481e-42db-4069-a8eb-88d5872d9ff1}</Project>
-      <Name>BionicCode.BionicUtilities.NetStandard</Name>
+      <Name>BionicCode.Utilities.NetStandard</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

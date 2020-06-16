@@ -2,9 +2,9 @@
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
-using BionicCode.BionicUtilities.NetStandard;
+using BionicCode.Utilities.NetStandard;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.Markup
+namespace BionicCode.Utilities.Net.Core.Wpf.Markup
 {
   public class InvertExtension : MarkupExtension
   {

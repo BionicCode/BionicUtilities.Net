@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5v82KQop7mRgDe0RGGl+IHoqbG+/QmO78S/HzPOmOsK+7s2eP2mnfmmu2x539iKIDgy4mCzzFYnkflMZ7ylmng==",
+  "dgSpecHash": "Ozh/K1WYiNwmgnU5z8dHgCkLTcMBp0+/JjMn1mbl3Zx5bj7yRSD1Rm/qcH8mWv4SlSm+pPkolu9jxpRI/irCHQ==",
   "success": true,
-  "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.Core\\BionicCode.BionicUtilities.Net.UnitTest.Core.csproj",
+  "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.Core\\BionicCode.Utilities.Net.UnitTest.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",

@@ -7,7 +7,7 @@
 
 using System.Collections.ObjectModel;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.AttachedBehaviors
+namespace BionicCode.Utilities.Net.Core.Wpf.AttachedBehaviors
 {
   public class HighLightRangeCollection : ObservableCollection<HighlightRange>
   {

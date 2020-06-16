@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace BionicCode.BionicUtilities.NetStandard.ViewModel
+namespace BionicCode.Utilities.NetStandard.ViewModel
 {
   /// <summary>
   /// PropertyChanged event handler that supports standard property changed signature events with additional old value and new value parameters.

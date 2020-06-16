@@ -6,10 +6,10 @@
 using System;
 using System.Threading.Tasks;
 using System.Windows.Media;
-using BionicCode.BionicUtilities.Net.Utility.Generic;
-using BionicCode.BionicUtilities.NetStandard.ViewModel;
+using BionicCode.Utilities.Net.Utility.Generic;
+using BionicCode.Utilities.NetStandard.ViewModel;
 
-namespace BionicCode.BionicUtilities.Net.Dialog
+namespace BionicCode.Utilities.Net.Dialog
 {
   /// <summary>
   /// The DataContext and binding source for the dialog Window. Implement this interface or the derived abstract <see cref="DialogViewModel"/> to transport data from the view to the view model via binding.
@@ -26,7 +26,7 @@ namespace BionicCode.BionicUtilities.Net.Dialog
     /// </summary>
     string Message { get; set; }
     /// <summary>
-    /// The <see cref="BionicUtilities.Net.Dialog.DialogResult"/> of the user interaction.
+    /// The <see cref="Net.Dialog.DialogResult"/> of the user interaction.
     /// </summary>
     DialogResult DialogResult { get; set; }
     /// <summary>

@@ -1,6 +1,6 @@
 ﻿using System;
-using BionicCode.BionicUtilities.NetStandard.Generic;
 using BionicCode.BionicUtilities.NetStandard.UnitTest.Resources;
+using BionicCode.Utilities.NetStandard;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BionicCode.BionicUtilities.NetStandard.UnitTest

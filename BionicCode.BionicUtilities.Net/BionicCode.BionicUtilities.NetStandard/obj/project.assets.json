@@ -185,9 +185,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.BionicUtilities.NetStandard.csproj",
-      "projectName": "BionicCode.BionicUtilities.NetStandard",
-      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.BionicUtilities.NetStandard.csproj",
+      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj",
+      "projectName": "BionicCode.Utilities.NetStandard",
+      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj",
       "packagesPath": "C:\\Users\\MusicMonkey\\.nuget\\packages\\",
       "outputPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.NetStandard\\obj\\",
       "projectStyle": "PackageReference",

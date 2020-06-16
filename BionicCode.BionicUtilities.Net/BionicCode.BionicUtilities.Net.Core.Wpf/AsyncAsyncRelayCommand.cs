@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf
+namespace BionicCode.Utilities.Net.Core.Wpf
 {
   /// <summary>
   /// A  reusable command that encapsulates the implementation of <see cref="ICommand"/> with support for async/await. Enables instant creation of an ICommand without implementing the ICommand interface for each command.

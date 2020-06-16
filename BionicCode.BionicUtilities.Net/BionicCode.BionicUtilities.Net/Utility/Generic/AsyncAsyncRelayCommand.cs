@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace BionicCode.BionicUtilities.Net.Utility.Generic
+namespace BionicCode.Utilities.Net.Utility.Generic
 {
 
   /// <summary>

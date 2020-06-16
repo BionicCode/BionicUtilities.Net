@@ -3,7 +3,7 @@
 // BionicUtilities.Net
 #endregion
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.Dialog
+namespace BionicCode.Utilities.Net.Core.Wpf.Dialog
 {
   /// <summary>
   /// The binding source for the current dialog view and the attached property <see cref="Dialog.DialogDataContextProperty"/>.

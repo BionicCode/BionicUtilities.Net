@@ -6,10 +6,10 @@
 using System;
 using System.Threading.Tasks;
 using System.Windows.Media;
-using BionicCode.BionicUtilities.Net.Core.Wpf.Generic;
-using BionicCode.BionicUtilities.NetStandard.ViewModel;
+using BionicCode.Utilities.Net.Core.Wpf.Generic;
+using BionicCode.Utilities.NetStandard.ViewModel;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.Dialog
+namespace BionicCode.Utilities.Net.Core.Wpf.Dialog
 {
   /// <summary>
   /// The DataContext and binding source for the dialog Window. Implement this interface or the derived abstract <see cref="DialogViewModel"/> to transport data from the view to the view model via binding.

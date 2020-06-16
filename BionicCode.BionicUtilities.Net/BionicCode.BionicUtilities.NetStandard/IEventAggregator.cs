@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Transactions;
 
-namespace BionicCode.BionicUtilities.NetStandard
+namespace BionicCode.Utilities.NetStandard
 {
   public interface IEventAggregator
   {

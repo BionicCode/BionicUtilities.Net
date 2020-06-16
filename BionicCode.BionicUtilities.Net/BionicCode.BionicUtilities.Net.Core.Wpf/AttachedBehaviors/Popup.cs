@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using BionicCode.BionicUtilities.Net.Core.Wpf.Extensions;
+using BionicCode.Utilities.Net.Core.Wpf.Extensions;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.AttachedBehaviors
+namespace BionicCode.Utilities.Net.Core.Wpf.AttachedBehaviors
 {
   public class Popup : DependencyObject
   {

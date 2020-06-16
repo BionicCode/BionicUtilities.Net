@@ -3,7 +3,7 @@ using System.Security;
 using System.Windows;
 using System.Windows.Input;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.AttachedBehaviors
+namespace BionicCode.Utilities.Net.Core.Wpf.AttachedBehaviors
 {
   public class PasswordBox : DependencyObject
   {

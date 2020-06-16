@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace BionicCode.BionicUtilities.NetStandard.ViewModel
+namespace BionicCode.Utilities.NetStandard.ViewModel
 {
   public class PropertyValueChangedArgs<TValue>
   {

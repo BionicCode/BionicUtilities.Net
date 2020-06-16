@@ -8,9 +8,9 @@
 using System;
 using System.Globalization;
 using System.Windows;
-using BionicCode.BionicUtilities.NetStandard;
+using BionicCode.Utilities.NetStandard;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf
+namespace BionicCode.Utilities.Net.Core.Wpf
 {
   public class DefaultValueInverter : IValueInverter
   {

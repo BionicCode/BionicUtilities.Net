@@ -5713,9 +5713,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.Core\\BionicCode.BionicUtilities.Net.UnitTest.Core.csproj",
-      "projectName": "BionicCode.BionicUtilities.Net.UnitTest.Core",
-      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.Core\\BionicCode.BionicUtilities.Net.UnitTest.Core.csproj",
+      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.Core\\BionicCode.Utilities.Net.UnitTest.Core.csproj",
+      "projectName": "BionicCode.Utilities.Net.UnitTest.Core",
+      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.Core\\BionicCode.Utilities.Net.UnitTest.Core.csproj",
       "packagesPath": "C:\\Users\\MusicMonkey\\.nuget\\packages\\",
       "outputPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.Core\\obj\\",
       "projectStyle": "PackageReference",

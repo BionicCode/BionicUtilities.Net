@@ -1,7 +1,7 @@
 ﻿using System;
-using BionicCode.BionicUtilities.NetStandard.Generic;
+using BionicCode.Utilities.NetStandard.Generic;
 
-namespace BionicCode.BionicUtilities.Net.Dialog
+namespace BionicCode.Utilities.Net.Dialog
 {
   /// <summary>
   /// Interface that supports notification of observers to request display of a dialog.

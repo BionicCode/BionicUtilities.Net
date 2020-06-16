@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BionicCode.BionicUtilities.Net.UnitTest.Core
+namespace BionicCode.Utilities.Net.UnitTest.Core
 {
   [TestClass]
   public class UnitTest1

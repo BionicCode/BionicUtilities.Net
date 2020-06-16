@@ -1,4 +1,4 @@
-﻿namespace BionicCode.BionicUtilities.NetStandard
+﻿namespace BionicCode.Utilities.NetStandard
 {
   /// <summary>
   /// Null-Object Pattern implementation

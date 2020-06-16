@@ -2,7 +2,7 @@
 using System.Windows.Data;
 using System.Windows.Markup;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.Markup
+namespace BionicCode.Utilities.Net.Core.Wpf.Markup
 {
   public class EqualsExtension : MarkupExtension
   {

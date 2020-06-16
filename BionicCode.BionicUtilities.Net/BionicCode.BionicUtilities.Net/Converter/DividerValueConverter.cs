@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace BionicCode.BionicUtilities.Net.Converter
+namespace BionicCode.Utilities.Net.Converter
 {
   [ValueConversion(typeof(double), typeof(double))]
   public class DividerValueConverter : IValueConverter

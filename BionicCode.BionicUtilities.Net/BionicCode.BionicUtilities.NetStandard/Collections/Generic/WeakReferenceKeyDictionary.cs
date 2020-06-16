@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BionicCode.BionicUtilities.NetStandard.Collections.Generic
+namespace BionicCode.Utilities.NetStandard.Collections.Generic
 {
   public class WeakReferenceKeyDictionary<TKey, TValue> : IDictionary<TKey, TValue> where TKey : WeakReference
   {

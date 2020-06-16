@@ -10,10 +10,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Data;
-using BionicCode.BionicUtilities.NetStandard;
-using BionicCode.BionicUtilities.NetStandard.Collections.Generic;
+using BionicCode.Utilities.NetStandard;
+using BionicCode.Utilities.NetStandard.Collections.Generic;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.Markup
+namespace BionicCode.Utilities.Net.Core.Wpf.Markup
 {
   internal class BindingResolver : FrameworkElement
   {

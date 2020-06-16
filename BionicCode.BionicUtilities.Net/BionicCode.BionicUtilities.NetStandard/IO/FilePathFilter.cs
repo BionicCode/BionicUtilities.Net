@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace BionicCode.BionicUtilities.NetStandard.IO
+namespace BionicCode.Utilities.NetStandard.IO
 {
   public class FilePathFilter : IFilePathFilter
   {

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BionicCode.BionicUtilities.NetStandard.Generic;
 
 namespace BionicCode.BionicUtilities.NetStandard.UnitTest.Resources
 {

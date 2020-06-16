@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace BionicCode.BionicUtilities.NetStandard
+namespace BionicCode.Utilities.NetStandard
 {
   public class ArgumentsValidator
   {

@@ -12239,9 +12239,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.UWP\\BionicCode.BionicUtilities.Net.UnitTest.UWP.csproj",
-      "projectName": "BionicCode.BionicUtilities.Net.UnitTest.UWP",
-      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.UWP\\BionicCode.BionicUtilities.Net.UnitTest.UWP.csproj",
+      "projectUniqueName": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.UWP\\BionicCode.Utilities.Net.UnitTest.UWP.csproj",
+      "projectName": "BionicCode.Utilities.Net.UnitTest.UWP",
+      "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.UWP\\BionicCode.Utilities.Net.UnitTest.UWP.csproj",
       "packagesPath": "C:\\Users\\MusicMonkey\\.nuget\\packages\\",
       "outputPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.Net.UnitTest.UWP\\obj\\",
       "projectStyle": "PackageReference",

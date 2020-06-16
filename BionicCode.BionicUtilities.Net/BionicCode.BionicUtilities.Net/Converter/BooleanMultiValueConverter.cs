@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Data;
 
-namespace BionicCode.BionicUtilities.Net.Converter
+namespace BionicCode.Utilities.Net.Converter
 {
   public class BooleanMultiValueConverter : IMultiValueConverter
   {

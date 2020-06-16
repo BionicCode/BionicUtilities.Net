@@ -7,7 +7,7 @@
 
 using System;
 
-namespace BionicCode.BionicUtilities.NetStandard.Generic
+namespace BionicCode.Utilities.NetStandard.Generic
 {
   /// <summary>
   /// Generic EventArgs implementation that supports value changed information

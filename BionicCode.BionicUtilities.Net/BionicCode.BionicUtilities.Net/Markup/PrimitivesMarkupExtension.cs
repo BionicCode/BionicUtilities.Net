@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Markup;
 
-namespace BionicCode.BionicUtilities.Net.Markup
+namespace BionicCode.Utilities.Net.Markup
 {
   public class PrimitiveTypeExtension : MarkupExtension
   {

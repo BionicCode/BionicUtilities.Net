@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Media;
 
-namespace BionicCode.BionicUtilities.Net.Core.Wpf.AttachedBehaviors
+namespace BionicCode.Utilities.Net.Core.Wpf.AttachedBehaviors
 {
   public class TextControl : DependencyObject
   {
@@ -19,7 +18,7 @@ namespace BionicCode.BionicUtilities.Net.Core.Wpf.AttachedBehaviors
       "TextValue",
       typeof(string),
       typeof(TextControl),
-      new PropertyMetadata(string.Empty, OnTextChanged));
+      new PropertyMetadata(string.Empty, TextControl.OnTextChanged));
 
     public static void SetText([NotNull] DependencyObject attachingElement, string value)
     {

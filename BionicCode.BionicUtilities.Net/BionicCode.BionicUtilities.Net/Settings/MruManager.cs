@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using BionicCode.BionicUtilities.NetStandard.Generic;
-using BionicCode.BionicUtilities.NetStandard.ViewModel;
+using BionicCode.Utilities.NetStandard.Generic;
+using BionicCode.Utilities.NetStandard.ViewModel;
 
-namespace BionicCode.BionicUtilities.Net.Settings
+namespace BionicCode.Utilities.Net.Settings
 {
   /// <summary>
   /// API that manages a MRU (Most Recently Used files) table which is stored in the AppSettings file.
