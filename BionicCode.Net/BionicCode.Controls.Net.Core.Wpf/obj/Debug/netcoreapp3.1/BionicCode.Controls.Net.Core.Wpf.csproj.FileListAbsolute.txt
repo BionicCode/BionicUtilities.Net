@@ -1,0 +1,14 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\bin\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.deps.json
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\bin\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\bin\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf_MarkupCompile.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf_MarkupCompile.lref
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\Themes\Generic.baml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.g.resources
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.AssemblyInfoInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.AssemblyInfo.cs
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.csproj.CoreCompileInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Controls.Net.Core.Wpf\obj\Debug\netcoreapp3.1\BionicCode.Controls.Net.Core.Wpf.pdb

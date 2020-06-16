@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using BionicCode.Utilities.NetStandard.Generic;
-using BionicCode.Utilities.NetStandard.ViewModel;
+using BionicCode.Utilities.Net.Standard.Generic;
+using BionicCode.Utilities.Net.Standard.ViewModel;
 
 namespace BionicCode.Utilities.Net.Core.Wpf.Settings
 {

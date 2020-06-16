@@ -1,0 +1,8 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net\v16\lut\0\b\BionicCode.Utilities.UnitTest.Net.Standard\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net\v16\lut\0\b\BionicCode.Utilities.UnitTest.Net.Standard\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net\v16\lut\0\b\BionicCode.Utilities.UnitTest.Net.Standard\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net\v16\lut\0\b\BionicCode.Utilities.UnitTest.Net.Standard\bin\Debug\BionicCode.Utilities.UnitTest.Net.Standard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net\v16\lut\0\i\BionicCode.Utilities.UnitTest.Net.Standard\Debug\BionicCode.Utilities.UnitTest.Net.Standard.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net\v16\lut\0\i\BionicCode.Utilities.UnitTest.Net.Standard\Debug\BionicCode.Utilities.UnitTest.Net.Standard.csproj.CoreCompileInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net\v16\lut\0\i\BionicCode.Utilities.UnitTest.Net.Standard\Debug\BionicCode.Utilities.UnitTest.Net.Standard.csproj.CopyComplete
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net\v16\lut\0\i\BionicCode.Utilities.UnitTest.Net.Standard\Debug\BionicCode.Utilities.UnitTest.Net.Standard.dll

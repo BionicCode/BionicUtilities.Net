@@ -1,5 +1,5 @@
 ﻿using System;
-using BionicCode.Utilities.NetStandard.Generic;
+using BionicCode.Utilities.Net.Standard.Generic;
 
 namespace BionicCode.Utilities.Net.Core.Wpf.Dialog
 {

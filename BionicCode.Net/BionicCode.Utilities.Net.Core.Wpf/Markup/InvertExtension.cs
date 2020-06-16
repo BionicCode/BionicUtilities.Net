@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
-using BionicCode.Utilities.NetStandard;
+using BionicCode.Utilities.Net.Standard;
 
 namespace BionicCode.Utilities.Net.Core.Wpf.Markup
 {

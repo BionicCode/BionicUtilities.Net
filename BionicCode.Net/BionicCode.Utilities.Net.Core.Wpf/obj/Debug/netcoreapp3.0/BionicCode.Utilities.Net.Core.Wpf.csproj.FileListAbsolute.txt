@@ -1,0 +1,15 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\UiTemplates\ErrorVallidationTemplate.baml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf_MarkupCompile.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.g.resources
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.AssemblyInfoInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.AssemblyInfo.cs
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.csproj.CoreCompileInputs.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\bin\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.deps.json
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\bin\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\bin\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\bin\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Standard.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\bin\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Standard.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.csproj.CopyComplete
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.dll
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Core.Wpf\obj\Debug\netcoreapp3.0\BionicCode.Utilities.Net.Core.Wpf.pdb

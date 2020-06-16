@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BionicCode.BionicUtilities.NetStandard\BionicCode.Utilities.NetStandard.csproj" />
+    <ProjectReference Include="..\BionicCode.Utilities.Net.Standard\BionicCode.Utilities.Net.Standard.csproj" />
   </ItemGroup>
 
 </Project>

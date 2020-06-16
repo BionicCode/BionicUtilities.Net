@@ -7,7 +7,7 @@ using System;
 using System.Threading.Tasks;
 using System.Windows.Media;
 using BionicCode.Utilities.Net.Core.Wpf.Generic;
-using BionicCode.Utilities.NetStandard.ViewModel;
+using BionicCode.Utilities.Net.Standard.ViewModel;
 
 namespace BionicCode.Utilities.Net.Core.Wpf.Dialog
 {

@@ -1,0 +1,4 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Uwp\obj\Debug\BionicCode.Utilities.Uwp.csprojAssemblyReference.cache
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Uwp\obj\Debug\UiTemplates\ErrorVallidationTemplate.xaml
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Uwp\obj\Debug\UiTemplates\ErrorVallidationTemplate.xbf
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Uwp\obj\Debug\BionicCode.Utilities.Uwp.csproj.CoreCompileInputs.cache

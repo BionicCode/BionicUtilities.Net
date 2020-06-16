@@ -1,22 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "i/knyAl8xNFZJshBVEh7huLtM7DjheU0ayVVOKKFOstDu14FlPZfDWOAJdfsxuP5ebdxOuPgiqkgvruhxz9axw==",
-  "success": false,
+  "dgSpecHash": "2DyxL/V9PseBC86yTpof5n5V84TQgyzUju5Ho6NxyrMmPTcNksit3/xMXY7i3wCLuAR5neziIHJezwbopWRgBw==",
+  "success": true,
   "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.Net.Core.Wpf\\BionicCode.Utilities.Net.Core.Wpf.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.0"
-      ]
-    }
-  ]
+  "logs": []
 }

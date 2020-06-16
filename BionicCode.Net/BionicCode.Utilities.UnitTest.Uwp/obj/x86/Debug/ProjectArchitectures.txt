@@ -1,0 +1,1 @@
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.UnitTest.Uwp\BionicCode.Utilities.UnitTest.Uwp.csproj;x86

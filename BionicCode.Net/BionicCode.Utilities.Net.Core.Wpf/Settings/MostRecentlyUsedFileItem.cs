@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using BionicCode.Utilities.NetStandard.ViewModel;
+using BionicCode.Utilities.Net.Standard.ViewModel;
 
 namespace BionicCode.Utilities.Net.Core.Wpf.Settings
 {

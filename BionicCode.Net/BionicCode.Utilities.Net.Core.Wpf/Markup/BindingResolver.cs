@@ -10,8 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Data;
-using BionicCode.Utilities.NetStandard;
-using BionicCode.Utilities.NetStandard.Collections.Generic;
+using BionicCode.Utilities.Net.Standard;
+using BionicCode.Utilities.Net.Standard.Collections.Generic;
 
 namespace BionicCode.Utilities.Net.Core.Wpf.Markup
 {

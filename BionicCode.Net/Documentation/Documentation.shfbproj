@@ -31,7 +31,7 @@
       <Argument Key="requestExampleUrl" Value="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\BionicCode.BionicUtilities.NetStandard\BionicCode.BionicUtilities.NetStandard.csproj" />
+      <DocumentationSource sourceFile="..\BionicCode.BionicUtilities.Net.Standard\BionicCode.BionicUtilities.Net.Standard.csproj" />
     </DocumentationSources>
     <HelpFileFormat>Website</HelpFileFormat>
     <SyntaxFilters>C#, Visual Basic, Managed C++, F#, XAML Usage</SyntaxFilters>

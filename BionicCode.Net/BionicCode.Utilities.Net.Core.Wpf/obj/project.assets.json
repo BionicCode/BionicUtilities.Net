@@ -1,12 +1,29 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {
+      "BionicCode.Utilities.Net.Standard/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BionicCode.Utilities.Net.Standard.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BionicCode.Utilities.Net.Standard/1.0.0": {
+      "type": "project",
+      "path": "../BionicCode.Utilities.Net.Standard/BionicCode.Utilities.Net.Standard.csproj",
+      "msbuildProject": "../BionicCode.Utilities.Net.Standard/BionicCode.Utilities.Net.Standard.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj"
+      "BionicCode.Utilities.Net.Standard >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -39,8 +56,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj": {
-              "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj"
+            "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.Net.Standard\\BionicCode.Utilities.Net.Standard.csproj": {
+              "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.Utilities.Net.Standard\\BionicCode.Utilities.Net.Standard.csproj"
             }
           }
         }
@@ -88,16 +105,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicCode.Net\\BionicCode.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.Utilities.NetStandard.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.0"
-      ]
-    }
-  ]
+  }
 }
