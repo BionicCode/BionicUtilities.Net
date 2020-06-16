@@ -6,7 +6,7 @@
 using System;
 using System.Threading.Tasks;
 using System.Windows.Media;
-using BionicCode.BionicUtilities.Net.Core.Wpf.Utility.Generic;
+using BionicCode.BionicUtilities.Net.Core.Wpf.Generic;
 using BionicCode.BionicUtilities.NetStandard.ViewModel;
 
 namespace BionicCode.BionicUtilities.Net.Core.Wpf.Dialog

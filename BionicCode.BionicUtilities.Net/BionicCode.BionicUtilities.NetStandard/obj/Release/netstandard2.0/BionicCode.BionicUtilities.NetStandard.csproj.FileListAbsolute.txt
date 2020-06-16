@@ -1,9 +1,9 @@
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\bin\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.deps.json
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\bin\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.dll
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\bin\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.pdb
-D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\obj\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.csprojAssemblyReference.cache
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\obj\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.csproj.CoreCompileInputs.cache
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\obj\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.AssemblyInfoInputs.cache
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\obj\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.AssemblyInfo.cs
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\obj\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.dll
 D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\obj\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicUtilities.Net\BionicCode.BionicUtilities.Net\BionicCode.BionicUtilities.NetStandard\obj\Release\netstandard2.0\BionicCode.BionicUtilities.NetStandard.csprojAssemblyReference.cache

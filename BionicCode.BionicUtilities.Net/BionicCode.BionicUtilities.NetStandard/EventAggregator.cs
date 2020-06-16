@@ -8,6 +8,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 
 namespace BionicCode.BionicUtilities.NetStandard
 {
@@ -15,20 +16,21 @@ namespace BionicCode.BionicUtilities.NetStandard
   {
     public EventAggregator()
     {
-      this.EventHandlerTable = new ConcurrentDictionary<Type, ConcurrentDictionary<string, List<Delegate>>>();
-      this.EventPublisherTable = new ConcurrentDictionary<string, Delegate>();
+      this.EventHandlerTable = new ConcurrentDictionary<string, List<Delegate>>();
+      this.EventPublisherTable = new ConcurrentDictionary<object, List<(EventInfo EventInfo, Delegate Handler)>>();
     }
 
-    #region Implementation of IEventAggregator<TEventSource>
+    #region Implementation of IEventAggregator
+
 
     /// <inheritdoc />
     public bool TryRegisterObservable<TEventSource>(TEventSource eventSource, IEnumerable<string> eventNames)
     {
-      if (eventSource == null)
+      if (EqualityComparer<TEventSource>.Default.Equals(eventSource, default))
       {
         return false;
       }
-      foreach (string eventName in eventNames)
+      foreach (string eventName in eventNames.Distinct())
       {
         EventInfo eventInfo = eventSource.GetType()
           .GetEvent(
@@ -39,119 +41,163 @@ namespace BionicCode.BionicUtilities.NetStandard
           throw new ArgumentException($"The event {eventName} was not found on the event source {eventSource.GetType().Name} or on its declaring base type.");
         }
 
-        var fullyQualifiedEventIdOfGlobalSource =
-          CreateFullyQualifiedEventIdOfGlobalSource(eventInfo.EventHandlerType, eventName);
-        var fullyQualifiedEventIdOfSpecificSource =
+        Type normalizedEventHandlerType = NormalizeEventHandlerType(eventInfo.EventHandlerType);
+
+        var fullyQualifiedEventIdOfGlobalEvent =
+          CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, eventName);
+        var fullyQualifiedEventIdOfUnknownGlobalEvent =
+          CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, string.Empty);
+        var fullyQualifiedEventIdOfSpecificEvent =
           CreateFullyQualifiedEventIdOfSpecificSource(eventSource.GetType(), eventName);
 
         IEnumerable<string> interfaceEventIds = eventSource.GetType().GetInterfaces().Select(
           interfaceType => CreateFullyQualifiedEventIdOfSpecificSource(interfaceType, eventName));
-        var eventIds = new List<string>(interfaceEventIds) { fullyQualifiedEventIdOfSpecificSource, fullyQualifiedEventIdOfGlobalSource };
 
-        (Type EventHandlerType, IEnumerable<string> EventIds) eventIdArg = (eventInfo.EventHandlerType, eventIds);
+        var eventIds = new List<string>(interfaceEventIds) { fullyQualifiedEventIdOfSpecificEvent, fullyQualifiedEventIdOfGlobalEvent, fullyQualifiedEventIdOfUnknownGlobalEvent };
 
-        var eventPublisher = new Action<object, object>((sender, args) => HandleEvent(eventIdArg, sender, args));
-        if (!this.EventPublisherTable.TryAdd(fullyQualifiedEventIdOfSpecificSource, eventPublisher))
+        (Type eventHandlerType, List<string> eventIds) eventIdArg = (normalizedEventHandlerType, eventIds);
+        //DynamicMethod handler =
+        //  new DynamicMethod("",
+        //    null,
+        //    eventInfo.EventHandlerType.GetMethod("Invoke").GetParameters().Select(pi => pi.ParameterType).ToArray(),
+        //    GetType());
+
+        //ILGenerator ilgen = handler.GetILGenerator();
+
+        //Type[] showParameters = { typeof(String) };
+        //MethodInfo simpleShow =
+        //  typeof(MessageBox).GetMethod("Show", showParameters);
+
+        //ilgen.Emit(OpCodes.Ldstr,
+        //  "This event handler was constructed at run time.");
+        //ilgen.Emit(OpCodes.Call, simpleShow);
+        //ilgen.Emit(OpCodes.Pop);
+        //ilgen.Emit(OpCodes.Ret);
+
+        Action<object, object> clientHandlerInvocator = (sender, args) => HandleEvent(eventIdArg, sender,args);
+        var eventSourceHandler = Delegate.CreateDelegate(
+          eventInfo.EventHandlerType,
+          clientHandlerInvocator.Target,
+          clientHandlerInvocator.Method);
+        if (this.EventPublisherTable.TryGetValue(eventSource, out List<(EventInfo, Delegate)> publishers))
+        {
+          publishers.Add((eventInfo, eventSourceHandler));
+        }
+        else if (!this.EventPublisherTable.TryAdd(eventSource, new List<(EventInfo, Delegate)> { (eventInfo, eventSourceHandler) }))
         {
           return false;
         }
-        Delegate genericHandler = Delegate.CreateDelegate(
-          eventInfo.EventHandlerType,
-          eventPublisher.Target,
-          eventPublisher.Method);
 
-        eventInfo.AddEventHandler(eventSource, genericHandler);
+        eventInfo.AddEventHandler(eventSource, eventSourceHandler);
       }
 
       return true;
     }
 
     /// <inheritdoc />
-    public bool TryRemoveObservable<TEventSource>(TEventSource eventSource, IEnumerable<string> eventNames, bool removeEventObservers = false)
+    public bool TryRemoveObservable(object eventSource, IEnumerable<string> eventNames, bool removeEventObservers = false)
     {
-      bool result = false;
+      bool hasRemovedObservable = false;
+      if (!this.EventPublisherTable.TryGetValue(eventSource, out List<(EventInfo EventInfo, Delegate Handler)> publisherHandlerInfos))
+      {
+        return false;
+      }
       foreach (string eventName in eventNames)
       {
-        string fullyQualifiedEventIdOfSpecificSource =
-          CreateFullyQualifiedEventIdOfSpecificSource(eventSource.GetType(), eventName);
-        bool isRemoveSuccessful = this.EventPublisherTable.TryRemove(fullyQualifiedEventIdOfSpecificSource, out Delegate handler);
-        result |= isRemoveSuccessful;
+        (EventInfo EventInfo, Delegate Handler) publisherHandlerInfo = publisherHandlerInfos.FirstOrDefault(
+          handlerInfo => handlerInfo.EventInfo.Name.Equals(eventName, StringComparison.Ordinal));
 
-        if (isRemoveSuccessful)
-        {
-          EventInfo eventInfo = eventSource.GetType()
-            .GetEvent(
-              eventName,
-              BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
-          eventInfo?.RemoveEventHandler(eventSource, handler);
-        }
+        publisherHandlerInfo.EventInfo?.RemoveEventHandler(eventSource, publisherHandlerInfo.Handler);
+        hasRemovedObservable = publisherHandlerInfos.Remove(publisherHandlerInfo); 
 
         if (removeEventObservers)
         {
-          TryRemoveAllSpecificEventSources(eventName, eventSource.GetType());
+          TryRemoveAllObservers(eventName, eventSource.GetType());
         }
       }
 
-      return result;
-    }
-
-    /// <inheritdoc />
-    public bool TryRemoveObservable<TEventSource>(TEventSource eventSource, bool removeObserversOfEvents = false)
-    {
-      bool result = false;
-      string fullyQualifiedEventIdOfSpecificSourcePrefix =
-        CreateFullyQualifiedEventIdOfSpecificSource(eventSource.GetType(), string.Empty);
-      foreach (KeyValuePair<string, Delegate> publisherEntry in this.EventPublisherTable.Where(entry => entry.Key.StartsWith(fullyQualifiedEventIdOfSpecificSourcePrefix)))
+      if (!publisherHandlerInfos.Any())
       {
-        bool isRemoveSuccessful = this.EventPublisherTable.TryRemove(publisherEntry.Key, out Delegate handler);
-        result |= isRemoveSuccessful;
-        if (!isRemoveSuccessful || !removeObserversOfEvents)
-        {
-          continue;
-        }
-
-        TryRemoveAllSpecificEventSources(publisherEntry.Key, eventSource.GetType());
+        this.EventPublisherTable.TryRemove(eventSource, out List<(EventInfo EventInfo, Delegate Handler)> _);
       }
 
-      return result;
+      return hasRemovedObservable;
     }
 
     /// <inheritdoc />
-    public bool TryRemoveSpecificEventSource<TEventHandler>(string eventName, Type eventSourceType, TEventHandler eventHandler) where TEventHandler : Delegate
+    public bool TryRemoveObservable(object eventSource, bool removeObserversOfEvents = false)
     {
-      bool result = false;
+      bool hasRemovedObservable = false;
+
+      if (this.EventPublisherTable.TryRemove(eventSource, out List<(EventInfo EventInfo, Delegate Handler)> handlerInfo))
+      {
+        handlerInfo.ForEach(publisherHandlerInfo => publisherHandlerInfo.EventInfo.RemoveEventHandler(eventSource, publisherHandlerInfo.Handler));
+        hasRemovedObservable = true;
+      }
+
+      if (removeObserversOfEvents)
+      {
+        TryRemoveAllObservers(eventSource.GetType());
+      }
+
+      return hasRemovedObservable;
+    }
+
+    /// <inheritdoc />
+    public bool TryRegisterObserver<TEventArgs>(string eventName, Type eventSourceType, EventHandler<TEventArgs> eventHandler)
+    {
+      var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfSpecificSource(eventSourceType, eventName);
+      return TryRegisterObserverInternal(eventHandler, fullyQualifiedEventName);
+    }
+
+    /// <inheritdoc />
+    public bool TryRegisterGlobalObserver<TEventArgs>(string eventName, EventHandler<TEventArgs> eventHandler)
+    {
+      Type normalizedEventHandlerType = NormalizeEventHandlerType(eventHandler.GetType());
+      var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, eventName);
+      return TryRegisterObserverInternal(eventHandler, fullyQualifiedEventName);
+    }
+
+    /// <inheritdoc />
+    public bool TryRegisterGlobalObserver<TEventArgs>(EventHandler<TEventArgs> eventHandler)
+    {
+      Type normalizedEventHandlerType = NormalizeEventHandlerType(eventHandler.GetType());
+      var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, string.Empty);
+      return TryRegisterObserverInternal(eventHandler, fullyQualifiedEventName);
+    }
+
+    /// <inheritdoc />
+    public bool TryRemoveObserver<TEventArgs>(string eventName, Type eventSourceType, EventHandler<TEventArgs> eventHandler)
+    {
       string fullyQualifiedEventIdOfSpecificSource =
         CreateFullyQualifiedEventIdOfSpecificSource(eventSourceType, eventName);
-      for (var index = 0; index < this.EventHandlerTable.Count; index++)
-      {
-        KeyValuePair<Type, ConcurrentDictionary<string, List<Delegate>>> entry = this.EventHandlerTable.ElementAt(index);
-        bool hasRemovedEntry = entry.Value.TryGetValue(fullyQualifiedEventIdOfSpecificSource, out List<Delegate> handlers) &&
-            handlers.Remove(eventHandler);
-        result |= hasRemovedEntry;
-        if (hasRemovedEntry && entry.Value.IsEmpty)
-        {
-          this.EventHandlerTable.TryRemove(entry.Key, out ConcurrentDictionary<string, List<Delegate>> eventNameToHandlersMap);
-        }
-      }
-
-      return result;
+      return this.EventHandlerTable.TryRemove(fullyQualifiedEventIdOfSpecificSource, out List<Delegate> _);
     }
 
     /// <inheritdoc />
-    public bool TryRemoveAllSpecificEventSources(string eventName, Type eventSourceType)
+    public bool TryRemoveGlobalObserver<TEventArgs>(string eventName, EventHandler<TEventArgs> eventHandler)
+    {
+      Type normalizedEventHandlerType = NormalizeEventHandlerType(eventHandler.GetType());
+
+      string fullyQualifiedEventIdOfGlobalSource =
+        CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, eventName);
+      return this.EventHandlerTable.TryRemove(fullyQualifiedEventIdOfGlobalSource, out List<Delegate> _);
+    }
+
+    /// <inheritdoc />
+    public bool TryRemoveGlobalObserver<TEventArgs>(EventHandler<TEventArgs> eventHandler)
     {
       bool result = false;
-      string fullyQualifiedEventIdOfSpecificSource =
-        CreateFullyQualifiedEventIdOfSpecificSource(eventSourceType, eventName);
-      for (var index = 0; index < this.EventHandlerTable.Count; index++)
+      Type normalizedEventHandlerType = NormalizeEventHandlerType(eventHandler.GetType());
+
+      string fullyQualifiedEventIdOfGlobalSourcePrefix =
+        CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, string.Empty);
+      for (var index = this.EventHandlerTable.Count - 1; index >= 0; index--)
       {
-        KeyValuePair<Type, ConcurrentDictionary<string, List<Delegate>>> entry = this.EventHandlerTable.ElementAt(index);
-        bool hasRemovedEntry = entry.Value.TryRemove(fullyQualifiedEventIdOfSpecificSource,
-          out List<Delegate> handlers);
-        result |= hasRemovedEntry;
-        if (hasRemovedEntry && entry.Value.IsEmpty)
+        KeyValuePair<string, List<Delegate>> handlersEntry = this.EventHandlerTable.ElementAt(index);
+        if (handlersEntry.Key.StartsWith(fullyQualifiedEventIdOfGlobalSourcePrefix, StringComparison.Ordinal))
         {
-          this.EventHandlerTable.TryRemove(entry.Key, out ConcurrentDictionary<string, List<Delegate>> eventNameToHandlersMap);
+          result |= this.EventHandlerTable.TryRemove(handlersEntry.Key, out List<Delegate> _);
         }
       }
 
@@ -159,21 +205,26 @@ namespace BionicCode.BionicUtilities.NetStandard
     }
 
     /// <inheritdoc />
-    public bool TryClearEventSources(Type eventSourceType)
+    public bool TryRemoveAllObservers(string eventName, Type eventSourceType)
+    {
+      string fullyQualifiedEventIdOfSpecificSource =
+        CreateFullyQualifiedEventIdOfSpecificSource(eventSourceType, eventName);
+      return this.EventHandlerTable.TryRemove(fullyQualifiedEventIdOfSpecificSource,
+        out List<Delegate> _);
+    }
+
+    /// <inheritdoc />
+    public bool TryRemoveAllObservers(Type eventSourceType)
     {
       bool result = false;
       string fullyQualifiedEventIdOfSpecificSourcePrefix =
         CreateFullyQualifiedEventIdOfSpecificSource(eventSourceType, string.Empty);
-      for (var index = 0; index < this.EventHandlerTable.Count; index++)
+      for (var index = this.EventHandlerTable.Count - 1; index >= 0; index--)
       {
-        KeyValuePair<Type, ConcurrentDictionary<string, List<Delegate>>> entry = this.EventHandlerTable.ElementAt(index);
-        for (var index2 = 0; index2 < entry.Value.Count; index2++)
+        KeyValuePair<string, List<Delegate>> handlersEntry = this.EventHandlerTable.ElementAt(index);
+        if (handlersEntry.Key.StartsWith(fullyQualifiedEventIdOfSpecificSourcePrefix, StringComparison.Ordinal))
         {
-          KeyValuePair<string, List<Delegate>> handlersEntry = entry.Value.ElementAt(index2);
-          if (handlersEntry.Key.StartsWith(fullyQualifiedEventIdOfSpecificSourcePrefix))
-          {
-            result |= entry.Value.TryRemove(handlersEntry.Key, out List<Delegate> handlers);
-          }
+          result |= this.EventHandlerTable.TryRemove(handlersEntry.Key, out _);
         }
       }
 
@@ -181,132 +232,42 @@ namespace BionicCode.BionicUtilities.NetStandard
     }
 
     /// <inheritdoc />
-    public bool TryRemoveHandlerFromGlobalEventSource<TEventHandler>(string eventName, TEventHandler eventHandler) where TEventHandler : Delegate
+    public bool TryRemoveAllObservers(string eventName)
     {
       bool result = false;
-      string fullyQualifiedEventIdOfGlobalSource =
-        CreateFullyQualifiedEventIdOfGlobalSource(typeof(TEventHandler), eventName);
-      for (var index = 0; index < this.EventHandlerTable.Count; index++)
+      string fullyQualifiedEventIdSuffix = $".{eventName}";
+      for (var index = this.EventHandlerTable.Count - 1; index >= 0; index--)
       {
-        KeyValuePair<Type, ConcurrentDictionary<string, List<Delegate>>> entry = this.EventHandlerTable.ElementAt(index);
-        bool hasRemovedEntry = entry.Value.TryGetValue(fullyQualifiedEventIdOfGlobalSource, out List<Delegate> handlers) && handlers.Remove(eventHandler);
-        result |= hasRemovedEntry;
-        if (hasRemovedEntry && entry.Value.IsEmpty)
+        KeyValuePair<string, List<Delegate>> handlersEntry = this.EventHandlerTable.ElementAt(index);
+        if (handlersEntry.Key.EndsWith(fullyQualifiedEventIdSuffix, StringComparison.Ordinal))
         {
-          this.EventHandlerTable.TryRemove(entry.Key, out ConcurrentDictionary<string, List<Delegate>> eventNameToHandlersMap);
+          result |= this.EventHandlerTable.TryRemove(handlersEntry.Key, out List<Delegate> _);
         }
       }
 
       return result;
     }
 
-    /// <inheritdoc />
-    public bool TryClearGlobalEventSource<TEventHandler>(TEventHandler eventHandler) where TEventHandler : Delegate
+    #endregion Implementation of IEventAggregator
+
+    private bool TryRegisterObserverInternal<TEventArgs>(
+      EventHandler<TEventArgs> eventHandler,
+      string fullyQualifiedEventName)
     {
-      bool result = false;
-      string fullyQualifiedEventIdOfSpecificSourcePrefix =
-        CreateFullyQualifiedEventIdOfGlobalSource(typeof(TEventHandler), string.Empty);
-      for (var index = 0; index < this.EventHandlerTable.Count; index++)
+      if (this.EventHandlerTable.TryGetValue(fullyQualifiedEventName, out List<Delegate> handlers))
       {
-        KeyValuePair<Type, ConcurrentDictionary<string, List<Delegate>>> entry = this.EventHandlerTable.ElementAt(index);
-        for (var index2 = 0; index2 < entry.Value.Count; index2++)
-        {
-          KeyValuePair<string, List<Delegate>> handlersEntry = entry.Value.ElementAt(index2);
-          if (handlersEntry.Key.StartsWith(fullyQualifiedEventIdOfSpecificSourcePrefix))
-          {
-            result |= entry.Value.TryGetValue(handlersEntry.Key, out List<Delegate> handlers) && handlers.Remove(eventHandler);
-          }
-        }
+        handlers.Add(eventHandler);
+        return true;
       }
 
-      return result;
+      return this.EventHandlerTable.TryAdd(fullyQualifiedEventName, new List<Delegate>() { eventHandler });
     }
-
-    /// <inheritdoc />
-    public bool TryRemoveAllHandlers<TEventHandler>(string eventName)
-    {
-      bool result = false;
-      string fullyQualifiedEventIdSuffix = eventName;
-      for (var index = 0; index < this.EventHandlerTable.Count; index++)
-      {
-        KeyValuePair<Type, ConcurrentDictionary<string, List<Delegate>>> entry = this.EventHandlerTable.ElementAt(index);
-        for (var index2 = 0; index2 < entry.Value.Count; index2++)
-        {
-          KeyValuePair<string, List<Delegate>> handlersEntry = entry.Value.ElementAt(index2);
-          if (handlersEntry.Key.EndsWith(fullyQualifiedEventIdSuffix))
-          {
-            result |= entry.Value.TryRemove(handlersEntry.Key, out List<Delegate> handlers);
-          }
-        }
-      }
-
-      return result;
-    }
-
-    /// <inheritdoc />
-    public bool TryRegisterObserver<TEventHandler>(string eventName, TEventHandler eventHandler)
-      where TEventHandler : Delegate
-    {
-      var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfGlobalSource(typeof(TEventHandler), eventName);
-      RegisterObserver(eventHandler, fullyQualifiedEventName);
-
-      return true;
-    }
-
-    /// <inheritdoc />
-    public bool TryRegisterObserver<TEventHandler>(string eventName, Type eventSourceType, TEventHandler eventHandler)
-      where TEventHandler : Delegate
-    {
-      var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfSpecificSource(eventSourceType, eventName);
-      RegisterObserver(eventHandler, fullyQualifiedEventName);
-
-      return true;
-    }
-
-    #endregion
-
-    private void RegisterObserver<TEventHandler>(
-      TEventHandler eventHandler,
-      string fullyQualifiedEventName) where TEventHandler : Delegate
-    {
-      Type eventHandlerType = typeof(TEventHandler);
-      if (this.EventHandlerTable.TryGetValue(
-        eventHandlerType,
-        out ConcurrentDictionary<string, List<Delegate>> eventNameToHandlersMap))
-      {
-        if (eventNameToHandlersMap.TryGetValue(fullyQualifiedEventName, out List<Delegate> handlers))
-        {
-          handlers.Add(eventHandler);
-        }
-        else
-        {
-          eventNameToHandlersMap.TryAdd(fullyQualifiedEventName, new List<Delegate>() { eventHandler });
-        }
-      }
-      else
-      {
-        var nameToHandlersMap = new ConcurrentDictionary<string, List<Delegate>>();
-        nameToHandlersMap.TryAdd(fullyQualifiedEventName, new List<Delegate>() { eventHandler });
-        this.EventHandlerTable.TryAdd(eventHandlerType, nameToHandlersMap);
-      }
-    }
-
-    private string CreateFullyQualifiedEventIdOfGlobalSource(Type eventHandlerType, string eventName) => eventHandlerType.FullName.ToLowerInvariant() + "." + eventName;
-
-    private string CreateFullyQualifiedEventIdOfSpecificSource(Type eventSource, string eventName) => eventSource.AssemblyQualifiedName.ToLowerInvariant() + "." + eventName;
 
     private void HandleEvent((Type EventHandlerType, IEnumerable<string> EventIds) eventInfo, object sender, object args)
     {
-      if (!this.EventHandlerTable.TryGetValue(
-        eventInfo.EventHandlerType,
-        out ConcurrentDictionary<string, List<Delegate>> handlerInfos))
-      {
-        return;
-      }
-
       IEnumerable<Delegate> handlers = eventInfo.EventIds
         .SelectMany(
-          eventId => handlerInfos.TryGetValue(eventId, out List<Delegate> delegates)
+          eventId => this.EventHandlerTable.TryGetValue(eventId, out List<Delegate> delegates)
             ? delegates
             : new List<Delegate>());
 
@@ -327,7 +288,19 @@ namespace BionicCode.BionicUtilities.NetStandard
       }
     }
 
-    private ConcurrentDictionary<Type, ConcurrentDictionary<string, List<Delegate>>> EventHandlerTable { get; set; }
-    private ConcurrentDictionary<string, Delegate> EventPublisherTable { get; }
+    private Type NormalizeEventHandlerType(Type eventHandlerType)
+    {
+      Type normalizedEventHandlerType = eventHandlerType == typeof(EventHandler)
+        ? typeof(EventHandler<EventArgs>)
+        : eventHandlerType;
+      return normalizedEventHandlerType;
+    }
+
+    private string CreateFullyQualifiedEventIdOfGlobalSource(Type eventHandlerType, string eventName) => eventHandlerType.FullName.ToLowerInvariant() + "." + eventName;
+
+    private string CreateFullyQualifiedEventIdOfSpecificSource(Type eventSource, string eventName) => eventSource.AssemblyQualifiedName.ToLowerInvariant() + "." + eventSource.FullName.ToLowerInvariant() + "." + eventName;
+
+    private ConcurrentDictionary<string, List<Delegate>> EventHandlerTable { get; set; }
+    private ConcurrentDictionary<object, List<(EventInfo EventInfo,  Delegate Handler)>> EventPublisherTable { get; }
   }
 }

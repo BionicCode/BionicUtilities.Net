@@ -2,35 +2,26 @@
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
+using BionicCode.BionicUtilities.NetStandard;
 
 namespace BionicCode.BionicUtilities.Net.Core.Wpf.Markup
 {
-  public class BindingResolver : FrameworkElement
-  {
-    public static readonly DependencyProperty ValueProperty = DependencyProperty.Register(
-      "Value",
-      typeof(object),
-      typeof(BindingResolver),
-      new PropertyMetadata(default(object)));
-
-    public object Value
-    {
-      get => GetValue(BindingResolver.ValueProperty);
-      set => SetValue(BindingResolver.ValueProperty, value);
-    }
-  }
-
   public class InvertExtension : MarkupExtension
   {
-    public object Value { get; }
-    private BindingResolver BindingResolver { get; }
-    private MarkupExtension WrappedExtension { get; }
+    public object Value { get; set; }
+    public InversionMode Mode { get; set; }
+    private IValueInverter ValueInverter { get; set; }
 
-    public InvertExtension() => this.BindingResolver = new BindingResolver();
+    public InvertExtension() : this(DependencyProperty.UnsetValue)
+    {
+    }
 
-    public InvertExtension(MarkupExtension extension) : this() => this.WrappedExtension = extension;
-
-    public InvertExtension(object value) : this() => this.Value = value;
+    public InvertExtension(object value)
+    {
+      this.Value = value;
+      this.ValueInverter = new DefaultValueInverter();
+      this.Mode = InversionMode.Default;
+    }
 
     #region Overrides of MarkupExtension
 
@@ -38,9 +29,13 @@ namespace BionicCode.BionicUtilities.Net.Core.Wpf.Markup
     public override object ProvideValue(IServiceProvider serviceProvider)
     {
       object valueToInvert;
-      if (this.Value is MarkupExtension wrappedMarkupExtension)
+      if (this.Value is MarkupExtension innerMarkupExtension)
       {
-        valueToInvert = GetValueToInvertFromMarkupExtension(wrappedMarkupExtension, serviceProvider);
+        valueToInvert = GetValueToInvertFromMarkupExtension(innerMarkupExtension, serviceProvider);
+        if (valueToInvert is BindingBase bindingMarkupExtension)
+        {
+          return bindingMarkupExtension.ProvideValue(serviceProvider);
+        }
       }
       else
       {
@@ -50,107 +45,45 @@ namespace BionicCode.BionicUtilities.Net.Core.Wpf.Markup
       var provideValueTargetService = serviceProvider.GetService(typeof(IProvideValueTarget)) as IProvideValueTarget;
       Type targetPropertyType = (provideValueTargetService.TargetProperty as DependencyProperty).PropertyType;
 
-      return TryInvertValue(valueToInvert, out object invertedValue)
-        ? targetPropertyType.Equals(typeof(string))
-          ? invertedValue.ToString()
-          : invertedValue
-        : valueToInvert;
+      return valueToInvert == DependencyProperty.UnsetValue
+        ? valueToInvert
+        : this.ValueInverter.TryInvertValue(valueToInvert, out object invertedValue)
+          ? targetPropertyType.Equals(typeof(string))
+            ? invertedValue.ToString()
+            : invertedValue
+          : valueToInvert;
     }
+    #endregion
 
     protected object GetValueToInvertFromMarkupExtension(MarkupExtension wrappedMarkupExtension,
       IServiceProvider serviceProvider)
     {
-      object wrappedExtensionValue = wrappedMarkupExtension.ProvideValue(serviceProvider);
-      if (wrappedExtensionValue is BindingExpression bindingExpression)
+      if (wrappedMarkupExtension is Binding bindingExpression)
       {
-        var provideValueTargetService = serviceProvider.GetService(typeof(IProvideValueTarget)) as IProvideValueTarget;
-        object targetObject = provideValueTargetService?.TargetObject;
-        this.BindingResolver.DataContext = (targetObject as FrameworkElement)?.DataContext ?? targetObject;
-        BindingOperations.SetBinding(
-          this.BindingResolver,
-          BindingResolver.ValueProperty,
-          bindingExpression.ParentBinding);
-        return this.BindingResolver.Value;
+        return GetValueFomBinding(serviceProvider, bindingExpression);
       }
 
-      return wrappedExtensionValue;
+      return wrappedMarkupExtension.ProvideValue(serviceProvider);
     }
 
-    private bool TryInvertValue(object value, out object invertedValue)
+    private object GetValueFomBinding(IServiceProvider serviceProvider, Binding bindingExpression)
     {
-      if (TryConvertStringToNumber(value, out object number))
+      var provideValueTargetService = serviceProvider.GetService(typeof(IProvideValueTarget)) as IProvideValueTarget;
+      object targetObject = provideValueTargetService?.TargetObject;
+      if (targetObject == null)
       {
-        value = number;
+        return this;
       }
 
-      switch (value)
+      var bindingResolver = new BindingResolver(
+        targetObject as FrameworkElement,
+        provideValueTargetService.TargetProperty as DependencyProperty)
       {
-        case bool boolValue:
-          invertedValue = !boolValue;
-          break;
-        case int intValue:
-          invertedValue = intValue * -1;
-          break;
-        case decimal decimalValue:
-          invertedValue = decimalValue * decimal.MinusOne;
-          break;
-        case double doubleValue:
-          invertedValue = double.IsNaN(doubleValue)
-            ? doubleValue
-            : double.IsNegativeInfinity(doubleValue)
-              ? double.PositiveInfinity
-              : double.IsPositiveInfinity(doubleValue)
-                ? double.NegativeInfinity
-                : doubleValue * -1.0;
-          break;
-        case float floatValue:
-          invertedValue = float.IsNaN(floatValue)
-            ? floatValue
-            : float.IsNegativeInfinity(floatValue)
-              ? float.PositiveInfinity
-              : float.IsPositiveInfinity(floatValue)
-                ? float.NegativeInfinity
-                : floatValue * -1.0;
-          break;
-        case byte byteValue:
-          invertedValue = ~byteValue;
-          break;
-        case Visibility visibilityValue:
-          invertedValue = visibilityValue.Equals(Visibility.Hidden) || visibilityValue.Equals(Visibility.Collapsed)
-            ? Visibility.Visible
-            : Visibility.Collapsed;
-          break;
-        default:
-          invertedValue = value;
-          break;
-      }
+        InversionMode = this.Mode,
+        ValueInverter = this.ValueInverter
+      };
 
-      return invertedValue != value;
+      return bindingResolver.ResolveBinding(bindingExpression, this.Mode);
     }
-
-    private bool TryConvertStringToNumber(object value, out object numericValue)
-    {
-      numericValue = null;
-      if (!(value is string stringValue))
-      {
-        return false;
-      }
-
-      if (int.TryParse(stringValue, out int integer))
-      {
-        numericValue = integer;
-      }
-      else
-      {
-        if (double.TryParse(stringValue, out double doubleValue))
-        {
-          numericValue = doubleValue;
-        }
-      }
-
-      return numericValue != null;
-    }
-
-    #endregion
   }
 }

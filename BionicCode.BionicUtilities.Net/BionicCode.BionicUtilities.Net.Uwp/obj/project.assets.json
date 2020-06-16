@@ -315,6 +315,16 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm": {
@@ -809,6 +819,16 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
         }
       }
     },
@@ -1306,6 +1326,16 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm64-aot": {
@@ -1802,6 +1832,16 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64": {
@@ -2296,6 +2336,16 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
         }
       }
     },
@@ -2793,6 +2843,16 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86": {
@@ -3287,6 +3347,16 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
+        }
+      },
+      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
         }
       }
     },
@@ -3783,6 +3853,16 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BionicCode.BionicUtilities.NetStandard.dll": {}
         }
       }
     }
@@ -8236,17 +8316,22 @@
         "runtimes/win10-x86/lib/uap10.0.15138/netstandard.dll",
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
+    },
+    "BionicCode.BionicUtilities.NetStandard/1.0.0": {
+      "type": "project",
+      "path": "../BionicCode.BionicUtilities.NetStandard/BionicCode.BionicUtilities.NetStandard.csproj",
+      "msbuildProject": "../BionicCode.BionicUtilities.NetStandard/BionicCode.BionicUtilities.NetStandard.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
+      "BionicCode.BionicUtilities.NetStandard >= 1.0.0",
       "JetBrains.Annotations >= 2019.1.3",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.9"
     ]
   },
   "packageFolders": {
     "C:\\Users\\MusicMonkey\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
@@ -8260,13 +8345,11 @@
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
         "C:\\Users\\MusicMonkey\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"
@@ -8277,7 +8360,11 @@
       },
       "frameworks": {
         "uap10.0.17763": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.BionicUtilities.NetStandard.csproj": {
+              "projectPath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net\\BionicCode.BionicUtilities.Net\\BionicCode.BionicUtilities.NetStandard\\BionicCode.BionicUtilities.NetStandard.csproj"
+            }
+          }
         }
       }
     },

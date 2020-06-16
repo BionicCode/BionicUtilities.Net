@@ -167,6 +167,12 @@
   <ItemGroup>
     <Content Include="logo.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BionicCode.BionicUtilities.NetStandard\BionicCode.BionicUtilities.NetStandard.csproj">
+      <Project>{D147481E-42DB-4069-A8EB-88D5872D9FF1}</Project>
+      <Name>BionicCode.BionicUtilities.NetStandard</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

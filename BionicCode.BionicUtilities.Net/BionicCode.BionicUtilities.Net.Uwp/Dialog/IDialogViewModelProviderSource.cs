@@ -1,4 +1,5 @@
 ﻿using System;
+using BionicCode.BionicUtilities.NetStandard.Generic;
 
 namespace BionicCode.BionicUtilities.Net.Uwp.Dialog
 {

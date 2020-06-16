@@ -5,6 +5,9 @@
 
 using System;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media;
+using BionicCode.BionicUtilities.Net.Uwp.Utility.Generic;
+using BionicCode.BionicUtilities.NetStandard.ViewModel;
 
 namespace BionicCode.BionicUtilities.Net.Uwp.Dialog
 {
@@ -12,7 +15,7 @@ namespace BionicCode.BionicUtilities.Net.Uwp.Dialog
   /// The DataContext and binding source for the dialog Window. Implement this interface or the derived abstract <see cref="DialogViewModel"/> to transport data from the view to the view model via binding.
   /// </summary>
   /// <remarks>It is recommended to extend the abstract class <see cref="DialogViewModel"/> instead as this class already implemented the dialog data handling logic. Also use the <see cref="Dialog"/> attached behavior as it handles the view logic. Just bind <see cref="Dialog.DialogDataContextProperty"/> to an instance of <see cref="DialogViewModel"/> (or <see cref="IDialogViewModel"/>) and define a DataTemplate for each implementation of <see cref="DialogViewModel"/>.</remarks>
-  public interface IDialogViewModel : IBaseViewModel
+  public interface IDialogViewModel : IViewModel
   {
     /// <summary>
     /// The title of the dialog <c>Window</c>

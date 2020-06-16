@@ -49,6 +49,7 @@
     <Compile Include="Converter\InvertBooleanConverter.cs" />
     <Compile Include="Converter\InvertValueConverter.cs" />
     <Compile Include="Converter\IsGreaterThanValueConverter.cs" />
+    <Compile Include="DefaultValueInverter.cs" />
     <Compile Include="Dialog\Dialog.cs" />
     <Compile Include="Dialog\DialogResult.cs" />
     <Compile Include="Dialog\DialogViewModel.cs" />
@@ -57,7 +58,9 @@
     <Compile Include="Dialog\IDialogViewModelProviderSource.cs" />
     <Compile Include="Extensions\HelperExtensions.cs" />
     <Compile Include="Generic\NullObjectCreator.cs" />
+    <Compile Include="Markup\BindingResolver.cs" />
     <Compile Include="Markup\EqualsExtension.cs" />
+    <Compile Include="Markup\InversionMode.cs" />
     <Compile Include="Markup\InvertExtension.cs" />
     <Compile Include="Markup\PrimitivesMarkupExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
