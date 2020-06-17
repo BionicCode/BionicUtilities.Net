@@ -276,7 +276,7 @@ namespace BionicCode.Utilities.Net.Standard
           .GetMethod("Invoke")?
           .GetParameters()
           .ElementAt(1).ParameterType;
-        if (!args.GetType().IsSubclassOf(handlerEventArgsType)
+        if (handlerEventArgsType == null || !args.GetType().IsSubclassOf(handlerEventArgsType)
             && handlerEventArgsType != args.GetType())
         {
           throw new InvalidOperationException(
