@@ -36,10 +36,27 @@ namespace BionicCode.Utilities.Net.Standard.ViewModel
         return false;
       }
 
-      TValue oldValue = value;
+      TValue oldValue = targetBackingField;
       targetBackingField = value;
       OnPropertyChanged(propertyName, oldValue, value);
       return true;
+    }
+
+    /// <summary>
+    /// Generic property setter. Silently sets the value of any property of the extending view model by passing in a the corresponding property backing field. Suppresses a <see cref="INotifyPropertyChanged.PropertyChanged"/> event for this property.
+    /// </summary>
+    /// <remarks>If new value equals the old value the value of the property won't change and the <see cref="INotifyPropertyChanged.PropertyChanged"/> event won't be raised. Uses the <c>Equals</c> implementation to check for equality.</remarks>
+    /// <typeparam name="TValue">The generic type parameter of the new property value.</typeparam>
+    /// <param name="value">The new property value.</param>
+    /// <param name="targetBackingField">The backing field of the target property for the new value. Passed in by reference using <c>ref</c> keyword.</param>
+    /// <param name="propertyName">The name of the property that changes. By default the property name is automatically set to the property that called this setter method.</param>
+    /// <returns><c>true</c> when the property has changed or <c>false</c> when the property value didn't change (e.g. on equality of old and new value).</returns>
+    protected virtual bool TrySetValueSilent<TValue>(TValue value, ref TValue targetBackingField, [CallerMemberName] string propertyName = null)
+    {
+      this.IsSilent = true;
+      bool isSuccessful = TrySetValue(value, ref targetBackingField, propertyName);
+      this.IsSilent = false;
+      return isSuccessful;
     }
 
     /// <summary>
@@ -57,15 +74,8 @@ namespace BionicCode.Utilities.Net.Standard.ViewModel
     /// <remarks>This property setter supports invalid value rejection, which means values are only assigned to the backing field if they are valid which is when the <paramref name="validationDelegate"/> return <c>true</c>.<br/> To support visual validation error feed back and proper behavior in <c>TwoWay</c> binding scenarios, <br/> it is recommended to set <paramref name="isThrowExceptionOnValidationErrorEnabled"/> to <c>true</c> and set the validation mode of the binding to <c>Binding.ValidatesOnExceptions</c>.<br/>If not doing so, the binding target will clear the new value and show the last valid value instead.</remarks>
     protected virtual bool TrySetValue<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, ref TValue targetBackingField, bool isRejectInvalidValueEnabled = false, bool isThrowExceptionOnValidationErrorEnabled = false, [CallerMemberName] string propertyName = null)
     {
-      bool isValueValid = false;
-      bool previousValidationHasFailed = false;
-
-      if (propertyName != null)
-      {
-        previousValidationHasFailed = PropertyHasError(propertyName);
-        isValueValid = IsValueValid(value, validationDelegate, propertyName);
-      }
-
+      bool previousValidationHasFailed = propertyName != null && PropertyHasError(propertyName);
+      bool isValueValid = IsValueValid(value, validationDelegate, propertyName);
 
       if (!isValueValid && isRejectInvalidValueEnabled)
       {
@@ -86,7 +96,7 @@ namespace BionicCode.Utilities.Net.Standard.ViewModel
         return false;
       }
 
-      TValue oldValue = value;
+      TValue oldValue = targetBackingField;
       targetBackingField = value;
       OnPropertyChanged(propertyName, oldValue, value);
       if (!isValueValid && isThrowExceptionOnValidationErrorEnabled)
@@ -94,6 +104,33 @@ namespace BionicCode.Utilities.Net.Standard.ViewModel
         throw new ArgumentException(string.Empty);
       }
       return true;
+    }
+
+    /// <summary>
+    ///  Silently sets the value of the referenced property without raising <see cref="INotifyPropertyChanged.PropertyChanged"/> and executes a validation delegate.
+    /// </summary>
+    /// <typeparam name="TValue">The generic value type parameter</typeparam>
+    /// <param name="value">The new value which is to be set to the property.</param>
+    /// <param name="validationDelegate">The callback that is used to validate the new value.</param>
+    /// <param name="targetBackingField">The reference to the backing field.</param>
+    /// <param name="propertyName">The name of the property to set. Default name is the property that called this method.</param>
+    /// <param name="isRejectInvalidValueEnabled">When <c>true</c> the invalid value is not stored to the backing field.<br/> Use this to ensure that the view model in a valid state.</param>
+    /// <param name="isThrowExceptionOnValidationErrorEnabled">Enable throwing an <exception cref="ArgumentException"></exception> if validation failed. Use this when <c>ValidatesOnExceptions</c> on a <c>Binding</c> is set to <c>true</c></param>
+    /// <exception cref="ArgumentException">Thrown on validation failed</exception>
+    /// <returns>Returns <c>true</c> if the new value doesn't equal the old value and the new value is valid. Returns <c>false</c> if the new value equals the old value or the validation has failed.</returns>
+    /// <remarks>This property setter supports invalid value rejection, which means values are only assigned to the backing field if they are valid which is when the <paramref name="validationDelegate"/> return <c>true</c>.<br/> To support visual validation error feed back and proper behavior in <c>TwoWay</c> binding scenarios, <br/> it is recommended to set <paramref name="isThrowExceptionOnValidationErrorEnabled"/> to <c>true</c> and set the validation mode of the binding to <c>Binding.ValidatesOnExceptions</c>.<br/>If not doing so, the binding target will clear the new value and show the last valid value instead.</remarks>
+    protected virtual bool TrySetValueSilent<TValue>(TValue value, Func<TValue, (bool IsValid, IEnumerable<string> ErrorMessages)> validationDelegate, ref TValue targetBackingField, bool isRejectInvalidValueEnabled = false, bool isThrowExceptionOnValidationErrorEnabled = false, [CallerMemberName] string propertyName = null)
+    {
+      this.IsSilent = true;
+      bool isSuccessful = TrySetValue(
+        value,
+        validationDelegate,
+        ref targetBackingField,
+        isRejectInvalidValueEnabled,
+        isThrowExceptionOnValidationErrorEnabled,
+        propertyName);
+      this.IsSilent = false;
+      return isSuccessful;
     }
 
     /// <summary>
@@ -144,6 +181,11 @@ namespace BionicCode.Utilities.Net.Standard.ViewModel
     /// <param name="newValue">The value after the property change.</param>
     protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null, object oldValue = null, object newValue = null)
     {
+      if (this.IsSilent)
+      {
+        return;
+      }
+
       // Invoke INotifyPropertyChanged.PropertyChanged
       this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
@@ -158,7 +200,7 @@ namespace BionicCode.Utilities.Net.Standard.ViewModel
     /// <param name="propertyName">The of the property of which the error messages should be returned.</param>
     /// <returns>An <see cref="IEnumerable"/> containing all error messages of the specified property.</returns>
     /// <remarks>If the <paramref name="propertyName"/> is <c>null</c> all current error messages will be returned.</remarks>
-    public IEnumerable GetErrors(string propertyName) =>
+    public IEnumerable GetErrors(string propertyName = null) =>
         string.IsNullOrWhiteSpace(propertyName) 
           ? this.Errors.SelectMany(entry => entry.Value) 
           : this.Errors.TryGetValue(propertyName, out IEnumerable<string> errors) 
@@ -181,6 +223,7 @@ namespace BionicCode.Utilities.Net.Standard.ViewModel
       #endregion
 
       private Dictionary<string, IEnumerable<string>> Errors { get; set; }
+      private bool IsSilent { get; set; }
 
       /// <summary>
       /// Raised when the validation state of the view model has changed (e.g. error added or removed).

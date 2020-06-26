@@ -8,6 +8,8 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
+using BionicCode.Utilities.Net.Standard.Exception;
 
 namespace BionicCode.Utilities.Net.Standard
 {
@@ -16,16 +18,16 @@ namespace BionicCode.Utilities.Net.Standard
     public EventAggregator()
     {
       this.EventHandlerTable = new ConcurrentDictionary<string, List<Delegate>>();
-      this.EventPublisherTable = new ConcurrentDictionary<object, List<(EventInfo EventInfo, Delegate Handler)>>();
+      this.EventPublisherTable = new ConditionalWeakTable<object, List<(EventInfo EventInfo, Delegate Handler)>>();
     }
 
     #region Implementation of IEventAggregator
 
 
     /// <inheritdoc />
-    public bool TryRegisterObservable<TEventSource>(TEventSource eventSource, IEnumerable<string> eventNames)
+    public bool TryRegisterObservable(object eventSource, IEnumerable<string> eventNames)
     {
-      if (EqualityComparer<TEventSource>.Default.Equals(eventSource, default))
+      if (object.Equals(eventSource, default))
       {
         return false;
       }
@@ -41,52 +43,24 @@ namespace BionicCode.Utilities.Net.Standard
         }
 
         Type normalizedEventHandlerType = NormalizeEventHandlerType(eventInfo.EventHandlerType);
+        ICollection<string> eventIds = CreateEventIdsOfConcreteType(eventSource, normalizedEventHandlerType, eventName);
 
-        var fullyQualifiedEventIdOfGlobalEvent =
-          CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, eventName);
-        var fullyQualifiedEventIdOfUnknownGlobalEvent =
-          CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, string.Empty);
-        var fullyQualifiedEventIdOfSpecificEvent =
-          CreateFullyQualifiedEventIdOfSpecificSource(eventSource.GetType(), eventName);
+        if (TryCreateEventIdOfInterfaceType(eventSource, eventName, out string interfaceEventId))
+        {
+          eventIds.Add(interfaceEventId);
+        }
 
-        IEnumerable<string> interfaceEventIds = eventSource.GetType().GetInterfaces().Select(
-          interfaceType => CreateFullyQualifiedEventIdOfSpecificSource(interfaceType, eventName));
+        (Type EventHandlerType, ICollection<string> EventIds) eventIdArg = (normalizedEventHandlerType, eventIds);
 
-        var eventIds = new List<string>(interfaceEventIds) { fullyQualifiedEventIdOfSpecificEvent, fullyQualifiedEventIdOfGlobalEvent, fullyQualifiedEventIdOfUnknownGlobalEvent };
-
-        (Type eventHandlerType, List<string> eventIds) eventIdArg = (normalizedEventHandlerType, eventIds);
-        //DynamicMethod handler =
-        //  new DynamicMethod("",
-        //    null,
-        //    eventInfo.EventHandlerType.GetMethod("Invoke").GetParameters().Select(pi => pi.ParameterType).ToArray(),
-        //    GetType());
-
-        //ILGenerator ilgen = handler.GetILGenerator();
-
-        //Type[] showParameters = { typeof(String) };
-        //MethodInfo simpleShow =
-        //  typeof(MessageBox).GetMethod("Show", showParameters);
-
-        //ilgen.Emit(OpCodes.Ldstr,
-        //  "This event handler was constructed at run time.");
-        //ilgen.Emit(OpCodes.Call, simpleShow);
-        //ilgen.Emit(OpCodes.Pop);
-        //ilgen.Emit(OpCodes.Ret);
-
-        Action<object, object> clientHandlerInvocator = (sender, args) => HandleEvent(eventIdArg, sender,args);
+        Action<object, object> clientHandlerInvocator = (sender, args) => DelegateHandleEvent(eventIdArg, sender, args);
         var eventSourceHandler = Delegate.CreateDelegate(
           eventInfo.EventHandlerType,
           clientHandlerInvocator.Target,
           clientHandlerInvocator.Method);
-        if (this.EventPublisherTable.TryGetValue(eventSource, out List<(EventInfo, Delegate)> publishers))
-        {
-          publishers.Add((eventInfo, eventSourceHandler));
-        }
-        else if (!this.EventPublisherTable.TryAdd(eventSource, new List<(EventInfo, Delegate)> { (eventInfo, eventSourceHandler) }))
-        {
-          return false;
-        }
 
+        List<(EventInfo EventInfo, Delegate Handler)> publishers = this.EventPublisherTable.GetOrCreateValue(eventSource);
+        publishers.Add((eventInfo, eventSourceHandler));
+        
         eventInfo.AddEventHandler(eventSource, eventSourceHandler);
       }
 
@@ -117,7 +91,7 @@ namespace BionicCode.Utilities.Net.Standard
 
       if (!publisherHandlerInfos.Any())
       {
-        this.EventPublisherTable.TryRemove(eventSource, out List<(EventInfo EventInfo, Delegate Handler)> _);
+        this.EventPublisherTable.Remove(eventSource);
       }
 
       return hasRemovedObservable;
@@ -128,8 +102,10 @@ namespace BionicCode.Utilities.Net.Standard
     {
       bool hasRemovedObservable = false;
 
-      if (this.EventPublisherTable.TryRemove(eventSource, out List<(EventInfo EventInfo, Delegate Handler)> handlerInfo))
+      if (this.EventPublisherTable.TryGetValue(eventSource, out List<(EventInfo EventInfo, Delegate Handler)> handlerInfo))
       {
+        this.EventPublisherTable.Remove(eventSource);
+
         handlerInfo.ForEach(publisherHandlerInfo => publisherHandlerInfo.EventInfo.RemoveEventHandler(eventSource, publisherHandlerInfo.Handler));
         hasRemovedObservable = true;
       }
@@ -143,14 +119,17 @@ namespace BionicCode.Utilities.Net.Standard
     }
 
     /// <inheritdoc />
-    public bool TryRegisterObserver<TEventArgs>(string eventName, Type eventSourceType, EventHandler<TEventArgs> eventHandler)
+    public bool TryRegisterObserver(string eventName, Type eventSourceType, Delegate eventHandler)
     {
       var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfSpecificSource(eventSourceType, eventName);
       return TryRegisterObserverInternal(eventHandler, fullyQualifiedEventName);
     }
 
     /// <inheritdoc />
-    public bool TryRegisterGlobalObserver<TEventArgs>(string eventName, EventHandler<TEventArgs> eventHandler)
+    public bool TryRegisterObserver<TEventSource>(string eventName, Type eventSourceType, Action<object, TEventSource> eventHandler) => TryRegisterObserver(eventName, eventSourceType, (Delegate) eventHandler);
+
+    /// <inheritdoc />
+    public bool TryRegisterGlobalObserver(string eventName, Delegate eventHandler)
     {
       Type normalizedEventHandlerType = NormalizeEventHandlerType(eventHandler.GetType());
       var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, eventName);
@@ -158,7 +137,15 @@ namespace BionicCode.Utilities.Net.Standard
     }
 
     /// <inheritdoc />
-    public bool TryRegisterGlobalObserver<TEventArgs>(EventHandler<TEventArgs> eventHandler)
+    public bool TryRegisterGlobalObserver<TEventArgs>(string eventName, Action<object, TEventArgs> eventHandler)
+    {
+      Type normalizedEventHandlerType = NormalizeEventHandlerType<TEventArgs>(eventHandler.GetType());
+      var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, eventName);
+      return TryRegisterObserverInternal(eventHandler, fullyQualifiedEventName);
+    }
+
+    /// <inheritdoc />
+    public bool TryRegisterGlobalObserver(Delegate eventHandler)
     {
       Type normalizedEventHandlerType = NormalizeEventHandlerType(eventHandler.GetType());
       var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, string.Empty);
@@ -166,7 +153,15 @@ namespace BionicCode.Utilities.Net.Standard
     }
 
     /// <inheritdoc />
-    public bool TryRemoveObserver<TEventArgs>(string eventName, Type eventSourceType, EventHandler<TEventArgs> eventHandler)
+    public bool TryRegisterGlobalObserver<TEventArgs>(Action<object, TEventArgs> eventHandler)
+    {
+      Type normalizedEventHandlerType = NormalizeEventHandlerType<TEventArgs>(eventHandler.GetType());
+      var fullyQualifiedEventName = CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, string.Empty);
+      return TryRegisterObserverInternal(eventHandler, fullyQualifiedEventName);
+    }
+
+    /// <inheritdoc />
+    public bool TryRemoveObserver(string eventName, Type eventSourceType, Delegate eventHandler)
     {
       string fullyQualifiedEventIdOfSpecificSource =
         CreateFullyQualifiedEventIdOfSpecificSource(eventSourceType, eventName);
@@ -174,7 +169,14 @@ namespace BionicCode.Utilities.Net.Standard
     }
 
     /// <inheritdoc />
-    public bool TryRemoveGlobalObserver<TEventArgs>(string eventName, EventHandler<TEventArgs> eventHandler)
+    public bool TryRemoveObserver<TEventSource>(
+      string eventName,
+      Type eventSourceType,
+      Action<object, TEventSource> eventHandler) =>
+      TryRemoveObserver(eventName, eventSourceType, (Delegate) eventHandler);
+
+    /// <inheritdoc />
+    public bool TryRemoveGlobalObserver(string eventName, Delegate eventHandler)
     {
       Type normalizedEventHandlerType = NormalizeEventHandlerType(eventHandler.GetType());
 
@@ -183,24 +185,31 @@ namespace BionicCode.Utilities.Net.Standard
       return this.EventHandlerTable.TryRemove(fullyQualifiedEventIdOfGlobalSource, out List<Delegate> _);
     }
 
+
     /// <inheritdoc />
-    public bool TryRemoveGlobalObserver<TEventArgs>(EventHandler<TEventArgs> eventHandler)
+    public bool TryRemoveGlobalObserver<TEventArgs>(string eventName, Action<object, TEventArgs> eventHandler)
+    {
+      Type normalizedEventHandlerType = NormalizeEventHandlerType< TEventArgs>(eventHandler.GetType());
+
+      string fullyQualifiedEventIdOfGlobalSource =
+        CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, eventName);
+      return this.EventHandlerTable.TryRemove(fullyQualifiedEventIdOfGlobalSource, out List<Delegate> _);
+    }
+
+    /// <inheritdoc />
+    public bool TryRemoveGlobalObserver(Delegate eventHandler)
     {
       bool result = false;
       Type normalizedEventHandlerType = NormalizeEventHandlerType(eventHandler.GetType());
 
-      string fullyQualifiedEventIdOfGlobalSourcePrefix =
-        CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, string.Empty);
-      for (var index = this.EventHandlerTable.Count - 1; index >= 0; index--)
-      {
-        KeyValuePair<string, List<Delegate>> handlersEntry = this.EventHandlerTable.ElementAt(index);
-        if (handlersEntry.Key.StartsWith(fullyQualifiedEventIdOfGlobalSourcePrefix, StringComparison.Ordinal))
-        {
-          result |= this.EventHandlerTable.TryRemove(handlersEntry.Key, out List<Delegate> _);
-        }
-      }
+      return TryRemoveGlobalObserverInternal(normalizedEventHandlerType);
+    }
 
-      return result;
+    /// <inheritdoc />
+    public bool TryRemoveGlobalObserver<TEventArgs>(Action<object, TEventArgs> eventHandler)
+    {
+      Type normalizedEventHandlerType = NormalizeEventHandlerType< TEventArgs>(eventHandler.GetType());
+      return TryRemoveGlobalObserverInternal(normalizedEventHandlerType);
     }
 
     /// <inheritdoc />
@@ -249,8 +258,8 @@ namespace BionicCode.Utilities.Net.Standard
 
     #endregion Implementation of IEventAggregator
 
-    private bool TryRegisterObserverInternal<TEventArgs>(
-      EventHandler<TEventArgs> eventHandler,
+    private bool TryRegisterObserverInternal(
+      Delegate eventHandler,
       string fullyQualifiedEventName)
     {
       if (this.EventHandlerTable.TryGetValue(fullyQualifiedEventName, out List<Delegate> handlers))
@@ -262,7 +271,24 @@ namespace BionicCode.Utilities.Net.Standard
       return this.EventHandlerTable.TryAdd(fullyQualifiedEventName, new List<Delegate>() { eventHandler });
     }
 
-    private void HandleEvent((Type EventHandlerType, IEnumerable<string> EventIds) eventInfo, object sender, object args)
+    private bool TryRemoveGlobalObserverInternal(Type normalizedEventHandlerType)
+    {
+      bool result = false;
+      string fullyQualifiedEventIdOfGlobalSourcePrefix =
+        CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, string.Empty);
+      for (var index = this.EventHandlerTable.Count - 1; index >= 0; index--)
+      {
+        KeyValuePair<string, List<Delegate>> handlersEntry = this.EventHandlerTable.ElementAt(index);
+        if (handlersEntry.Key.StartsWith(fullyQualifiedEventIdOfGlobalSourcePrefix, StringComparison.Ordinal))
+        {
+          result |= this.EventHandlerTable.TryRemove(handlersEntry.Key, out List<Delegate> _);
+        }
+      }
+
+      return result;
+    }
+
+    private void DelegateHandleEvent((Type EventHandlerType, ICollection<string> EventIds) eventInfo, object sender, object args)
     {
       IEnumerable<Delegate> handlers = eventInfo.EventIds
         .SelectMany(
@@ -272,34 +298,108 @@ namespace BionicCode.Utilities.Net.Standard
 
       foreach (Delegate handler in handlers)
       {
-        Type handlerEventArgsType = handler.GetType()
-          .GetMethod("Invoke")?
-          .GetParameters()
-          .ElementAt(1).ParameterType;
-        if (handlerEventArgsType == null || !args.GetType().IsSubclassOf(handlerEventArgsType)
-            && handlerEventArgsType != args.GetType())
+        try
         {
-          throw new InvalidOperationException(
-            $"The event handler {handler.Method.Name} has the wrong signature. Expected event args type: {args.GetType()}. But found type {handlerEventArgsType}.");
+          handler.DynamicInvoke(sender, args);
         }
+        catch (ArgumentException e)
+        {
+          MethodInfo delegateInvokeMethodInfo = handler.GetType().GetMethod("Invoke");
+          string handlerSignatureParameterList = delegateInvokeMethodInfo?
+            .GetParameters()
+            .Select(parameterInfo => parameterInfo.ParameterType.FullName)
+            .Aggregate((result, current) => result += ", " + current).TrimEnd(',', ' ');
 
-        handler.DynamicInvoke(sender, args);
+          throw new WrongEventHandlerSignatureException(
+            $"The found callback signature does not match the registered delegate{Environment.NewLine}'{FormatTypeName(handler.GetType())}'. {Environment.NewLine}{Environment.NewLine}Expected: '{delegateInvokeMethodInfo.ReturnType.Name} {handler.Method.Name}({handlerSignatureParameterList})'.{Environment.NewLine}Actual: '{handler.Method}'.", e);
+        }
       }
     }
 
-    private Type NormalizeEventHandlerType(Type eventHandlerType)
+    private void ThrowIfHandlerSignatureIncompatible(object args, Delegate handler)
     {
-      Type normalizedEventHandlerType = eventHandlerType == typeof(EventHandler)
+      MethodInfo delegateInvokeMethodInfo = handler.GetType().GetMethod("Invoke");
+      Type handlerEventArgsType = delegateInvokeMethodInfo?
+        .GetParameters()
+        .ElementAt(1).ParameterType;
+      if (!handlerEventArgsType?.IsInstanceOfType(args) ?? true)
+      {
+        string handlerSignature = delegateInvokeMethodInfo?
+          .GetParameters()
+          .Select(parameterInfo => parameterInfo.ParameterType.FullName)
+          .Aggregate((result, current) => result += ", " + current).TrimEnd(',', ' ');
+        throw new WrongEventHandlerSignatureException(
+          $"The found callback signature does not match the registered delegate{Environment.NewLine}'{FormatTypeName(handler.GetType())}'. {Environment.NewLine}Expected: '{delegateInvokeMethodInfo.ReturnType.Name} {handler.Method.Name}({handlerSignature})'. Actual: '{handler.Method}'.");
+      }
+    }
+    private string FormatTypeName(Type typeToFormat, bool isFullyQualified = true)
+    {
+      if (!typeToFormat.IsGenericType)
+      {
+        return isFullyQualified ? typeToFormat.FullName : typeToFormat.Name;
+      }
+      Type[] genericArguments = typeToFormat.GetGenericArguments();
+      string originalTypeName = isFullyQualified ? typeToFormat.FullName : typeToFormat.Name;
+      return originalTypeName.Substring(0, originalTypeName.IndexOf("`", StringComparison.OrdinalIgnoreCase)) + "<" + String.Join(", ", genericArguments.Select(type => FormatTypeName(type))) + ">";
+    }
+
+    private bool TryCreateEventIdOfInterfaceType(object eventSource, string eventName, out string eventId)
+    {
+      eventId = string.Empty;
+
+      Type eventSourceInterfaceType = eventSource.GetType().GetInterfaces().FirstOrDefault(
+        interfaceType => interfaceType.GetEvent(
+          eventName,
+          BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance |
+          BindingFlags.Static) != null);
+
+      if (eventSourceInterfaceType != null)
+      {
+        var fullyQualifiedInterfaceEventIdOfSpecificEvent =
+          CreateFullyQualifiedEventIdOfSpecificSource(eventSourceInterfaceType, eventName);
+        eventId = fullyQualifiedInterfaceEventIdOfSpecificEvent;
+      }
+
+      return !string.IsNullOrWhiteSpace(eventId);
+    }
+
+    private List<string> CreateEventIdsOfConcreteType(
+      object eventSource,
+      Type normalizedEventHandlerType,
+      string eventName)
+    {
+      var fullyQualifiedEventIdOfGlobalEvent =
+        CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, eventName);
+      var fullyQualifiedEventIdOfUnknownGlobalEvent =
+        CreateFullyQualifiedEventIdOfGlobalSource(normalizedEventHandlerType, string.Empty);
+      var fullyQualifiedImplementationEventIdOfSpecificEvent =
+        CreateFullyQualifiedEventIdOfSpecificSource(eventSource.GetType(), eventName);
+
+      var eventIds = new List<string>
+      {
+        fullyQualifiedImplementationEventIdOfSpecificEvent, fullyQualifiedEventIdOfGlobalEvent,
+        fullyQualifiedEventIdOfUnknownGlobalEvent
+      };
+      return eventIds;
+    }
+
+    private Type NormalizeEventHandlerType(Type eventHandlerType) =>
+      eventHandlerType == typeof(EventHandler) || eventHandlerType == typeof(Action<object, EventArgs>)
         ? typeof(EventHandler<EventArgs>)
         : eventHandlerType;
-      return normalizedEventHandlerType;
-    }
+
+    private Type NormalizeEventHandlerType<TEventArgs>(Type eventHandlerType) =>
+      eventHandlerType == typeof(EventHandler) || eventHandlerType == typeof(Action<object, EventArgs>)
+        ? typeof(EventHandler<EventArgs>)
+        : eventHandlerType == typeof(Action<object, TEventArgs>)
+          ? typeof(EventHandler<TEventArgs>)
+          : eventHandlerType;
 
     private string CreateFullyQualifiedEventIdOfGlobalSource(Type eventHandlerType, string eventName) => eventHandlerType.FullName.ToLowerInvariant() + "." + eventName;
 
     private string CreateFullyQualifiedEventIdOfSpecificSource(Type eventSource, string eventName) => eventSource.AssemblyQualifiedName.ToLowerInvariant() + "." + eventSource.FullName.ToLowerInvariant() + "." + eventName;
 
     private ConcurrentDictionary<string, List<Delegate>> EventHandlerTable { get; set; }
-    private ConcurrentDictionary<object, List<(EventInfo EventInfo,  Delegate Handler)>> EventPublisherTable { get; }
+    private ConditionalWeakTable<object, List<(EventInfo EventInfo, Delegate Handler)>> EventPublisherTable { get; }
   }
 }

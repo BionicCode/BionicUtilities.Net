@@ -1,5 +1,6 @@
 ﻿using System;
 using BionicCode.Utilities.Net.Standard;
+using BionicCode.Utilities.Net.Standard.Exception;
 using BionicCode.Utilities.UnitTest.Net.Standard.Resources;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -25,12 +26,74 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     }
 
     [TestMethod]
+    [ExpectedException(typeof(WrongEventHandlerSignatureException))]
+    public void RegisterWrongDelegateSignatureThrowsException()
+    {
+      this.EventManager.TryRegisterObserver(nameof(this.EventSource1.TestEvent), typeof(ITestEventSource), new EventHandler<TestEventArgs>(OnTestEvent));
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+    }
+
+    [TestMethod]
+    [ExpectedException(typeof(WrongEventHandlerSignatureException))]
+    public void RegisterWrongDelegateSignatureThrowsExceptionUsingActionDelegate()
+    {
+      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.TestEvent), typeof(ITestEventSource), OnTestEvent);
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+    }
+
+    [TestMethod]
+    public void Handle2EventsOfSpecificEventOfKnownInterfaceSource()
+    {
+      this.EventManager.TryRegisterObserver(nameof(this.EventSource1.TestEvent), typeof(ITestEventSource), new EventHandler<EventArgs>(OnTestEvent));
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(2, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(0, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle2EventsOfSpecificEventOfKnownInterfaceSourceUsingActionDelegate()
+    {
+      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), typeof(ITestEventSource), OnTestEvent);
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(2, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(0, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
     public void Handle4EventsOfSpecificEventOfKnownSource()
     {
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), OnGenericTestEvent);
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), OnGenericTestEvent);
+      RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate();
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(2, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(2, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle4EventsOfSpecificEventOfKnownSourceUsingActionDelegate()
+    {
+      RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate();
 
       this.SenderType = this.EventSource1.GetType();
       this.EventSource1.RaiseAll();
@@ -44,6 +107,23 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
 
     [TestMethod]
     public void Handle4EventsOfSpecificEventOfUnknownSource()
+    {
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource1.TestEvent), new EventHandler<EventArgs>(
+        OnTestEvent));
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource1.GenericTestEvent), new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(2, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(2, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle4EventsOfSpecificEventOfUnknownSourceUsingActionDelegate()
     {
       this.EventManager.TryRegisterGlobalObserver<EventArgs>(nameof(this.EventSource1.TestEvent), OnTestEvent);
       this.EventManager.TryRegisterGlobalObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), OnGenericTestEvent);
@@ -61,6 +141,22 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void Handle4EventsOfUnspecificEventOfUnknownSourceButSpecificHandler()
     {
+      this.EventManager.TryRegisterGlobalObserver(new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRegisterGlobalObserver(new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(2, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(2, this.GenericEventInvocationCount); 
+    }
+
+    [TestMethod]
+    public void Handle4EventsOfUnspecificEventOfUnknownSourceButSpecificHandlerUsingActionDelegate()
+    {
       this.EventManager.TryRegisterGlobalObserver<EventArgs>(OnTestEvent);
       this.EventManager.TryRegisterGlobalObserver<TestEventArgs>(OnGenericTestEvent);
 
@@ -77,11 +173,28 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void Handle2EventsAfterUnsubscribingFromAllSpecificEventsOfKnownSource()
     {
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), OnGenericTestEvent);
+      RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate();
 
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), OnGenericTestEvent);
+      this.EventManager.TryRemoveObserver(
+        nameof(this.EventSource1.TestEvent),
+        this.EventSource1.GetType(),
+        new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRemoveObserver(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(1, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(1, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle2EventsAfterUnsubscribingFromAllSpecificEventsOfKnownSourceUsingActionDelegate()
+    {
+      RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate();
 
       this.EventManager.TryRemoveObserver<EventArgs>(
         nameof(this.EventSource1.TestEvent),
@@ -101,6 +214,30 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
 
     [TestMethod]
     public void HandleNoEventsAfterUnsubscribingFromSpecificEventsOfAllUnknownSource()
+    {
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource1.TestEvent), new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource1.GenericTestEvent), new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource2.TestEvent), new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource2.GenericTestEvent), new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.EventManager.TryRemoveGlobalObserver(
+        nameof(this.EventSource1.TestEvent),
+        new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRemoveGlobalObserver(nameof(this.EventSource1.GenericTestEvent), new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(0, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(0, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void HandleNoEventsAfterUnsubscribingFromSpecificEventsOfAllUnknownSourceUsingActionDelegate()
     {
       this.EventManager.TryRegisterGlobalObserver<EventArgs>(nameof(this.EventSource1.TestEvent), OnTestEvent);
       this.EventManager.TryRegisterGlobalObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), OnGenericTestEvent);
@@ -126,6 +263,29 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void HandleNoEventsAfterUnsubscribingFromUnspecificEventOfAllUnknownSourcesButSpecificHandlers()
     {
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource1.TestEvent), new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource1.GenericTestEvent), new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource2.TestEvent), new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRegisterGlobalObserver(nameof(this.EventSource2.GenericTestEvent), new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.EventManager.TryRemoveGlobalObserver(
+        new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRemoveGlobalObserver(new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(0, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(0, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void HandleNoEventsAfterUnsubscribingFromUnspecificEventOfAllUnknownSourcesButSpecificHandlersUsingActionDelegate()
+    {
       this.EventManager.TryRegisterGlobalObserver<EventArgs>(nameof(this.EventSource1.TestEvent), OnTestEvent);
       this.EventManager.TryRegisterGlobalObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), OnGenericTestEvent);
 
@@ -149,11 +309,24 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void Handle2EventsAfterUnsubscribingFromAllUnspecificEventsOfKnownSource()
     {
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(),  OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), OnGenericTestEvent);
+      RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate();
 
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), OnGenericTestEvent);
+      this.EventManager.TryRemoveAllObservers(this.EventSource1.GetType());
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(1, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(1, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle2EventsAfterUnsubscribingFromAllUnspecificEventsOfKnownSourceUsingActionDelegate()
+    {
+      RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate();
 
       this.EventManager.TryRemoveAllObservers(this.EventSource1.GetType());
 
@@ -170,11 +343,24 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void Handle2EventsAfterUnsubscribingFromAllSpecificEventsOfAllUnknownSources()
     {
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), OnGenericTestEvent);
+      RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate();
 
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), OnGenericTestEvent);
+      this.EventManager.TryRemoveAllObservers(nameof(this.EventSource1.TestEvent));
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(0, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(2, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle2EventsAfterUnsubscribingFromAllSpecificEventsOfAllUnknownSourcesUsingActionDelegate()
+    {
+      RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate();
 
       this.EventManager.TryRemoveAllObservers(nameof(this.EventSource1.TestEvent));
 
@@ -191,11 +377,24 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void Handle3EventAfterUnsubscribingFromSpecificEventOfKnownSource()
     {
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), OnGenericTestEvent);
+      RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate();
 
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), OnGenericTestEvent);
+      this.EventManager.TryRemoveAllObservers(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType());
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(1, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(2, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle3EventAfterUnsubscribingFromSpecificEventOfKnownSourceUsingActionDelegate()
+    {
+      RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate();
 
       this.EventManager.TryRemoveAllObservers(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType());
 
@@ -212,11 +411,24 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void Handle3EventsAfterUnregister1KnownSource1SpecificEvent()
     {
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), OnGenericTestEvent);
+      RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate();
 
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), OnGenericTestEvent);
+      this.EventManager.TryRemoveObservable(this.EventSource1, new []{ nameof(this.EventSource1.TestEvent) });
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(1, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(2, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle3EventsAfterUnregister1KnownSource1SpecificEventUsingActionDelegate()
+    {
+      RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate();
 
       this.EventManager.TryRemoveObservable(this.EventSource1, new []{ nameof(this.EventSource1.TestEvent) });
 
@@ -233,11 +445,24 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void Handle2EventsAfterUnregister1KnownCompleteSource()
     {
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), OnGenericTestEvent);
+      RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate();
 
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), OnGenericTestEvent);
+      this.EventManager.TryRemoveObservable(this.EventSource1);
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(1, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(1, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle2EventsAfterUnregister1KnownCompleteSourceUsingActionDelegate()
+    {
+      RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate();
 
       this.EventManager.TryRemoveObservable(this.EventSource1);
 
@@ -254,11 +479,24 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void Handle2EventsAfterUnregister1KnownSourceAllEvents()
     {
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), OnGenericTestEvent);
+      RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate();
 
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), OnGenericTestEvent);
+      this.EventManager.TryRemoveObservable(this.EventSource1, true);
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(1, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(1, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle2EventsAfterUnregister1KnownSourceAllEventsUsingActionDelegate()
+    {
+      RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate();
 
       this.EventManager.TryRemoveObservable(this.EventSource1, true);
 
@@ -275,11 +513,7 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
     [TestMethod]
     public void Handle3EventsAfterUnregister1KnownSource1Event()
     {
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), OnGenericTestEvent);
-
-      this.EventManager.TryRegisterObserver<EventArgs>(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), OnTestEvent);
-      this.EventManager.TryRegisterObserver<TestEventArgs>(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), OnGenericTestEvent);
+      RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate();
 
       this.EventManager.TryRemoveObservable(this.EventSource1, new []{ nameof(this.EventSource1.TestEvent)}, true);
 
@@ -291,6 +525,53 @@ namespace BionicCode.Utilities.UnitTest.Net.Standard
 
       Assert.AreEqual(1, this.NonGenericEventInvocationCount);
       Assert.AreEqual(2, this.GenericEventInvocationCount);
+    }
+
+    [TestMethod]
+    public void Handle3EventsAfterUnregister1KnownSource1EventUsingActionDelegate()
+    {
+      RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate();
+
+      this.EventManager.TryRemoveObservable(this.EventSource1, new []{ nameof(this.EventSource1.TestEvent)}, true);
+
+      this.SenderType = this.EventSource1.GetType();
+      this.EventSource1.RaiseAll();
+
+      this.SenderType = this.EventSource2.GetType();
+      this.EventSource2.RaiseAll();
+
+      Assert.AreEqual(1, this.NonGenericEventInvocationCount);
+      Assert.AreEqual(2, this.GenericEventInvocationCount);
+    }
+
+    private void RegisterAllEventsUsingConcreteEventSourceTypeAndExplicitDelegate()
+    {
+      this.EventManager.TryRegisterObserver(nameof(this.EventSource1.TestEvent), this.EventSource1.GetType(), new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRegisterObserver(nameof(this.EventSource1.GenericTestEvent), this.EventSource1.GetType(), new EventHandler<TestEventArgs>(OnGenericTestEvent));
+
+      this.EventManager.TryRegisterObserver(nameof(this.EventSource2.TestEvent), this.EventSource2.GetType(), new EventHandler<EventArgs>(OnTestEvent));
+      this.EventManager.TryRegisterObserver(nameof(this.EventSource2.GenericTestEvent), this.EventSource2.GetType(), new EventHandler<TestEventArgs>(OnGenericTestEvent));
+    }
+
+    private void RegisterAllEventsUsingConcreteEventSourceTypeAndActionDelegate()
+    {
+      this.EventManager.TryRegisterObserver<EventArgs>(
+        nameof(this.EventSource1.TestEvent),
+        this.EventSource1.GetType(),
+        OnTestEvent);
+      this.EventManager.TryRegisterObserver<TestEventArgs>(
+        nameof(this.EventSource1.GenericTestEvent),
+        this.EventSource1.GetType(),
+        OnGenericTestEvent);
+
+      this.EventManager.TryRegisterObserver<EventArgs>(
+        nameof(this.EventSource2.TestEvent),
+        this.EventSource2.GetType(),
+        OnTestEvent);
+      this.EventManager.TryRegisterObserver<TestEventArgs>(
+        nameof(this.EventSource2.GenericTestEvent),
+        this.EventSource2.GetType(),
+        OnGenericTestEvent);
     }
 
     private void OnTestEvent(object sender, EventArgs e)

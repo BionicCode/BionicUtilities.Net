@@ -45,6 +45,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\Generic\ObservablePropertyChangedCollection.cs" />
     <Compile Include="Converter\BooleanMultiValueConverter.cs" />
     <Compile Include="Converter\BoolToStringConverter.cs" />
     <Compile Include="Converter\DividerValueConverter.cs" />

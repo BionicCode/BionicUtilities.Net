@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2019.8.24.0" projectFile="D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\Documentation\Documentation.shfbproj" started="17.06.2020 01:56:56">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2019.8.24.0" projectFile="D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\Documentation\Documentation.shfbproj" started="24.06.2020 11:05:47">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -13,6 +13,9 @@ Loading and initializing plug-ins...
 Lightweight Website Style Version 2019.8.24.0
 Copyright &#169; 2006-2019, Eric Woodruff, All Rights Reserved
 Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
+</buildStep>
+<buildStep step="ClearWorkFolder">
+Clearing working folder...
 -------------------------------
 Clearing any prior web/markdown output...
 </buildStep>
@@ -20,7 +23,7 @@ Clearing any prior web/markdown output...
 Validating and copying documentation source information
 Source: D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.BionicUtilities.Net.Standard\BionicCode.BionicUtilities.Net.Standard.csproj
 SHFB: Warning BE0006: Unable to locate any documentation sources for &#39;D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.BionicUtilities.Net.Standard\BionicCode.BionicUtilities.Net.Standard.csproj&#39; (Configuration: Debug Platform: AnyCPU)
-    Last step completed in 00:00:00,0150
+    Last step completed in 00:00:00,0640
 </buildStep>
 <buildStep step="Failed">
 

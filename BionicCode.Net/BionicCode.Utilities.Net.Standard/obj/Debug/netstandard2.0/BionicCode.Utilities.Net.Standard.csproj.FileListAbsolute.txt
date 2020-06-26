@@ -10,9 +10,9 @@ D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\Bionic
 D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\bin\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.deps.json
 D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\bin\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.dll
 D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\bin\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.pdb
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\obj\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.csprojAssemblyReference.cache
 D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\obj\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.AssemblyInfoInputs.cache
 D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\obj\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.AssemblyInfo.cs
 D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\obj\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.csproj.CoreCompileInputs.cache
 D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\obj\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.dll
 D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\obj\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.pdb
+D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\BionicCode.Utilities.Net.Standard\obj\Debug\netstandard2.0\BionicCode.Utilities.Net.Standard.csprojAssemblyReference.cache
