@@ -38,7 +38,7 @@ namespace BionicUtilities.NetStandard.ViewModel
         return false;
       }
 
-      TValue oldValue = value;
+      TValue oldValue = targetBackingField;
       targetBackingField = value;
       OnPropertyChanged(propertyName, oldValue, value);
       return true;
@@ -88,7 +88,7 @@ namespace BionicUtilities.NetStandard.ViewModel
         return false;
       }
 
-      TValue oldValue = value;
+      TValue oldValue = targetBackingField;
       targetBackingField = value;
       OnPropertyChanged(propertyName, oldValue, value);
       if (!isValueValid && isThrowExceptionOnValidationErrorEnabled)

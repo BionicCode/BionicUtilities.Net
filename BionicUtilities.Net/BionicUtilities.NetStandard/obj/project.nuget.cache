@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "teCr4ICk77xhZ4rC5VBtidhAQJFzuvp56SpuYs/UVxyAhYI8en5hym0m7YZjbViNTQ8bHUBSMQkwIQMtifJ1BQ==",
+  "success": true,
+  "projectFilePath": "D:\\-Programming-\\C#\\GitOpenSourceRepository\\BionicUtilities.Net_DEPRECATED\\BionicUtilities.Net\\BionicUtilities.NetStandard\\BionicUtilities.NetStandard.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MusicMonkey\\.nuget\\packages\\jetbrains.annotations\\10.2.1\\jetbrains.annotations.10.2.1.nupkg.sha512",
+    "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\MusicMonkey\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512",
+    "C:\\Users\\MusicMonkey\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
