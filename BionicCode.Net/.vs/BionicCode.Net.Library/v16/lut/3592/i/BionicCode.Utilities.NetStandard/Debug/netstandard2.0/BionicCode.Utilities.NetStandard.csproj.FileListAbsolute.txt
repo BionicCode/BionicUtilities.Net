@@ -1,7 +1,0 @@
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\b\BionicCode.Utilities.NetStandard\Debug\netstandard2.0\BionicCode.Utilities.NetStandard.deps.json
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\b\BionicCode.Utilities.NetStandard\Debug\netstandard2.0\BionicCode.Utilities.NetStandard.dll
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.NetStandard\Debug\netstandard2.0\BionicCode.Utilities.NetStandard.AssemblyInfoInputs.cache
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.NetStandard\Debug\netstandard2.0\BionicCode.Utilities.NetStandard.AssemblyInfo.cs
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.NetStandard\Debug\netstandard2.0\BionicCode.Utilities.NetStandard.csproj.CopyComplete
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.NetStandard\Debug\netstandard2.0\BionicCode.Utilities.NetStandard.dll
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.NetStandard\Debug\netstandard2.0\BionicCode.Utilities.NetStandard.csproj.CoreCompileInputs.cache

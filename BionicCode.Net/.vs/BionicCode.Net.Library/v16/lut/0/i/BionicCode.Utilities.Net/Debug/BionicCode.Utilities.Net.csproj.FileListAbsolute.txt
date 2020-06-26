@@ -1,7 +1,0 @@
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\b\BionicCode.Utilities.Net\bin\Debug\BionicCode.Utilities.Net.dll
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.Net\Debug\UiTemplates\ErrorVallidationTemplate.baml
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.Net\Debug\BionicCode.Utilities.Net_MarkupCompile.cache
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.Net\Debug\BionicCode.Utilities.Net.g.resources
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.Net\Debug\BionicCode.Utilities.Net.csproj.CoreCompileInputs.cache
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.Net\Debug\BionicCode.Utilities.Net.csproj.CopyComplete
-D:\-Programming-\C#\GitOpenSourceRepository\BionicCode.Net\BionicCode.Net\.vs\BionicCode.Net.Library\v16\lut\0\i\BionicCode.Utilities.Net\Debug\BionicCode.Utilities.Net.dll
