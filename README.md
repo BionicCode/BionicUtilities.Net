@@ -1,4 +1,4 @@
-# BionicUtilities.Net
+# BionicUtilities.Net (depricated - use [BionicCode.Net](https://github.com/BionicCode/BionicCode.Net) instead)
 Reusable utility and class library for WPF.
 
 ## [NuGet package](https://www.nuget.org/packages/BionicUtilities.Net/)
