@@ -1,4 +1,4 @@
-# BionicUtilities.Net [![info](https://img.shields.io/badge/Important-Deprecated-critical)](https://github.com/BionicCode/BionicCode.Net) Use [![info](https://img.shields.io/badge/Repository-BionicCode.Net-success)](https://github.com/BionicCode/BionicCode.Net) instead
+# ~~BionicUtilities.Net~~ [![info](https://img.shields.io/badge/Important-Deprecated-critical)](https://github.com/BionicCode/BionicCode.Net) Use [![info](https://img.shields.io/badge/Repository-BionicCode.Net-success)](https://github.com/BionicCode/BionicCode.Net) instead
 ![BC](https://img.shields.io/badge/Framework-.NET_4.8/.NET_Standard_2.0-informational)
 ![GitHub](https://img.shields.io/github/license/BionicCode/BionicUtilities.Net)
 [![NuGet Package](https://img.shields.io/nuget/v/BionicUtilities.Net.svg)](https://www.nuget.org/packages/BionicUtilities.Net/)
